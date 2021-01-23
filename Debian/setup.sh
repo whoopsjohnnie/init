@@ -16,6 +16,7 @@ sudo snap install --classic code
 sudo snap install --classic eclipse
 
 # Dev
+sudo apt-get install -y gawk 
 sudo apt-get install -y git
 
 sudo apt-get install -y python2
