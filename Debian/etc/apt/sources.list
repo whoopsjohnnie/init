@@ -1,0 +1,23 @@
+#
+
+# deb cdrom:[Debian GNU/Linux 10.7.0 _Buster_ - Official amd64 xfce-CD Binary-1 20201205-11:17]/ buster main
+
+# From installation media
+# deb cdrom:[Debian GNU/Linux 10.7.0 _Buster_ - Official amd64 xfce-CD Binary-1 20201205-11:17]/ buster main
+
+# Line commented out by installer because it failed to verify:
+deb http://security.debian.org/debian-security buster/updates main
+# Line commented out by installer because it failed to verify:
+deb-src http://security.debian.org/debian-security buster/updates main
+
+# buster-updates, previously known as 'volatile'
+# A network mirror was not selected during install.  The following entries
+# are provided as examples, but you should amend them as appropriate
+# for your mirror of choice.
+
+deb http://deb.debian.org/debian buster main
+deb-src http://deb.debian.org/debian buster main
+
+deb http://deb.debian.org/debian/ buster-updates main
+deb-src http://deb.debian.org/debian/ buster-updates main
+
