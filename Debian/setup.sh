@@ -30,9 +30,9 @@ sudo apt-get install -y python3-virtualenv
 sudo apt-get install -y pipenv
 
 # Dots
-cp ./.bashrc ~/.bashrc
-cp ./.zshrc ~/.zshrc
-cp ./.emacs ~/.emacs
+cp ./home/.bashrc ~/.bashrc
+cp ./home/.zshrc ~/.zshrc
+cp ./home/.emacs ~/.emacs
 
 # Shell
 chmod 644 .zshrc || true
