@@ -4,6 +4,9 @@
 # Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2016-01-04_at_00:22:49
 ##
 
+# 
+emulate sh -c 'source /etc/profile'
+
 # ZSH
 
 autoload -U compinit promptinit
