@@ -30,6 +30,24 @@ sudo apt-get install -y python3-virtualenv
 
 sudo apt-get install -y pipenv
 
+# X
+sudo apt-get install -y task-mate-desktop
+# sudo apt-get install -y mate-desktop-environment
+sudo apt-get install -y mate-desktop-environment-extras
+
+sudo apt-get install -y network-manager
+sudo apt-get install -y network-manager-gnome
+
+# sudo apt-get install -y gtk2-engines-murrine
+# sudo apt-get install -y gtk2-engines-pixbuf
+
+sudo apt-get install -y arc-theme
+sudo apt-get install -y numix-gtk-theme
+
+sudo apt-get install -y gnome-icon-theme
+sudo apt-get install -y moka-icon-theme
+sudo apt-get install -y numix-icon-theme
+
 # Dots
 cp ./home/.bashrc ~/.bashrc
 cp ./home/.zshrc ~/.zshrc
