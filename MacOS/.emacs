@@ -1,4 +1,7 @@
 
+;; prevent silly initial splash screen
+(setq inhibit-splash-screen t)
+
 ;; Disable menubar
 ;(menu-bar-mode -1) 
 
