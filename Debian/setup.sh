@@ -15,6 +15,8 @@ sudo snap install --classic sublime-text
 sudo snap install --classic code
 sudo snap install --classic eclipse
 
+sudo snap install --classic slack
+
 # Dev
 sudo apt-get install -y gawk 
 sudo apt-get install -y git
