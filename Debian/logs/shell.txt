@@ -1,0 +1,125 @@
+    1  ls /media/
+    2  ls /media/
+    3  ls
+    4  ls -al
+    5  ls /media/cdrom
+    6  ls /media/cdrom0/
+    7  ls
+    8  cd /
+    9  ls
+   10  ls media/
+   11  ls mnt/
+   12  ls /etc/fstab 
+   13  cat /etc/fstab 
+   14  ls /mnt/
+   15  uname 0a
+   16  uname -a
+   17  ls /boot/
+   18  dmesg
+   19  dmesg
+   20  dmesg
+   21  dmesg
+   22  lsblk
+   23  mount /dev/sdc5 /mnt/
+   24  ls /mnt/
+   25  umount /mnt
+   26  mount /dev/sdc3 /mnt/
+   27  ls /mnt/
+   28  cd /mnt/
+   29  ls -al
+   30  ls /mnt/john/
+   31  cd /mnt/john/
+   32  ls -al
+   33  cd /home/john/
+   34  ls
+   35  cd Install/
+   36  ls
+   37  cat hotspot1.sh 
+   38  service NetworkManager restart
+   39  apt-get install network-manager
+   40  ls /media/cdrom
+   41  ls /media/cdrom0/
+   42  ls /media/cdrom0/
+   43  ls /media/cdrom/
+   44  ls /mnt/
+   45  ls /mnt/john/
+   46  cat /etc/fstab 
+   47  cat /etc/apt/sources.list
+   48  sudo nano /etc/apt/sources.list
+   49  sudo vi /etc/apt/sources.list
+   50  nano /etc/apt/sources.list
+   51  apt-cdrom 
+   52  apt-cdrom add
+   53  apt-cdrom add
+   54  apt-cdrom add /dev/sr0
+   55  apt-cdrom add /dev/sr0
+   56  apt-cdrom add /dev/sr0
+   57  cat /etc/fstab 
+   58  mount /media/cdrom
+   59  mount /media/cdrom
+   60  cat /etc/fstab 
+   61  history
+   62  lsblk
+   63  cat /etc/fstab 
+   64  mount /dev/sr0 /media/cdrom0
+   65  mount /dev/sdd1 /media/cdrom0
+   66  ls /media/cdrom0
+   67  umount /media/cdrom0 
+   68  apt-cdrom add /dev/sdd1
+   69  apt-cdrom -d /media/cdrom0 add
+   70  apt-cdrom -d=/media/cdrom0 add
+   71  ls /media/cdrom0
+   72  ls /media/cdrom
+   73  nano /etc/fstab 
+   74  apt-cdrom add
+   75  nano /etc/fstab 
+   76  apt-cdrom add
+   77  nano /etc/fstab 
+   78  cat /etc/apt/sources.list
+   79  nano /etc/fstab 
+   80  umount /media/cdrom
+   81  mount /media/cdrom
+   82  ls /media/cdrom
+   83  apt-cdrom add
+   84  apt update
+   85  cat /etc/apt/sources.list
+   86  apt-get install network-manager
+
+   92  cd /home/john/
+   93  ls
+   94  cd Install/
+   95  ls
+   96  cat hotspot1.sh 
+   97  service NetworkManager restart
+   98  cat nm.sh 
+   99  nmcli radio
+  100  nmcli device
+  101  nmcli device wifi rescan
+  102  nmcli device wifi list
+  103  nmcli device wifi connect ONEOHSIX password frenchtoast
+  104  ping 192.168.0.1
+
+  107  nano /etc/apt/sources.list
+  108  cat /mnt/john/Install/sources.list 
+  109  diff
+  110  diff /etc/apt/sources.list /mnt/john/Install/sources.list 
+  111  diff /etc/apt/sources.list /mnt/john/Install/sources.list 
+  112  vim
+  113  vi
+  114  emacs
+  115  mg
+  116  cat /etc/apt/sources.list
+  117  cp /etc/apt/sources.list /etc/apt/__sources.list__
+  118  ls /etc/apt/sources.list
+  119  ls /etc/apt/
+  120  cp /home/john/Install/sources.list /etc/apt/sources.list
+  121  apt update
+  122  cd
+  123  apt-get install emacs
+  124  umount /media/cdrom
+  125  umount /media/cdrom0
+  126  umount /mnt
+  127  apt-get install task-mate-desktop
+  128  nano /etc/apt/sources.list
+  129  apt update
+  130  apt-get install task-mate-desktop

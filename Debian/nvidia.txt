@@ -1,0 +1,68 @@
+
+nvidia graphics
+https://wiki.debian.org/NvidiaGraphicsDrivers#Identification
+
+> nvidia-detect 
+Detected NVIDIA GPUs:
+01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GT216M [GeForce GT 330M] [10de:0a29] (rev ff)
+
+Checking card:  NVIDIA Corporation GT216M [GeForce GT 330M] (rev ff)
+Your card is only supported up to the 340 legacy drivers series.
+It is recommended to install the
+    nvidia-legacy-340xx-driver
+package.
+
+# 
+nvidia-legacy-340xx-driver
+
+# Make sure we have the contrib and non-free apt sources
+# Contrib/Non-free
+deb http://deb.debian.org/debian buster contrib non-free
+
+# I had the backport/testing 5.9 kernel installed but not used,
+# This caused the driver build to fail even though the stable 4.x kernel was running
+> apt list --installed | grep linux-headers
+> sudo apt-get uninstall linux-headers-5.9.0-0
+> sudo apt-get purge linux-headers-5.9.0-0
+
+> sudo apt install linux-headers-amd64
+> sudo apt-get install nvidia-legacy-340xx-driver
+> sudo apt-get install firmware-misc-nonfree
+
+
+# Black screen issue
+> sudo lshw -businfo -class bridge -class display   
+Bus info          Device      Class          Description
+========================================================
+pci@0000:00:00.0              bridge         Core Processor DRAM Controller
+pci@0000:00:01.0              bridge         Core Processor PCI Express x16 Root Port
+pci@0000:01:00.0              display        GT216M [GeForce GT 330M]
+pci@0000:00:02.0              display        Core Processor Integrated Graphics Controller
+pci@0000:00:1c.0              bridge         5 Series/3400 Series Chipset PCI Express Root Port 1
+pci@0000:00:1c.1              bridge         5 Series/3400 Series Chipset PCI Express Root Port 2
+pci@0000:00:1c.2              bridge         5 Series/3400 Series Chipset PCI Express Root Port 3
+pci@0000:00:1c.3              bridge         5 Series/3400 Series Chipset PCI Express Root Port 4
+pci@0000:00:1e.0              bridge         82801 Mobile PCI Bridge
+pci@0000:00:1f.0              bridge         HM55 Chipset LPC Interface Controller
+pci@0000:ff:00.0              bridge         Core Processor QuickPath Architecture Generic Non-core Registers
+pci@0000:ff:00.1              bridge         Core Processor QuickPath Architecture System Address Decoder
+pci@0000:ff:02.0              bridge         Core Processor QPI Link 0
+pci@0000:ff:02.1              bridge         1st Generation Core i3/5/7 Processor QPI Physical 0
+pci@0000:ff:02.2              bridge         1st Generation Core i3/5/7 Processor Reserved
+pci@0000:ff:02.3              bridge         1st Generation Core i3/5/7 Processor Reserved
+
+Edit /etc/grub.d/01_enable_vga.conf 
+Put this in:
+
+cat << EOF
+setpci -s "00:01.0" 3e.b=8
+setpci -s "01:00.0" 04.b=7
+EOF
+
+> sudo chmod 755 /etc/grub.d/01_enable_vga.conf
+> sudo update-grub
+
+# extras
+> sudo apt-get install nvidia-settings-legacy-340xx
+> sudo apt-get install nvidia-legacy-340xx-vdpau-driver
+> sudo apt-get install nvidia-xconfig
