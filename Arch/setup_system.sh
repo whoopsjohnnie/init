@@ -58,11 +58,21 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
 
+# 
+cat << EOF > /etc/sudoers
+root ALL=(ALL) ALL
+%wheel ALL=(ALL) ALL
+# sudo group is not available by default
+# %sudo ALL=(ALL) ALL
+@includedir /etc/sudoers.d
+
+EOF
+
 # Prompt for root password
 passwd
 
 useradd arch
-usermod -aG wheel arch,storage
+usermod -aG wheel,storage arch
 
 # Prompt for user password
 passwd arch
