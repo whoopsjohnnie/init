@@ -1,0 +1,87 @@
+
+
+john@Johns-MacBook-Pro:~/Documents/development/init$ uname -a
+Linux Johns-MacBook-Pro 5.4.0-65-generic #73-Ubuntu SMP Mon Jan 18 17:25:17 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+
+john@Johns-MacBook-Pro:~/Documents/development/init$ apt list --installed | grep linux
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+binutils-x86-64-linux-gnu/focal,now 2.34-6ubuntu1 amd64 [installed,automatic]
+console-setup-linux/focal,focal,now 1.194ubuntu3 all [installed,automatic]
+libselinux1/focal,now 3.0-1build2 amd64 [installed,automatic]
+linux-base/focal-updates,focal-updates,focal-security,focal-security,now 4.5ubuntu3.1 all [installed,automatic]
+linux-firmware/focal-updates,focal-updates,now 1.187.9 all [installed,automatic]
+linux-generic/focal-updates,focal-security,now 5.4.0.65.68 amd64 [installed]
+linux-headers-5.4.0-65-generic/focal-updates,focal-security,now 5.4.0-65.73 amd64 [installed,automatic]
+linux-headers-5.4.0-65/focal-updates,focal-updates,focal-security,focal-security,now 5.4.0-65.73 all [installed,automatic]
+linux-headers-generic/focal-updates,focal-security,now 5.4.0.65.68 amd64 [installed]
+linux-image-5.4.0-65-generic/focal-updates,focal-security,now 5.4.0-65.73 amd64 [installed,automatic]
+linux-image-generic/focal-updates,focal-security,now 5.4.0.65.68 amd64 [installed,automatic]
+linux-libc-dev/focal-updates,focal-security,now 5.4.0-65.73 amd64 [installed,automatic]
+linux-modules-5.4.0-65-generic/focal-updates,focal-security,now 5.4.0-65.73 amd64 [installed,automatic]
+linux-modules-extra-5.4.0-65-generic/focal-updates,focal-security,now 5.4.0-65.73 amd64 [installed,automatic]
+linux-sound-base/focal,focal,now 1.0.25+dfsg-0ubuntu5 all [installed,automatic]
+pptp-linux/focal,now 1.10.0-1build1 amd64 [installed,automatic]
+syslinux-common/focal,focal,now 3:6.04~git20190206.bf6db5b4+dfsg1-2 all [installed,automatic]
+syslinux-legacy/focal,now 2:3.63+dfsg-2ubuntu9 amd64 [installed,automatic]
+syslinux/focal,now 3:6.04~git20190206.bf6db5b4+dfsg1-2 amd64 [installed,automatic]
+util-linux/focal-updates,now 2.34-0.1ubuntu9.1 amd64 [installed,automatic]
+
+
+john@Johns-MacBook-Pro:~/Documents/development/init$ apt list --installed | grep nvidia
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+nvidia-340/focal-updates,now 340.108-0ubuntu5.20.04.1 amd64 [installed]
+nvidia-opencl-icd-340/focal-updates,now 340.108-0ubuntu5.20.04.1 amd64 [installed,automatic]
+nvidia-settings/focal-updates,now 440.82-0ubuntu0.20.04.1 amd64 [installed,automatic]
+john@Johns-MacBook-Pro:~/Documents/development/init$ 
+
+
+
+
+
+
+
+
+# Black screen issue
+> sudo lshw -businfo -class bridge -class display   
+Bus info          Device      Class          Description
+========================================================
+pci@0000:00:00.0              bridge         Core Processor DRAM Controller
+pci@0000:00:01.0              bridge         Core Processor PCI Express x16 Root Port
+pci@0000:01:00.0              display        GT216M [GeForce GT 330M]
+pci@0000:00:02.0              display        Core Processor Integrated Graphics Controller
+pci@0000:00:1c.0              bridge         5 Series/3400 Series Chipset PCI Express Root Port 1
+pci@0000:00:1c.1              bridge         5 Series/3400 Series Chipset PCI Express Root Port 2
+pci@0000:00:1c.2              bridge         5 Series/3400 Series Chipset PCI Express Root Port 3
+pci@0000:00:1c.3              bridge         5 Series/3400 Series Chipset PCI Express Root Port 4
+pci@0000:00:1e.0              bridge         82801 Mobile PCI Bridge
+pci@0000:00:1f.0              bridge         HM55 Chipset LPC Interface Controller
+pci@0000:ff:00.0              bridge         Core Processor QuickPath Architecture Generic Non-core Registers
+pci@0000:ff:00.1              bridge         Core Processor QuickPath Architecture System Address Decoder
+pci@0000:ff:02.0              bridge         Core Processor QPI Link 0
+pci@0000:ff:02.1              bridge         1st Generation Core i3/5/7 Processor QPI Physical 0
+pci@0000:ff:02.2              bridge         1st Generation Core i3/5/7 Processor Reserved
+pci@0000:ff:02.3              bridge         1st Generation Core i3/5/7 Processor Reserved
+
+Edit /etc/grub.d/01_enable_vga.conf 
+Put this in:
+
+cat << EOF
+setpci -s "00:01.0" 3e.b=8
+setpci -s "01:00.0" 04.b=7
+EOF
+
+> sudo chmod 755 /etc/grub.d/01_enable_vga.conf
+> sudo update-grub
+
+
+
+
+
+
+
+
