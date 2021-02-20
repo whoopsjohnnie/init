@@ -5,20 +5,41 @@ ls -al /etc/localtime
 
 hwclock --systohc
 
-echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+# 
+cat << EOF > /etc/locale.gen
+en_US.UTF-8 UTF-8
+
+EOF
+
 cat /etc/locale.gen
 locale-gen
 
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "LC_MESSAGES=en_US.UTF-8" >> /etc/locale.conf
+# 
+cat << EOF > /etc/locale.conf
+LANG=en_US.UTF-8
+LC_MESSAGES=en_US.UTF-8
+
+EOF
+
 cat /etc/locale.conf
 
-echo "KEYMAP=us" > /etc/vconsole.conf
+# 
+cat << EOF > /etc/vconsole.conf
+KEYMAP=us
+
+EOF
+
 cat /etc/vconsole.conf
 
-echo "127.0.0.1 localhost" > /etc/hosts
-echo "::1 localhost" >> /etc/hosts
-echo "127.0.1.1 archlinux.local archlinux" >> /etc/hosts
+# 
+cat << EOF > /etc/hosts
+127.0.0.1   localhost
+::1         localhost
+
+127.0.1.1   archlinux.local archlinux
+
+EOF
+
 
 yes | pacman -S nano
 yes | pacman -S vim
