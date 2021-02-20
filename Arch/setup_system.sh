@@ -57,3 +57,12 @@ grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
+
+# Prompt for root password
+passwd
+
+useradd arch
+usermod -aG wheel arch,storage
+
+# Prompt for user password
+passwd arch
