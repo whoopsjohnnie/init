@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -x
-
 SECTORSIZE=512
 
 MEGABYTE=2048
@@ -15,18 +13,6 @@ SWAPSIZE=$(( 1 * GIGABYTE ))
 
 ROOTSTART=$(( SWAPSTART + SWAPSIZE ))
 ROOTSIZE=$(( 6 * GIGABYTE  ))
-
-# echo ${EFISTART}
-# echo ${EFISIZE}
-# 
-# echo ${SWAPSTART}
-# echo ${SWAPSIZE}
-# 
-# echo ${ROOTSTART}
-# echo ${ROOTSIZE}
-
-# /sbin/sfdisk -l /dev/sda
-# /sbin/sfdisk /dev/sda <<-'EOF'
 
 cat << EOF > ./sda.sfdisk.out
 unit: sectors

@@ -1,9 +1,5 @@
 #!/bin/sh
 
-set -x
-
-# yes | pacman -S nano
-
 ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 ls -al /etc/localtime
 
