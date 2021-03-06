@@ -7,5 +7,6 @@ cat /mnt/etc/fstab
 
 # 
 cp ./setup_system.sh /mnt/root/
+cp ./setup_software.sh /mnt/root/
 
 arch-chroot /mnt

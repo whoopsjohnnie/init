@@ -40,6 +40,12 @@ cat << EOF > /etc/hosts
 
 EOF
 
+# 
+yes | pacman -Syu
+
+# yes | pacman -S ssh
+# yes | pacman -S scp
+yes | pacman -S openssh
 
 yes | pacman -S nano
 yes | pacman -S vim
@@ -71,7 +77,7 @@ EOF
 # Prompt for root password
 passwd
 
-useradd arch
+useradd -m arch
 usermod -aG wheel,storage arch
 
 # Prompt for user password

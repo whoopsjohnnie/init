@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# GBs
+DISKSIZE=20
+
 SECTORSIZE=512
 
 MEGABYTE=2048
@@ -12,7 +15,7 @@ SWAPSTART=$(( EFISTART + EFISIZE ))
 SWAPSIZE=$(( 1 * GIGABYTE ))
 
 ROOTSTART=$(( SWAPSTART + SWAPSIZE ))
-ROOTSIZE=$(( 6 * GIGABYTE  ))
+ROOTSIZE=$(( (DISKSIZE - 2) * GIGABYTE  ))
 
 cat << EOF > ./sda.sfdisk.out
 unit: sectors
