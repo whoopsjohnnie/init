@@ -9,4 +9,5 @@ source ./share/GNUstep/Makefiles/GNUstep.sh
 exec /usr/bin/wmaker &
 
 # 
+openapp Terminal &
 openapp GWorkspace

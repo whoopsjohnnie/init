@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>AddYBorders</key>
+    <string>YES</string>
+    <key>AltIsNotMeta</key>
+    <string>NO</string>
+    <key>BlackOnWhite</key>
+    <string>NO</string>
+    <key>BoldTerminalFont</key>
+    <string>FreeMono-Bold</string>
+    <key>BoldTerminalFontSize</key>
+    <real>12</real>
+    <key>CommandAsMeta</key>
+    <string>NO</string>
+    <key>CursorColorA</key>
+    <real>1</real>
+    <key>CursorColorB</key>
+    <real>1</real>
+    <key>CursorColorG</key>
+    <real>0.198442</real>
+    <key>CursorColorR</key>
+    <real>0.3976082</real>
+    <key>CursorStyle</key>
+    <integer>0</integer>
+    <key>DoubleEscape</key>
+    <string>NO</string>
+    <key>Linux_CharacterSet</key>
+    <string>iso-8859-1</string>
+    <key>LoginShell</key>
+    <string>NO</string>
+    <key>NSMenuLocations</key>
+    <dict>
+	<key>\U001B</key>
+	<string>10 591 94 182 0 0  1440 900 </string>
+    </dict>
+    <key>NSWindow Frame Preferences</key>
+    <string>440 384 410 433 0 0  1440 900 </string>
+    <key>ScrollBackLines</key>
+    <integer>256</integer>
+    <key>Shell</key>
+    <string>/bin/zsh</string>
+    <key>TerminalFont</key>
+    <string>FreeMono-Bold</string>
+    <key>TerminalFontSize</key>
+    <real>12</real>
+    <key>UseMultiCellGlyphs</key>
+    <string>NO</string>
+    <key>WindowCloseBehavior</key>
+    <integer>0</integer>
+    <key>WindowHeight</key>
+    <integer>25</integer>
+    <key>WindowWidth</key>
+    <integer>120</integer>
+</dict>
+</plist>

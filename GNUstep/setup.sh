@@ -33,3 +33,9 @@ cp ./home/Icons/* ~/Icons/
 # icons
 # wget -O "openstepicons-1.1.tar.gz" "http://galgot.free.fr/NeXTicons/openstepicons-1.1.tar.gz"
 # wget -O "areao43_folder-remote.tar.gz" "http://galgot.free.fr/NeXTicons/areao43_folder-remote.tar.gz"
+
+cp ./home/.xsession ~/
+cp ./home/.xsessionrc ~/
+
+rm -rf ~/GNUstep/Defaults
+cp -r ./home/GNUstep/Defaults ~/GNUstep/
