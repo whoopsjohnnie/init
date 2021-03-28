@@ -1,12 +1,13 @@
 
-;; prevent silly initial splash screen
-(setq inhibit-splash-screen t)
-
 ;; Disable menubar
 ;(menu-bar-mode -1) 
 
 ;; Disable toolbar
-(tool-bar-mode -1)
+; (tool-bar-mode -1)
+
+;; turn off toolbar
+(if window-system
+    (tool-bar-mode -1))
 
 ;; CUA Mode, I cannot live without it
 (cua-mode t)
@@ -20,5 +21,18 @@
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
 ;;
-(setq default-directory "~/")
-(setq command-line-default-directory "~/")
+; (setq default-directory "~/")
+; (setq command-line-default-directory "~/")
+(if window-system
+    (setq default-directory "~/"))
+
+;;
+; (eval-after-load "color-theme"
+;   '(progn
+;      (color-theme-initialize)
+;      (color-theme-dusk)
+;      (when (display-graphic-p)
+;        ;; settings for GUI emacs
+;        (add-to-list 'default-frame-alist '(background-color . "#282B35"))
+;        (add-to-list 'default-frame-alist '(foreground-color . "White"))
+;        (set-frame-font "Inconsolata 18" nil t))))
