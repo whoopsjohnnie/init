@@ -1,0 +1,82 @@
+
+;;
+;; https://people.kth.se/~e97_jog/emacs/
+;; https://people.kth.se/~e97_jog/emacs/FSF-emacs
+;;
+
+;;Goto line
+(global-set-key (quote [f12]) (quote goto-line))
+
+;;Rad/kolumnnummer
+(setq line-number-mode 't)
+(setq column-number-mode 't)
+
+;;Klocka
+
+(setq display-time-24hr-format t)
+(setq calendar-week-start-day 1)
+(display-time)
+
+;;Automatisk radmatning sist
+(setq require-final-newline 'ask)
+
+;;Markera sökträffar
+(setq search-highlight t)
+(setq query-replace-highlight t)
+
+;;Färgläggning av text
+(if (fboundp 'global-font-lock-mode)
+    (global-font-lock-mode t))
+
+;;Maximalt antal färger
+(setq font-lock-maximum-decoration t)
+
+(add-hook 'c-mode-hook 'turn-on-font-lock)
+(add-hook 'c++-mode-hook 'turn-on-font-lock)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-font-lock)
+(add-hook 'tex-mode-hook 'turn-on-font-lock)
+(add-hook 'latex-mode-hook 'turn-on-font-lock)
+(add-hook 'perl-mode-hook 'turn-on-font-lock)
+(add-hook 'scheme-mode-hook 'turn-on-font-lock)
+(add-hook 'java-mode-hook 'turn-on-font-lock)
+(add-hook 'lisp-mode-hook 'turn-on-font-lock)
+(add-hook 'makefile-mode-hook 'turn-on-font-lock)
+(add-hook 'nroff-mode-hook 'turn-on-font-lock)
+(add-hook 'pascal-mode-hook 'turn-on-font-lock)
+(add-hook 'sgml-mode-hook 'turn-on-font-lock)
+(add-hook 'sh-mode-hook 'turn-on-font-lock)
+(add-hook 'tcl-mode-hook 'turn-on-font-lock)
+(add-hook 'texinfo-mode-hook 'turn-on-font-lock)
+
+;;Visa markering
+(transient-mark-mode t)
+
+;;Matcha paranteser
+(require 'paren)
+(show-paren-mode 't)
+(setq show-paren-style 'parenthesis)
+
+(setq blink-matching-paren-distance nil)
+
+;;Bryt rader
+(setq truncate-lines t)
+(setq scroll-step 1)
+(auto-show-mode t)
+
+;;JAVA
+(require 'jde)
+
+;;TeX
+(require 'tex-site)
+
+;;Rullningslist till höger
+(custom-set-variables
+ '(paren-mode (quote paren) nil (paren)))
+
+;;Okända filer öppnas i textläge
+(setq default-major-mode 'text-mode)
+
+(setq scroll-step 1)
+
+(message ".emacs loaded")
+(custom-set-faces)
