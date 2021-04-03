@@ -25,15 +25,15 @@
 ;;Automatisk radmatning sist
 (setq require-final-newline 'ask)
 
-;;Markera sˆktr‰ffar
+;;Markera s√∂ktr√§ffar
 (setq search-highlight t)
 (setq query-replace-highlight t)
 
-;;F‰rgl‰ggning av text
+;;F√§rgl√§ggning av text
 (if (fboundp 'global-font-lock-mode)
     (global-font-lock-mode t))
 
-;;Maximalt antal f‰rger
+;;Maximalt antal f√§rger
 (setq font-lock-maximum-decoration t)
 
 (add-hook 'c-mode-hook 'turn-on-font-lock)
@@ -74,11 +74,11 @@
 ;;TeX
 (require 'tex-site)
 
-;;Rullningslist till hˆger
+;;Rullningslist till h√∂ger
 (custom-set-variables
  '(paren-mode (quote paren) nil (paren)))
 
-;;Ok‰nda filer ˆppnas i textl‰ge
+;;Ok√§nda filer √∂ppnas i textl√§ge
 (setq default-major-mode 'text-mode)
 
 (setq scroll-step 1)
