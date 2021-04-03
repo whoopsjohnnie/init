@@ -1,3 +1,14 @@
+
+;; 
+;; Incredible, I found my old Digital UNIX emacs files from e.kth.se
+;; 
+;; https://people.kth.se/~e97_jog/.emacs
+;; wget https://people.kth.se/~e97_jog/.emacs
+;; 
+;; Git is mangling timestamps, so adding the original timestamp here for reference
+;; -rw-r--r--  1 john  john  5320 Feb  5  2001 .emacs
+;; 
+
 ;;(setq debug-on-error t) ;; använd inte denna, ger fula debug-meddelanden
 ;*                    -*- emacs-lisp -*-
 ;:*========================================================
