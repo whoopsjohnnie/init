@@ -74,3 +74,6 @@ pkg install -y guile
 # Gotta have an HP48! This was one of the most popular graphing calculators of that time, 
 # I used a TI-89 but oh well.
 pkg install -y x48
+
+# GNU Octave will suffice for actual Matlab
+pkg install -y octave
