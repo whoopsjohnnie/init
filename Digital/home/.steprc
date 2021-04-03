@@ -1,3 +1,14 @@
+
+# 
+# Also found my old Digital UNIX AfterStep config from e.kth.se
+# 
+# https://people.kth.se/~e97_jog/.steprc
+# wget https://people.kth.se/~e97_jog/.steprc
+# 
+# Git is mangling timestamps, so adding the original timestamp here for reference
+# -rw-r--r--  1 john  john  20809 Jul 25  2000 .steprc
+# 
+
 # 08/25/96 sample.steprc v1.6 fsf frank@ssax.com
              ############################################
              # The AfterStep v1.0 Default Configuration #
