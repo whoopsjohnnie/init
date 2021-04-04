@@ -70,3 +70,7 @@ pkg install -y firefox
 # pkg install -y scheme48
 pkg install -y mit-scheme
 pkg install -y guile
+
+# Gotta have an HP48! This was one of the most popular graphing calculators of that time, 
+# I used a TI-89 but oh well.
+pkg install -y x48
