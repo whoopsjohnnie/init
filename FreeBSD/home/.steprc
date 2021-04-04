@@ -158,16 +158,16 @@ DeskTopScale 20
 # ModulePath is a colon-separated list, just like a regular unix PATH
 # Any Module must be found within the path in order to be located
 # and executed
-ModulePath          /misc/hacks/lib/X11/afterstep/modules
+ModulePath          /usr/local/lib/X11/afterstep
 
 #Line added by John --------------
 #PixmapPath          ~/Public/Gigerdir/Giger/
 #---------------------------------
 
 # Another colon-separated list pointing to your pixmaps (color icons)
-PixmapPath          /misc/hacks/lib/X11/icons/
+PixmapPath          /usr/local/include/X11/pixmaps:/usr/local/share/pixmaps
 # Path for your ugly black&white icons
-IconPath            /usr/include/X11/bitmaps/
+IconPath            /usr/local/include/X11/bitmaps:/usr/local/share/bitmaps
 
 # Various styles which can be associated with specific applications
 # Sticky -- remains "stuck" on all desks
@@ -205,12 +205,12 @@ Module Wharf
   # Open up an xterm
 *Wharf xterm monitor.xpm	Exec "-" xterm -132 &
   # Starts the a mailreader
-*Wharf exmh writeletter.xpm	Exec "-" /usr/local/vol/exmh/latest/bin/exmh &
+*Wharf exmh writeletter.xpm	Exec "-" exmh &
   # Surf the web
-*Wharf Netscape netscape3.xpm	Exec "-" communicator &
+*Wharf Netscape netscape3.xpm	Exec "-" firefox &
   # Swallow a pager to quickly get an outlook on your virtual desktop
   # Edit this file in its own window
-*Wharf emacs gnu-animal.xpm	Exec "-" emacs -geometry 100x40 &
+*Wharf emacs text.xpm		Exec "-" emacs -geometry 100x40 &
   # Maple (e97_etj)
 #*Wharf xmaple mini-maple.xpm	Exec "-" xmaple &
 
@@ -241,10 +241,11 @@ Icon "pine"		writeletter.xpm
 Icon "ghostview"	text.xpm
 Icon "Xman"		xman.xpm
 Icon "exmh"		writeletter.xpm
-Icon "emacs"		gnu-animal.xpm
-Icon "xlogout"		exit.xpm
-Icon "xconsole"		dxconsole.xpm
+Icon "emacs"		text.xpm
+Icon "xlogout"		shutdown.xpm
+Icon "xconsole"		xorg.xpm
 Icon "Netscape"		netscape3.xpm
+Icon "Firefox"		netscape3.xpm
 Icon "Untitled*"	YellowBlueRedGeometry.xpm
 Icon "*wgc"		z.xpm
 
@@ -344,7 +345,7 @@ Popup "Applications"
 	Exec	"Xpaint"	exec xpaint &
 	Exec	"Ghostview"	exec ghostview &
 	Exec	"GNU Emacs"	exec emacs &
-	Exec	"Calculator"	exec dxcalc &
+	Exec	"Calculator"	exec xcalc &
 	Exec	"Framemaker"	exec /usr/local/vol/frame5/bin/imaker
 	Exec	"Manual"	exec xman -notopbox -bothshown &
 EndPopup
@@ -435,21 +436,21 @@ EndPopup
 # Images ... quick way to view the included default background images
 Popup "Images"
 	Title	"Images"
-	Exec	"Brick"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/brick.jpg
-	Exec	"Coins"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/coins.jpg
-	Exec	"Dark Wood"	exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/darkwood.jpg
-	Exec	"Eyes"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/eyes.jpg
-	Exec	"Glass"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/glass.jpg
-	Exec	"Green Carpet"	exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/carpet.green.jpg
-	Exec	"Parquet"	exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/parquet.jpg
-	Exec	"Pebbles"	exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/pebbles.jpg
-	Exec	"Rock"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/rock.tile.jpg
-	Exec	"Rope"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/rope.weave.jpg
-	Exec	"Stucco"	exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/stucco.jpg
-	Exec	"Tile"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/tile.check.jpg
-	Exec	"Tree Bark"	exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/bark.jpg
-	Exec	"Volcanic"	exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/volcanic.jpg
-	Exec	"Wood"		exec xv -root -quit /misc/hacks/src/X11/afterstep/backgrounds/wood.jpg
+	Exec	"Brick"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/brick.jpg
+	Exec	"Coins"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/coins.jpg
+	Exec	"Dark Wood"	exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/darkwood.jpg
+	Exec	"Eyes"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/eyes.jpg
+	Exec	"Glass"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/glass.jpg
+	Exec	"Green Carpet"	exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/carpet.green.jpg
+	Exec	"Parquet"	exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/parquet.jpg
+	Exec	"Pebbles"	exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/pebbles.jpg
+	Exec	"Rock"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/rock.tile.jpg
+	Exec	"Rope"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/rope.weave.jpg
+	Exec	"Stucco"	exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/stucco.jpg
+	Exec	"Tile"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/tile.check.jpg
+	Exec	"Tree Bark"	exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/bark.jpg
+	Exec	"Volcanic"	exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/volcanic.jpg
+	Exec	"Wood"		exec xv -root -quit /usr/local/lib/X11/afterstep/backgrounds/wood.jpg
 EndPopup
 
 # Background settings ... choose from either Solid Colors or Color Images
@@ -466,7 +467,7 @@ EndPopup
 Popup "HotList"
 	Title 	"HotList"
         Exec    "Xterm"		exec xterm &
-        Exec    "Netscape"	exec communicator &
+	Exec	"Netscape"	exec firefox &
         Exec    "Netscape -install"	exec netscape -install &
         Popup   "Applications"	Applications
 	Popup	"Utilities"	Utilities
@@ -607,5 +608,4 @@ Key F9		A	N	GoToPage 1 1
 #*Audio end_windowlist twang.au
 
 # qed
-
 
