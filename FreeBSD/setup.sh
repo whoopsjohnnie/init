@@ -59,3 +59,14 @@ pkg install -y aterm
 
 # 
 pkg install -y firefox
+
+# Ahh, good old scheme
+# 
+# I can't remember which version of scheme was used at KTH in 1997 - 1998, 
+# It would have been a version that was available for Digital UNIX on 64 bit alpha in 1997.
+# My guess is that its either mit-scheme, scm, or scheme48
+# 
+# pkg install -y scm
+# pkg install -y scheme48
+pkg install -y mit-scheme
+pkg install -y guile
