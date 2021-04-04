@@ -1,0 +1,73 @@
+# Prototype global .bash_profile file
+# This file is sourced by default user file ~/.bash_profile
+#
+# $Header: /afs/.e.kth.se/system/common/usr/athena/lib/dotfiles/RCS/bash_profile,v 1.19 2004/09/07 14:14:42 abo Exp $
+
+#  This file is sourced for every login shell.
+#  (Read: For every new telnet session and every interactive rsh.)
+
+# Change this to heimdal if and only if /usr/heimdal/bin comes before
+# /usr/athena/bin in the standard PATH, so that kdestroy will work.
+krbdir=/usr/heimdal
+
+# This is a login shell. If it is also interactive then we
+# may ask for tickets.
+# (If we want to ask for tickets in every new xterm, then we
+# should put this code block in bashrc instead. (Bevare of laptops.))
+#  XXX This shell will always be interactive! (?)
+if [ "$PS1" ]; then
+    # Is interactive.
+
+    $krbdir/bin/klist -t
+    if [ $? -eq 1 ]; then
+	if [ -f ~/.no_kauth -o "X$USER" = "Xroot" ]; then
+	    echo "Note: No Kerberos tickets obtained"
+	else
+	    echo ""
+	    echo "Type your password to obtain Kerberos tickets on this machine"
+	    echo "(or type control-C to proceed without tickets)"
+	    if fgrep default_realms /etc/krb5.conf >/dev/null; then
+		for realm in $(fgrep 'default_realms' /etc/krb5.conf|cut -d= -f2); do
+		    $krbdir/bin/klist -t || $krbdir/bin/kinit $USER@$realm
+		done
+            else
+                $krbdir/bin/kauth
+	    fi
+	fi
+    fi
+
+    $krbdir/bin/klist -t
+    if [ $? -eq 1 ]; then
+	echo "Warning: Not Kerberos tickets obtained."
+    fi
+fi
+
+
+# Set up environment common to all shells.
+initdir=/usr/athena/lib/dotfiles
+if [ -r $initdir/bashrc ]; then
+    . $initdir/bashrc
+else
+    echo "Strange, $initdir/bashrc is missing."
+fi
+
+
+$krbdir/bin/klist -t
+if [ $? -eq 0 ]; then
+    $krbdir/bin/afslog
+fi
+
+# modules should be present in every shell.
+if type -p module; then
+    : Have modules already.
+else
+    . /mpkg/modules/current/init/bash
+    module use /afs/e.kth.se/system/modulefiles
+fi
+
+# Check windowsize
+shopt -s checkwinsize
+
+module add TextStartup
+
+

@@ -1,0 +1,13 @@
+# Run the ~/.logout.mine file if it exists
+#
+# $Header: /afs/.e.kth.se/system/common/usr/athena/lib/dotfiles/RCS/bash_logout,v 1.2 2001/08/29 21:25:43 abo Exp $
+
+
+if [ -r ~/.bash_logout.mine ]; then
+    . ~/.bash_logout.mine
+fi
+
+# send hangup signal to the processgroup
+kill -HUP 0
+
+exit 0
