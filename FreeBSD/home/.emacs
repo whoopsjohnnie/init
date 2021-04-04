@@ -21,79 +21,75 @@
 ;: (You do not have to defvar a global variable before using it --
 ;: you can just call `setq' directly like we do for `emacs-major-version'
 ;: below.  It's clearer this way, though.)
-(defvar running-xemacs (string-match "XEmacs\\|Lucid" emacs-version))
+;; XEmacs is defunct
+(defvar running-xemacs nil)
 ;:*======================
 ;:* This is where it all starts...
 (cond (running-xemacs
-;:*======================
-;:*
-;:*======================
-;:* Options Menu Settings for older XEmacsen       
-(cond
-        ((and (string-match "XEmacs" emacs-version)
-              (boundp 'emacs-major-version)
-              (or (and
-                   (= emacs-major-version 19)
-                   (>= emacs-minor-version 14))
-                  (= emacs-major-version 20))
-              (fboundp 'load-options-file))
-         (load-options-file "~/.xemacs-options")))
-;:* if called with -u username, use this username for (load-file):       
-(setq USER "john")
-(let ( (l command-line-args) )
-         (while (not (null l))
-           (if (string= (car l) "-u") (setq USER (cadr l))  )
-           (setq l (cdr l))
-           ))
-(defun USER-load-file (f) (load-file (concat "~" USER "/.xemacs/" f)) )
+
+;;
+;; XEmacs is defunct
+;;
 
 ;:*=====================================================================
 ;:*====================== Johns grejor, för XEmacs =====================
 ;:*=====================================================================
 
-(setq load-path (cons (expand-file-name "~/emacs/") load-path))
-
-;; Startup files for XEmacs 19.xx
-(load-library "xemacs-general")
-(load-library "xemacs-keys")
-(load-library "xemacs-packages")
-;;(load-library "xemacs-mail")
-(load-library "xemacs-c")
-(load-library "xemacs-latex")
-;;(load-library "xemacs-idl")
-
-;;(require 'scroll-in-place)
-(require 'jde)
-;;(require 'tex-site) ;; sätts i xemacs-latex
-
-;;(setq scroll-in-place nil)
-
-(setq scroll-step 1)
+; (setq load-path (cons (expand-file-name "~/emacs/") load-path))
 
 ;:*======================== S L U T ====================================
 
-
-;:* XEmacs ready for take-off!!!
-;:*======================
-
-(let* ((string "XEmacs ready for take-off!!!"))
-  (string-match "XEmacs ready for take-off!!!" string)
-  (put-text-property (match-beginning 0) (match-end 0) 'face 'bold string)
-  (display-message 'message string)
-(sit-for 2))
-
-;:*
-;:* I only use the latest versions of XEmacs, but if you have older,
-;:* incompatible stuff, this is the right place to put it...
-;:*======================
-
 ))
 
-(cond ((not running-xemacs)  
-       (load-file "~/emacs/FSF-emacs")
-       
-       )
-      )
+(cond ((not running-xemacs)
+
+;:*=====================================================================
+;:*===================== Johns grejor, för FSF Emacs ===================
+;:*=====================================================================
+
+;; set a nice retro font, ala Digital UNIX circa 1997 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Misc Fixed" :foundry "Misc" :slant normal :weight normal :height 98 :width normal)))))
+
+;; prevent silly initial splash screen
+(setq inhibit-splash-screen t)
+
+;; Disable menubar
+; (menu-bar-mode -1) 
+
+;; Disable toolbar
+; (tool-bar-mode -1)
+
+;; John: I am pretty sure emacs 19 did not have a tool bar
+;; However XEmacs did, but this is the FSF Emacs clause
+;; turn off toolbar
+(if window-system
+    (tool-bar-mode -1))
+
+;; CUA Mode, I cannot live without it
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+
+;; CUA Mode, this lets me paste into the search bar
+; (define-key isearch-mode-map "\C-v" 'isearch-yank-kill)
+; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
+(define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
+
+;;
+; (setq default-directory "~/")
+; (setq command-line-default-directory "~/")
+
+(load-file "~/emacs/FSF-emacs")
+
+;:*======================== S L U T ====================================
+
+))
 
 ;:*
 ;:* That's all folks :-)       
@@ -154,4 +150,3 @@
 ;:* might only be of interest for someone who's doing a little LaTeX
 ;:* and mail/news. So - enjoy...
 ;:*
-

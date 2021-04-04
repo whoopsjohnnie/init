@@ -66,13 +66,13 @@
 ;;Bryt rader
 (setq truncate-lines t)
 (setq scroll-step 1)
-(auto-show-mode t)
+;(auto-show-mode t)
 
 ;;JAVA
-(require 'jde)
+;(require 'jde)
 
 ;;TeX
-(require 'tex-site)
+;(require 'tex-site)
 
 ;;Rullningslist till höger
 (custom-set-variables
