@@ -54,19 +54,19 @@ TextureTypes 1 1 1 1 1
 
 # Set the number of colors to use on textures.
 # Default is 10 on 8bpp screens and 128 on +16bpp.
-TextureMaxColors 128 128 128 128
+TextureMaxColors 4 4 4 4
 
 # Texture Colors, given in Standard RGB X numbering
 # Window TitleBar textures
-TitleTextureColor	#000000	#0A0A0A
+TitleTextureColor	#000010	#303080
+#TitleTextureColor	#000010	#F03080
 
 # Unfocused TitleBar textures
-UTitleTextureColor	#A0A0A0	#AAAAAA
-
+UTitleTextureColor	#808281	#a0a2a1
 # Menu TitleBar textures
-MTitleTextureColor	#000010	#111111
+MTitleTextureColor	#000010	#303080
 # Menu Item textures
-MenuTextureColor	#A0A0A0 #AAAAAA
+MenuTextureColor	#808080	#d0d0d0
 
 # Menu Font
 Font                    -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
@@ -202,31 +202,31 @@ Module Wharf
 # Create a pullout "Folder" as the first button on Wharf
 *Wharf AfterStep AfterStep.xpm Folder
   # Include all desired icons for this initial Folder here
+  # Open up an xterm
+*Wharf xterm monitor.xpm	Exec "-" xterm -132 &
+  # Starts the a mailreader
+*Wharf exmh writeletter.xpm	Exec "-" exmh &
+  # Surf the web
+*Wharf Netscape netscape3.xpm	Exec "-" firefox &
+  # Swallow a pager to quickly get an outlook on your virtual desktop
+  # Edit this file in its own window
+*Wharf emacs text.xpm		Exec "-" emacs -geometry 100x40 &
+  # Maple (e97_etj)
+#*Wharf xmaple mini-maple.xpm	Exec "-" xmaple &
+
+  # Click on the different "desks" to change in between them
   # Lock the display and use a kaleidoscope screensaver
 *Wharf xlock KeysOnChain.xpm Exec "-" xlock -mode random
   # This first will shut down AfterStep
-*Wharf Shutdown  shutdown.xpm  Quit
+#*Wharf Shutdown  shutdown.xpm  Quit
   # Close the Folder
 *Wharf ~Folder
-
-  # Swallow a pager to quickly get an outlook on your virtual desktop
-  # Click on the different "desks" to change in between them
 *Wharf pager nil SwallowModule "Pager" Pager 0 0
   # Add a Beatiful little timepiece 
   # MaxSwallow it in order to fit the full button
 *Wharf asclock nil MaxSwallow "asclock" asclock -24 -shape &
   # Examine your computer's load
 *Wharf xload nil Swallow "xload" xload -label Load -geometry 48x48+0+0 &
-  # Open up an xterm
-*Wharf xterm monitor.xpm	Exec "-" urxvt -title "Terminal" &
-  # Starts the a mailreader
-*Wharf exmh writeletter.xpm	Exec "-" exmh &
-  # Surf the web
-*Wharf Netscape netscape3.xpm	Exec "-" firefox &
-  # Edit this file in its own window
-*Wharf emacs text.xpm		Exec "-" emacs -geometry 100x40 &
-  # Maple (e97_etj)
-#*Wharf xmaple mini-maple.xpm	Exec "-" xmaple &
 
 #////////////////#
 # Icon Selection #
@@ -237,8 +237,6 @@ Module Wharf
 Icon ""			unknown1.xpm
 #Icon "xterm"		as1.5-iconize-p2.xpm
 Icon "xterm"		monitor.xpm
-Icon "aterm"		monitor.xpm
-Icon "urxvt"		monitor.xpm
 Icon "pine"		writeletter.xpm
 Icon "ghostview"	text.xpm
 Icon "Xman"		xman.xpm
@@ -468,9 +466,9 @@ EndPopup
 # defined first before they can be placed in a different menu
 Popup "HotList"
 	Title 	"HotList"
-        Exec    "Xterm"		exec xterm -title "Terminal" &
+        Exec    "Xterm"		exec xterm &
 	Exec	"Netscape"	exec firefox &
-        # Exec    "Netscape -install"	exec netscape -install &
+        Exec    "Netscape -install"	exec netscape -install &
         Popup   "Applications"	Applications
 	Popup	"Utilities"	Utilities
         Popup   "Games"		Games
