@@ -1,0 +1,125 @@
+# Uncomment and Edit the next line to enable your preferred gtk icon theme.
+gtk-icon-theme-name = "Tango"
+
+# Edit these colors and fonts however you like.
+style "default"
+{
+	fg[NORMAL]         =    "#E6E6E6"   	
+	fg[ACTIVE]         =    "#E6E6E6"   	
+	fg[PRELIGHT]       =    "#E6E6E6"	
+	fg[SELECTED]       =    "#F5F8FA"      	
+	fg[INSENSITIVE]	   =    "#262D33"    	   	
+	bg[NORMAL]	   =	"#34404C" #*** buttons, menu, tabs and apps background
+	bg[ACTIVE]         =   	"#5B6665" # tabs not selected, buttons pressed but not prelight 
+	bg[PRELIGHT]       =  	"#8A8899" # button mouseover, just like wharf		
+	bg[SELECTED]       =  	"#665646" # ???	  	
+	bg[INSENSITIVE]    = 	"#5C5B66" # ???   		
+
+	text[NORMAL]       =    "#000000" # text color while typing, non negociable
+#	text[NORMAL]       =    "InactiveText1" #*** text color while typing
+	text[ACTIVE]       = 	"#E6E6E6"   	
+	text[PRELIGHT]     = 	"#E6E6E6"	
+	text[SELECTED]     = 	"#F5F8FA"		
+	text[INSENSITIVE]  = 	"#E6E6E6"   	
+
+	base[NORMAL]       = 	"#ffffff" # text background while typing, non negociable
+#	base[NORMAL]       = 	"Inactive1" #*** text background while typing
+	base[ACTIVE]       = 	"#5B6665" # selected text not focused  		
+	base[PRELIGHT]     = 	"#5C5B66" #???		
+	base[SELECTED]     = 	"#665646" # selected text in text area	  	
+	base[INSENSITIVE]  = 	"#5C5B66" # ???  		
+
+
+	GtkButton::default_border = { 0, 0, 0, 0 }
+  	GtkButton::default_outside_border = { 0, 0, 0, 0 }
+  	GtkRange::trough_border = 0
+
+	GtkWidget::focus_padding = 1
+	
+        GtkRange::slider_width = 15
+        GtkRange::stepper_size = 15
+        GtkScrollbar::min_slider_length = 30
+        GtkCheckButton::indicator_size = 12
+	GtkMenuBar::internal-padding = 0
+
+	engine "clearlooks"  {
+	       menubarstyle      = 1       # 0 = flat, 1 = sunken, 2 = flat gradient
+               menuitemstyle     = 1       # 0 = flat, 1 = 3d-ish (gradient), 2 = 3d-ish (button)
+               listviewitemstyle = 1       # 0 = flat, 1 = 3d-ish (gradient)
+               progressbarstyle  = 0      # 0 = candy bar, 1 = flat
+	}
+}
+
+class "*" style "default"
+
+
+style "ToolTip"
+{
+  bg[NORMAL] = "#586C7F"
+  base[NORMAL] = "#586C7F"
+  text[NORMAL] = "#E6E6E6"
+  fg[NORMAL] = "#E6E6E6"
+}
+
+widget "gtk-tooltips" style "ToolTip"
+
+
+style "scrollbar" = "default"
+{
+#  bg[PRELIGHT]     =  "Inactive1Light"
+  bg[PRELIGHT]	    =  "#665646"
+  bg[NORMAL]        = "#586C7F" #***
+  bg[ACTIVE]        = "#5C5B66"
+}
+
+widget_class "*GtkVScrollbar*"     style "scrollbar"
+class "*GtkVScrollbar*"            style "scrollbar"
+widget_class "*GtkHScrollbar*"     style "scrollbar"
+class "*GtkHScrollbar*"            style "scrollbar"
+
+
+style "button" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+
+#    bg[PRELIGHT]      = "Inactive1Light" # button mouseover, just like wharf
+    bg[PRELIGHT]      =	"#665646"
+    bg[NORMAL]        = "#586C7F" #*** buttons, menu, tabs and apps background
+    bg[ACTIVE]        = "#5B6665" # tabs not selected, buttons pressed but not prelight
+}
+
+widget_class "*Button*"            style "button"
+class "*Button*"                   style "button"
+widget_class "*button*"            style "button"
+class "*button*"                   style "button"
+widget_class "*OptionMenu*"        style "button"
+class "*OptionMenu*"               style "button"
+
+# Modify this for reverse text in menu according to colorscheme
+style "clearlooks-menu-item" = "default"
+{
+  xthickness = 2
+  ythickness = 3
+  fg[PRELIGHT] = "#F5F8FA"
+  text[PRELIGHT] = "#F5F8FA"
+}
+
+widget_class "*MenuItem.*" style "clearlooks-menu-item"
+class "GtkMenuItem"    style "clearlooks-menu-item"
+
+
+style "menubar" = "default"
+{
+  xthickness = 2
+  ythickness = 3
+  bg[PRELIGHT]      = "#8A8899" # button mouseover, just like wharf
+  bg[NORMAL]        = "#586C7F" #*** buttons, menu, tabs and apps background
+  bg[ACTIVE]        = "#5B6665" # tabs not selected, buttons pressed but not prelight
+}
+
+widget_class "*MenuBar.*" style "menubar"
+class "GtkMenuBar"    style "menubar"
+
+
+
