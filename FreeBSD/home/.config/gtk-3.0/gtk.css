@@ -1,0 +1,8 @@
+
+#pane #menubar,
+#pane #menubar GtkMenuShell,
+#pane #menubar GtkMenuShell *
+{
+    font-family: "Misc Fixed";
+    font-weight: "normal";
+}

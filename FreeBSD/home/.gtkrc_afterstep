@@ -1,0 +1,36 @@
+# Edit these colors and fonts however you like.
+style "default"
+{
+	fg[NORMAL]         =    "#E6E6E6"   	
+	fg[ACTIVE]         =    "#E6E6E6"   	
+	fg[PRELIGHT]       =    "#E6E6E6"	
+	fg[SELECTED]       =    "#F5F8FA"      	
+	fg[INSENSITIVE]	   =    "#262D33"    	
+	bg[NORMAL]         =   	"#5C5B66"       	
+	bg[ACTIVE]         =   	"#5B6665"   		
+	bg[PRELIGHT]       =  	"#8A8899"		
+	bg[SELECTED]       =  	"#665646"	  	
+	bg[INSENSITIVE]    = 	"#5C5B66"   		
+	text[NORMAL]       = 	"#E6E6E6"   	
+	text[ACTIVE]       = 	"#E6E6E6"   	
+	text[PRELIGHT]     = 	"#E6E6E6"	
+	text[SELECTED]     = 	"#F5F8FA"		
+	text[INSENSITIVE]  = 	"#E6E6E6"   	
+
+	base[NORMAL]       = 	"#5C5B66"   		
+	base[ACTIVE]       = 	"#5B6665"   		
+	base[PRELIGHT]     = 	"#8A8899"		
+	base[SELECTED]     = 	"#665646"	  	
+	base[INSENSITIVE]  = 	"#5C5B66"   		
+
+
+	engine "clearlooks"  {
+	       menubarstyle      = 2       # 0 = flat, 1 = sunken, 2 = flat gradient
+               menuitemstyle     = 1       # 0 = flat, 1 = 3d-ish (gradient), 2 = 3d-ish (button)
+               listviewitemstyle = 1       # 0 = flat, 1 = 3d-ish (gradient)
+               progressbarstyle  = 0       # 0 = candy bar, 1 = flat
+	}
+}
+
+class "GtkWidget" style "default"
+
