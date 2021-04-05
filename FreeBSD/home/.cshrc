@@ -1,56 +1,23 @@
-# $FreeBSD$
 #
-# .cshrc - csh resource script, read at beginning of execution by each shell
+# $Header: /afs/.nada.kth.se/usr/local/etc/nadaskel/srcfiles/sv/RCS/.cshrc,v 1.2 1997/08/07 10:22:49 fjo Exp $
 #
-# see also csh(1), environ(7).
-# more examples available at /usr/share/examples/csh/
+#  Initieringsfil till csh
 #
+#  Vill du veta mer om denna fil, läs i filen README i din hemkatalog.
+#
+#  (.cshrc 2.0)
 
-set color
-setenv CLICOLOR yes
+# Producera ingen "core"-fil när ett program kraschar
+# (skriv "unlimited" istället för 0 om du vill ha "core-dumpar")
+limit coredumpsize 0
+limit cputime unlimited
 
-setenv LS_COLORS	"di=01;36;40"
-setenv LSCOLORS		"GxGxFxdxCxegedabagExEx"
+# Skriv "unset" istället för "set" i dessa för att få motsatt effekt 
+set ignoreeof		# ignorera C-d till skalet (istället för att dö)
+set noclobber		# skriv inte över existerande filer i skalet
+set notify		# tala om omedelbart när backgrunds-jobb är klara
+set recexact		# känn igen exakta substrängar vid komplettering
+set rmstar		# fråga när man försöker ta bort alla filer (med *)
 
-alias h		history 25
-alias j		jobs -l
-# alias ls	ls-F
-alias ls	ls --color=auto
-alias la	ls -aF --color=auto
-alias lf	ls -FA --color=auto
-alias ll	ls -lAF --color=auto
+alias emacs 'emacs-20.7'
 
-alias emacs	emacs -nw
-alias gcc	cc
-
-# These are normally set through /etc/login.conf.  You may override them here
-# if wanted.
-# set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/bin)
-# A righteous umask
-# umask 22
-
-# setenv	EDITOR	vi
-setenv	EDITOR	vim
-setenv	PAGER	less
-
-if ($?prompt) then
-	# An interactive shell -- set some stuff up
-	# set prompt = "%N@%m:%~ %# "
-	set prompt = "%N@%M %~>"
-	set promptchars = "%#"
-
-	set filec
-	set history = 1000
-	set savehist = (1000 merge)
-	set autolist = ambiguous
-	# Use history to aid expansion
-	set autoexpand
-	set autorehash
-	set mail = (/var/mail/$USER)
-	if ( $?tcsh ) then
-		bindkey "^W" backward-delete-word
-		bindkey -k up history-search-backward
-		bindkey -k down history-search-forward
-	endif
-
-endif
