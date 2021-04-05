@@ -3,13 +3,12 @@
 #
 #  Initieringsfil till tcsh och csh vid inloggning
 #
-#  Vill du veta mer om denna fil, l‰s i filen README i din hemkatalog.
+#  Vill du veta mer om denna fil, l√§s i filen README i din hemkatalog.
 #
 #  (.login 2.0)
 #
 
 xset -b
-
 
 
 
