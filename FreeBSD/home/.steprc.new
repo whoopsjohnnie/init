@@ -61,6 +61,7 @@ TextureMaxColors 128 128 128 128
 TitleTextureColor	#000000	#0A0A0A
 
 # Unfocused TitleBar textures
+# UTitleTextureColor	#808281	#a0a2a1
 UTitleTextureColor	#A0A0A0	#AAAAAA
 
 # Menu TitleBar textures
@@ -158,6 +159,7 @@ DeskTopScale 20
 # ModulePath is a colon-separated list, just like a regular unix PATH
 # Any Module must be found within the path in order to be located
 # and executed
+# ModulePath          /misc/hacks/lib/X11/afterstep/modules
 ModulePath          /usr/local/lib/X11/afterstep
 
 #Line added by John --------------
@@ -165,8 +167,10 @@ ModulePath          /usr/local/lib/X11/afterstep
 #---------------------------------
 
 # Another colon-separated list pointing to your pixmaps (color icons)
+# PixmapPath          /misc/hacks/lib/X11/icons/
 PixmapPath          /usr/local/include/X11/pixmaps:/usr/local/share/pixmaps
 # Path for your ugly black&white icons
+# IconPath            /usr/include/X11/bitmaps/
 IconPath            /usr/local/include/X11/bitmaps:/usr/local/share/bitmaps
 
 # Various styles which can be associated with specific applications
@@ -209,7 +213,7 @@ Module Wharf
   # Close the Folder
 *Wharf ~Folder
 
-  # Swallow a pager to quickly get an outlook on your virtual desktop
+# Swallow a pager to quickly get an outlook on your virtual desktop
   # Click on the different "desks" to change in between them
 *Wharf pager nil SwallowModule "Pager" Pager 0 0
   # Add a Beatiful little timepiece 
@@ -217,16 +221,19 @@ Module Wharf
 *Wharf asclock nil MaxSwallow "asclock" asclock -24 -shape &
   # Examine your computer's load
 *Wharf xload nil Swallow "xload" xload -label Load -geometry 48x48+0+0 &
+
   # Open up an xterm
-*Wharf xterm monitor.xpm	Exec "-" urxvt -title "Terminal" &
-  # Starts the a mailreader
-*Wharf exmh writeletter.xpm	Exec "-" exmh &
-  # Surf the web
-*Wharf Netscape netscape3.xpm	Exec "-" firefox &
+*Wharf urxvt monitor.xpm	Exec "-" urxvt -title "Terminal" &
+
   # Edit this file in its own window
 *Wharf emacs text.xpm		Exec "-" emacs -geometry 100x40 &
-  # Maple (e97_etj)
+# Maple (e97_etj)
 #*Wharf xmaple mini-maple.xpm	Exec "-" xmaple &
+
+  # Surf the web
+*Wharf Netscape netscape3.xpm	Exec "-" firefox &
+  # Starts the a mailreader
+*Wharf exmh writeletter.xpm	Exec "-" exmh &
 
 #////////////////#
 # Icon Selection #
@@ -243,9 +250,11 @@ Icon "pine"		writeletter.xpm
 Icon "ghostview"	text.xpm
 Icon "Xman"		xman.xpm
 Icon "exmh"		writeletter.xpm
-Icon "emacs"		text.xpm
+Icon "emacs"		gnu-animal.xpm
+# Icon "xlogout"		exit.xpm
 Icon "xlogout"		shutdown.xpm
-Icon "xconsole"		xorg.xpm
+# Icon "xconsole"		dxconsole.xpm
+# Icon "xconsole"		xorg-bw.xpm
 Icon "Netscape"		netscape3.xpm
 Icon "Firefox"		netscape3.xpm
 Icon "Untitled*"	YellowBlueRedGeometry.xpm
@@ -347,6 +356,7 @@ Popup "Applications"
 	Exec	"Xpaint"	exec xpaint &
 	Exec	"Ghostview"	exec ghostview &
 	Exec	"GNU Emacs"	exec emacs &
+	# Exec	"Calculator"	exec dxcalc &
 	Exec	"Calculator"	exec xcalc &
 	Exec	"Framemaker"	exec /usr/local/vol/frame5/bin/imaker
 	Exec	"Manual"	exec xman -notopbox -bothshown &
@@ -467,8 +477,10 @@ EndPopup
 # our above Menus to this one ... also note that menus must be
 # defined first before they can be placed in a different menu
 Popup "HotList"
-	Title 	"HotList"
-        Exec    "Xterm"		exec xterm -title "Terminal" &
+	Title 	"Stuff"
+        # Exec    "Xterm"		exec xterm &
+	Exec	"Xterm"		exec xterm -title "Terminal" &
+        # Exec    "Netscape"	exec communicator &
 	Exec	"Netscape"	exec firefox &
         # Exec    "Netscape -install"	exec netscape -install &
         Popup   "Applications"	Applications
