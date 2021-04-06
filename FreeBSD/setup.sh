@@ -19,6 +19,9 @@ pkg install -y xsetroot
 pkg install -y xrandr
 pkg install -y xdm
 
+pkg install -y xterm
+pkg install -y urxvt
+
 # 
 pkg install -y xv
 pkg install -y xman

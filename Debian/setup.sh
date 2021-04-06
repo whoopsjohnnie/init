@@ -9,9 +9,13 @@ sudo apt-get install -y rsync
 
 # Env
 sudo apt-get install -y zsh
-sudo apt-get install -y emacs
+sudo apt-get install -y tcsh
 
-sudo snap install --classic sublime-text
+sudo apt-get install -y vim
+sudo apt-get install -y emacs
+sudo apt-get install -y git
+
+# sudo snap install --classic sublime-text
 
 # sudo snap install --classic code
 # sudo snap install --classic eclipse
@@ -57,12 +61,47 @@ sudo apt-get install -y xorg
 sudo apt-get install -y xinit
 sudo apt-get install -y xdm
 
+sudo apt-get install -y xterm
+sudo apt-get install -y rxvt
+
 sudo apt-get install -y x11-apps
+sudo apt-get install -y xpaint
+
+sudo apt-get install -y exmh
+
+sudo apt-get install -y xbill
+sudo apt-get install -y xplanet
 
 sudo apt-get install -y afterstep
 
 sudo apt-get install -y wmaker
 sudo apt-get install -y menu
+
+# 
+# sudo apt-get install -y firefox
+sudo apt-get install -y firefox-esr
+
+# Ahh, good old scheme
+# 
+# I can't remember which version of scheme was used at KTH in 1997 - 1998, 
+# It would have been a version that was available for Digital UNIX on 64 bit alpha in 1997.
+# My guess is that its either mit-scheme, scm, or scheme48
+# 
+# In the pkg/mpkg ports trees, which were used during this time on the elektro Digital Unix systems, 
+# I can find the following scheme versions, umb-scheme, guile and chez
+# 
+# sudo apt-get install -y scm
+# sudo apt-get install -y scheme48
+# sudo apt-get install -y chez-scheme
+sudo apt-get install -y mit-scheme
+sudo apt-get install -y guile2.2
+
+# Gotta have an HP48! This was one of the most popular graphing calculators of that time, 
+# I used a TI-89 but oh well.
+# sudo apt-get install -y x48
+
+# GNU Octave will suffice for actual Matlab
+sudo apt-get install -y octave
 
 # Dots
 # cp ./home/.bashrc ~/.bashrc
