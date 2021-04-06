@@ -3,8 +3,9 @@
 # set -x
 
 # Sys
+sudo apt-get install -y sudo
 sudo apt-get install -y rsync
-sudo apt-get install -y snapd
+# sudo apt-get install -y snapd
 
 # Env
 sudo apt-get install -y zsh
@@ -12,10 +13,10 @@ sudo apt-get install -y emacs
 
 sudo snap install --classic sublime-text
 
-sudo snap install --classic code
-sudo snap install --classic eclipse
-
-sudo snap install --classic slack
+# sudo snap install --classic code
+# sudo snap install --classic eclipse
+# 
+# sudo snap install --classic slack
 
 # Dev
 sudo apt-get install -y gawk 
@@ -37,8 +38,8 @@ sudo apt-get install -y pipenv
 # sudo apt-get install -y mate-desktop-environment
 # sudo apt-get install -y mate-desktop-environment-extras
 
-sudo apt-get install -y network-manager
-sudo apt-get install -y network-manager-gnome
+# sudo apt-get install -y network-manager
+# sudo apt-get install -y network-manager-gnome
 
 # sudo apt-get install -y gtk2-engines-murrine
 # sudo apt-get install -y gtk2-engines-pixbuf
@@ -50,14 +51,27 @@ sudo apt-get install -y network-manager-gnome
 # sudo apt-get install -y moka-icon-theme
 # sudo apt-get install -y numix-icon-theme
 
+# X
+
+sudo apt-get install -y xorg
+sudo apt-get install -y xinit
+sudo apt-get install -y xdm
+
+sudo apt-get install -y x11-apps
+
+sudo apt-get install -y afterstep
+
+sudo apt-get install -y wmaker
+sudo apt-get install -y menu
+
 # Dots
-cp ./home/.bashrc ~/.bashrc
-cp ./home/.zshrc ~/.zshrc
-cp ./home/.emacs ~/.emacs
+# cp ./home/.bashrc ~/.bashrc
+# cp ./home/.zshrc ~/.zshrc
+# cp ./home/.emacs ~/.emacs
 
 # Shell
-chmod 644 .zshrc || true
-chsh -s /bin/zsh || true
+# chmod 644 .zshrc || true
+# chsh -s /bin/zsh || true
 
 # VirtualBox
 # https://www.virtualbox.org/wiki/Linux_Downloads
