@@ -1,0 +1,6 @@
+
+https://www.sys.kth.se/staff/mpkg
+
+MPKG is a ports collection. A ports collection is a collection of ports. Each port contains the information necessary to automatically download and install a specific program. After downloading MPKG itself, you will be able to install any program in the collection with a simple command.
+
+MPKG is available under a BSD 2 point-style license. For details see COPYING.
