@@ -1,0 +1,31 @@
+/* XPM */
+static char *magick[] = {
+/* columns rows colors chars-per-pixel */
+"14 14 11 1",
+"  c gainsboro",
+". c #c3c3c3",
+"X c #585858",
+"o c #a0a0a0",
+"O c #808080",
+"+ c Gray19",
+"@ c Gray0",
+"# c Gray100",
+"$ c #ffc0ff",
+"% c #c0c0ff",
+"& c #c05800",
+/* pixels */
+" ............X",
+"oOOOOOOOOOO+OX",
+"oOOXXXXXOO++XX",
+"oOoXoOOoo+XXOX",
+"ooOXOoOo+++ooX",
+"ooXOooX+XX@oOX",
+"oo.##.+$#.@oOX",
+"oO.#o+ ##.@oOX",
+"oO.%+ ###O@oo+",
+"oo.+.  ##.@oOX",
+"oO. #####o@oOX",
+"oOXoOOoXO&@oOX",
+"oo@+@++@+@+ooX",
+"oXXXXXXXXXXXX+"
+};

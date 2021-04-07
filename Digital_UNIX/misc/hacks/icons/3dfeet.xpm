@@ -1,0 +1,34 @@
+/* XPM */
+static char *magick[] = {
+/* columns rows colors chars-per-pixel */
+"50 17 11 1",
+"  c Gray19",
+". c #800080",
+"X c #400000",
+"o c #800000",
+"O c #585858",
+"+ c #404000",
+"@ c #ffa858",
+"# c #a0a0a0",
+"$ c #c3c3c3",
+"% c #c000c0",
+"& c #ffc0c0",
+/* pixels */
+" .X. X. X. X. X. X. X. X. X. X. X. X. X. X. X. X. ",
+".oOX.o.X.o. .o.X.o.X.o. .o.X.o.X.o. .o.X.o.X.o. .X",
+" X.oO o.+.XoOX.OX.+.+.XoOX.OX.+.+.XoOX.OX.+.+.Xo. ",
+".o.X.X.+.XO.o. o.+.X.XO.o. o.+.X.XO.o. o.+.X.oO.o ",
+" .+.X.+.X.o .Xo.+.oOo.Xo. o.X.oOo.Xo. o.X.+oOX.X.o",
+"oX.+.X.o.+.X.oO.X.X.o .oOX.+.+.X.X.Oo .XOo. .X.+. ",
+". o.+.+.+.X.+.XoOX. .X. .o.Xo.+.+.X.X.o.X.X.o.+.X.",
+"Oo.X.X.o o.+.XO.X.@##oOoX.+. .oX.+.+.+.+.+.XOoX.o ",
+"X. o$##o. o.X.o##.###.X.OX.XoO. o.X.X.X.o.+.o.OX.o",
+".X.######.XOo#####X.@.X.X.oO.o o.+.o+.oO+.o .X.X. ",
+" o##@%####&####%@##X# o.+.X.X.Oo.X. .X.X.X.XoOo.+.",
+"o.######@#%##%&####.#o.+.X.+.oX.+.+.o+.+.oOo. .X.X",
+".X&%##@%###@####%##o#. o.+.X. .X.Xo. .o.X. . o.+.+",
+"+.X#&%######%@###@#.#.X.X.X.+.oOo.XOo.XO+.o o.+.X.",
+".X.X####%@####%###.X#@. oOo.Xo. . .o.+.o.X.o. o.+o",
+" oOX.o.o##%###o.X.@.X. o.X.+.OoX.oXOX.o .o Oo .o .",
+".X.oOX. .oOo.X.+.X X.X.OX.X.X. .+..X.+.X. .o. o. o"
+};
