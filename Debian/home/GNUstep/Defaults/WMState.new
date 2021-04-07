@@ -1,0 +1,205 @@
+{
+  Dock = {
+    AutoRaiseLower = No;
+    Applications = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        Command = "x-terminal-emulator";
+      },
+      {
+        Forced = No;
+        Name = "firefox-esr.Firefox-esr";
+        DropCommand = "firefox-esr %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "firefox-esr %s";
+        Command = "firefox-esr";
+      },
+      {
+        Forced = No;
+        Name = emacs.Emacs;
+        DropCommand = "emacs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "emacs %s";
+        Command = emacs;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = wmcube.wmcube;
+        DropCommand = "wmcube %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmcube %s";
+        Command = wmcube;
+      },
+      {
+        Forced = No;
+        Name = rxvt.URxvt;
+        DropCommand = "rxvt %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "rxvt %s";
+        Command = rxvt;
+      }
+    );
+    Lowered = No;
+    Position = "0,0";
+    Applications900 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        Command = "x-terminal-emulator";
+      },
+      {
+        Forced = No;
+        Name = "firefox-esr.Firefox-esr";
+        DropCommand = "firefox-esr %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "firefox-esr %s";
+        Command = "firefox-esr";
+      },
+      {
+        Forced = No;
+        Name = emacs.Emacs;
+        DropCommand = "emacs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "emacs %s";
+        Command = emacs;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = wmcube.wmcube;
+        DropCommand = "wmcube %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmcube %s";
+        Command = wmcube;
+      },
+      {
+        Forced = No;
+        Name = rxvt.URxvt;
+        DropCommand = "rxvt %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "rxvt %s";
+        Command = rxvt;
+      }
+    );
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    DropCommand = "wmsetbg -u -t %d";
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "1376,0";
+    Lock = No;
+    Command = "-";
+  };
+  Applications = (
+    {
+      Name = rxvt.URxvt;
+      Shaded = No;
+      Miniaturized = No;
+      Command = rxvt;
+      Geometry = "655x426+639+360";
+      Hidden = No;
+      Workspace = Main;
+      ShortcutMask = 0;
+    },
+    {
+      Dock = Dock;
+      Name = rxvt.URxvt;
+      Shaded = No;
+      Miniaturized = No;
+      Command = rxvt;
+      Geometry = "655x426+390+209";
+      Hidden = No;
+      Workspace = Main;
+      ShortcutMask = 0;
+    }
+  );
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = Main;
+    }
+  );
+  Workspace = Main;
+}

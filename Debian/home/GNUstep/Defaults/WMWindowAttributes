@@ -1,0 +1,23 @@
+{
+  "x-terminal-emulator.XTerm" = {
+    Icon = GNUterm.tiff;
+  };
+  xload.XLoad = {
+    Icon = xload.XLoad.xpm;
+  };
+  groupLeader.WPrefs = {
+    Icon = groupLeader.WPrefs.xpm;
+  };
+  rxvt.URxvt = {
+    Icon = defaultterm.tiff;
+  };
+  emacs.Emacs = {
+    Icon = emacs.Emacs.xpm;
+  };
+  "firefox-esr.Firefox-esr" = {
+    Icon = "firefox-esr.Firefox-esr.xpm";
+  };
+  xterm.UXTerm = {
+    Icon = xterm.UXTerm.xpm;
+  };
+}
