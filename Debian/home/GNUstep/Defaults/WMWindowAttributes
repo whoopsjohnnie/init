@@ -2,6 +2,9 @@
   "x-terminal-emulator.XTerm" = {
     Icon = GNUterm.tiff;
   };
+  thunderbird.Thunderbird = {
+    Icon = thunderbird.Thunderbird.xpm;
+  };
   xload.XLoad = {
     Icon = xload.XLoad.xpm;
   };

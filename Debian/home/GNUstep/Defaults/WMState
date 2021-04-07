@@ -26,7 +26,7 @@
         DropCommand = "firefox-esr %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,6";
+        Position = "0,7";
         Lock = Yes;
         PasteCommand = "firefox-esr %s";
         Command = "firefox-esr";
@@ -37,7 +37,7 @@
         DropCommand = "emacs %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,7";
+        Position = "0,8";
         Lock = Yes;
         PasteCommand = "emacs %s";
         Command = emacs;
@@ -52,6 +52,17 @@
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = thunderbird.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
       },
       {
         Forced = No;
@@ -114,7 +125,7 @@
         DropCommand = "firefox-esr %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,6";
+        Position = "0,7";
         Lock = Yes;
         PasteCommand = "firefox-esr %s";
         Command = "firefox-esr";
@@ -125,7 +136,7 @@
         DropCommand = "emacs %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,7";
+        Position = "0,8";
         Lock = Yes;
         PasteCommand = "emacs %s";
         Command = emacs;
@@ -140,6 +151,17 @@
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = thunderbird.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
       },
       {
         Forced = No;
@@ -186,7 +208,19 @@
     Lock = No;
     Command = "-";
   };
-  Applications = ();
+  Applications = (
+    {
+      Dock = Dock;
+      Name = rxvt.URxvt;
+      Shaded = No;
+      Miniaturized = No;
+      Command = rxvt;
+      Geometry = "565x396+435+224";
+      Hidden = No;
+      Workspace = Main;
+      ShortcutMask = 0;
+    }
+  );
   Drawers = ();
   Workspaces = (
     {
