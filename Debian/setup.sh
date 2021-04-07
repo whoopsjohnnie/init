@@ -72,10 +72,14 @@ sudo apt-get install -y exmh
 sudo apt-get install -y xbill
 sudo apt-get install -y xplanet
 
-sudo apt-get install -y afterstep
+# sudo apt-get install -y afterstep
 
 sudo apt-get install -y wmaker
 sudo apt-get install -y menu
+
+# sudo apt-get install -y wmpager
+sudo apt-get install -y wmclock
+sudo apt-get install -y asmon
 
 # 
 # sudo apt-get install -y firefox
