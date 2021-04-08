@@ -208,19 +208,7 @@
     Lock = No;
     Command = "-";
   };
-  Applications = (
-    {
-      Dock = Dock;
-      Name = rxvt.URxvt;
-      Shaded = No;
-      Miniaturized = No;
-      Command = rxvt;
-      Geometry = "565x396+435+224";
-      Hidden = No;
-      Workspace = Main;
-      ShortcutMask = 0;
-    }
-  );
+  Applications = ();
   Drawers = ();
   Workspaces = (
     {

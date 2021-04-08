@@ -3,7 +3,7 @@
     Icon = GNUterm.tiff;
   };
   thunderbird.Thunderbird = {
-    Icon = thunderbird.Thunderbird.xpm;
+    Icon = writeletter.xpm;
   };
   xload.XLoad = {
     Icon = xload.XLoad.xpm;
@@ -12,13 +12,13 @@
     Icon = groupLeader.WPrefs.xpm;
   };
   rxvt.URxvt = {
-    Icon = defaultterm.tiff;
+    Icon = monitor.xpm;
   };
   emacs.Emacs = {
-    Icon = emacs.Emacs.xpm;
+    Icon = "gnu-animal.xpm";
   };
   "firefox-esr.Firefox-esr" = {
-    Icon = "firefox-esr.Firefox-esr.xpm";
+    Icon = netscape3.xpm;
   };
   xterm.UXTerm = {
     Icon = xterm.UXTerm.xpm;
