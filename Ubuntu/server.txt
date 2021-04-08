@@ -1,0 +1,17 @@
+
+
+# 
+# https://askubuntu.com/questions/360615/ubuntu-server-13-10-now-goes-to-sleep-when-closing-laptop-lid
+# https://askubuntu.com/questions/141866/keep-ubuntu-server-running-on-a-laptop-with-the-lid-closed
+# 
+
+Edit: /etc/systemd/logind.conf
+uncomment/add: 	HandleLidSwitch=ignore
+or:		HandleLidSwitch=lock
+LidSwitchIgnoreInhibited=no?
+
+> sudo restart systemd-logind
+
+> sudo restart systemd-logind
+> sudo systemctl restart systemd-logind.service
+

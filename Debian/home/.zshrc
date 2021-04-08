@@ -12,6 +12,9 @@ autoload -U compinit promptinit
 promptinit
 compinit
 
+# LSCOLORS
+export LS_COLORS="di=01;36;40"
+
 # 
 zstyle ':completion:*' insert-tab false
 # zstyle ':completion:*' menu select
