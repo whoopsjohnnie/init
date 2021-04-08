@@ -3,7 +3,6 @@
     Icon = GNUterm.tiff;
   };
   thunderbird.Thunderbird = {
-    AlwaysUserIcon = Yes;
     Icon = writeletter.xpm;
   };
   xload.XLoad = {
@@ -17,7 +16,6 @@
     Icon = groupLeader.WPrefs.xpm;
   };
   rxvt.URxvt = {
-    AlwaysUserIcon = Yes;
     Icon = monitor.xpm;
   };
   emacs.Emacs = {
@@ -29,11 +27,9 @@
     Icon = writeletter.xpm;
   };
   "firefox-esr.Firefox-esr" = {
-    AlwaysUserIcon = Yes;
     Icon = netscape3.xpm;
   };
   xterm.UXTerm = {
-    AlwaysUserIcon = Yes;
     Icon = xterm.UXTerm.xpm;
   };
 }

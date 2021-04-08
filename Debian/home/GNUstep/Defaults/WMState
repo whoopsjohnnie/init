@@ -13,20 +13,11 @@
       },
       {
         Forced = No;
-        Name = "x-terminal-emulator.XTerm";
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,2";
-        Lock = Yes;
-        Command = "x-terminal-emulator";
-      },
-      {
-        Forced = No;
         Name = "firefox-esr.Firefox-esr";
         DropCommand = "firefox-esr %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,7";
+        Position = "0,6";
         Lock = Yes;
         PasteCommand = "firefox-esr %s";
         Command = "firefox-esr";
@@ -37,7 +28,7 @@
         DropCommand = "emacs %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,8";
+        Position = "0,7";
         Lock = Yes;
         PasteCommand = "emacs %s";
         Command = emacs;
@@ -48,7 +39,7 @@
         DropCommand = "wmclock %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,3";
+        Position = "0,2";
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
@@ -59,7 +50,7 @@
         DropCommand = "thunderbird %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,6";
+        Position = "0,5";
         Lock = Yes;
         PasteCommand = "thunderbird %s";
         Command = thunderbird;
@@ -70,7 +61,7 @@
         DropCommand = "rxvt %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,5";
+        Position = "0,4";
         Lock = Yes;
         PasteCommand = "rxvt %s";
         Command = rxvt;
@@ -92,7 +83,7 @@
         DropCommand = "asmon %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,4";
+        Position = "0,3";
         Lock = Yes;
         PasteCommand = "asmon %s";
         Command = asmon;
@@ -112,20 +103,11 @@
       },
       {
         Forced = No;
-        Name = "x-terminal-emulator.XTerm";
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,2";
-        Lock = Yes;
-        Command = "x-terminal-emulator";
-      },
-      {
-        Forced = No;
         Name = "firefox-esr.Firefox-esr";
         DropCommand = "firefox-esr %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,7";
+        Position = "0,6";
         Lock = Yes;
         PasteCommand = "firefox-esr %s";
         Command = "firefox-esr";
@@ -136,7 +118,7 @@
         DropCommand = "emacs %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,8";
+        Position = "0,7";
         Lock = Yes;
         PasteCommand = "emacs %s";
         Command = emacs;
@@ -147,7 +129,7 @@
         DropCommand = "wmclock %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,3";
+        Position = "0,2";
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
@@ -158,7 +140,7 @@
         DropCommand = "thunderbird %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,6";
+        Position = "0,5";
         Lock = Yes;
         PasteCommand = "thunderbird %s";
         Command = thunderbird;
@@ -169,7 +151,7 @@
         DropCommand = "rxvt %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,5";
+        Position = "0,4";
         Lock = Yes;
         PasteCommand = "rxvt %s";
         Command = rxvt;
@@ -191,7 +173,7 @@
         DropCommand = "asmon %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,4";
+        Position = "0,3";
         Lock = Yes;
         PasteCommand = "asmon %s";
         Command = asmon;
@@ -208,30 +190,7 @@
     Lock = No;
     Command = "-";
   };
-  Applications = (
-    {
-      Dock = Dock;
-      Name = "firefox-esr.Firefox-esr";
-      Shaded = No;
-      Miniaturized = Yes;
-      Command = "firefox-esr";
-      Geometry = "1280x810+78+17";
-      Hidden = No;
-      Workspace = Main;
-      ShortcutMask = 0;
-    },
-    {
-      Dock = Dock;
-      Name = rxvt.URxvt;
-      Shaded = No;
-      Miniaturized = Yes;
-      Command = rxvt;
-      Geometry = "883x578+387+126";
-      Hidden = No;
-      Workspace = Main;
-      ShortcutMask = 0;
-    }
-  );
+  Applications = ();
   Drawers = ();
   Workspaces = (
     {
