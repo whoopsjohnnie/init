@@ -208,7 +208,30 @@
     Lock = No;
     Command = "-";
   };
-  Applications = ();
+  Applications = (
+    {
+      Dock = Dock;
+      Name = "firefox-esr.Firefox-esr";
+      Shaded = No;
+      Miniaturized = Yes;
+      Command = "firefox-esr";
+      Geometry = "1280x810+78+17";
+      Hidden = No;
+      Workspace = Main;
+      ShortcutMask = 0;
+    },
+    {
+      Dock = Dock;
+      Name = rxvt.URxvt;
+      Shaded = No;
+      Miniaturized = Yes;
+      Command = rxvt;
+      Geometry = "883x578+387+126";
+      Hidden = No;
+      Workspace = Main;
+      ShortcutMask = 0;
+    }
+  );
   Drawers = ();
   Workspaces = (
     {
