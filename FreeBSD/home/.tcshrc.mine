@@ -1,27 +1,27 @@
-# I den här filen kan du lägga kommandon som du vill ska utföras varje
-# gång kommandotolkaren startas. Du kan t.ex. göra egna kortkommandon
-# för saker som du gör ofta, byta prompt etc.
-# Läs manualbladet till tcsh om du vill veta allt som går att ställa in 
+# I den hÃ¤r filen kan du lÃ¤gga kommandon som du vill ska utfÃ¶ras varje
+# gÃ¥ng kommandotolkaren startas. Du kan t.ex. gÃ¶ra egna kortkommandon
+# fÃ¶r saker som du gÃ¶r ofta, byta prompt etc.
+# LÃ¤s manualbladet till tcsh om du vill veta allt som gÃ¥r att stÃ¤lla in 
 # i kommandotolkaren.
 
-# Några exempel. (Ta bort kommentarstecknet (#) i början av raden om du 
-# vill att raden ska utföras.)
+# NÃ¥gra exempel. (Ta bort kommentarstecknet (#) i bÃ¶rjan av raden om du 
+# vill att raden ska utfÃ¶ras.)
 
 # definiera kommandot 'show_la' som 
-# visar innehållet i kön till de båda stora laserskrivarna
+# visar innehÃ¥llet i kÃ¶n till de bÃ¥da stora laserskrivarna
 #alias show_la 'lpq -Pprefix; echo " "; lpq -Pdryck'
 
-# Gör så att prompten (normalt 'datornamn>') också innehåller aktuell
+# GÃ¶r sÃ¥ att prompten (normalt 'datornamn>') ocksÃ¥ innehÃ¥ller aktuell
 # katalog, t.ex. hertz:~/numme>:
 #set prompt = '%m:%~>'
 
-# Säg åt kommandotolkaren att rätta stavfel i kommandon:
+# SÃ¤g Ã¥t kommandotolkaren att rÃ¤tta stavfel i kommandon:
 #set correct=all
 alias gcc gcc -Wall -ansi -pedantic -g
 set prompt="%m:%~>"
 
 #---------------------------
-#Mina ändringar
+#Mina Ã¤ndringar
 
 set autolist
 set correct=cmd
