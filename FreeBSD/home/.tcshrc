@@ -1,36 +1,45 @@
-#
-# $Header: /afs/.nada.kth.se/usr/local/etc/nadaskel/srcfiles/sv/RCS/.tcshrc,v 1.2 1997/08/07 10:23:44 fjo Exp $
-#
-#  Initieringsfil till tcsh
-#
-#  Vill du veta mer om denna fil, läs i filen README i din hemkatalog.
-#
-#  (.tcshrc 2.1)
+# Prototype user .tcshrc file
+# Last modified by patriks/910730
 
-# Läs in initieringarna till csh (om den filen finns)
-if ( -r ~/.cshrc ) then
-  source ~/.cshrc
+# This file sources a system-wide tcshrc file, which:
+#      - sets up standard environment variables
+#      - sources user file ~/.environment, if it exists
+#      - sets standard path, OR sources user file ~/.path, if it exists
+#      - sets up standard cshell variables, aliases, etc.
+#      - source user file ~/.tshrc.mine, if it exists
+
+set initdir=/usr/athena/lib/dotfiles
+
+if (-r $initdir/tcshrc) then
+        source $initdir/tcshrc
+else
+	if ($?prompt) then		# Don't echo if noninteractive
+	  echo "Warning: System-wide initialization files not found."
+	  echo "C Shell initialization has not been performed."
+	  stty dec
+	endif
+	# set some basic defaults if failed initialization
+	umask 22
+	set hosttype=`/bin/machine`
+	set bindir=${hosttype}bin
+	set path=( $HOME/$bindir /usr/local/bin /usr/local/bin/X11 /usr/athena/bin /bin/athena /usr/new/mh/bin /usr/ucb /bin /usr/bin . )
 endif
 
-if ( ! $?prompt ) exit;		# Avsluta här om inte körs från terminal
+# If you want to ADJUST the cshell initialization sequence, create any of 
+# the following files (as appropriate) in your home directory, with commands
+# to achieve the effect listed:
+#
+#      .environment - setup session environment (set environmental variables, 
+#                     attach lockers, etc.)
+#      .tcshrc.mine - setup cshell environment (set shell variables, aliases,
+#                     unset system defaults, etc.)
+                      
+# If you want to CHANGE the cshell initialization sequence, revise this .tcshrc
+# file (the one you're reading now).  You may want to copy the contents of
+# the system-wide tcshrc file as a starting point.
+#
+# WARNING: If you revise this .tcshrc file, you will not automatically
+# get any changes that may be made to the system-wide file at 
+# a later date.  Be sure you know what you are doing.
 
-# Speciella funktioner hos olika knappar 
-# bind list-choices ? # disabled for new tcsh version 20010912 sgr	# Frågetecken listar möjliga alternativ
-# bind self-insert-command ?	# Om du snarare vill ha ? normal
-# bind list-choices M-?		# och Meta-? för att lista alternativ
-
-set history = 40	# Historie-listans längd
-set prompt = "%m:%~>"	# "Promptens" utseende (%m =datornamn, %~ =katalognamn)
-set nobeep
-set autolist
-set correct=cmd
-
-
-# Dessa program kan man gå ur med C-z och komma in i igen med programnamnet.
-set continue=(clisp lisp sicstus prolog muprolog sml scheme xscheme elk a.out simuladeb matlab)
-
-# Om man inte kör i X-miljö, ge samma emacs tillbaka när man gått ur med C-z
-# Gör "unset continue_args" för att kunna ha flera olika emacsar
-if ( ! $?DISPLAY ) then
-  set continue_args=(emacs .emacs_pause)
-endif
+xset -b

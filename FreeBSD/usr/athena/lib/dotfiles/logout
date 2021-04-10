@@ -1,0 +1,6 @@
+#!/bin/csh -f
+
+# Run the ~/.logout.mine file if it exists
+if (-r ~/.logout.mine) then
+	source ~/.logout.mine
+endif
