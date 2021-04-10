@@ -27,7 +27,8 @@ set autolist
 set correct=cmd
 set nobeep
 
-
+#
+alias emacs emacs -nw
 
 
 
