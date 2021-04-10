@@ -1,0 +1,56 @@
+# Global bashrc file
+# This file is sourced by default user file ~/.bashrc
+# $Header: /afs/.e.kth.se/system/common/usr/athena/lib/dotfiles/RCS/bashrc,v 1.14 2004/05/26 14:30:34 mattiasa Exp $ 
+
+#  The ~/.bashrc file is should be sourced for every interactive shell,
+#  but for some reason it is only source for non-login interactive shells
+#  and non-interactive shells.
+#  (Read: For every new xterm and every non-interactive rsh.)
+#  But we fixed this in bash_profile, which now sources this file if PS1
+#  is non-empty so this file is sourced for every interactive shell and
+#  every non-login shell.
+#  (Read: For every telnet, rsh and new xterm.)
+
+
+# Change this to heimdal if and only if /usr/heimdal/bin comes before
+# /usr/athena/bin in the standard PATH, so that kdestroy will work.
+krbdir=/usr/heimdal
+
+
+# modules should be present in every shell.
+if type -p module; then
+    : Have modules already.
+else
+    . /mpkg/modules/current/init/bash
+    module use /afs/e.kth.se/system/modulefiles
+fi
+
+# For interactive shells only (i.e., NOT rsh):
+if [ "$PS1" ]; then
+    PS1='\h:\w\$ '		#   Set prompt
+    HISTSIZE=10000		#   Number of commands saved as history
+    IGNOREEOF=3
+
+    # This might work without tickets. XXX
+    $krbdir/bin/klist -t > /dev/null
+    if [ $? = 0 ]; then
+	module add Alias
+    fi
+
+    # Add default path and other things
+    module add Login
+
+    if [ -r ~/.environment ]; then
+	. ~/.environment
+    else
+	echo "Strange, ~/.environment file is missing."
+    fi
+fi
+
+ulimit -S -c 0
+
+# Put own alias in .tcshrc.mine
+if [ -r ~/.bashrc.mine ]; then
+    . ~/.bashrc.mine
+fi
+

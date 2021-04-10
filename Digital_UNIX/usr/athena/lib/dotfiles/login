@@ -1,0 +1,53 @@
+# Prototype global .login file
+# This file is sourced by default user file ~/.login
+#
+
+# Kerberos/AFS stuff
+#
+setenv krbdir /usr/heimdal
+
+$krbdir/bin/klist -t
+if ( $status == 1 ) then
+  if ( -f ~/.no_kauth || $USER == "root") then
+    echo "Note: No Kerberos tickets obtained"
+  else
+    echo
+    echo "Type your password to obtain Kerberos tickets on this machine"
+    echo "(or type control-C to proceed without tickets)"
+
+    fgrep default_realms /etc/krb5.conf >/dev/null
+    if ( $status == 0 ) then
+	foreach realm (`fgrep 'default_realms' /etc/krb5.conf|cut -d= -f2`)
+	    $krbdir/bin/klist -t || $krbdir/bin/kinit $USER@$realm
+	end
+    else
+        $krbdir/bin/kauth
+    endif
+  endif
+endif
+
+# If we don't have a ticket we can safely skip the rest; it won't work!
+$krbdir/bin/klist -t
+if ( $status == 1 ) then
+  set ignoreeof
+  setenv PATH /usr/local/bin:$krbdir/bin:/usr/ucb:$PATH
+  echo "System initialization not done! You are on your own"
+else
+  $krbdir/bin/afslog
+
+  source /mpkg/modules/current/init/tcsh
+  module use /afs/e.kth.se/system/modulefiles
+
+  # Add default path and other thing
+  module add Login
+
+  if ((! $?NOCALLS) && (-r ~/.environment)) source ~/.environment
+
+
+  # Skip DISPLAY Setting.. Don't trying to be smart...
+  # If it's needed, try to put them to a separate module (typ: module add TextEnv)
+
+  module add TextStartup
+endif
+
+

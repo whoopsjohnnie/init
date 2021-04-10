@@ -1,0 +1,42 @@
+# Global tcshrc file
+# This file is sourced by default user file ~/.tcshrc
+ 
+# Hist:
+#  9705*/MiA - Total rewrite. Now is enviroment already set when coming here.
+#  970530/jf - Added system_path
+#  970612/jf - Added coredumpsize
+#  970718/jf - More tests to make rcp work, errors are not allowed!
+#  980401/LHA - Added root bits
+#  980714/max - Added >/dev/null after the klist-line to remove extra newline
+
+# modules
+source /mpkg/modules/current/init/tcsh
+module use /afs/e.kth.se/system/modulefiles
+
+/usr/heimdal/bin/klist -t > /dev/null
+if ( $status == 0 ) then
+  module add Alias
+endif
+
+# Set up standard C shell initializations
+
+set noclobber                   # Don't overwrite files with redirection
+
+if ($?prompt) then              # For interactive shells only (i.e., NOT rsh):
+    set prompt = "%m>"          #   Set prompt
+    set history = 100           #   Number of commands saved as history
+    set cdpath = (~)            #   Path to search for directory changes
+    set interactive             #   Provide shell variable for compatability
+    set notify recexact ignoreeof hcompress
+#    set continue_args=(emacs .emacs_pause)
+    bindkey ? list-choices
+# for people who used the shell-variable system_path when setting the
+# shell path variable
+    set system_path=( /usr/local/bin /usr/local/mh/bin /usr/athena/bin /usr/bin /usr/afsws/bin )    
+    unset dspmbyte
+endif
+
+# Put own alias in .tcshrc.mine
+if ((! $?NOCALLS) && (-r ~/.tcshrc.mine)) source ~/.tcshrc.mine
+
+limit coredumpsize 0
