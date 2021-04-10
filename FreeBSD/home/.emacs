@@ -48,15 +48,23 @@
 ;:*=====================================================================
 
 ;; set a nice retro font, ala Digital UNIX circa 1997 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Misc Fixed" :foundry "Misc" :slant normal :weight normal :height 98 :width normal)))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;; ;; '(default ((t (:family "Misc Fixed" :foundry "Misc" :slant normal :weight normal :height 98 :width normal)))))
 
 ;; prevent silly initial splash screen
 (setq inhibit-splash-screen t)
+
+;(set-foreground-color "white")
+;(set-background-color "black")
+;(set-border-color "black")
+;(set-face-background 'fringe "black")
+
+;; I want an invisible finge
+(set-face-attribute 'fringe nil :background nil)
 
 ;; Disable menubar
 ; (menu-bar-mode -1) 

@@ -26,11 +26,26 @@ URxvt*foreground:	    #FFFFFF
 URxvt*background:	    #000000
 
 ! URxvt*font:		    xft:Misc Fixed:medium:size=12
-URxvt*font:		    7x14
-! URxvt*boldFont:		    7x14bold
-URxvt*boldFont:		    7x14
+URxvt*font:		    6x13
+! URxvt*boldFont:		    6x13bold
+URxvt*boldFont:		    6x13
 URxvt*letterSpace:	    0
 
 URxvt*scrollBar:	    true
 URxvt*scrollBar_right:	    false
 URxvt*scrollstyle:	    next
+
+
+Emacs.menuBar:		    1
+Emacs.toolBar:		    0
+Emacs.verticalScrollBars:   off
+Emacs.FontBackend:	    xft,x
+Emacs*font:		    6x13
+Emacs.font:		    6x13
+Emacs*boldFont:		    6x13
+Emacs.boldFont:		    6x13
+
+Emacs*foreground:	    #000000
+Emacs.foreground:	    #000000
+Emacs*background:	    #F5F5F5
+Emacs.background:	    #F5F5F5
