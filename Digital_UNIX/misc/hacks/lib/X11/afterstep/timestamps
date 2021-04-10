@@ -1,0 +1,7 @@
+total 96
+drwxr-xr-x  6 john  staff    192 Apr  7 11:19 .
+drwxr-xr-x  3 john  staff     96 Apr  7 11:16 ..
+drwxr-xr-x  9 john  staff    288 Apr  7 11:17 modules
+-rw-r--r--  1 john  staff  20554 Oct 14  1997 sample.steprc
+-rw-r--r--  1 john  staff  20568 Apr 24  1998 system.steprc
+-rw-r--r--  1 john  staff      0 Apr  7 11:19 timestamps
