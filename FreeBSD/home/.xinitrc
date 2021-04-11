@@ -15,5 +15,12 @@ xrdb -merge ~/.Xresources
 
 # xearth &
 
+# I know I settled on AfterStep (1.x) or WindowMaker on DEC UNIX,
+# for some reason CDE wasn't available, or at least I have no
+# memory of ever running it except on Solaris at Nada
 exec afterstep
 
+# I do remember playing around with fvwm, fvwm2, fvwm95(!), twm/mwm(?).
+# I cannot find any of these dotfiles but there is a fvwm2 config found on
+# the KTH AFS cell here.
+# exec fvwm2
