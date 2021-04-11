@@ -1,0 +1,15 @@
+total 63
+drwxr-xr-x  2 john  john     14 Apr 10 22:51 .
+drwxr-xr-x  4 john  john      8 Apr 10 22:18 ..
+-rw-r--r--  1 john  john   5320 Apr 10 22:18 .emacs
+-rw-r--r--  1 john  john     51 Apr 10 22:18 .emacs.timestamp
+-rw-r--r--  1 john  john   1817 Apr 10 22:18 FSF-emacs
+-rw-r--r--  1 john  john     54 Apr 10 22:18 FSF-emacs.timestamp
+-rw-r--r--  1 john  john      0 Apr 10 22:51 timestamps
+-rw-r--r--  1 john  john   1535 Feb  5  2001 xemacs-c.el
+-rw-r--r--  1 john  john   7111 Feb  5  2001 xemacs-general.el
+-rw-r--r--  1 john  john   2160 Feb  5  2001 xemacs-idl.el
+-rw-r--r--  1 john  john   3789 Feb  5  2001 xemacs-keys.el
+-rw-r--r--  1 john  john   3154 Feb  5  2001 xemacs-latex.el
+-rw-r--r--  1 john  john  10071 Feb  5  2001 xemacs-mail.el
+-rw-r--r--  1 john  john   4799 Feb  5  2001 xemacs-packages.el
