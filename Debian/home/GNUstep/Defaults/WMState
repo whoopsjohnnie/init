@@ -13,15 +13,6 @@
       },
       {
         Forced = No;
-        Name = "x-terminal-emulator.XTerm";
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,2";
-        Lock = Yes;
-        Command = "x-terminal-emulator";
-      },
-      {
-        Forced = No;
         Name = "firefox-esr.Firefox-esr";
         DropCommand = "firefox-esr %d";
         BuggyApplication = No;
@@ -48,10 +39,21 @@
         DropCommand = "wmclock %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,3";
+        Position = "0,2";
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = thunderbird.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
       },
       {
         Forced = No;
@@ -59,7 +61,7 @@
         DropCommand = "rxvt %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,5";
+        Position = "0,4";
         Lock = Yes;
         PasteCommand = "rxvt %s";
         Command = rxvt;
@@ -81,7 +83,7 @@
         DropCommand = "asmon %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,4";
+        Position = "0,3";
         Lock = Yes;
         PasteCommand = "asmon %s";
         Command = asmon;
@@ -101,15 +103,6 @@
       },
       {
         Forced = No;
-        Name = "x-terminal-emulator.XTerm";
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,2";
-        Lock = Yes;
-        Command = "x-terminal-emulator";
-      },
-      {
-        Forced = No;
         Name = "firefox-esr.Firefox-esr";
         DropCommand = "firefox-esr %d";
         BuggyApplication = No;
@@ -136,10 +129,21 @@
         DropCommand = "wmclock %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,3";
+        Position = "0,2";
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = thunderbird.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
       },
       {
         Forced = No;
@@ -147,7 +151,7 @@
         DropCommand = "rxvt %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,5";
+        Position = "0,4";
         Lock = Yes;
         PasteCommand = "rxvt %s";
         Command = rxvt;
@@ -169,7 +173,7 @@
         DropCommand = "asmon %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,4";
+        Position = "0,3";
         Lock = Yes;
         PasteCommand = "asmon %s";
         Command = asmon;

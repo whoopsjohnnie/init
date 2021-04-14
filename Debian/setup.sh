@@ -75,8 +75,11 @@ sudo apt-get install -y xplanet
 # sudo apt-get install -y afterstep
 
 sudo apt-get install -y wmaker
+sudo apt-get install -y wmaker-common
+sudo apt-get install -y wmaker-utils
 sudo apt-get install -y menu
 
+sudo apt-get install -y wmbubble
 # sudo apt-get install -y wmpager
 sudo apt-get install -y wmclock
 sudo apt-get install -y asmon
