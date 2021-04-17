@@ -1,0 +1,74 @@
+*Dtfile*view_count:	1
+#
+*Dtfile*showFilesystem:	True
+#
+*Dtfile*restrictMode:	False
+#
+*Dtfile*openFolder:	CURRENT
+#
+*Dtfile.0.screen:    0
+*Dtfile.0.iconify:   False
+*Dtfile.0.workspace: ws0
+*Dtfile.0.FileMgr.displayed:	True
+*Dtfile.0.FileMgr.x:	657
+*Dtfile.0.FileMgr.y:	111
+*Dtfile.0.FileMgr.width:	555
+*Dtfile.0.FileMgr.height:	400
+*Dtfile.0.FileMgr.show_type:	single_directory
+*Dtfile.0.FileMgr.tree_files:	never
+*Dtfile.0.FileMgr.view_single:	by_name_and_icon
+*Dtfile.0.FileMgr.view_tree:	by_name_and_small_icon
+*Dtfile.0.FileMgr.order:	order_by_alphabetical
+*Dtfile.0.FileMgr.direction:	direction_ascending
+*Dtfile.0.FileMgr.positionEnabled:	random_off
+*Dtfile.0.FileMgr.host:	volterra.math.kth.se
+*Dtfile.0.FileMgr.current_directory:	/afs/e.kth.se/home/e97/e97_jog
+*Dtfile.0.FileMgr.branch_list:	4:/afs/e.kth.se/home/e97/e97_jog
+*Dtfile.0.FileMgr.helpVol:	Filemgr
+*Dtfile.0.FileMgr.selection_list:	
+*Dtfile.0.FileMgr.show_iconic_path:	True
+*Dtfile.0.FileMgr.show_current_directory:	True
+*Dtfile.0.FileMgr.show_status_line:	True
+*Dtfile.0.FileMgr.fast_cd_enabled:	False
+*Dtfile.0.FileMgr.toolbox:	False
+*Dtfile.0.FileMgr.media:	False
+*Dtfile.0.FileMgr.show_hid_enabled:	False
+*Dtfile.0.FileMgr.secondaryHelpDialogCount:	0
+*Dtfile.0.FileMgr.trashcan:	False
+*Dtfile.0.FileMgr.screen:	0
+*Dtfile.0.FileMgr.num_positions:   0
+#
+*Dtfile.0.ChangeDirectory.visibleCount:	8
+*Dtfile.0.ChangeDirectory.listCount:	0
+*Dtfile.0.Preferences.showType:	single_directory
+*Dtfile.0.Preferences.treeFiles:	never
+*Dtfile.0.Preferences.view_single:	by_name_and_icon
+*Dtfile.0.Preferences.view_tree:	by_name_and_small_icon
+*Dtfile.0.Preferences.order:	order_by_alphabetical
+*Dtfile.0.Preferences.direction:	direction_ascending
+*Dtfile.0.Preferences.positionEnabled:	random_off
+*Dtfile.0.filter_edit.FileFilter.matchFilter:	True
+*Dtfile.0.filter_edit.FileFilter.name:	.*
+*Dtfile.0.filter_edit.FileFilter.showHidden:	False
+*Dtfile.0.filter_edit.FileFilter.filetypesFilteredCount:	3
+*Dtfile.0.filter_edit.FileFilter.filetypesFiltered:	DOT_FILE,DOT_FOLDER,CURRENT_FOLDER
+*Dtfile.0.filter_edit.FileFilter.media:	False
+*Dtfile.0.filter_active.FileFilter.matchFilter:	True
+*Dtfile.0.filter_active.FileFilter.name:	.*
+*Dtfile.0.filter_active.FileFilter.showHidden:	False
+*Dtfile.0.filter_active.FileFilter.filetypesFilteredCount:	3
+*Dtfile.0.filter_active.FileFilter.filetypesFiltered:	DOT_FILE,DOT_FOLDER,CURRENT_FOLDER
+*Dtfile.0.filter_active.FileFilter.media:	False
+#
+*Dtfile.Workspace.0.secondaryHelpDialogCount: 0
+#
+#
+*Dtfile.Workspace.1.secondaryHelpDialogCount: 0
+#
+#
+*Dtfile.Workspace.2.secondaryHelpDialogCount: 0
+#
+#
+*Dtfile.Workspace.3.secondaryHelpDialogCount: 0
+#
+#

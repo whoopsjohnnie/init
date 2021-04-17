@@ -1,0 +1,4 @@
+dtsmcmd -hints "-geometry 1x1+700+0 -state NormalState -cmd \"dtfile -session dtkuaqxp \"" -screen 0 -cmd "dtfile -session dtkuaqxp"
+
+dtsmcmd -hints "-geometry 493x620+66+101 -state NormalState -workspaces \"ws0 \" -cmd \"/usr/dt/bin/dthelpview -helpVolume Intromgr -xrm *iconX:0 -xrm *iconY:0 \"" -screen 0 -cmd "/usr/dt/bin/dthelpview -helpVolume Intromgr -xrm *iconX:0 -xrm *iconY:0"
+
