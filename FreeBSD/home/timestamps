@@ -1,6 +1,3 @@
-total 112
-drwxr-xr-x  12 john  staff    384 Apr 17 12:14:47 2021 .
-drwxr-xr-x   4 john  staff    128 Apr 17 11:41:26 2021 ..
 -rw-r--r--   1 john  staff   5320 Feb  5 03:38:57 2001 .emacs
 -rw-r--r--   1 john  staff   1258 Aug 21 10:51:25 1997 .login
 -rw-r--r--   1 john  staff    631 Aug 21 10:51:25 1997 .logout
@@ -9,5 +6,3 @@ drwxr-xr-x   4 john  staff    128 Apr 17 11:41:26 2021 ..
 -rw-r--r--   1 john  staff   1824 Jan 16 23:33:08 2000 .tcshrc
 -rw-r--r--   1 john  staff    891 Oct 31 14:42:51 2000 .tcshrc.mine
 -rw-r--r--   1 john  staff     14 Aug 21 10:51:25 1997 .zephyr.subs
-drwxr-xr-x   4 john  staff    128 Apr 17 12:15:22 2021 backup
-drwxr-xr-x  11 john  staff    352 Apr 17 12:12:49 2021 emacs

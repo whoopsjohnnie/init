@@ -1,8 +1,3 @@
-total 31
-drwxrwxr-x  3 john  john     7 Apr 15 12:32 .
-drwxrwxr-x  3 john  john     3 Apr 15 12:28 ..
-drwxrwxr-x  2 john  john     7 Apr 15 12:32 current
 -rw-rw-r--  1 john  john  4016 Oct 18  2002 dtperf
 -rw-rw-r--  1 john  john     8 Oct 18  2002 dtwmfp.session
 -rw-rw-r--  1 john  john    32 Oct 18  2002 lastsession
--rw-rw-r--  1 john  john     0 Apr 15 12:32 timestamps
