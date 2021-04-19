@@ -1,0 +1,17 @@
+*dtterm.numClonedTerms: 1
+*dtterm_0.x: 43
+*dtterm_0.y: 24
+*dtterm_0.width: 593
+*dtterm_0.height: 359
+*dtterm_0.iconify: False
+*dtterm_0.workspaceList:  ws0
+*dtterm_0.userFontListIndex: 0
+*dtterm_0*rows: 24
+*dtterm_0*columns: 80
+*dtterm_0*charCursorStyle: CHARCURSOR_BOX
+*dtterm_0*blinkRate: 250
+*dtterm_0*visualBell: True
+*dtterm_0*userKeyLock: False
+*dtterm_0*autoLineFeed: False
+*dtterm_0*currentWorkingDirectory: /afs/nada.kth.se/home/e97/e97_jog
+*dtterm.sessionFileVersionId: dttermSessionFileVersion.1.0.0
