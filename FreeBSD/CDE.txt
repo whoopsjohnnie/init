@@ -1,0 +1,37 @@
+
+# 
+# https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/
+#
+
+
+
+Install CDE
+
+pkg install cde
+
+
+
+Starting the CDE login manager on boot
+Add the following line to /etc/rc.local:
+
+/usr/local/dt/bin/dtlogin
+
+
+
+Add these lines to /etc/inetd.conf:
+
+dtspc stream tcp4   nowait  root    /usr/local/dt/bin/dtspcd /usr/local/dt/bin/dtspcd
+cmsd/2-5    dgram rpc/udp4 wait root /usr/local/dt/bin/rpc.cmsd rpc.cmsd
+
+
+
+Add these lines to /etc/rc.conf:
+
+rpcbind_enable="YES"
+inetd_enable="YES"
+
+
+
+Add this line to /etc/hosts:
+
+127.0.0.1   HOSTNAME
