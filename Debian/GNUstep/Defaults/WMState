@@ -1,0 +1,227 @@
+{
+  Dock = {
+    AutoRaiseLower = No;
+    Applications = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,2";
+        Lock = Yes;
+        Command = "x-terminal-emulator";
+      },
+      {
+        Forced = No;
+        Name = "firefox-esr.Firefox-esr";
+        DropCommand = "firefox-esr %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,7";
+        Lock = Yes;
+        PasteCommand = "firefox-esr %s";
+        Command = "firefox-esr";
+      },
+      {
+        Forced = No;
+        Name = emacs.Emacs;
+        DropCommand = "emacs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,8";
+        Lock = Yes;
+        PasteCommand = "emacs %s";
+        Command = emacs;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = thunderbird.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
+      },
+      {
+        Forced = No;
+        Name = rxvt.URxvt;
+        DropCommand = "rxvt %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "rxvt %s";
+        Command = rxvt;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "/usr/bin/WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "/usr/bin/WPrefs %s";
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = asmon.asmon;
+        DropCommand = "asmon %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "asmon %s";
+        Command = asmon;
+      }
+    );
+    Lowered = No;
+    Position = "0,0";
+    Applications900 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,2";
+        Lock = Yes;
+        Command = "x-terminal-emulator";
+      },
+      {
+        Forced = No;
+        Name = "firefox-esr.Firefox-esr";
+        DropCommand = "firefox-esr %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,7";
+        Lock = Yes;
+        PasteCommand = "firefox-esr %s";
+        Command = "firefox-esr";
+      },
+      {
+        Forced = No;
+        Name = emacs.Emacs;
+        DropCommand = "emacs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,8";
+        Lock = Yes;
+        PasteCommand = "emacs %s";
+        Command = emacs;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = thunderbird.Thunderbird;
+        DropCommand = "thunderbird %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "thunderbird %s";
+        Command = thunderbird;
+      },
+      {
+        Forced = No;
+        Name = rxvt.URxvt;
+        DropCommand = "rxvt %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "rxvt %s";
+        Command = rxvt;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "/usr/bin/WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "/usr/bin/WPrefs %s";
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = asmon.asmon;
+        DropCommand = "asmon %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "asmon %s";
+        Command = asmon;
+      }
+    );
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    DropCommand = "wmsetbg -u -t %d";
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "1376,0";
+    Lock = No;
+    Command = "-";
+  };
+  Applications = ();
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = Main;
+    }
+  );
+  Workspace = Main;
+}

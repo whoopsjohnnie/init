@@ -56,7 +56,6 @@ sudo apt-get install -y pipenv
 # sudo apt-get install -y numix-icon-theme
 
 # X
-
 sudo apt-get install -y xorg
 sudo apt-get install -y xinit
 sudo apt-get install -y xdm
@@ -72,8 +71,10 @@ sudo apt-get install -y exmh
 sudo apt-get install -y xbill
 sudo apt-get install -y xplanet
 
+# AfterStep
 # sudo apt-get install -y afterstep
 
+# WindowMaker
 sudo apt-get install -y wmaker
 sudo apt-get install -y wmaker-common
 sudo apt-get install -y wmaker-utils
@@ -83,6 +84,11 @@ sudo apt-get install -y wmbubble
 # sudo apt-get install -y wmpager
 sudo apt-get install -y wmclock
 sudo apt-get install -y asmon
+
+# Mate
+sudo apt-get install -y task-mate-desktop
+sudo apt-get install -y mate-desktop-environment
+sudo apt-get install -y mate-desktop-environment-extras
 
 # 
 # sudo apt-get install -y firefox

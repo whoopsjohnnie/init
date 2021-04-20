@@ -1,0 +1,456 @@
+commit 7f160d784ee114229755c24885e56f19d6e4e68e
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Mon Apr 5 04:49:48 2021 -0700
+
+    Timestamp information
+
+commit 5b713bc891798c80f3f768aa77beba481434ed49
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Mon Apr 5 04:48:52 2021 -0700
+
+    KTH AFS cell Athena dotfiles
+
+commit 84cade0f232d38ccb52c5acb937327fcab6cc767
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Mon Apr 5 04:41:57 2021 -0700
+
+    Timestamp information
+
+commit 6054c44057bff40387bd099dff341593810e8513
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Mon Apr 5 04:40:09 2021 -0700
+
+    I found the main KTH AFS cell, where I have additional dotfiles
+
+commit 47f0bebb0c11b2fbf518515a654b74ff3e353a36
+Merge: 3eab408 79c7db6
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sun Apr 4 23:59:42 2021 -0700
+
+    Merge pull request #11 from whoopsjohnnie/unixdev2
+    
+    Updating tcsh config based on Solaris UNIX tcsh dotfiles
+
+commit 79c7db6866ccb16b57ff28f4ce7106ba2c4f6067
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 23:58:43 2021 -0700
+
+    Updating tcsh config based on Solaris UNIX tcsh dotfiles
+
+commit 7b43d19b89f1de9a3b168db70353e2e4e85b49cc
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 23:55:25 2021 -0700
+
+    Umlauts are important
+
+commit 3eab408c4c891343570f920fb9dfccd9c5d5d895
+Merge: f7b6b62 e60a806
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sun Apr 4 23:38:41 2021 -0700
+
+    Merge pull request #10 from whoopsjohnnie/solaris
+    
+    I found my old Solaris csh and tcsh config from nada.kth.se
+
+commit f7b6b62fe30197989c01d318afb85cbd4b8ee060
+Merge: 2d6533b cb5535c
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sun Apr 4 20:46:41 2021 -0700
+
+    Merge pull request #9 from whoopsjohnnie/unixdev
+    
+    Recreating my Digital UNIX dev env on FreeBSD
+
+commit cb5535c8999bbce47d5673f0c83412c77251e70b
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 15:04:42 2021 -0700
+
+    These were created along the way, not sure if they are needed
+
+commit 38ff801613104172ba5d9c4e7a5fa13b5997b017
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 15:00:18 2021 -0700
+
+    Adding a new AfterStep config that closer resembles my fav NeXT look
+
+commit 3bdc64b9c84edc879f2b0f4ac05199136663fae2
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 04:53:39 2021 -0700
+
+    Installing GNU Octave as a replacement for real Matlab
+
+commit 47d9eb0a9efadb2b0b7de469b98fc1ecbcc6b39c
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 14:17:35 2021 -0700
+
+    Adding an HP 48 emulator
+
+commit c5508b887623f29cc88991a6089685852f74a07c
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 14:15:06 2021 -0700
+
+    Installing scheme interpreters, which was teached at KTH in 1997
+
+commit bbb6b5ddace984d6fa83e9c29fac428c6f0b5e53
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 14:04:56 2021 -0700
+
+    Applying a retro look to modern GTK emacs ala 1997 Emacs 19 or 20
+
+commit 4658cf8b61a9f19373639c858a344adefe335dd8
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 13:59:39 2021 -0700
+
+    I distincly remember using tcsh in my Digital UNIX env
+
+commit 6111ba16a40bf1aaa769f1cc5e97b2506bdc0630
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 13:53:29 2021 -0700
+
+    Adding a simple AfterStep launcher with a black background
+
+commit e6aa6cd295e84a4b4c35b8fa9e40c27b46ab00e1
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 13:43:01 2021 -0700
+
+    Updating Emacs comnfig based on current FreeBSD apps and paths
+
+commit 259f6cb7807d17f102ca40ac60d9fabdb73062a8
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 13:35:37 2021 -0700
+
+    Updating AfterStep comnfig based on current FreeBSD apps and paths
+
+commit e1517b131df4a3afb90c60c61b4eaabe1fafd752
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 11:27:35 2021 -0700
+
+    Basic system based on Digial UNIX dotfiles
+
+commit 1fed9a34a74d7db284312b9c1921798ada026f83
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sun Apr 4 11:16:29 2021 -0700
+
+    Recreating my Digital UNIX dev env on FreeBSD
+
+commit e60a8067a358c5fdb66f9f1d47967355766e82ab
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 12:16:06 2021 -0700
+
+    Adding timestamp information
+
+commit cd5ef2fdfb13d0109dd350c45439071d12999c32
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 12:15:11 2021 -0700
+
+    Now I found my old Solaris csh and tcsh config from nada.kth.se
+
+commit 2d6533b7ab73124e01edd9e230be05be530a782a
+Merge: 104d3bc 18affeb
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:33:46 2021 -0700
+
+    Merge pull request #8 from whoopsjohnnie/digital
+    
+    Incredible, I found my old Digital UNIX config files from e.kth.se
+
+commit 18affeb64dd4cba7a52f37ffa7e4c9a83dcb1052
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:32:31 2021 -0700
+
+    Adding timestamp information
+
+commit 546038088bff5b0ff89baef41c87a23a303dc994
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:31:24 2021 -0700
+
+    Found additional backup files
+
+commit f71f05d3922d5096a07d27590113f355bddb6f26
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:21:36 2021 -0700
+
+    Umlauts are important
+
+commit bc5746049b1b0448e69b3958763131b9e09acbb0
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:11:11 2021 -0700
+
+    Adding details and timestamp information
+
+commit 7fab79bf30843961396360e3591e6c7085c77e4b
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:10:05 2021 -0700
+
+    Also found my old Digital UNIX AfterStep config from e.kth.se
+
+commit 558202896c6012311fa0d36defc14d70229ec52c
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:07:37 2021 -0700
+
+    Adding details and timestamp information
+
+commit 16cbdbf766374c2665798eb7c9d19e48efef0cf3
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Apr 3 00:06:26 2021 -0700
+
+    Incredible, I found my old Digital UNIX emacs files from e.kth.se
+
+commit 104d3bc06fda14542dd77af4b3e48abde3ee4f52
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 27 13:29:09 2021 -0700
+
+    Updated MacOS zshrc
+
+commit 36bf65862e005a8435899b82bf66f21921cbb968
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 27 13:16:54 2021 -0700
+
+    Updated Debian and Ubuntu zshrc
+
+commit 82332da9ee89d581ca63ea439b8fd30b44a002a0
+Merge: a843b5c 9542a23
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sat Mar 20 13:29:49 2021 -0700
+
+    Merge pull request #7 from whoopsjohnnie/gnustep
+    
+    New GNUstep Debian setup
+
+commit a843b5c993556ed72cd9cca6f891ad4aa408f319
+Merge: 16056a5 4f91d26
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sat Mar 20 13:28:54 2021 -0700
+
+    Merge pull request #6 from whoopsjohnnie/debian
+    
+    New debian init
+
+commit 4f91d26e97e82ad9acd9a6bb2023b4ebca578be6
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 20 13:27:50 2021 -0700
+
+    Disabling mate desktop in Debian
+
+commit 9542a235c4f856c9c3272fa56333ed514207c04a
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 20 13:25:27 2021 -0700
+
+    Additional GNUstep config
+
+commit f5c99208af95fc1d1eca3839b61b78f810a79e0a
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 20 12:28:27 2021 -0700
+
+    GNUstep xsession start
+
+commit c76be12922590d70a7fe8f107d0e7f15a4432357
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 20 09:50:17 2021 -0700
+
+    New GNUstep Debian setup
+
+commit 843eeca6a2fdbfb4754f0d930ec5842f01b5aa3f
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 6 21:47:52 2021 -0800
+
+    Wheels group and sudo
+
+commit d5af10b4028674e83f72143acd6236370a169ec0
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 6 21:06:20 2021 -0800
+
+    New debian 10.8 testing
+
+commit 16056a57dfa607fd1e956f01f4256c748e3a402a
+Merge: b3fcd2d cb652c4
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sat Mar 6 04:01:41 2021 -0800
+
+    Merge pull request #5 from whoopsjohnnie/gentoo
+    
+    Gentoo linux installer
+
+commit cb652c47e15adc2330f036deb97e82861d53e66b
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 6 04:01:11 2021 -0800
+
+    Gentoo linux installer
+
+commit b3fcd2d89783b970b7c391d24f86e62ea8fbd690
+Merge: 748315d ba2d836
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sat Mar 6 04:00:08 2021 -0800
+
+    Merge pull request #4 from whoopsjohnnie/arch
+    
+    Additional arch linux
+
+commit ba2d836fa796ea5b36a5ae4eaa9208c6ba4b0619
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 6 03:58:03 2021 -0800
+
+    Additional arch software
+
+commit 84618b13e456ec6b15063ac02d1b620449f9206f
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Mar 6 03:57:45 2021 -0800
+
+    Additional arch fixes
+
+commit 748315d329a99b32b91d6f269663f624e9f62902
+Merge: f6772a2 2a895a3
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sat Feb 20 03:29:07 2021 -0800
+
+    Merge pull request #3 from whoopsjohnnie/ubuntu
+    
+    New Ubuntu config
+
+commit f6772a28a6b28f56fd70255de0f59ed4396a8fe1
+Merge: 8830f28 ce2944b
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Sat Feb 20 03:21:51 2021 -0800
+
+    Merge pull request #1 from whoopsjohnnie/arch
+    
+    Arch Linux install
+
+commit ce2944bd08dafd277012f549b2534ece6be1bded
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Feb 20 03:20:39 2021 -0800
+
+    Sudo setup
+
+commit 04faa12adecdd3f2de14a61daf0d686eff393044
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Feb 20 02:15:13 2021 -0800
+
+    Setup users
+
+commit c7c0674db026b9a117d3fab9bd2c54ef60e6283d
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Feb 20 02:09:05 2021 -0800
+
+    Arch linux fixes and docs
+
+commit 778106d45d5aa89f277f0ddffb6ff5196b8df57f
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Feb 20 01:44:55 2021 -0800
+
+    Cleanup arch install
+
+commit a2922dd6dbd4c97306e0b2b5602016815aa1345e
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Feb 20 01:41:33 2021 -0800
+
+    Arch Linux install
+
+commit 2a895a380e7a84bd93ccd05e4ea3755cad65dd13
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Feb 6 12:33:05 2021 -0800
+
+    New Ubuntu config
+
+commit 8830f289b866de155b8764a49f3c061b00f6c75c
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Mon Feb 1 21:32:21 2021 -0800
+
+    NVidia drivers
+
+commit 3d24219a38c8b1d5cc3e98909c1e25a35da3953f
+Merge: 4c94a29 6ccb9f2
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Tue Jan 26 20:10:01 2021 -0800
+
+    Merge branch 'debian' into main
+
+commit 6ccb9f2ad2eee8078aca842cbe607bacebb9ec1c
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Tue Jan 26 20:08:07 2021 -0800
+
+    Install slack
+
+commit d739770422916e8588d4c9e9b78b1639f25502b8
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Jan 23 19:12:44 2021 -0800
+
+    Disable Emacs spash screen
+
+commit 754069c4d50668276311d5b4e1b6fc6473e5435f
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Jan 23 19:11:40 2021 -0800
+
+    Additional mate desktop themes
+
+commit e53d6723cfa9aa7a9df8f5f6698227b2017edce8
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Jan 23 12:39:40 2021 -0800
+
+    Install gawk
+
+commit 65d39b4f3478e96a2544c400979859828ac93027
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Jan 23 11:53:38 2021 -0800
+
+    Debian shell commands log
+
+commit 3b01cb0029a62e72f6eb080ae30df3472c44f54b
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Jan 23 11:30:30 2021 -0800
+
+    Debian system config
+
+commit 65576c26c9c92d85aeba1cea7e34c7d850e0b28d
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Jan 23 11:19:44 2021 -0800
+
+    Moving dots to home
+
+commit 56c5823786d46d06cdfa5c87a62283b2e2808562
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Sat Jan 23 11:17:44 2021 -0800
+
+    Additional Debian services
+
+commit 4c94a29df8e9cbacf254b7ae6912a9c17a566e56
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Fri Jan 22 19:25:17 2021 -0800
+
+    Reorganizing
+
+commit b48fb3644ffcd971a7ad50d9fd963ba86357e665
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Fri Jan 22 19:22:38 2021 -0800
+
+    FreeBSD system config
+
+commit be7cd576781a21235287babf07b83577e7cc2aa1
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Fri Jan 22 19:14:02 2021 -0800
+
+    FreeBSD init scripts
+
+commit a3ca3c8c2e79de1067a626265e6a79894ff002be
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Mon Jan 18 22:54:04 2021 -0800
+
+    Debian init scripts
+
+commit 12526571786829f889f791a65cbb165c81807ea7
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Fri Jan 15 22:03:04 2021 -0800
+
+    MacOS bash init scripts
+
+commit 9c41da61a15eb9bb39d8bdf73e464666a13d7ab9
+Author: whoopsjohnnie <jgrundback@gmail.com>
+Date:   Fri Jan 15 21:56:48 2021 -0800
+
+    MacOS zsh and emacs init scripts
+
+commit c77cae07d724ec8646aab4453eb58b12be888bb4
+Author: John Grundback <jgrundback@gmail.com>
+Date:   Fri Jan 15 21:54:46 2021 -0800
+
+    Initial commit
