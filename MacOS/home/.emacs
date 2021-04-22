@@ -50,6 +50,9 @@
 ;; prevent silly initial splash screen
 (setq inhibit-splash-screen t)
 
+(cond ((window-system)
+;;
+
 ;; My theme
 ;(set-foreground-color "white")
 ;;(set-background-color "black")
@@ -71,14 +74,11 @@
 ; (tool-bar-mode -1)
 
 ;; turn off toolbar
-(if window-system
-    (tool-bar-mode -1))
+(tool-bar-mode -1)
 
 ;; tabs, tabs, tabs
-(if window-system
-    (global-tab-line-mode t))
-(if window-system
-    (tab-line-mode 1))
+(global-tab-line-mode t)
+(tab-line-mode 1)
 
 (setq tab-line-new-button-show nil)
 ;; (setq tab-line-close-button-show nil)
@@ -96,6 +96,22 @@
       :background "#353535" :foreground "#88887f" :box nil)
 (set-face-attribute 'tab-line-highlight nil ;; mouseover
       :background "white" :foreground 'unspecified)
+
+;; Scrollbars on Mac
+(set-frame-parameter nil 'ns-appearance 'dark)
+(set-frame-parameter nil 'ns-transparent-titlebar nil)
+
+;; Tabbar
+;(require 'tabbar)
+;(tabbar-mode t)
+;(setq tab-bar-mode t)
+;(setq tab-bar-show nil)
+;(setq global-tab-line-mode t)
+
+;(global-tab-line-mode t)
+;;(tab-line-mode)
+;;(tab-line-mode--turn-on)
+;(tab-line-mode 1)
 
 ;; 
 ;; Making Emacs tabs work like in Atom
@@ -131,21 +147,22 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
                  (ignore-errors (delete-window window)))))))
     (force-mode-line-update)))
 
-;; Scrollbars on Mac
-(set-frame-parameter nil 'ns-appearance 'dark)
-(set-frame-parameter nil 'ns-transparent-titlebar nil)
+;;
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
 
-;; Tabbar
-;(require 'tabbar)
-;(tabbar-mode t)
-;(setq tab-bar-mode t)
-;(setq tab-bar-show nil)
-;(setq global-tab-line-mode t)
+;;
+))
 
-;(global-tab-line-mode t)
-;;(tab-line-mode)
-;;(tab-line-mode--turn-on)
-;(tab-line-mode 1)
+(cond ((not window-system)
+;;
+
+;;
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
+
+;;
+))
 
 ;; dired mode, click opens subfolder in same frame
 (eval-after-load "dired" '(progn
@@ -161,10 +178,6 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ; (define-key isearch-mode-map "\C-v" 'isearch-yank-kill)
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
-
-;;
-; (setq default-directory "~/")
-; (setq command-line-default-directory "~/")
 
 (load-file "~/.emacs.d/FSF-emacs")
 
