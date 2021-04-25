@@ -35,6 +35,35 @@ URxvt*scrollBar:	    true
 URxvt*scrollBar_right:	    false
 URxvt*scrollstyle:	    next
 
+URxvt.iso14755:		    false
+URxvt.iso14755_52:		    false
+
+! URxvt*altSendsEscape:	    true
+
+! URxvt.perl-ext-common: 	  	default,clipboard,url-select,keyboard-select
+URxvt.perl-ext-common: 			default,selection-to-clipboard,clipboard-osc
+! URxvt.keysym.M-u:    	  	perl:url-select:select_next
+! URxvt.keysym.M-Escape:		perl:keyboard-select:activate
+! URxvt.keysym.M-s:		perl:keyboard-select:search
+! URxvt.url-select.launcher:	chromium
+! URxvt.url-select.underline:	true
+! URxvt.urgentOnBell:	  	true
+! URxvt.clipboard.copycmd:  	xsel -ib
+! URxvt.clipboard.pastecmd: 	xsel -ob
+
+! URxvt.keysym.M-c:   perl:clipboard:copy
+! URxvt.keysym.M-v:   perl:clipboard:paste
+! URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+! URxvt.keysym.Meta-C:   eval:selection_to_clipboard
+! URxvt.keysym.Meta-V:   eval:paste_clipboard
+
+URxvt.keysym.Shift-Control-C:   eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V:   eval:paste_clipboard
+
+! ################
+! # EMACS settings
+! ################
 
 Emacs.menuBar:		    1
 Emacs.toolBar:		    0
