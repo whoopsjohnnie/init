@@ -50,10 +50,22 @@
 ;; prevent silly initial splash screen
 (setq inhibit-splash-screen t)
 
-(set-foreground-color "white")
-(set-background-color "black")
-(set-border-color "black")
-(set-face-background 'fringe "black")
+(cond ((window-system)
+;;
+
+;; My theme
+;(set-foreground-color "white")
+;;(set-background-color "black")
+;(set-background-color "#3f3f3f")
+;;(set-border-color "black")
+;(set-border-color "#3f3f3f")
+;;(set-face-background 'fringe "black")
+;(set-face-background 'fringe "#3f3f3f")
+
+;; Zenburn theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'zenburn t)
+(set-face-background 'fringe "#3f3f3f")
 
 ;; Disable menubar
 ; (menu-bar-mode -1) 
@@ -62,8 +74,99 @@
 ; (tool-bar-mode -1)
 
 ;; turn off toolbar
-(if window-system
-    (tool-bar-mode -1))
+(tool-bar-mode -1)
+
+;; tabs, tabs, tabs
+(global-tab-line-mode t)
+(tab-line-mode 1)
+
+(setq tab-line-new-button-show nil)
+;; (setq tab-line-close-button-show nil)
+
+(set-face-attribute 'tab-line nil ;; background behind tabs
+      :background "#252525"
+      :foreground "#252525" :distant-foreground "#252525"
+      :family "Menlo" :height 1.0 :box nil)
+(set-face-attribute 'tab-line-tab nil ;; active tab in another window
+      :inherit 'tab-line
+      :foreground "#88887f" :background "#3f3f3f" :box nil)
+(set-face-attribute 'tab-line-tab-current nil ;; active tab in current window
+      :background "#3f3f3f" :foreground "#dcdcca" :box nil)
+(set-face-attribute 'tab-line-tab-inactive nil ;; inactive tab
+      :background "#353535" :foreground "#88887f" :box nil)
+(set-face-attribute 'tab-line-highlight nil ;; mouseover
+      :background "white" :foreground 'unspecified)
+
+;; Scrollbars on Mac
+(set-frame-parameter nil 'ns-appearance 'dark)
+(set-frame-parameter nil 'ns-transparent-titlebar nil)
+
+;; Tabbar
+;(require 'tabbar)
+;(tabbar-mode t)
+;(setq tab-bar-mode t)
+;(setq tab-bar-show nil)
+;(setq global-tab-line-mode t)
+
+;(global-tab-line-mode t)
+;;(tab-line-mode)
+;;(tab-line-mode--turn-on)
+;(tab-line-mode 1)
+
+;; 
+;; Making Emacs tabs work like in Atom
+;; https://andreyorst.gitlab.io/posts/2020-05-07-making-emacs-tabs-work-like-in-atom/
+;; 
+(defun tab-line-close-tab (&optional e)
+  "Close the selected tab.
+If tab is presented in another window, close the tab by using `bury-buffer` function.
+If tab is uniq to all existing windows, kill the buffer with `kill-buffer` function.
+Lastly, if no tabs left in the window, it is deleted with `delete-window` function."
+  (interactive "e")
+  (let* ((posnp (event-start e))
+         (window (posn-window posnp))
+         (buffer (get-pos-property 1 'tab (car (posn-string posnp)))))
+    (with-selected-window window
+      (let ((tab-list (tab-line-tabs-window-buffers))
+            (buffer-list (flatten-list
+                          (seq-reduce (lambda (list window)
+                                        (select-window window t)
+                                        (cons (tab-line-tabs-window-buffers) list))
+                                      (window-list) nil))))
+        (select-window window)
+        (if (> (seq-count (lambda (b) (eq b buffer)) buffer-list) 1)
+            (progn
+              (if (eq buffer (current-buffer))
+                  (bury-buffer)
+                (set-window-prev-buffers window (assq-delete-all buffer (window-prev-buffers)))
+                (set-window-next-buffers window (delq buffer (window-next-buffers))))
+              (unless (cdr tab-list)
+                (ignore-errors (delete-window window))))
+          (and (kill-buffer buffer)
+               (unless (cdr tab-list)
+                 (ignore-errors (delete-window window)))))))
+    (force-mode-line-update)))
+
+;;
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
+
+;;
+))
+
+(cond ((not window-system)
+;;
+
+;;
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
+
+;;
+))
+
+;; dired mode, click opens subfolder in same frame
+(eval-after-load "dired" '(progn
+    (define-key dired-mode-map [mouse-2] 'dired-mouse-find-file)))
 
 ;; CUA Mode, I cannot live without it
 (cua-mode t)
@@ -75,10 +178,6 @@
 ; (define-key isearch-mode-map "\C-v" 'isearch-yank-kill)
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
-
-;;
-; (setq default-directory "~/")
-; (setq command-line-default-directory "~/")
 
 (load-file "~/emacs/FSF-emacs")
 
