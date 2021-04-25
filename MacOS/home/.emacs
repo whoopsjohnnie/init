@@ -158,8 +158,8 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ;;
 
 ;;
-(setq default-directory "~/")
-(setq command-line-default-directory "~/")
+;(setq default-directory "~/")
+;(setq command-line-default-directory "~/")
 
 ;;
 ))
