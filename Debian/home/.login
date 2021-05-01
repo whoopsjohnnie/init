@@ -1,4 +1,11 @@
 #!/bin/csh -f
+
+#
+# This is my original tcsh shell config from the Digital UNIX kth.se AFS cell
+#
+# /afs/kth.se/home/e97/e97_jog/.login, Aug 21 1997, 10:51:25
+#
+
 # Prototype user .login file
 
 # This file sources a system-wide .login file, which:
