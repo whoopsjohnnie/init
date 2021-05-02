@@ -19,5 +19,7 @@ set notify		# tala om omedelbart när backgrunds-jobb är klara
 set recexact		# känn igen exakta substrängar vid komplettering
 set rmstar		# fråga när man försöker ta bort alla filer (med *)
 
-alias emacs 'emacs-20.7'
+# alias emacs 'emacs-20.7'
+# alias emacs 'emacs-gtk-27.1'
+alias emacs 'emacs-gtk'
 
