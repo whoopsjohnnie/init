@@ -1,0 +1,19 @@
+# I den här filen kan du lägga kommandon som du vill ska utföras varje
+# gång kommandotolkaren startas. Du kan t.ex. göra egna kortkommandon
+# för saker som du gör ofta, byta prompt etc.
+# Läs manualbladet till tcsh om du vill veta allt som går att ställa in 
+# i kommandotolkaren.
+
+# Några exempel. (Ta bort kommentarstecknet (#) i början av raden om du 
+# vill att raden ska utföras.)
+
+# definiera kommandot 'show_la' som 
+# visar innehållet i kön till de båda stora laserskrivarna
+#alias show_la 'lpq -Pdirector; echo " "; lpq -Pdryck; echo " "; lpq -Peuropa'
+
+# Gör så att prompten (normalt 'datornamn>') också innehåller aktuell
+# katalog, t.ex. hertz:~/numme>:
+set prompt = '%m:%~>'
+
+# Säg åt kommandotolkaren att rätta stavfel i kommandon:
+#set correct=all
