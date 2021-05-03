@@ -1,0 +1,4 @@
+# comment the next line if you want MOTIF instead of DECWINDOWS
+# setenv DECWINDOWS
+# to use twm instead of the MOTIF windowmanager, uncomment the next line
+# setenv WINDOW_MANAGER twm
