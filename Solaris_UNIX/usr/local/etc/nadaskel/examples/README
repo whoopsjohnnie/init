@@ -1,0 +1,45 @@
+				96-10-01/AHo & PSv
+
+This directory (/usr/local/etc/nadaskel/examples/) contains
+examples of how initialization files ("dot files") for
+different programs can look. You can use these to start
+from if you would like to make your own adjustments of
+a certain program.
+
+Some comments to some of the files:
+
+* You are strongly encouraged to copy the file .emacs to your
+  home directory, if you do not have such a file already. It
+  makes emacs behave better, and you can easily customize it as
+  you like.
+
+* Initially you get the shell "tcsh". If you would like to
+  change your shell to something else you can use the program
+  "chsh" ("change shell"). One alternative to tcsh then is
+  "bash" (Bourne-Again SHell).  You can copy the files .bashrc,
+  .bash_profile, and .inputrc to your home directory, as a
+  starting point for initialization files for bash. (They
+  replace the files used by tcsh: .login, .tcshrc, .cshrc, and
+  .aliases).
+
+* At NADA a lot of initializations are done globally before
+  your own initialization files are run. Specifically, your
+  .aliases, .modules, and .environment are loaded by these
+  global initializations. If you move from NADA one day and
+  want a similar environment, or if you want to control all
+  initialization yourself here, you can use the files ending in
+  ".nada". They do mainly what the global initialization files
+  does (of 96-08-23). If you use them at NADA you also need to
+  inhibit the global initializations by having an empty file
+  called ".no_init" in your home directory.
+
+* There are some different window managers you can use. The
+  default one is MWM (Motif Window Manager). To try some other
+  you can either start it in .xinitrc (where you currently
+  start mwm) or you can set the environment variable
+  WINDOW_MANAGER in either .envirtonment or .xinitrc_hook (this
+  variable is used by the default .xinitrc). The files called
+  "system.*wmrc" contain the default configurations for some
+  common window managers. You can copy them to you own
+  directory as ".*wmrc" and use as starting point for your own
+  environment.

@@ -1,0 +1,167 @@
+#
+# $Id: login.init,v 1.24 95/09/12 11:23:06 psv Exp Locker: ahi $
+#
+# Vill du veta mer om nedanstaende, las i filen README i din hemkatalog.
+#
+
+if ( -f ~/.no_tcshinit ) exit
+
+if ( $?deb_login == 1 ) then
+    echo "LA `$deb_secs`" >> $deb_login
+endif
+
+/usr/athena/bin/klist -t
+if ( $? == 1 ) then
+  echo
+  echo '*** Det finns inga giltiga Kerberos-biljetter för dig på den här datorn.'
+  echo '*** Du kan skaffa dig sådana med kommandot \"kauth\".'
+  echo '*** Om din hemkatalog ligger i AFS kan du inte läsa dina filer utan biljetter.'
+  echo '    (No Kerberos tickets. More info in English with \"help tickets\".)'
+  echo 
+else
+  /usr/local/bin/aklog
+endif
+
+if ( $?deb_login == 1 ) then
+    echo "LB `$deb_secs`" >> $deb_login
+endif
+
+if ( -x /usr/bin/zwgc ) then
+  if ( $?WGFILE == 0  && $?KRBTKFILE == 0 && { klist -t } ) then
+    setenv WGFILE /tmp/wg$$
+    /usr/bin/zwgc -ttymode
+  endif
+  if ( $?WGFILE == 0 && $?KRBTKFILE == 1 ) then
+    if ( $KRBTKFILE != "/tmp/tkt_console" && { klist -t } ) then
+      setenv WGFILE /tmp/wg$$
+      /usr/bin/zwgc -ttymode
+    endif
+  endif
+endif
+
+if ( $?deb_login == 1 ) then
+    echo "LC `$deb_secs`" >> $deb_login
+endif
+#
+# Limit CPU usage to 5 min on manyuser hosts.
+#
+switch (`hostname`)
+case alv.nada.kth.se:
+case xalv.nada.kth.se:
+case byse.nada.kth.se:
+case xbyse.nada.kth.se:
+case dront.nada.kth.se:
+case hemul.nada.kth.se:
+case mumrik.nada.kth.se:
+limit cputime 300
+echo "En CPU-tidsgräns p} 5 minuter per process är satt."
+echo "Med kommandot 'limit' kan du ändra detta."
+breaksw
+endsw
+
+#if ( $?DISPLAY ) then
+#    if ( -f /usr/local/bin/termchars ) then
+#	/usr/local/bin/termchars sw
+#    endif
+#else
+#    stty rows 0 cols 0
+#endif
+
+setenv EDITOR /usr/local/bin/emacs
+setenv VISUAL /usr/local/bin/emacs
+setenv SUBEDITOR /usr/local/bin/submg
+#setenv TEXINPUTS .:${HOME}/tex:/usr/lib/tex/macros
+#setenv TEXFONTS /usr/lib/tex/fonts
+#setenv TEXFORMATS /usr/lib/tex/fonts
+#setenv TEXEDIT "$SUBEDITOR +%d %s"
+setenv LANG sv_SE.8859-1
+if ( $HOSTTYPE == "sun4" ) then
+	stty pass8
+endif
+setenv ESHELL /bin/csh
+setenv HPATH /usr/local/man/cat1:/usr/man/cat1:/usr/local/man/cat8:/usr/man/cat8
+if (! $?MANPATH ) then
+    setenv MANPATH /usr/local/man:/usr/man
+endif
+#
+setenv MANPATH ${MANPATH}:/usr/local/epc-pascal/man
+#
+if ( $?deb_login == 1 ) then
+    echo "LD `$deb_secs`" >> $deb_login
+endif
+if ( $?tcshinit == 0 ) then
+    source /usr/local/etc/shellinits/tcsh.init
+endif
+if ( $?deb_login == 1 ) then
+    echo "LE `$deb_secs`" >> $deb_login
+endif
+#
+# check for login message in siteinfo database
+#if ( -x /usr/local/sbin/getsiteinfo ) then
+#	set login_msg = `/usr/local/sbin/getsiteinfo -q self login-msg  `
+#	if ( "$login_msg" != ""  && -f  "$login_msg" ) then
+#		cat $login_msg
+#	endif
+#	unset login_msg
+#endif
+#
+#
+#   Get category part of home directory name
+#
+if ( $?_uname_cat == 0 ) then
+    set _uname_cat=`echo $home | sed -e 's#/home/##' -e 's#/.*$##' -e 's#-.*$##'`
+endif
+if ( $?deb_login == 1 ) then
+    echo "LF `$deb_secs`" >> $deb_login
+endif
+#
+# Print the login message for the category (in /info/<category>/motd) if any
+if ( -f /info/$_uname_cat/motd ) cat /info/$_uname_cat/motd
+if ( $?deb_login == 1 ) then
+    echo "LG `$deb_secs`" >> $deb_login
+endif
+#
+# Source the login.init for the category (in /info/<category>) if any
+if ( -f /info/$_uname_cat/login.init ) source /info/$_uname_cat/login.init
+if ( $?deb_login == 1 ) then
+    echo "LH `$deb_secs`" >> $deb_login
+endif
+#
+unset _uname_cat
+#
+# Report if there is any unread mail in /usr/spool/mail
+#
+if ( -e /usr/local/bin/checkmail) then
+    /usr/local/bin/checkmail
+endif
+if ( $?deb_login == 1 ) then
+    echo "LI `$deb_secs`" >> $deb_login
+endif
+
+
+#
+# From login.override version 1.5
+#
+set warnfn="/usr/local/etc/pwwarn"
+if (-x "$warnfn") then
+    $warnfn
+    if ( $?deb_login == 1 ) then
+        echo "LJ `$deb_secs`" >> $deb_login
+    endif
+endif
+unset warnfn
+
+#
+# Show latest news (maybe)
+#
+
+# /usr/local/bin/sysnews -u 1
+
+# New news with categories /klas 941113
+#	Run in background as checkmail do
+#if ( -e /usr/local/bin/kursnytt ) then
+#	sh -c "/usr/local/bin/kursnytt -c &"
+#endif
+if ( $?deb_login == 1 ) then
+    echo "LK `$deb_secs`" >> $deb_login
+endif

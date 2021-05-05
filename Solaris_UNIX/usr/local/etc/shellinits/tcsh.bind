@@ -1,0 +1,10 @@
+#
+#	tcsh.bind version 1.2
+#
+bind emacs
+bind run-help ^@
+bind backward-delete-word ^W
+bind backward-kill-line	^U
+# bind kill-whole-line ^U
+# bind complete-word escape
+bind list-choices ?

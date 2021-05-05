@@ -1,0 +1,19 @@
+#
+#  .login
+#
+
+#       User environment
+if ( -r $HOME/.environment ) then
+    source $HOME/.environment
+endif
+
+#       User modules
+if ( -r $HOME/.modules ) then
+    source $HOME/.modules
+endif
+
+#  If there is a variable PREPATH, put it first in the PATH
+if ( $?PREPATH ) then
+  setenv PATH $PREPATH":"$PATH
+endif
+

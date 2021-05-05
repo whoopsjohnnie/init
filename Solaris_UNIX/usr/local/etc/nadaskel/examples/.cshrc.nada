@@ -1,0 +1,15 @@
+#
+#  Initializations for csh
+#
+
+#       Default shell settings
+limit coredumpsize 0
+set  ignoreeof  noclobber  notify  recexact  rmstar
+set backslash_quote
+set history = 40
+
+#      User aliases
+if ( -r $HOME/.aliases ) then
+    source $HOME/.aliases
+endif
+

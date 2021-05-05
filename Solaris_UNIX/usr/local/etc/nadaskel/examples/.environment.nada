@@ -1,0 +1,12 @@
+#
+#       Environment variables
+#
+
+setenv PATH /usr/local/bin:/usr/local/bin/X11:/usr/openwin/bin:/usr/bin:/usr/ucb:.
+setenv MANPATH /usr/local/man:/usr/man
+setenv LANG sv_SE.8895-1
+setenv EDITOR emacs
+setenv VISUAL $EDITOR
+setenv SUBEDITOR $EDITOR
+setenv ESHELL /bin/csh
+

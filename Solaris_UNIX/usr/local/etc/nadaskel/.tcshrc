@@ -1,0 +1,34 @@
+#
+# $Header: /afs/.nada.kth.se/common/usr/local/etc/nadaskel/sv/RCS/.tcshrc,v 1.1 2001/09/03 11:07:51 klas Exp klas $
+#
+#  Initieringsfil till tcsh
+#
+#  Vill du veta mer om denna fil, läs i filen README i din hemkatalog.
+#
+#  (.tcshrc 2.1)
+
+# Läs in initieringarna till csh (om den filen finns)
+if ( -r ~/.cshrc ) then
+  source ~/.cshrc
+endif
+
+if ( ! $?prompt ) exit;		# Avsluta här om inte körs från terminal
+
+# Speciella funktioner hos olika knappar 
+# bindkey ? list-choices  		# Frågetecken listar möjliga alternativ
+# bindkey ? self-insert-command 	# Om du snarare vill ha ? normal
+# bindkey M-? list-choices 		# och Meta-? för att lista alternativ
+
+set history = 40	# Historie-listans längd
+set prompt = "%m:%~>"	# "Promptens" utseende (%m =datornamn, %~ =katalognamn)
+
+# Dessa program kan man gå ur med C-z och komma in i igen med programnamnet.
+set continue=(clisp lisp sicstus prolog muprolog sml scheme xscheme elk a.out simuladeb matlab)
+
+# Om man inte kör i X-miljö, ge samma emacs tillbaka när man gått ur med C-z
+# Gör "unset continue_args" för att kunna ha flera olika emacsar
+if ( ! $?DISPLAY ) then
+  set continue_args=(emacs .emacs_pause)
+endif
+
+ 

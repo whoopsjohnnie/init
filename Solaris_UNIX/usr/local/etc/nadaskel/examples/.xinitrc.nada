@@ -1,0 +1,55 @@
+#! /bin/csh
+#
+# Example .xinitrc file
+#
+
+#  User environment
+if ( -r $HOME/.environment ) then
+    source $HOME/.environment
+endif
+
+#  Read Xresource database
+if ( -r $HOME/.Xresources ) then
+  xrdb $HOME/.Xresources
+endif
+
+#  Keyboard remapping
+if ( -r $HOME/.xmodmaprc ) then
+  xmodmap $HOME/.xmodmaprc
+endif
+
+#  User modules
+if ( -r $HOME/.modules ) then
+    source $HOME/.modules
+endif
+
+#  If there is a variable PREPATH, put it first in the PATH
+if ( $?PREPATH ) then
+  setenv PATH $PREPATH":"$PATH
+endif
+
+# Set bell parameters
+xset b 1 1 1 # bell percent=1 pitch=1 duration=1
+
+# If this is a workstation you need to watch console output.
+display=`expr "$DISPLAY" : "\(.*\)[:]"`
+if [ x$display = x ]; then
+  xconsole -geometry +0+0 -unmapped &
+elif [ $display = unix ]; then
+  xconsole -geometry +0+0 -unmapped &
+fi
+
+# Start window manager
+if [ "$WINDOW_MANAGER" ]; then
+  $WINDOW_MANAGER &
+else
+  mwm &					# Use Motif window manager.
+fi
+
+# Default applications
+clock -geometry 120x120-0+0 &
+emacs -i -geometry 80x32-0-0 &
+xterm -T Terminal -ls -geometry 80x32+0+0 &
+
+# This should not be in the background. You get logged out when it exits.
+xlogout -geometry -142+0

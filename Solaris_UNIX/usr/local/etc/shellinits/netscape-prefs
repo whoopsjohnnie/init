@@ -1,0 +1,12 @@
+MEMORY_CACHE_SIZE:	4000
+DISK_CACHE_SIZE:	0
+
+PROXY_MODE:		2
+PROXY_URL:		http://www.nada.kth.se/proxy.pac
+
+HTTP_PROXY:		proxy.nada.kth.se:3128
+FTP_PROXY:		proxy.nada.kth.se:3128
+GOPHER_PROXY:		proxy.nada.kth.se:3128
+WAIS_PROXY:		proxy.nada.kth.se:3128
+
+HOME_DOCUMENT:		http://www.nada.kth.se/

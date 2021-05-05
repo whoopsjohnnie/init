@@ -1,0 +1,8 @@
+# login.override version 1.5
+#
+#
+set warnfn="/usr/local/etc/pwwarn"
+if (-x "$warnfn") then
+    $warnfn
+endif
+unset warnfn

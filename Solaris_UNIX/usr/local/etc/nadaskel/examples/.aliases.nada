@@ -1,0 +1,20 @@
+#
+#      Aliases
+#
+
+alias logo logout
+alias term 'set term = \!*'
+alias teach-emacs '\emacs -f help-with-tutorial'
+alias newemacs '\emacs'
+alias kemacs 'emacs -kill'
+
+alias setprinter 'setenv PRINTER "`/usr/local/script/print-cmds/printer-get.sh -set \!*`"'
+alias print '(setenv PRINTER "`/usr/local/script/print-cmds/printer-get.sh \!*`"; /usr/local/bin/print \!*); source /usr/local/script/print-cmds/printer-setenv.csh'
+alias setlocale 'setenv LANG "`/usr/local/libexec/locale-get.sh \!*`"; /usr/local/libexec/locale-adjust.sh \!*'
+
+alias lf 'ls -F'
+alias ll 'ls -laF'
+alias lsd 'cd \!* ; ls -aF'
+alias h 'history -r | more'
+alias em 'eval "emacs \!* "`if ( $?DISPLAY ) echo "&"`'
+

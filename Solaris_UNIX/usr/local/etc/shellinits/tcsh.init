@@ -1,0 +1,176 @@
+#
+# $Id: tcsh.init,v 1.19 1996/03/05 15:16:55 erlandf Exp $
+#
+# Vill du veta mer om nedanstaende, las i filen README i din hemkatalog.
+#
+if ( -f ~/.debug_login_delay ) then
+    set deb_login = "/tmp/debug_login_delay.$$.`date +19%y%m%dT%H%M%S`"
+    set deb_secs = "/usr/local/etc/shellinit/floatsecs_since_epoch"
+    if ( { touch $deb_login } && -x $deb_secs ) then
+	echo "T0 `$deb_secs`" >> $deb_login
+    else
+	unset deb_login
+    endif
+else
+    unset deb_login
+endif
+
+
+if ( $?deb_login == 1 ) then
+    echo "TA `$deb_secs`" >> $deb_login
+endif
+
+if ( -f ~/.no_tcshinit ) exit
+
+if ( $?tcshinit ) exit
+set tcshinit = done
+#
+#    Set default path
+#
+if ( $?deb_login == 1 ) then
+    echo "Ta `$deb_secs` path set, was $path" >> $deb_login
+endif
+set path=(/usr/local/bin /usr/local/bin/X11 /usr/ucb /bin /usr/bin .)
+#
+#	Aliases for Environment Modification
+#
+if ( $?histchars ) then
+  set histchar = `echo $histchars | cut -c1`
+  set _tmphistchars = $histchars
+  alias module 'unset histchars; \\
+eval `$MODULESHOME/modulecmd csh '$histchar'*`; \\
+set histchars = $_tmphistchars'
+  unset histchar
+else
+  alias module 'eval `$MODULESHOME/modulecmd csh \!*`'
+endif
+if ( $?deb_login == 1 ) then
+    echo "TB `$deb_secs`" >> $deb_login
+endif
+
+setenv MODULESHOME /usr/local/lib/module
+
+if (! $?MODULEPATH ) then
+  setenv MODULEPATH $MODULESHOME/modules
+endif
+
+if (! $?LOADEDMODULES ) then
+  setenv LOADEDMODULES
+endif
+#
+
+if ( $?deb_login == 1 ) then
+    echo "Tb `$deb_secs`" >> $deb_login
+endif
+
+#
+# Modules via categories
+#
+
+if ( ! -f /etc/nocategories && -f /usr/local/libexec/cat_get_user_attribute ) then
+  set _modules = `/usr/local/libexec/cat_get_user_attribute module`
+if ( $?deb_login == 1 ) then
+    echo "T1 `$deb_secs`" >> $deb_login
+endif
+  if ( "$_modules" != "" ) then
+    module add $_modules
+if ( $?deb_login == 1 ) then
+    echo "T2 `$deb_secs`" >> $deb_login
+endif
+  endif
+  unset _modules
+endif
+
+#
+# Solaris 2 modules...
+#
+
+if ( -f /kernel/unix ) then
+	module add openwin
+endif
+
+if ( $?deb_login == 1 ) then
+    echo "TC `$deb_secs`" >> $deb_login
+endif
+
+# temp /klas 
+#module add metamail
+
+if ( $?deb_login == 1 ) then
+    echo "Tc `$deb_secs`" >> $deb_login
+endif
+
+#
+bind local
+limit coredumpsize 0
+set noclobber  notify  recexact ignoreeof
+set backslash_quote
+#
+# S{tt umask-v{rde.
+set _exprres=`expr $USER : '.*-'`
+if ( "$_exprres" > 0 ) then
+    umask 066	# Troligen en elev, h|gt filskydd
+else
+    umask 022   # ..annars normalt filskydd
+endif
+unset _exprres
+if ( $?deb_login == 1 ) then
+    echo "TD `$deb_secs`" >> $deb_login
+endif
+#
+#
+if ( -r ~/.aliases ) then
+	source ~/.aliases
+endif
+if ( $?deb_login == 1 ) then
+    echo "TE `$deb_secs`" >> $deb_login
+endif
+#
+if ( ! $?prompt ) exit		   # Avsluta h{r om inte k|rs fr}n terminal
+#
+alias logo logout
+alias h 'history -r | more'
+alias ter set term = \!\*
+alias term set term = \!\*
+alias print '(setenv PRINTER "`/usr/local/print/printer-get.sh \!*`";\\\
+               /usr/local/bin/print \!*); source /usr/local/print/printer-setenv.csh'
+alias skriv '(setenv PRINTER "`/usr/local/print/printer-get.sh \!*`";\\\
+               /usr/local/bin/skriv \!*); source /usr/local/print/printer-setenv.csh'
+alias setprinter 'setenv PRINTER "`/usr/local/print/printer-get.sh -set \!*`"'
+alias setlocale 'setenv LANG "`/usr/local/libexec/locale-get.sh \!*`"; /usr/local/libexec/locale-adjust.sh \!*'
+#
+if ( $?EMACS_SKILL ) then
+    alias emacs $EMACS_SKILL
+    alias newemacs '/usr/local/bin/emacs &'
+endif
+alias em emacs
+alias kemacs 'emacs -kill'
+alias teach-emacs '\\emacs -f help-with-tutorial'
+alias kmg 'kill %mg'
+#
+set history = 40  
+set prompt=%m'>'
+set continue=(clisp lisp sicstus prolog muprolog sml scheme xscheme elk a.out simuladeb matlab)
+set continue_args=(gnumacs .emacs_pause mg .mg_pause emacs .emacs_pause)
+#
+# Source the tcsh.init for the category (in /info/<category>) if any
+set _uname_cat=`echo $home | sed -e 's#/home/##' -e 's#/.*$##' -e 's#-.*$##'`
+if ( -f /info/$_uname_cat/tcsh.init ) source /info/$_uname_cat/tcsh.init
+if ( $?deb_login == 1 ) then
+    echo "TF `$deb_secs`" >> $deb_login
+endif
+#
+# Borttaget, inaktuellt/PSv
+#echo $version | grep  -s 6.01
+#if ( $? == 0 ) then
+#	Version 6.01
+#else
+#	version 6.03 or greater (?)
+
+set rmstar
+
+#endif
+
+if ( $?deb_login == 1 ) then
+    echo "TH `$deb_secs`" >> $deb_login
+endif

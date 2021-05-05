@@ -1,0 +1,26 @@
+#
+#  Initializations for tcsh
+#
+
+#  Read csh initializations
+if ( -r $HOME/.cshrc ) then
+  source $HOME/.cshrc
+endif
+
+if ( ! $?prompt ) exit;		# Stop here if not interactive
+
+stty erase "^?" -parenb cs8 -istrip
+
+#  Bind various keys
+bind emacs
+bind backward-delete-word ^W
+bind backward-kill-line	^U
+bind list-choices ?
+
+set prompt=%m'>'
+
+set continue=(clisp lisp sicstus prolog muprolog sml scheme xscheme elk a.out simuladeb matlab)
+if ( ! $?DISPLAY ) then
+  set continue_args=(emacs .emacs_pause)
+endif
+

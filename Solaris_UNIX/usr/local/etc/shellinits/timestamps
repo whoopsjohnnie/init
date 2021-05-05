@@ -1,0 +1,14 @@
+
+-rw-r--r--   1 john  staff   1611 May 11 01:00:55 2001 Nada_classic.xinitrc
+-rw-r--r--   1 john  staff    571 Sep  9 16:16:27 1992 bash.init
+-rw-r--r--   1 john  staff   4186 Oct 19 10:12:16 1995 deb_login.init
+-rw-r--r--   1 john  staff   3882 Sep 18 17:01:29 1995 deb_tcsh.init
+-rw-r--r--   1 john  staff  24576 Sep 18 16:27:20 1995 floatsecs_since_epoch
+-rw-r--r--   1 john  staff   4453 Jul  4 07:31:29 2002 login.init
+-rw-r--r--   1 john  staff   4150 Sep 22 06:37:01 1995 login.init.CHECKNEWS
+-rw-r--r--   1 john  staff   3198 Sep 12 07:22:21 1995 login.init.NORMAL
+-rw-r--r--   1 john  staff    122 Sep  6 10:06:40 1990 login.override
+-rw-r--r--   1 john  staff    291 May 15 23:28:24 1996 netscape-prefs
+-rw-r--r--   1 john  staff    186 Feb 12 05:45:23 1993 tcsh.bind
+-rw-r--r--   1 john  staff   4316 Mar  5 07:16:55 1996 tcsh.init
+-rw-r--r--   1 john  staff   2895 Sep 12 07:21:57 1995 tcsh.init.NORMAL

@@ -1,0 +1,17 @@
+
+-rw-r--r--   1 john  staff    685 Aug 22 00:55:47 1996 .aliases.nada
+-rw-r--r--   1 john  staff    118 Aug 22 03:44:54 1996 .bash_profile
+-rw-r--r--   1 john  staff    275 Jan 21 02:13:44 2000 .bashrc
+-rw-r--r--   1 john  staff    257 Aug 22 01:05:57 1996 .cshrc.nada
+-rw-r--r--   1 john  staff   3976 Apr 17 08:07:13 1997 .emacs
+-rw-r--r--   1 john  staff    273 Aug 22 00:41:38 1996 .environment.nada
+-rw-r--r--   1 john  staff    315 Aug 22 00:44:27 1996 .login.nada
+-rw-r--r--   1 john  staff     33 Aug 22 00:42:18 1996 .modules.nada
+-rw-r--r--   1 john  staff    507 Aug 22 01:08:15 1996 .tcshrc.nada
+-rw-r--r--   1 john  staff   1432 Jul 31 13:38:08 1996 .xinitrc
+-rw-r--r--   1 john  staff   1173 Aug 22 01:26:06 1996 .xinitrc.nada
+-rw-r--r--   1 john  staff   2095 Oct  1 00:46:00 1996 README
+-rw-r--r--   1 john  staff  20477 Aug 22 01:45:32 1996 system.fvwm2rc
+-rw-r--r--   1 john  staff  19407 Aug 22 01:36:19 1996 system.fvwmrc
+-rw-r--r--   1 john  staff   3047 Aug 22 01:32:37 1996 system.mwmrc
+-rw-r--r--   1 john  staff   2373 Aug 22 01:32:37 1996 system.twmrc
