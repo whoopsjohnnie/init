@@ -22,4 +22,3 @@ set rmstar		# fråga när man försöker ta bort alla filer (med *)
 # alias emacs 'emacs-20.7'
 # alias emacs 'emacs-gtk-27.1'
 alias emacs 'emacs-gtk'
-

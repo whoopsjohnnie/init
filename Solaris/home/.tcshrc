@@ -34,3 +34,4 @@ set continue=(clisp lisp sicstus prolog muprolog sml scheme xscheme elk a.out si
 if ( ! $?DISPLAY ) then
   set continue_args=(emacs .emacs_pause)
 endif
+
