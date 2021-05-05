@@ -1,0 +1,119 @@
+
+Hello computer user!
+
+    
+
+Help
+
+To get info how to use Unix you can
+
+* read Nada www information
+* use the command "local-info"
+* use the commands "apropos subject" och "man subject"
+
+Initialization files
+
+ENGLISH-SPEAKING?
+If you prefer English dialogs in programs, and information
+in English (when avaliable), then se to it that
+the environment variable LANG has the value "en_US". This
+is initialized by default for English-speaking users (since
+sept. 1996) in the file ".environment". (Can be copied from
+/usr/local/etc/nadaskel/en/.environment.)
+In your directory there are some files which don't show up when you do
+an ordinary ls. They all begin with ".", you have to do "ls -a" to see
+them.
+
+These files set up your environment. When you are more used to everything,
+you can change them to your own taste. But leave them alone to start 
+with, otherwise things may get confusing...
+
+At Nada we use the command interpreter (shell) "tcsh".
+Before your personal files, common files in
+/usr/local/etc/shellinits are run, see below.
+
+Originally you have the following initialization files in your directory:
+
+.login          Run *only* at text login (i.e. Telnet
+                etc.). Before this the file  
+                /usr/local/etc/shellinits/login.init is run.
+.tcshrc         Run when the tcsh-shell is started. (also at login)
+                Runs .cshrc. Before this the file
+                /usr/local/etc/shellinits/tcsh.init is run.
+ ...
+                This command file sets up emacs and other programs
+                (clisp, prolog) so that they are restarted if you have
+                left them suspended.  This way you wont get lots of
+                emacses if you leave emacs with ^X^Z. Also the time to
+                restart emacs is much shorter than to start it from
+                fresh.
+ ...
+.cshrc          This is run whenever you start a new csh-shell. As .tcshrc
+                invokes it, it is run every time you start a new tcsh also.
+.aliases        In this file you can specify aliases for often used
+                commands. This file is loaded from
+                /usr/local/etc/shellinits/tcsh.init.
+...
+.environment    This is a good place to define your environment
+                variables. This file too is loaded by
+                /usr/local/etc/shellinits/tcsh.init.
+...
+.modules        Here you can specify which modules you want
+                initially in a session. This is also loaded by 
+                /usr/local/etc/shellinits/tcsh.init.
+
+There are several other possible initialization files used by different
+programs. Only some are mentioned here. For examples of how they 
+might look, check the directory "/usr/local/etc/shellinits/examples".
+
+.Xresources_hook  From Nadas standard .xinitrc this file is send to
+                the xrdb program ("X Resource Manager Database"). This
+                database handles e.g. the foreground and background
+                colors, and default fonts, for most X programs. Thus
+                this is the place to specify if you want a special
+                font in e.g. emacs, or a special background color of
+                e.g. the clock.
+.xinitrc_hook   This file is loaded from the standard .xinitrc at
+                NADA. Here you can specify e.g. the background color
+                of the screen, and start some additional programs if
+                you are not satisfied with the ones you normally get
+                initially. 
+.xinitrc        If you are not at all satisfied with the default
+                X-environment, then you can have your own .xinitrc
+                file. However, this requires that you know what you
+                are doing. Check the example file in 
+                /usr/local/etc/shellinits/examples. 
+.mwmrc          Used by MWM (Motif Window Manager). Here you can
+                specify for example window colors, and the contents of
+                window manager menus.
+ 
+.emacs          Run whenever GNU Emacs (normal emacs) is loaded. Here
+                you can specify various emacs variables, and determine
+                which functions are bound to which keys.
+.mailrc         Read when you start the mail program. Makes it always 
+                ask for subject and always save your own
+                messages into the "mbox" file on your directory.
+.logout         Run just before you are logged out.
+
+After some sessions these files may appear (amongst others):
+
+mbox            Where your letters are saved (mailbox).
+.newsrc         Read when the network news read program is started.
+                Use "rn", not "vnews"!
+
+The file you are now reading is a so called symbolic link
+to the global file 
+/usr/local/etc/nadaskel/sv/README.
+You can remove the link with the command "rm README".
+
+If you should do some foolish thing with some of the init-files, 
+you can always retrieve the original from
+the directory /usr/local/etc/nadaskel/en/.
+    
+
+**Good luck!**
+
+---------------------------------------------------------------
+Latest update 11 november 1997
+<webmaster@nada.kth.se>
+
