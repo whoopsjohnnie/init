@@ -3,18 +3,17 @@
 #
 #  Initieringsfil till csh
 #
-#  Vill du veta mer om denna fil, läs i filen README i din hemkatalog.
+#  Vill du veta mer om denna fil, lÃ¤s i filen README i din hemkatalog.
 #
 #  (.cshrc 2.0)
 
-# Producera ingen "core"-fil när ett program kraschar
-# (skriv "unlimited" istället för 0 om du vill ha "core-dumpar")
+# Producera ingen "core"-fil nÃ¤r ett program kraschar
+# (skriv "unlimited" istÃ¤llet fÃ¶r 0 om du vill ha "core-dumpar")
 limit coredumpsize 0
 
-# Skriv "unset" istället för "set" i dessa för att få motsatt effekt 
-set ignoreeof		# ignorera C-d till skalet (istället för att dö)
-set noclobber		# skriv inte över existerande filer i skalet
-set notify		# tala om omedelbart när backgrunds-jobb är klara
-set recexact		# känn igen exakta substrängar vid komplettering
-set rmstar		# fråga när man försöker ta bort alla filer (med *)
-
+# Skriv "unset" istÃ¤llet fÃ¶r "set" i dessa fÃ¶r att fÃ¥ motsatt effekt 
+set ignoreeof		# ignorera C-d till skalet (istÃ¤llet fÃ¶r att dÃ¶)
+set noclobber		# skriv inte Ã¶ver existerande filer i skalet
+set notify		# tala om omedelbart nÃ¤r backgrunds-jobb Ã¤r klara
+set recexact		# kÃ¤nn igen exakta substrÃ¤ngar vid komplettering
+set rmstar		# frÃ¥ga nÃ¤r man fÃ¶rsÃ¶ker ta bort alla filer (med *)

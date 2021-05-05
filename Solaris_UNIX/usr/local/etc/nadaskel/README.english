@@ -34,28 +34,28 @@ Before your personal files, common files in
 
 Originally you have the following initialization files in your directory:
 
-.login		Run *only* at text login (i.e. Telnet
-		etc.). Before this the file  
-		/usr/local/etc/shellinits/login.init is run.
-.tcshrc		Run when the tcsh-shell is started. (also at login)
-		Runs .cshrc. Before this the file
+.login          Run *only* at text login (i.e. Telnet
+                etc.). Before this the file  
+                /usr/local/etc/shellinits/login.init is run.
+.tcshrc         Run when the tcsh-shell is started. (also at login)
+                Runs .cshrc. Before this the file
                 /usr/local/etc/shellinits/tcsh.init is run.
  ...
-		This command file sets up emacs and other programs
-		(clisp, prolog) so that they are restarted if you have
-		left them suspended.  This way you wont get lots of
-		emacses if you leave emacs with ^X^Z. Also the time to
-		restart emacs is much shorter than to start it from
-		fresh.
+                This command file sets up emacs and other programs
+                (clisp, prolog) so that they are restarted if you have
+                left them suspended.  This way you wont get lots of
+                emacses if you leave emacs with ^X^Z. Also the time to
+                restart emacs is much shorter than to start it from
+                fresh.
  ...
-.cshrc		This is run whenever you start a new csh-shell. As .tcshrc
-		invokes it, it is run every time you start a new tcsh also.
-.aliases	In this file you can specify aliases for often used
-		commands. This file is loaded from
+.cshrc          This is run whenever you start a new csh-shell. As .tcshrc
+                invokes it, it is run every time you start a new tcsh also.
+.aliases        In this file you can specify aliases for often used
+                commands. This file is loaded from
                 /usr/local/etc/shellinits/tcsh.init.
 ...
-.environment	This is a good place to define your environment
-		variables. This file too is loaded by
+.environment    This is a good place to define your environment
+                variables. This file too is loaded by
                 /usr/local/etc/shellinits/tcsh.init.
 ...
 .modules        Here you can specify which modules you want
@@ -67,7 +67,7 @@ programs. Only some are mentioned here. For examples of how they
 might look, check the directory "/usr/local/etc/shellinits/examples".
 
 .Xresources_hook  From Nadas standard .xinitrc this file is send to
-		the xrdb program ("X Resource Manager Database"). This
+                the xrdb program ("X Resource Manager Database"). This
                 database handles e.g. the foreground and background
                 colors, and default fonts, for most X programs. Thus
                 this is the place to specify if you want a special

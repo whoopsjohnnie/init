@@ -2,160 +2,160 @@
 # $Header: /afs/.nada.kth.se/usr/local/etc/nadaskel/srcfiles/sv/RCS/README,v 1.2 1997/08/07 10:23:21 fjo Exp $
 #
 
-Hej datoranvändare!
+Hej datoranvÃ¤ndare!
 
 (There is a corresponding text in english in
  the file /usr/local/etc/nadaskel/en/README)
     
 
-Hjälp
+HjÃ¤lp
 
-För att få information om hur man använder UNIX kan du
+FÃ¶r att fÃ¥ information om hur man anvÃ¤nder UNIX kan du
 
-* läsa Nadas systemgrupps Unixhäfte
+* lÃ¤sa Nadas systemgrupps UnixhÃ¤fte
 * titta i Nadas www-information
-* använda kommandot "local-info"
-* använda kommandona "apropos ämne" och "man ämne"
+* anvÃ¤nda kommandot "local-info"
+* anvÃ¤nda kommandona "apropos Ã¤mne" och "man Ã¤mne"
 
 Initieringsfiler
 
-I din filkatalog finns några filer vars namn börjar med en punkt. Det
-är s. k. initieringsfiler, och eftersom det anses onödigt att alltid
-se sådana när man listar filer, visas de normalt inte (t ex med
-kommandot "ls"). Vill man se dem kan man använda "ls -a". 
+I din filkatalog finns nÃ¥gra filer vars namn bÃ¶rjar med en punkt. Det
+Ã¤r s. k. initieringsfiler, och eftersom det anses onÃ¶digt att alltid
+se sÃ¥dana nÃ¤r man listar filer, visas de normalt inte (t ex med
+kommandot "ls"). Vill man se dem kan man anvÃ¤nda "ls -a". 
 
-Initieringsfilerna "definierar din omgivning", dvs med hjälp av dem
-kan du påverka hur datorn och dess program beter sig. När du blivit
-mer van vid UNIX, kan du ändra i dem, men se till att du vet vad
-du gör när du ändrar, annars kan det bli förvirrande.
+Initieringsfilerna "definierar din omgivning", dvs med hjÃ¤lp av dem
+kan du pÃ¥verka hur datorn och dess program beter sig. NÃ¤r du blivit
+mer van vid UNIX, kan du Ã¤ndra i dem, men se till att du vet vad
+du gÃ¶r nÃ¤r du Ã¤ndrar, annars kan det bli fÃ¶rvirrande.
 
-Ordförklaring: Att en fil "exekveras" innebär att filen läses och
-kommandona i den utförs.
+OrdfÃ¶rklaring: Att en fil "exekveras" innebÃ¤r att filen lÃ¤ses och
+kommandona i den utfÃ¶rs.
 
-På Nada använder vi kommandotolkaren (ett s.k. shell) tcsh.
-Före dina egna initieringsfiler exekveras globala
+PÃ¥ Nada anvÃ¤nder vi kommandotolkaren (ett s.k. shell) tcsh.
+FÃ¶re dina egna initieringsfiler exekveras globala
 dito, som ligger i filkatalogen /usr/local/etc/shellinits.
 
-Dessa initieringsfiler finns från början i din katalog:
+Dessa initieringsfiler finns frÃ¥n bÃ¶rjan i din katalog:
 
-.login		Exekveras vid inloggning. Innan dess exekveras filen
-		/usr/local/etc/shellinits/login.init
+.login          Exekveras vid inloggning. Innan dess exekveras filen
+                /usr/local/etc/shellinits/login.init
 
-.tcshrc		Exekveras när shellprogrammet tcsh startas, dvs i
-		samband med inloggning, men även vid andra tillfällen.
-		Exekverar i sin tur filen ".cshrc". Före allt detta
-		exekveras filen /usr/local/etc/shellinits/tcsh.init
+.tcshrc         Exekveras nÃ¤r shellprogrammet tcsh startas, dvs i
+                samband med inloggning, men Ã¤ven vid andra tillfÃ¤llen.
+                Exekverar i sin tur filen ".cshrc". FÃ¶re allt detta
+                exekveras filen /usr/local/etc/shellinits/tcsh.init
 
-		Vissa program är konstruerade så att man inte behöver
-		avsluta dem helt när man ska göra något annat, utan
-		man bara stannar dem tillfälligt (engelska: suspend),
-		varvid de finns kvar "i bakgrunden".
+                Vissa program Ã¤r konstruerade sÃ¥ att man inte behÃ¶ver
+                avsluta dem helt nÃ¤r man ska gÃ¶ra nÃ¥got annat, utan
+                man bara stannar dem tillfÃ¤lligt (engelska: suspend),
+                varvid de finns kvar "i bakgrunden".
 
-		I den globala "tcsh.init" initieras så att några
-		program - emacs, clisp, prolog m fl - får automatik
-		för sådan hantering: om det finns ett stannat program
-		i bakgrunden så återtas körningen av detta när man ger
-		motsvarande kommando. (Om man inte har någon sådan
-		initiering laddas och startas programmet på nytt varje
-		gång samtidigt som man har de gamla "grenarna" med
-		startade program kvar i bakgrunden. Sådant kan alltså
-		leda till att man har samma program inladdat flera
-		gånger, vilket är förvirrande och tar upp
-		minnesutrymme.)
+                I den globala "tcsh.init" initieras sÃ¥ att nÃ¥gra
+                program - emacs, clisp, prolog m fl - fÃ¥r automatik
+                fÃ¶r sÃ¥dan hantering: om det finns ett stannat program
+                i bakgrunden sÃ¥ Ã¥tertas kÃ¶rningen av detta nÃ¤r man ger
+                motsvarande kommando. (Om man inte har nÃ¥gon sÃ¥dan
+                initiering laddas och startas programmet pÃ¥ nytt varje
+                gÃ¥ng samtidigt som man har de gamla "grenarna" med
+                startade program kvar i bakgrunden. SÃ¥dant kan alltsÃ¥
+                leda till att man har samma program inladdat flera
+                gÃ¥nger, vilket Ã¤r fÃ¶rvirrande och tar upp
+                minnesutrymme.)
 
-.cshrc		Exekveras när shellprogrammet csh startas. Eftersom
-		filen ".tcshrc" också anropar denna fil, exekveras den
-		varje gång ".tcshrc" exekveras.
+.cshrc          Exekveras nÃ¤r shellprogrammet csh startas. Eftersom
+                filen ".tcshrc" ocksÃ¥ anropar denna fil, exekveras den
+                varje gÃ¥ng ".tcshrc" exekveras.
 
-.aliases	I shellprogrammet "tcsh" (liksom i "csh") kan man
-		definiera egna kommandon med kommandot "alias". Om man
-		vill att vissa egna kommandon i "tcsh" alltid ska
-		finnas, är det enklast att lägga motsvarande
-		"alias"-kommandon i denna fil, ".aliases". Den
-		exekveras av den globala "tcsh.init", dvs vid varje
-		start av "tcsh".
+.aliases        I shellprogrammet "tcsh" (liksom i "csh") kan man
+                definiera egna kommandon med kommandot "alias". Om man
+                vill att vissa egna kommandon i "tcsh" alltid ska
+                finnas, Ã¤r det enklast att lÃ¤gga motsvarande
+                "alias"-kommandon i denna fil, ".aliases". Den
+                exekveras av den globala "tcsh.init", dvs vid varje
+                start av "tcsh".
 
-.environment	Många program går att påverka med hjälp av olika
-		"omgivnings-variabler" ("environment variables").
-		Till exempel, vilken skrivare man skriver ut på styrs
+.environment    MÃ¥nga program gÃ¥r att pÃ¥verka med hjÃ¤lp av olika
+                "omgivnings-variabler" ("environment variables").
+                Till exempel, vilken skrivare man skriver ut pÃ¥ styrs
                 av variabeln PRINTER, och i vilka kataloger man ska
-                leta efter körbara program i står i variabeln PATH.
-		Dessa olika variabler sätts lämpligast i denna fil,
+                leta efter kÃ¶rbara program i stÃ¥r i variabeln PATH.
+                Dessa olika variabler sÃ¤tts lÃ¤mpligast i denna fil,
                 som exekveras av den globala "tcsh.init".
 
 .modules        I denna fil kan man ange vilka moduler man vill ha
-                laddade från början av en session. Liksom .aliases och
+                laddade frÃ¥n bÃ¶rjan av en session. Liksom .aliases och
                 .environment exekveras den av den globala "tcsh.init".
                 Genom kommandona "module initadd <modulnamn>" och
-                "module initrm <modulnamn>" kan man lägga till och ta
+                "module initrm <modulnamn>" kan man lÃ¤gga till och ta
                 bort moduler ur denna fil.
 
-Dessutom finns ett antal ytterligare initieringsfiler som används av
-olika program, och som du kan ha om du vill. Förslag på hur några av
-dessa kan se ut finns på katalogen "/usr/local/etc/nadaskel/examples". 
+Dessutom finns ett antal ytterligare initieringsfiler som anvÃ¤nds av
+olika program, och som du kan ha om du vill. FÃ¶rslag pÃ¥ hur nÃ¥gra av
+dessa kan se ut finns pÃ¥ katalogen "/usr/local/etc/nadaskel/examples". 
 
-.Xresources_hook  I Nadas globala .xinitrc-fil sänds denna fil till
+.Xresources_hook  I Nadas globala .xinitrc-fil sÃ¤nds denna fil till
                 programmet "xrdb" ("X Resource Manager Database").
-                Denna databas tillfrågas av flera olika program om tex
-                vad de ska ha för bakgrunds- och förgrunds-färger, och
-                normalt typsnitt ("font"). Detta är alltså rätt ställe
-                att specificera om man vill ha något speciellt
-                typsnitt i tex emacs, eller speciell bakgrundsfärg på
+                Denna databas tillfrÃ¥gas av flera olika program om tex
+                vad de ska ha fÃ¶r bakgrunds- och fÃ¶rgrunds-fÃ¤rger, och
+                normalt typsnitt ("font"). Detta Ã¤r alltsÃ¥ rÃ¤tt stÃ¤lle
+                att specificera om man vill ha nÃ¥got speciellt
+                typsnitt i tex emacs, eller speciell bakgrundsfÃ¤rg pÃ¥
                 t.ex. klockan.  
 
-.xinitrc_hook   Exekveras från Nadas globala .xinitrc-fil, som i sin
-                tur exekveras när du loggar in direkt på en dator som
-                kör X11. Här kan du sätta vilken färg du vill ha på
+.xinitrc_hook   Exekveras frÃ¥n Nadas globala .xinitrc-fil, som i sin
+                tur exekveras nÃ¤r du loggar in direkt pÃ¥ en dator som
+                kÃ¶r X11. HÃ¤r kan du sÃ¤tta vilken fÃ¤rg du vill ha pÃ¥
                 bakgrunden, och starta ytterligare program om du inte
-                är nöjd med de du normalt får från början.
+                Ã¤r nÃ¶jd med de du normalt fÃ¥r frÃ¥n bÃ¶rjan.
 
-.xinitrc        Om du inte alls är nöjd med Nadas normala X-miljö så
-                kan man istället använda en egen ".xinitrc", men det
-                kräver lite mer att man vet vad man gör. Se på
+.xinitrc        Om du inte alls Ã¤r nÃ¶jd med Nadas normala X-miljÃ¶ sÃ¥
+                kan man istÃ¤llet anvÃ¤nda en egen ".xinitrc", men det
+                krÃ¤ver lite mer att man vet vad man gÃ¶r. Se pÃ¥
                 exemplet i /usr/local/etc/nadaskel/examples
 
-.mwmrc          Används av fönsterhanteraren MWM (Motif Window
-                Manager). Här kan du ställa in bland annat vad det ska
-                vara för färg på fönster, och vad som ska stå i
-                fönsterhanterarens menyer.
+.mwmrc          AnvÃ¤nds av fÃ¶nsterhanteraren MWM (Motif Window
+                Manager). HÃ¤r kan du stÃ¤lla in bland annat vad det ska
+                vara fÃ¶r fÃ¤rg pÃ¥ fÃ¶nster, och vad som ska stÃ¥ i
+                fÃ¶nsterhanterarens menyer.
 
  
-.emacs          Exekveras när emacs (GNU Emacs) startas. Här kan man
-                bland annat sätta variabler som bestämmer hur emacs
-                ska bete sig, vilka paket man vill använda i emacs,
-                och vilka knappar som ska köra vilka funktioner. 
+.emacs          Exekveras nÃ¤r emacs (GNU Emacs) startas. HÃ¤r kan man
+                bland annat sÃ¤tta variabler som bestÃ¤mmer hur emacs
+                ska bete sig, vilka paket man vill anvÃ¤nda i emacs,
+                och vilka knappar som ska kÃ¶ra vilka funktioner. 
 
-.mailrc         Exekveras när programmet "mail" startas. Medför att
-                det frågas efter en ärenderad när man skickar
+.mailrc         Exekveras nÃ¤r programmet "mail" startas. MedfÃ¶r att
+                det frÃ¥gas efter en Ã¤renderad nÃ¤r man skickar
                 datorbrev, och att alla brev sparas i filen "mbox".
 
-                Programmet "Pine" rekommenderas istället för "mail".
+                Programmet "Pine" rekommenderas istÃ¤llet fÃ¶r "mail".
 
 .logout         Exekveras alldeles innan man blir utloggad.
 
-När du kört några gånger på datorn, kan följande filer dyka
+NÃ¤r du kÃ¶rt nÃ¥gra gÃ¥nger pÃ¥ datorn, kan fÃ¶ljande filer dyka
 upp (bland andra):
 
-mbox            Filen där alla datorbrev sparas av programmet "mail".
+mbox            Filen dÃ¤r alla datorbrev sparas av programmet "mail".
 
-.newsrc         Uppdateras när man läser "news" (konferenssystemet
+.newsrc         Uppdateras nÃ¤r man lÃ¤ser "news" (konferenssystemet
                 mellan UNIX-datorer). Programmet "rn" rekommenderas
-                istället för "vnews". Kör man "rn" går det också bra
-                själv stuva om raderna i denna fil, om man vill läsa
-                mötena i en annan ordning.
+                istÃ¤llet fÃ¶r "vnews". KÃ¶r man "rn" gÃ¥r det ocksÃ¥ bra
+                sjÃ¤lv stuva om raderna i denna fil, om man vill lÃ¤sa
+                mÃ¶tena i en annan ordning.
 
-Den fil du läser nu är en s. k. symbolisk fillänk till den globala filen
-/usr/local/etc/nadaskel/sv/README. Du kan ta bort länken med
+Den fil du lÃ¤ser nu Ã¤r en s. k. symbolisk fillÃ¤nk till den globala filen
+/usr/local/etc/nadaskel/sv/README. Du kan ta bort lÃ¤nken med
 kommandot "rm README".
 
-Om du skulle råka göra något misstag med någon av initieringsfilerna
-kan du alltid återgå till ursprungsfilen genom att kopiera den från
+Om du skulle rÃ¥ka gÃ¶ra nÃ¥got misstag med nÃ¥gon av initieringsfilerna
+kan du alltid Ã¥tergÃ¥ till ursprungsfilen genom att kopiera den frÃ¥n
 katalogen /usr/local/etc/nadaskel/sv/.
     
 
 *Lycka till!*
 
 ---------------------------------------------------------------
-Senast ändrad 1 okt. 1996
+Senast Ã¤ndrad 1 okt. 1996
 <webmaster@nada.kth.se>
 

@@ -39,13 +39,13 @@ xset b 1 1 1    # bell percent=1 pitch=1 duration=1
   xterm -T Terminal -ls -geometry 80x32+0+0 &
 
 #  Start the window manager
-mwm &		# Motif Window Manager
+mwm &   # Motif Window Manager
 #  Or try one of these window managers
-# tvtwm &	# Tom's Virtual Tab Window Manager
-# fvwm &	# F? Virtual Window Manager
-# olwm &	# Open Look Window Manager
-# gwm &		# Generic Window Manager, standard profile
-# gwm -f vtwm &	# Generic Window Manager, vtwm profile
+# tvtwm & # Tom's Virtual Tab Window Manager
+# fvwm &  # F? Virtual Window Manager
+# olwm &  # Open Look Window Manager
+# gwm &   # Generic Window Manager, standard profile
+# gwm -f vtwm & # Generic Window Manager, vtwm profile
 
 # Have this last, and *not* in the background. When it exits you get logged out.
 xlogout -geometry -142+0
