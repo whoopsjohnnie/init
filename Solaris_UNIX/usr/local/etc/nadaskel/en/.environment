@@ -1,0 +1,8 @@
+##
+## $Header: /afs/.nada.kth.se/common/usr/local/etc/nadaskel/en/RCS/.environment,v 1.2 2008/09/25 14:24:52 ragge Exp $
+##
+##  LEGACY - FOR BACKWARDS COMPATIBILITY ONLY!
+##  tcsh users - setup your environment in .cshrc instead.
+##  bash users - setup your environment in .bashrc instead.
+##
+##  (.environment 2.2)

@@ -1,0 +1,22 @@
+##
+## $Header: /afs/.nada.kth.se/common/usr/local/etc/nadaskel/en/RCS/.aliases,v 1.2 2008/09/25 14:24:52 ragge Exp $
+##
+##  LEGACY - FOR BACKWARDS COMPATIBILITY ONLY!
+##  FOR USERS USING tcsh (or csh) ONLY!
+##  For bash users, setup your aliases in .bashrc instead.
+##
+#  Here you can define "aliases" for often used commands.
+#
+#  The characters \!* marks where possible arguments are meant to go.
+#  If you want to know more, read the file README in your home directory.
+#
+#  (.aliases 2.0)
+
+alias lf 'ls -F'		# list files and show their types
+alias ll 'ls -laF'		# list all files in long format
+alias lsd 'cd \!* ; ls -aF'	# go to a directory and show its contents
+alias h 'history -r | more'	# show the shell history list
+alias logo 'logout'
+
+#  Make emacs run in the background when in X, and in the foreground otherwise.
+alias em 'eval "emacs \!* "`if ( $?DISPLAY ) echo "&"`'

@@ -1,0 +1,33 @@
+#
+# $Header: /afs/.nada.kth.se/common/usr/local/etc/nadaskel/en/RCS/.tcshrc,v 1.1 2001/09/10 08:06:31 klas Exp klas $
+#
+#  Initializations for tcsh
+#
+#  If you want to know more, read the file README in your home directory.
+#
+#  (.tcshrc 2.1)
+
+# Read the initializations for csh (if that file exists).
+if ( -r ~/.cshrc ) then
+  source ~/.cshrc
+endif
+
+if ( ! $?prompt ) exit;		# Stop here if not interactive
+
+# Special functions for various keys
+# bindkey ? list-choices 	# Question mark lists possible alternatives
+# bindkey ? self-insert-command # If you rather want ? as a normal character
+# bindkey M-? list-choices      # and Meta-? to list alternatives
+
+set history = 40	# Length of history list
+set prompt = "%m:%~>"	# Appearance of prompt (%m =computer, %~ =directory)
+
+# Programs which can be left with C-z, and entered again with their name.
+set continue=(clisp lisp sicstus prolog muprolog sml scheme xscheme elk a.out simuladeb matlab)
+
+# Make emacs behave like the programs above only if not in an X-environment.
+# (Do "unset continue_args" to always be able to have several emacses.)
+if ( ! $?DISPLAY ) then
+  set continue_args=(emacs .emacs_pause)
+endif
+
