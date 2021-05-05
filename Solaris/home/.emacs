@@ -159,6 +159,21 @@
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
+;; Ctrl-a should mark whole buffer
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+
+;; Option1
+(setq mac-command-modifier 'control)
+(setq mac-option-modifier 'meta)
+
+;; Option2
+; (setq mac-command-modifier 'super)
+; (setq mac-option-modifier 'meta)
+
+;; Enable Evil
+; (require 'evil)
+; (evil-mode 1)
+
 ;;
 ; (setq default-directory "~/")
 ; (setq command-line-default-directory "~/")
