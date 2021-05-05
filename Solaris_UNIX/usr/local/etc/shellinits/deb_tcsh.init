@@ -7,9 +7,9 @@ if ( -f ~/.debug_login_delay ) then
     set deb_login = "/tmp/debug_login_delay.$$.`date +19%y%m%dT%H%M%S`"
     set deb_secs = "/usr/local/etc/shellinit/floatsecs_since_epoch"
     if ( { touch $deb_login } && -x $deb_secs ) then
-	echo "T0 `$deb_secs`" >> $deb_login
+  echo "T0 `$deb_secs`" >> $deb_login
     else
-	unset deb_login
+  unset deb_login
     endif
 else
     unset deb_login
@@ -26,7 +26,7 @@ if ( $?tcshinit ) exit
 set tcshinit = done
 
 #
-#	Aliases for Environment Modification
+# Aliases for Environment Modification
 #
 if ( $?histchars ) then
   set histchar = `echo $histchars | cut -c1`
@@ -85,7 +85,7 @@ set backslash_quote
 # S{tt umask-v{rde.
 set _exprres=`expr $USER : '.*-'`
 if ( "$_exprres" > 0 ) then
-    umask 066	# Troligen en elev, h|gt filskydd
+    umask 066 # Troligen en elev, h|gt filskydd
 else
     umask 022   # ..annars normalt filskydd
 endif
@@ -97,13 +97,13 @@ endif
 set path=(/usr/local/bin /usr/local/bin/X11 /usr/ucb /bin /usr/bin .)
 #
 if ( -r ~/.aliases ) then
-	source ~/.aliases
+  source ~/.aliases
 endif
 if ( $?deb_login == 1 ) then
     echo "TE `$deb_secs`" >> $deb_login
 endif
 #
-if ( ! $?prompt ) exit		   # Avsluta h{r om inte k|rs fr}n terminal
+if ( ! $?prompt ) exit       # Avsluta h{r om inte k|rs fr}n terminal
 #
 alias logo logout
 alias h 'history -r | more'
@@ -140,9 +140,9 @@ endif
 # Borttaget, inaktuellt/PSv
 #echo $version | grep  -s 6.01
 #if ( $? == 0 ) then
-#	Version 6.01
+# Version 6.01
 #else
-#	version 6.03 or greater (?)
+# version 6.03 or greater (?)
 
 set rmstar
 

@@ -10,7 +10,7 @@ if ( $?tcshinit ) exit
 set tcshinit = done
 
 #
-#	Aliases for Environment Modification
+# Aliases for Environment Modification
 #
 if ( $?histchars ) then
   set histchar = `echo $histchars | cut -c1`
@@ -58,7 +58,7 @@ set backslash_quote
 # S{tt umask-v{rde.
 set _exprres=`expr $USER : '.*-'`
 if ( "$_exprres" > 0 ) then
-    umask 066	# Troligen en elev, h|gt filskydd
+    umask 066 # Troligen en elev, h|gt filskydd
 else
     umask 022   # ..annars normalt filskydd
 endif
@@ -67,10 +67,10 @@ unset _exprres
 set path=(/usr/local/bin /usr/local/bin/X11 /usr/ucb /bin /usr/bin .)
 #
 if ( -r ~/.aliases ) then
-	source ~/.aliases
+  source ~/.aliases
 endif
 #
-if ( ! $?prompt ) exit		   # Avsluta h{r om inte k|rs fr}n terminal
+if ( ! $?prompt ) exit       # Avsluta h{r om inte k|rs fr}n terminal
 #
 alias logo logout
 alias h 'history -r | more'
@@ -105,8 +105,8 @@ if ( -f /info/$_cat/tcsh.init ) source /info/$_cat/tcsh.init
 echo $version | grep  -s 6.01
 
 if ( $? == 0 ) then
-#	Version 6.01
+# Version 6.01
 else
-#	version 6.03 or greater (?)
-	set rmstar
+# version 6.03 or greater (?)
+  set rmstar
 endif

@@ -1,7 +1,7 @@
 #
 # $Id: bash.init,v 1.1 92/09/10 01:16:21 psv Exp $
 #
-# Initieringsfil för bash
+# Initieringsfil fÃ¶r bash
 #
 #
 #
@@ -22,11 +22,11 @@ term()
 print()
 {
     (PRINTER=`/usr/local/print/printer-get.sh $@`;
-	/usr/local/bin/print $@)
+    /usr/local/bin/print $@)
     _tfi=/tmp/PRINTER.$USER.$$
     if [ -r $_tfi ] ;  then
         PRINTER=`cat $_tfi`; export PRINTER;
-	rm -f $_tfi
+    rm -f $_tfi
     fi
 }
 

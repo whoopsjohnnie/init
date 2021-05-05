@@ -9,9 +9,9 @@ if ( -f ~/.no_tcshinit ) exit
 /usr/athena/bin/klist -t
 if ( $? == 1 ) then
   echo
-  echo '*** Det finns inga giltiga Kerberos-biljetter fˆr dig pÂ den h‰r datorn.'
-  echo '*** Du kan skaffa dig sÂdana med kommandot \"kauth\".'
-  echo '*** Om din hemkatalog ligger i AFS kan du inte l‰sa dina filer utan biljetter.'
+  echo '*** Det finns inga giltiga Kerberos-biljetter f√∂r dig p√• den h√§r datorn.'
+  echo '*** Du kan skaffa dig s√•dana med kommandot \"kauth\".'
+  echo '*** Om din hemkatalog ligger i AFS kan du inte l√§sa dina filer utan biljetter.'
   echo '    (No Kerberos tickets. More info in English with \"help tickets\".)'
   echo 
 else
@@ -43,14 +43,14 @@ case dront.nada.kth.se:
 case hemul.nada.kth.se:
 case mumrik.nada.kth.se:
 limit cputime 300
-echo "En CPU-tidsgr‰ns p} 5 minuter per process ‰r satt."
-echo "Med kommandot 'limit' kan du ‰ndra detta."
+echo "En CPU-tidsgr√§ns p} 5 minuter per process √§r satt."
+echo "Med kommandot 'limit' kan du √§ndra detta."
 breaksw
 endsw
 
 #if ( $?DISPLAY ) then
 #    if ( -f /usr/local/bin/termchars ) then
-#	/usr/local/bin/termchars sw
+# /usr/local/bin/termchars sw
 #    endif
 #else
 #    stty rows 0 cols 0
@@ -65,7 +65,7 @@ setenv SUBEDITOR /usr/local/bin/submg
 #setenv TEXEDIT "$SUBEDITOR +%d %s"
 setenv LANG sv_SE.8859-1
 if ( $HOSTTYPE == "sun4" ) then
-	stty pass8
+  stty pass8
 endif
 setenv ESHELL /bin/csh
 setenv HPATH /usr/local/man/cat1:/usr/man/cat1:/usr/local/man/cat8:/usr/man/cat8
@@ -77,11 +77,11 @@ source /usr/local/etc/shellinits/tcsh.init
 #
 # check for login message in siteinfo database
 #if ( -x /usr/local/sbin/getsiteinfo ) then
-#	set login_msg = `/usr/local/sbin/getsiteinfo -q self login-msg  `
-#	if ( "$login_msg" != ""  && -f  "$login_msg" ) then
-#		cat $login_msg
-#	endif
-#	unset login_msg
+# set login_msg = `/usr/local/sbin/getsiteinfo -q self login-msg  `
+# if ( "$login_msg" != ""  && -f  "$login_msg" ) then
+#   cat $login_msg
+# endif
+# unset login_msg
 #endif
 #
 #
@@ -120,8 +120,8 @@ unset warnfn
 # /usr/local/bin/sysnews -u 1
 
 # New news with categories /klas 941113
-#	Run in background as checkmail do
+# Run in background as checkmail do
 if ( -e /usr/local/bin/kursnytt ) then
-	sh -c "/usr/local/bin/kursnytt -c &"
+  sh -c "/usr/local/bin/kursnytt -c &"
 endif
 

@@ -6,11 +6,11 @@
 #
 
 #if [ -f $HOME/.xinitrc ] ; then
-#	chmod +x $HOME/.xinitrc
-#	exec $HOME/.xinitrc
+# chmod +x $HOME/.xinitrc
+# exec $HOME/.xinitrc
 #fi
 
-	
+  
 if [ -f $HOME/.Xresources ]; then
   xrdb $HOME/.Xresources
 elif [ -f /etc/dt/config/nada.default.Xresources ]; then
@@ -52,10 +52,10 @@ if [ ! "$NO_DEFAULT_APPS" ]; then
   else
     XFILESEARCHPATH=$XFILESEARCHPATH:/pkg/motif/2.1/lib/X11/app-defaults
     export XFILESEARCHPATH
-    /pkg/motif/2.1/bin/mwm &					# Use Motif window manager.
+    /pkg/motif/2.1/bin/mwm &          # Use Motif window manager.
   fi
   # Default applications
-  xclock -geometry 120x120-0+0 &		# Upper right.
+  xclock -geometry 120x120-0+0 &    # Upper right.
   emacs -i -geometry 80x32-0-0 &
   xterm -T Terminal -ls -geometry 80x32+0+0 &
 #
