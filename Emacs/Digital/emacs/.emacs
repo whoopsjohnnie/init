@@ -5,7 +5,7 @@
 ;; Timestamp: Feb 5 2001, 03:41:51
 ;;
 
-;;(setq debug-on-error t) ;; anv‰nd inte denna, ger fula debug-meddelanden
+;;(setq debug-on-error t) ;; anv√§nd inte denna, ger fula debug-meddelanden
 ;*                    -*- emacs-lisp -*-
 ;:*========================================================
 ;:*                 START EMACS SETTINGS
@@ -44,7 +44,7 @@
 (defun USER-load-file (f) (load-file (concat "~" USER "/.xemacs/" f)) )
 
 ;:*=====================================================================
-;:*====================== Johns grejor, fˆr XEmacs =====================
+;:*====================== Johns grejor, f√∂r XEmacs =====================
 ;:*=====================================================================
 
 (setq load-path (cons (expand-file-name "~/emacs/") load-path))
@@ -60,7 +60,7 @@
 
 ;;(require 'scroll-in-place)
 (require 'jde)
-;;(require 'tex-site) ;; s‰tts i xemacs-latex
+;;(require 'tex-site) ;; s√§tts i xemacs-latex
 
 ;;(setq scroll-in-place nil)
 
@@ -138,7 +138,7 @@
 ;:*=======================================================
 ;:*
 ;:* Layout stolen from Erik Selberg's GNUS hacks... (gnus-load.el)
-;:* Method of loading user files stolen from RenÈ Scholz.
+;:* Method of loading user files stolen from Ren√© Scholz.
 ;:* Kudos to Markus Dickebohm for getting me started and running.
 ;:*
 ;:* CAVEATS
