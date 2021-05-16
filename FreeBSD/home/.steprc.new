@@ -1,13 +1,9 @@
 
-# 
-# Also found my old Digital UNIX AfterStep config from e.kth.se
-# 
-# https://people.kth.se/~e97_jog/.steprc
-# wget https://people.kth.se/~e97_jog/.steprc
-# 
-# Git is mangling timestamps, so adding the original timestamp here for reference
-# -rw-r--r--  1 john  john  20809 Jul 25  2000 .steprc
-# 
+#
+# This is my original AfterStep config from the Digital UNIX kth.se AFS cell
+#
+# /afs/kth.se/home/e97/e97_jog/Public/.steprc, Jul 25 2000, 07:31:57
+#
 
 # 08/25/96 sample.steprc v1.6 fsf frank@ssax.com
              ############################################
