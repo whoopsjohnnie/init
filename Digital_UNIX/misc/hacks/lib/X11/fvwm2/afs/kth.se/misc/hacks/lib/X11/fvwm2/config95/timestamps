@@ -1,0 +1,25 @@
+total 108
+drwxr-xr-x  2 john  john     24 May 17 10:29:43 2021 .
+drwxr-xr-x  5 john  john     12 May 17 10:29:34 2021 ..
+-rw-r--r--  1 john  john    498 Sep  2 08:35:45 1998 colors
+-rw-r--r--  1 john  john    220 May  7 13:33:02 1998 fonts
+-rw-r--r--  1 john  john   2233 Apr 15 05:43:22 2000 functions
+-rw-r--r--  1 john  john   2730 Sep  2 08:31:06 1998 fvwmbuttons
+-rw-r--r--  1 john  john    229 Sep  2 08:31:41 1998 fvwmpager
+-rw-r--r--  1 john  john   2867 Sep  2 08:37:53 1998 fvwmtaskbar
+-rw-r--r--  1 john  john  14490 Sep  3 08:16:05 1997 hlock-menus
+-rw-r--r--  1 john  john   1779 Oct 10 17:41:18 1998 key-bindings
+-rw-r--r--  1 john  john   7668 Sep 10 08:36:06 2000 menus
+-rw-r--r--  1 john  john   3927 Oct 22 14:00:03 1998 mini-icons
+-rw-r--r--  1 john  john    660 Sep  3 08:37:06 1997 misc-modules
+-rw-r--r--  1 john  john    768 May  8 03:51:28 1998 modules-menu
+-rw-r--r--  1 john  john   1910 Sep  3 08:27:11 1997 mouse-bindings
+-rw-r--r--  1 john  john   1232 May 11 16:35:56 1998 operation
+-rw-r--r--  1 john  john    848 Jan 18 13:12:26 2000 root-menu
+-rw-r--r--  1 john  john    455 Apr 28 06:36:13 1998 start-menu
+-rw-r--r--  1 john  john    511 Sep  2 08:35:59 1998 startup
+-rw-r--r--  1 john  john      0 May 17 10:29:43 2021 timestamps
+-rw-r--r--  1 john  john    174 Sep  3 08:35:50 1997 user-conf
+-rw-r--r--  1 john  john      0 Nov  5 07:46:23 1997 user-preconf
+-rw-r--r--  1 john  john    996 Sep  3 08:26:28 1997 window-menu
+-rw-r--r--  1 john  john   1489 Sep  2 08:29:36 1998 windowstyles

@@ -1,0 +1,6 @@
+total 11
+drwxr-xr-x  2 john  john   5 May 17 10:34:18 2021 .
+drwxr-xr-x  7 john  john  13 May 17 10:34:12 2021 ..
+-rw-r--r--  1 john  john  78 Aug 28 12:23:52 1997 condread
+-rw-r--r--  1 john  john  55 Aug 28 12:24:02 1997 readifexists
+-rw-r--r--  1 john  john   0 May 17 10:34:18 2021 timestamps

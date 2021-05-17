@@ -1,0 +1,13 @@
+total 70
+drwxr-xr-x  5 john  john     12 May 17 10:29:34 2021 .
+drwxr-xr-x  3 john  john      3 May 17 09:41:16 2021 ..
+drwxr-xr-x  2 john  john     23 May 17 09:43:32 2021 config
+drwxr-xr-x  2 john  john     23 May 17 09:45:01 2021 config95
+-rw-r--r--  1 john  john  16152 May  7 13:27:39 1998 default.fvwm2rc
+-rw-r--r--  1 john  john  16628 May  7 13:18:52 1998 fvwmrc_convert
+drwxr-xr-x  2 john  john      7 May 17 09:45:32 2021 plugins
+-rw-r--r--  1 john  john   1219 May  7 13:18:52 1998 quantize_pixmaps
+-rw-r--r--  1 john  john   2862 Sep 10 09:42:52 2000 system.fvwm2rc
+-rw-r--r--  1 john  john   2830 Sep  2 08:23:02 1998 system.fvwm95rc
+-rw-r--r--  1 john  john      0 May 17 10:29:34 2021 timestamps
+-rw-r--r--  1 john  john    116 Sep 18 13:09:41 1998 update95icons

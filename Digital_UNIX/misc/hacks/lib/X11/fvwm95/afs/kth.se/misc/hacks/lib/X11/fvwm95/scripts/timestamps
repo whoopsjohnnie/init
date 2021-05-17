@@ -1,0 +1,14 @@
+total 63
+drwxr-xr-x  2 john  john    13 May 17 10:34:50 2021 .
+drwxr-xr-x  7 john  john    13 May 17 10:34:12 2021 ..
+-rw-r--r--  1 john  john  2064 Apr 29 08:37:49 1998 BellSetup
+-rw-r--r--  1 john  john  4840 Apr 29 08:37:49 1998 Buttons
+-rw-r--r--  1 john  john  5712 Apr 29 08:37:49 1998 Date
+-rw-r--r--  1 john  john  6679 Apr 29 08:37:49 1998 DeskSetup
+-rw-r--r--  1 john  john  4152 Apr 29 08:37:49 1998 FileBrowser
+-rw-r--r--  1 john  john  2112 Apr 29 08:37:49 1998 KeyboardSetup
+-rw-r--r--  1 john  john  2603 Apr 29 08:37:49 1998 PointerSetup
+-rw-r--r--  1 john  john  2115 Apr 29 08:37:49 1998 Quit
+-rw-r--r--  1 john  john  3710 Apr 29 08:37:50 1998 ScreenDump
+-rw-r--r--  1 john  john  6674 Apr 29 08:37:50 1998 ScreenSetup
+-rw-r--r--  1 john  john     0 May 17 10:34:50 2021 timestamps
