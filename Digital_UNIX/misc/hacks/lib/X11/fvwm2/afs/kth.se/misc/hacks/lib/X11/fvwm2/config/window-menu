@@ -1,0 +1,35 @@
+#========================================================================#
+#
+# This defines the most common window operations
+#
+DestroyMenu "WindowOps"
+AddToMenu "WindowOps" "Window Ops" Title
++ "&Move%mini-move.xpm%"		Function Move-or-Raise
++ "&Resize"				Function Resize-or-Raise
++ "R&aise%mini-raise.xpm"		Raise
++ "&Lower%mini-lower.xpm%"		Lower
++ "(De)Iconify"				Iconify
++ "(Un)Stick"				Stick
++ "(Un)Maximize"			Function Maximize-Func
++ ""					Nop
++ "Kill%mini-bomb.xpm%"			Destroy
++ "&Close%mini-cross.xpm%"		Delete
++ ""					Nop
++ "Switch to..."			WindowList
++ "Refresh Screen%mini-ray.xpm%"	Refresh
+
+
+#========================================================================#
+#
+# A trimmed down version of "Window Ops", good for binding to decorations
+#
+DestroyMenu "WindowMenu"
+AddToMenu "WindowMenu"
++ "&Restore"		Iconify -1
++ "&Move"		Move-or-Raise
++ "&Size"		Resize-or-Raise
++ "Mi&nimize"		Iconify 1
++ "Ma&ximize"		Maximize-Func
++ ""			Nop
++ "&Kill"		Destroy
++ "&Close	Alt+F4"	Delete

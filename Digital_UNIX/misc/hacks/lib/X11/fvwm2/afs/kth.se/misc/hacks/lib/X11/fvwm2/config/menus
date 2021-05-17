@@ -1,0 +1,228 @@
+#--------- Programs
+
+DestroyMenu "Programs"
+AddToMenu "Programs"
++ "Accessories%mini-hammer.xpm%"	Popup Accessories
++ "Development%mini-bug1.xpm%"		Popup Devel
++ "Editors%mini-edit.xpm%"		Popup Editors
++ "File managers%mini-filemgr.xpm" 	Popup FileManagers
++ "Games%mini-happy.xpm%"		Popup Games
++ "Graphics%mini-paint.xpm%"		Popup Graphics
++ "Internet%mini-connect.xpm%"		Popup Internet
++ "Multimedia%mini-cd.xpm%"		Popup Multimedia
++ "Scientific%mini-question.xpm"	Popup SciApps
++ "Shells%mini-term.xpm%"		Popup Shells
++ "Viewers%mini-eye.xpm%"		Popup Viewers
+#+ ""					Nop
+#+ "WM Modules%mini-modules.xpm%"	Popup Module-Popup
+#+ ""					Nop
+#+ "Others"				Popup Others
+
+
+#--------- Accessories
+
+DestroyMenu "Accessories"
+AddToMenu "Accessories"
++ "Running processes%mini-run.xpm%"	ShowProcs
+#+ "Control processes%mini-hex.xpm%"	Exec tkps &
+#+ "Memory usage%mini-perf.xpm%"	Exec xmem &
++ "Calculator%mini-calc.xpm%"		Exec kcalc &
++ "Magnifying glass%mini-zoom.xpm%" 	Exec xmag &
++ "Oclock%mini-clock.xpm%" 		Exec oclock &
++ "Session Manager"			Exec dxsession &
++ "System load%mini-perf.xpm%"		Exec xload &
++ "Xclipboard%mini-clipboard.xpm%"	Exec xclipboard &
++ "Xclock%mini-clock.xpm%" 		Exec xclock &
+#+ "Xgrab%mini-camera.xpm%"		Exec xgrab &
++ "Xman%mini-book1.xpm%"	 	Exec xman &
+
+#--------- Zephyr stuff
+
+DestroyMenu "Zephyr"
+AddToMenu "Zephyr"
++ "Zlocate%mini-zwgc.xpm%"		Exec xzlocate &
++ "Znol%mini-zwgc.xpm%"			Exec xznol &
++ "Zwrite%mini-zwgc.xpm%"		Exec hxzwrite &
+
+
+#--------- Games and amusements
+
+DestroyMenu "Games"
+AddToMenu "Games"
++ "Blackjack%mini-happy.xpm%"		Exec blackjack &
+#+ "Crossfire%mini-happy.xpm%"		Exec crossfire &
+#+ "Chess%mini-slon.xpm%"		Exec xboard &
+#+ "Spider%mini-espada.xpm%"		Exec spider &
+#+ "Hextris%mini-hextris.xpm%"		Exec xhextris &
+#+ "Kpat"				Exec kpat &
++ "Ktetris%mini-tetris.xpm%"		Exec ktetris &
++ "Kmines%mini-winmine.xpm%"		Exec kmines &
++ "Xbill%mini-happy.xpm%"		Exec xbill &
++ "Xboing%mini.xboing.xpm%"		Exec xboing &
++ "Xdoom%mini-happy.xpm%"		Exec xdoom &
++ "Xheretic%mini-happy.xpm%"		Exec xheretic &
++ "Xkoules%mini-happy.xpm%"		Exec xkoules &
+#+ "Xlander%mini-xlander.xpm%"		Exec xlander &
+#+ "Xmahjongg%mini-xmahjongg.xpm%"	Exec xmahjongg &
++ "Xmines%mini-happy.xpm%"		Exec xmines &
++ "Xpilot%mini-xpilot.xpm%"		Exec kvt -T "XPilot" -vt_fg green -no_scrollbar -vt_geometry 80x22 -e xpilot -join hstud8.cs.UiT.No &
++ "Xsokoban%mini-happy.xpm%"		Exec xsokoban &
++ "Xtris%mini-tetris.xpm%"		Exec xtris &
++ "" Nop
++ "Amusements%mini-program.xpm%"	Popup Amusements
+
+
+DestroyMenu "Amusements"
+AddToMenu "Amusements"
++ "Eyes%mini-eyes.xpm%"		Exec xeyes &
++ "Maze%mini-maze.xpm%"		Exec maze &
++ "Xaos%mini-fractal.xpm%"	Exec xaos &
++ "Xlogo%mini-bx2.xpm%"		Exec xlogo &
++ "Xpanic"			Exec xpanic &
+#+ "Xroach%mini-roach.xpm%"	Exec xroach &
++ "Xsnow%mini-xsnow.xpm%"	Exec xsnow &
+#+ "Desktop cat%mini-cat.xpm%"	Exec xcat &
+
+
+#--------- Multimedia
+
+DestroyMenu "Multimedia"
+AddToMenu "Multimedia"
++ "Mixer%mini-mixer.xpm%"		ActivateWindow audiocontrol /usr/opt/MME240/bin/mme/audiocontrol&
++ "CD player%mini-cdplayer.xpm%"	Exec exec xmcd &
++ "Midi Player"				Exec exec kmidi &
+
+
+#--------- Program Development
+
+DestroyMenu "Devel"
+AddToMenu "Devel"
++ "DDD%mini-bug1.xpm%"		Exec ddd &
++ "Vxp"				Exec vxp &
+
+
+#--------- Viewers
+
+DestroyMenu "Viewers"
+AddToMenu "Viewers"
++ "Colormap%mini-colors.xpm%"		Exec xcmap &
++ "Colors%mini-palette.xpm%"		Exec xcoloredit &
++ "Fonts%mini-font.xpm%"		Exec xfontsel &
++ "Kghostview%mini-gv.xpm%"		Exec kghostview &
++ "Kview%mini-palette.xpm%"		Exec kview &
++ "Xpdf%mini-pdf.xpm%"			Exec xpdf &
++ "Xview%mini-xv.xpm%"			Exec xv &
+#+ "Pixmap browser%mini-paint.xpm%"	Exec xbmbrowser &
+
+
+#--------- Internet
+DestroyMenu "Internet"
+AddToMenu "Internet"
++ "Mail%mini-mail.xpm%"			Exec /misc/hacks/bin/hexmh &
++ "Mosaic%mini-mosaic.xpm%"		Exec Mosaic &
++ "NcFTP%mini-ftp.xpm%"			DefaultTerm "-T NcFtp -n FTP -e ncftp"
++ "HNetscape%mini-nscape.xpm%"		Exec hnetscape -ncols 80 &
++ "HNetscape (Priv map)%mini-nscape.xpm%"	Exec hnetscape -install &
++ "NNetscape Gold%mini-nscape.xpm%"	Exec /misc/hacks/bin/netscape-gold -ncols 80 &
++ "Navigator%mini-nscape.xpm%"		Exec navigator -ncols 80 &
++ "Communicator%mini-nscape.xpm%"	Exec communicator -ncols 80 &
++ "Telnet...%mini-peer.xpm%"		Exec xtelnet &
++ "Telnet Agat%mini-peer.xpm%"		DefaultTerm "-T 'Telnet Agat' -n Agat -e telnet -x agat" &
++ "Telnet Zafir%mini-peer.xpm%"		DefaultTerm "-T 'Telnet Zafir' -n Zafir -e telnet -x zafir" &
+
+
+#--------- Editors
+DestroyMenu "Editors"
+AddToMenu "Editors"
++ "Emacs%mini-edit.xpm%"	Exec emacs &
++ "Framemaker%mini-edit.xpm%"	Exec /usr/local/vol/frame5/bin/imaker -l svenska &
++ "Kedit%mini-edit.xpm%"	Exec kedit &
+#+ "Cedit%mini-edit.xpm%" 	Exec /usr/local/cedit/cedit &
+#+ "Textedit%mini-edit.xpm%" 	Exec textedit -geometry 630x490+95+5 &
++ "Xedit%mini-edit.xpm%" 	Exec xedit &
+
+
+#--------- Graphics
+
+DestroyMenu "Graphics"
+AddToMenu "Graphics"
++ "Bitmap editor%mini-paint.xpm%" Exec bitmap &
+#+ "Pixmap editor%mini-paint.xpm%" Exec pixmap &
++ "Kpaint%mini-palette.xpm%"	  Exec kpaint &
++ "Xfig%mini-xfig.xpm%"		  Exec xfig &
++ "Xpaint%mini-palette.xpm%"	  Exec xpaint &
+
+
+#--------- Scientific applications
+
+DestroyMenu "SciApps"
+AddToMenu "SciApps"
+#+ "GNU plot%mini-zoom.xpm%"	Exec xterm -T "GNU plot" -name GNUplot -font "-*-lucidatypewriter-medium-r-*-*-12-*" -e gnuplot &
++ "Matlab%mini-matlab.xpm%" 	DefaultTerm "-T Matlab -n Matlab -e /usr/local/matlab/bin/matlab"
++ "Mäple%mini-maple.xpm%"	Exec xmaple &
+
+
+#--------- File managers
+
+DestroyMenu "FileManagers"
+AddToMenu "FileManagers"
+#+ "Explorer%mini-ofolder.xpm%"     Exec explorer &
++ "Tkdesk%mini-desktop.xpm%"      Exec tkdesk &
+#+ "File manager%mini-filemgr.xpm%" Exec xfm &
+
+
+#--------- Shells
+
+DestroyMenu "Shells"
+AddToMenu "Shells"
++ "Kvt%mini-term.xpm%"				Exec kvt &
++ "Xterm	(7x14 font)%mini-term.xpm%"	Exec xterm -sb -sl 500 -j -ls -fn 7x14 &
+#+ "Color Rxvt	(VT100)%mini-term.xpm%"		Exec rxvt -font 7x14 -ls &
++ "Color Xterm	(7x14 font)%mini-term.xpm%"	DefaultXterm
++ "Color Xterm	(8x13 font)%mini-term.xpm%"	Exec color_xterm -sb -sl 500 -j -ls -fn 8x13 -title "Color_Xterm" &
++ ""					    	Nop
++ "Large Xterm	(10x20 font)%mini-term.xpm%"	Exec xterm -sb -sl 500 -j -ls -fn 10x20 &
+#+ "Large Rxvt	(10x20 font)%mini-term.xpm%"	Exec rxvt -font 10x20 -ls &
++ "Large Color Xterm	(10x20 font)%mini-term.xpm%" Exec color_xterm -sb -sl 500 -j -ls -fn 10x20 &
+
+
+#--------- Settings
+
+DestroyMenu Settings
+AddToMenu Settings
++ "Fvwm95%mini-hammer.xpm%"		FvwmConfig
+
+
+#--------- Suspend
+
+DestroyMenu "Suspend"
+AddToMenu "Suspend"
++ "Lock Screen%mini-lock.xpm%"	  	Popup Screenlock
++ "Screensaver%mini-display.xpm%" 	Popup Screensaver
+
+
+#--------- Shutdown
+
+DestroyMenu "Shutdown"
+AddToMenu "Shutdown"
++ "Quit WindowManager%mini-exclam.xpm%"	Quit
++ "Logout%mini-x.xpm"			LogoutFunc
++ ""					Nop
++ "Restart%mini-turn.xpm%"		Restart
++ "Start fvwm%mini-turn.xpm%"		Restart fvwm
++ "Start fvwm2%mini-turn.xpm%"		Restart fvwm2
++ "Start hfvwm2%mini-turn.xpm%"		Restart hfvwm2
++ "Start hfvwm95%mini-turn.xpm%"	Restart hfvwm95
++ "Start fvwm95%mini-turn.xpm%"		Restart fvwm95
++ "" 					Nop
++ "Start afterstep%mini-afterstep.xpm%"	Restart afterstep
++ "Start amiwm%mini-ami.xpm%"		Restart amiwm
++ "Start ctwm%mini-twm.xpm%"		Restart ctwm
+#+ "Start enlightenment%mini-enl.xpm%"	Restart  enlightenment
++ "Start kwm%mini-kde.xpm%"		Restart kwm
++ "Start mwm%mini-mwm.xpm%"		Restart mwm
+#+ "Start olvwm%mini-olwm.xpm%"		Restart /usr/openwin/bin/olvwm
+#+ "Start olwm%mini-olwm.xpm%"		Restart /usr/openwin/bin/olwm
++ "Start tvtwm%mini-twm.xpm%"		Restart tvtwm
++ "Start twm%mini-twm.xpm%"		Restart twm
++ "Start WindowMaker%mini-wmaker.xpm%"	Restart wmaker

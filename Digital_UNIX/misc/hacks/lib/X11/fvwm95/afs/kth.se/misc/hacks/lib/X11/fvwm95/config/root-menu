@@ -1,0 +1,25 @@
+#
+# This is the menu that is popped up by the LMB
+#
+
+DestroyMenu "RootMenu"
+AddToMenu "RootMenu@utilities-menu.xpm@^white^"
++ "Running processes%mini-run.xpm%"	Exec kvt -no_scrollbar -vt_bg \#c0c0c0 -vt_fg black -T Top -n Top -e top &
++ "Calculator%mini-calc.xpm%"		Exec kcalc &
++ "Magnifying glass%mini-zoom.xpm%" 	Exec xmag &
+#+ "Oclock%mini-clock.xpm%" 		Exec oclock & 
+#+ "Fvwm95 Explorer%mini-ofolder.xpm%"	Exec explorer &
++ "Help%mini-help.xpm%"			Exec tkman &
++ "Kvt%mini-term.xpm%"			DefaultTerm
++ ""					Nop
++ "Programs%mini-program.xpm%"		Popup Programs
++ ""					Nop
++ "Modules%mini-modules.xpm%"		Popup Module-Popup
++ "Zephyr%mini-zwgc.xpm%"		Popup Zephyr
++ ""					Nop
++ "Lock Screen%mini-lock.xpm%"		Exec hlock &
++ "Refresh Screen%mini-ray.xpm%"	Refresh
++ ""					Nop
++ "Shut Down%mini-suspend.xpm%"		Popup Shutdown
++ "Logout%mini-x.xpm"			LogoutFunc
++ "Restart%mini-turn.xpm%"		Restart fvwm95

@@ -1,0 +1,6 @@
+#!/bin/tcsh -f
+if (-r $1) then
+  fvwmcmd Read $1
+else
+  fvwmcmd Read $2
+endif
