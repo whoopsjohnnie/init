@@ -1,0 +1,10 @@
+total 81
+drwxr-xr-x  2 john  john      9 May 17 22:45:07 2021 .
+drwxr-xr-x  4 john  john      4 May 17 22:42:20 2021 ..
+-rw-r--r--  1 john  john    144 Sep  4 11:31:24 1997 Background
+-rw-r--r--  1 john  john  40960 Sep  4 10:44:28 1997 Keyboard
+-rw-r--r--  1 john  john   4471 Sep  4 10:44:29 1997 def_tool.info
+-rw-r--r--  1 john  john  32768 Sep  4 10:44:28 1997 executecmd
+-rw-r--r--  1 john  john  40960 Sep  4 10:44:28 1997 requestchoice
+-rw-r--r--  1 john  john    459 Sep  4 10:54:52 1997 system.amiwmrc
+-rw-r--r--  1 john  john      0 May 17 22:45:07 2021 timestamps
