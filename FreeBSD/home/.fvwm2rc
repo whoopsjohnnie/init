@@ -1,0 +1,120 @@
+#
+#                   Configuration file for fvwm2
+#
+#         Administrated by Marcus Sundberg <e94_msu@e.kth.se>
+# 
+#                    Last changed:  07-May 1998
+#
+# Om du vill ändra på några inställningar i fvwm2 så skall du skapa
+# en katalog '.fvwm2conf' i din hemkatalog.
+# Där skall konfigurationsfilerna ligga.
+# Använd i första hand filen user-conf för dina inställningar.
+# I katalogen /misc/hacks/lib/X11/fvwm2/config ligger
+# standardinställlningarna, titta på dessa för att se vad som kan ändras.
+#
+#========================================================================#
+#
+# Module path and paths to the icons
+# Paths are a colon-separated list, just like regular unix PATH
+#
+ModulePath /afs/e.kth.se/misc/hacks/lib/X11/fvwm2/modules:/usr/lib/X11/fvwm2
+PixmapPath /afs/e.kth.se/misc/hacks/icons:/afs/e.kth.se/misc/hacks/icons/mini:/afs/e.kth.se/misc/hacks/icons/NEXT
+IconPath   /usr/include/X11/bitmaps
+
+
+Read .fvwm2conf/user-preconf
+
+# 
+Read .fvwm2conf/config
+
+#========================================================================#
+#
+# Set up the appearance and operation of fvwm2.
+#
+Read .fvwm2conf/fonts
+
+Read .fvwm2conf/colors
+
+Read .fvwm2conf/operation
+
+#========================================================================#
+#
+# Set the decoration styles and window options
+#
+Read .fvwm2conf/windowstyles
+
+#========================================================================#
+#
+# Some mini-icons for the title bar
+#
+Read .fvwm2conf/mini-icons
+
+#========================================================================#
+#
+# Stuff to do at start-up
+#
+Read .fvwm2conf/startup
+
+#========================================================================#
+#
+# Now define some handy complex functions
+#
+Read .fvwm2conf/functions
+
+#========================================================================#
+#
+# Configure the menus
+#
+Read .fvwm2conf/start-menu
+
+Read .fvwm2conf/root-menu
+
+Read .fvwm2conf/menus
+
+Read .fvwm2conf/modules-menu
+
+Read .fvwm2conf/hlock-menus
+
+Read .fvwm2conf/window-menu
+
+#========================================================================#
+#
+# Mouse bindings
+#
+Read .fvwm2conf/mouse-bindings
+
+#========================================================================#
+#
+# Key bindings
+#
+Read .fvwm2conf/key-bindings
+
+#========================================================================#
+#
+# Definitions used by the modules
+#
+
+Read .fvwm2conf/misc-modules
+
+Read .fvwm2conf/fvwmpager
+
+Read .fvwm2conf/fvwmbuttons
+
+
+#========================================================================#
+#
+# User specified settings
+#
+Read .fvwm2conf/user-conf
+
+#========================================================================#
+#
+# Settings made by FvwmConfig
+#
+Read .fvwm2rc-config
+
+#========================================================================#
+#
+# TaskBar settings, must be loaded last.
+#
+Read .fvwm2conf/fvwmtaskbar
