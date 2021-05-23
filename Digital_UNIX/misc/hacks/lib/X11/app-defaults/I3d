@@ -1,0 +1,8 @@
+*window_width:        600
+*window_height:       400
+*browser:             netscape
+*sb_translation_mode: free
+*sb_rotation_mode:    free
+*stress_max:          40.0
+*stress_factor:       0.4
+
