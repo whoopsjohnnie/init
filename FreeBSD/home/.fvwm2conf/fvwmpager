@@ -1,0 +1,13 @@
+#------------------ Pager
+*FvwmPagerBack grey20
+*FvwmPagerFore black
+*FvwmPagerFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+*FvwmPagerHilight #a02020
+*FvwmPagerGeometry -1-1
+*FvwmPagerLabel 0 Desktop
+*FvwmPagerSmallFont 5x8
+
+Style FvwmPager BackColor \#000000
+Style FvwmPager BorderWidth 1
+Style FvwmPager HandleWidth 1
+Style FvwmPager HilightBack \#000000
