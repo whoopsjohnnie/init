@@ -6,19 +6,19 @@ DestroyMenu "RootMenu"
 #AddToMenu "RootMenu@utilities-menu.xpm@^white^"
 AddToMenu "RootMenu"
 + "XTerm%mini-term.xpm%"		DefaultXTerm
-+ "Calculator%mini-calc.xpm%"		Exec kcalc &
++ "Calculator%mini-calc.xpm%"		Exec xcalc &
 + "Magnifying glass%mini-zoom.xpm%" 	Exec xmag &
 #+ "Oclock%mini-clock.xpm%" 		Exec oclock & 
 #+ "Fvwm95 Explorer%mini-ofolder.xpm%"	Exec explorer &
-+ "Help%mini-help.xpm%"			Exec tkman &
-+ "Kvt%mini-term.xpm%"			DefaultTerm
++ "Help%mini-help.xpm%"			Exec xman &
++ "Kvt%mini-term.xpm%"			Exec urxvt &
 + ""					Nop
 + "Programs%mini-program.xpm%"		Popup Programs
 + ""					Nop
 + "Modules%mini-modules.xpm%"		Popup Module-Popup
 + "Zephyr%mini-zwgc.xpm%"		Popup Zephyr
 + ""					Nop
-+ "Lock Screen%mini-lock.xpm%"		Exec hlock &
++ "Lock Screen%mini-lock.xpm%"		Exec xlock &
 + "Refresh Screen%mini-ray.xpm%"	Refresh
 + ""					Nop
 + "Shut Down%mini-suspend.xpm%"		Popup Shutdown
