@@ -5,12 +5,12 @@
 # 
 #                    Last changed:  02-Sep 1998
 #
-# Om du vill ändra på några inställningar i fvwm2 så skall du skapa
+# Om du vill Ã¤ndra pÃ¥ nÃ¥gra instÃ¤llningar i fvwm2 sÃ¥ skall du skapa
 # en katalog '.fvwm95conf' i din hemkatalog.
-# Där skall konfigurationsfilerna ligga.
-# Använd i första hand filen user-conf för dina inställningar.
+# DÃ¤r skall konfigurationsfilerna ligga.
+# AnvÃ¤nd i fÃ¶rsta hand filen user-conf fÃ¶r dina instÃ¤llningar.
 # I katalogen /misc/hacks/lib/X11/fvwm2/config95 ligger
-# standardinställlningarna, titta på dessa för att se vad som kan ändras.
+# standardinstÃ¤lllningarna, titta pÃ¥ dessa fÃ¶r att se vad som kan Ã¤ndras.
 #
 #========================================================================#
 #
