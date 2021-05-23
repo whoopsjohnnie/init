@@ -1,0 +1,69 @@
+§#========================================================================#
+#
+# FvwmButtons
+#
+
+Style "FvwmButtons"  NoTitle,NoHandles,Sticky,WindowListSkip,BorderWidth 0
+
+*FvwmButtonsFore Black
+*FvwmButtonsBack gray20
+*FvwmButtonsFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+# Geometry - really likes to pick its own size, but giving a position is OK
+*FvwmButtonsGeometry 100x300-2-0
+# Layout: specify rows or columns, not both
+#*FvwmButtonsRows 1
+*FvwmButtonsColumns 2
+
+# Define the buttons to use.....
+
+*FvwmButtons(Icon kvt.xpm, \
+             Action 'DefaultXTerm')
+#*FvwmButtons(Icon Xfm.xpm, \
+             Action 'Exec "Xfm" xfm -title "File Manager" &') 
+*FvwmButtons(Icon text.xpm, \
+             Action 'Exec "Emacs" emacs &')
+#*FvwmButtons(Icon rcalc.xpm, \
+#             Action 'Exec "kcalc" kcalc &')
+#*FvwmButtons(Icon gv.xpm, \
+             Action 'Exec "ghostview" ghostview &')
+*FvwmButtons(Icon mail2.xpm, \
+             Action 'Exec "Exmh" /misc/hacks/vol/sysapps/exmh &')
+*FvwmButtons(Icon news.xpm, \
+             Action 'Exec "real-knews" knews &')
+*FvwmButtons(Icon xview.xpm, \
+             Action 'Exec "xv" xv &')
+#*FvwmButtons(Icon nscape.xpm, \
+#             Action 'Exec "Netscape" /misc/hacks/bin/navigator -ncols 80 &')
+*FvwmButtons(Icon netscape.xpm, \
+             Action 'Exec "Netscape" /misc/hacks/bin/hnetscape -ncols 80 &')
+*FvwmButtons(Icon rbomb.xpm, Action Destroy)
+#*FvwmButtons(Swallow"xclock" 'Exec xclock -fg gray40 -bg gray20 \
+#             -hd red -hl red -padding 0 -geometry -1500-1500 &')
+#*FvwmButtons(Swallow "asclock" 'Exec asclock -shape &')
+*FvwmButtons(2x1, \
+             Swallow "xload" 'Exec xload -nolabel -fg red -bg gray20 \
+		-update 5 -geometry 100x100-1500-1500 &')
+*FvwmButtons(2x1, Swallow "Desktop" 'FvwmPager 0 0')
+
+#========================================================================#
+#
+# MiniButtons
+#
+
+Style "MiniButtons"  NoTitle,NoHandles,Sticky,StaysOnTop,WindowListSkip,BorderWidth 0
+
+*MiniButtonsFore Black
+*MiniButtonsBack #c0c0c0
+*MiniButtonsFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+*MiniButtonsGeometry -5+5
+*MiniButtonsRows 1
+*MiniButtonsPadding 1 1
+
+*MiniButtons -   mini-term.xpm		DefaultTerm
+#*MiniButtons -   mini-filemgr.xpm     Exec    "Xfm" xfm -title "File Manager" & 
+*MiniButtons -   mini-edit.xpm        Exec  "Textedit" textedit -En 32 &
+*MiniButtons -   mini-calc.xpm        Exec    "kcalc" kcalc &
+*MiniButtons -   mini-xv.xpm          Exec    "xv" xv   
+*MiniButtons -   mini-gv.xpm          Exec    "ghostview" ghostview &
+*MiniButtons -   mini-nscape.xpm      Exec    "Netscape" /misc/hacks/bin/hnetscape -geometry 790x543+0+0
+*MiniButtons -   mini-bomb.xpm        Destroy

@@ -1,0 +1,49 @@
+#========================================================================#
+#
+# Set up the major operating modes
+#
+
+Style "*" ClickToFocus
+# Comment the above and uncomment one of the following if you prefer
+# focus follow mouse. Also, if you want auto-raise enabled, uncomment
+# the appropiate line in InitFunction (see the 'startup' file).
+#Style "*" MouseFocus
+#Style "*" SloppyFocus
+
+
+# Default width.
+#
+Style "*" BorderWidth 6, HandleWidth 6, StickyIcon
+
+#Style "*" NoIcon
+Style "*" MWMFunctions
+Style "*" HintOverride
+Style "*" MWMDecor
+Style "*" DecorateTransient
+
+ClickTime 150
+EdgeResistance 500 20
+
+#EdgeScroll 0 0		# Don't scroll when cursor reaches edge of screen
+EdgeScroll 100 100	# Scroll when cursor reaches edge of screen
+
+OpaqueMoveSize 100	# Move full windows
+#OpaqueMoveSize 0	# Move just the border of windows
+
+ColormapFocus FollowsFocus
+#ColormapFocus FollowsMouse
+
+# RandomPlacement prevents user interaction while placing windows:
+#
+Style "*" SmartPlacement, RandomPlacement
+
+
+# Set the desk top size in units of physical screen size
+#
+DeskTopSize 3x2
+
+
+# NoPPosition instructs fvwm to ignore the PPosition field in window 
+# geometry hints. Emacs annoyingly sets PPosition to (0,0)!
+#
+#Style "*" NoPPosition

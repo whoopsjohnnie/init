@@ -1,0 +1,19 @@
+#========================================================================#
+#
+# Set the default window colors.
+Style "*"	Color black/#c0c0c0
+
+# Colors for the menus
+#
+MenuStyle black #c0c0c0 #000080 -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-*-* mwm
+#MenuColors	black #c0c0c0 white #000080
+
+
+# Text and background color for the title bar of the active (selected) window
+#
+HilightColor   white #000080
+
+
+# Text and background color for the title bar of sticky windows
+#
+#StickyColors    black grey30

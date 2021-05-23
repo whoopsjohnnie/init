@@ -1,0 +1,2 @@
+#!/bin/sh
+cat ./config/mini-icons | sed -e 's/MiniIcon/TitleIcon/g' >! /misc/hacks/lib/X11/fvwm95/config/mini-icons

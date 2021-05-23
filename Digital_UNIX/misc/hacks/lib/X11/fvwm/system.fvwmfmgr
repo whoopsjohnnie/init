@@ -1,0 +1,66 @@
+#
+# This is the file-name to icon/application mapping file.
+#
+# The line format is:
+#  name,type,permissions:application,icon
+#
+#  the first three arguments must match the target file's type in order for
+#  a match to be declared. 
+#  The first three arguments may contain wildcards (* and ? only).
+#  name = file name
+#  type = unused now
+#  permissions = the file's permissions when viewed with ls -l.
+#                match a directory with d*. Match an executable with *x*
+#
+#
+# NOTES: 
+# the referenced icons are included in the fvwm_icons directory, but
+# you have to copy them to your icon and pixmap directories for
+# FvwmFileMgr to find them.
+#
+# I use an non-windowing version of emacs to edit files. If you use
+# a windowing version, change "xterm -e emacs" to just "emacs" in the
+# examples below.
+#
+# This file needs to be tailored to your environment.
+
+*.c,,:xterm -e emacs,ccode.icon
+*.h,,:xterm -e emacs,hcode.icon
+*.c~,,:xterm -e emacs,ccode.icon
+*.h~,,:xterm -e emacs,hcode.icon
+Make*,,:xterm -e emacs,flow_chart.xpm
+make*,,:xterm -e emacs,flow_chart.xpm
+Imake*,,:xterm -e xmkmf; make,editres.xpm
+*.o,,:,ocode.icon
+core,,:xterm -e gdb,bomb.xpm
+*xmh*,,:xmh -font fixed,mail2.xpm
+Mail,,:xmh -font fixed, mail2.xpm
+mbox,,:xterm -e emacs, mail1.xpm
+*.txt,,:xterm -e emacs, page.xpm
+*.tex,,:xterm -e emacs, page.xpm
+*.text,,:xterm -e emacs, page.xpm
+*.TXT,,:xterm -e emacs, page.xpm
+*.README,,:xterm -e emacs, page.xpm
+*.readme,,:xterm -e emacs, page.xpm
+*.fm,,:/local/tools/framemaker_4.0/bin/maker -file, word_processor.xpm
+*.mif,,:/local/tools/framemaker_4.0/bin/maker -file, word_processor.xpm
+*.log,,:xterm -e emacs, page2.xpm
+*.m,,:rsh signal /usr/openwin/bin/xterm -display $HOSTDISPLAY -e matlab,math4.xpm
+*.d,,:sppeed6 ,math4.xpm
+*.dvi,,:xdvi ,wierd_page3.xpm
+*.man,,:xterm -e sh -c "nroff -man $file | more" ,xman.xpm
+*.1,,:xterm -e sh -c "nroff -man $file | more" ,xman.xpm
+
+*.tar*,,:,folders.xpm
+*.tgz,,:,folders.xpm
+*.ps,,:xterm -e gs ,ps.xpm
+*.eps,,:xterm -e gs ,eps.xpm
+*.tiff,,:xv,tiff2.xpm
+*.rf,,:xv,graphs.xpm
+db*.d,,:sppeed6 -ic bearcolor, math4.xpm
+,,d*: ,folder2.xpm
+,,*x*:xterm -e,dialog_box.xpm
+,,:xterm -e emacs,question.xpm
+
+
+

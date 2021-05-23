@@ -1,0 +1,8 @@
+#------------------ Pager
+*FvwmPagerBack grey60
+*FvwmPagerFore black
+*FvwmPagerFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+*FvwmPagerHilight #c0c0c0
+*FvwmPagerGeometry -1-1
+*FvwmPagerLabel 0 Desktop
+*FvwmPagerSmallFont 5x8
