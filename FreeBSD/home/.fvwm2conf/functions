@@ -75,12 +75,12 @@ AddToFunc "window_ops_func"
 
 DestroyFunc "DefaultTerm"
 AddToFunc "DefaultTerm"
-+ "I"	Exec /misc/hacks/kde/bin/kvt -sl 500 -pageup Up -pagedown Down -T Kvt -n Kvt $0 &
++ "I"	Exec urxvt &
 
 
 DestroyFunc "ShowProcs"
 AddToFunc "ShowProcs"
-+ "I"	Exec kvt -no_scrollbar -vt_bg \#c0c0c0 -vt_fg black -T Top -n Top -e top &
++ "I"	Exec urxvt -e top &
 
 
 DestroyFunc "DefaultXterm"
@@ -98,4 +98,4 @@ AddToFunc "ActivateWindow"
 
 DestroyFunc "LogoutFunc"
 AddToFunc "LogoutFunc"
-+ "I"	Exec /misc/hacks/bin/end_xsession
++ "I"	Quit

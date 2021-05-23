@@ -17,25 +17,25 @@ Style "FvwmButtons"  NoTitle,NoHandles,Sticky,WindowListSkip,BorderWidth 0
 # Define the buttons to use.....
 
 *FvwmButtons(Icon kvt.xpm, \
-             Action 'DefaultXTerm')
+             Action 'DefaultTerm')
 #*FvwmButtons(Icon Xfm.xpm, \
              Action 'Exec "Xfm" xfm -title "File Manager" &') 
 *FvwmButtons(Icon text.xpm, \
              Action 'Exec "Emacs" emacs &')
-#*FvwmButtons(Icon rcalc.xpm, \
-#             Action 'Exec "kcalc" kcalc &')
+*FvwmButtons(Icon rcalc.xpm, \
+             Action 'Exec "xcalc" xcalc &')
 #*FvwmButtons(Icon gv.xpm, \
              Action 'Exec "ghostview" ghostview &')
 *FvwmButtons(Icon mail2.xpm, \
-             Action 'Exec "Exmh" /misc/hacks/vol/sysapps/exmh &')
+             Action 'Exec "Exmh" exmh &')
 *FvwmButtons(Icon news.xpm, \
              Action 'Exec "real-knews" knews &')
 *FvwmButtons(Icon xview.xpm, \
              Action 'Exec "xv" xv &')
 #*FvwmButtons(Icon nscape.xpm, \
-#             Action 'Exec "Netscape" /misc/hacks/bin/navigator -ncols 80 &')
+#             Action 'Exec "Netscape" firefox &')
 *FvwmButtons(Icon netscape.xpm, \
-             Action 'Exec "Netscape" /misc/hacks/bin/hnetscape -ncols 80 &')
+             Action 'Exec "Netscape" firefox &')
 *FvwmButtons(Icon rbomb.xpm, Action Destroy)
 #*FvwmButtons(Swallow"xclock" 'Exec xclock -fg gray40 -bg gray20 \
 #             -hd red -hl red -padding 0 -geometry -1500-1500 &')

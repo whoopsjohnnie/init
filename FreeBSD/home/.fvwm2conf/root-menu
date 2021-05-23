@@ -11,7 +11,7 @@ AddToMenu "RootMenu"
 #+ "Oclock%mini-clock.xpm%" 		Exec oclock & 
 #+ "Fvwm95 Explorer%mini-ofolder.xpm%"	Exec explorer &
 + "Help%mini-help.xpm%"			Exec xman &
-+ "Kvt%mini-term.xpm%"			Exec urxvt &
++ "Kvt%mini-term.xpm%"			DefaultTerm
 + ""					Nop
 + "Programs%mini-program.xpm%"		Popup Programs
 + ""					Nop
@@ -22,5 +22,5 @@ AddToMenu "RootMenu"
 + "Refresh Screen%mini-ray.xpm%"	Refresh
 + ""					Nop
 + "Shut Down%mini-suspend.xpm%"		Popup Shutdown
-+ "Logout%mini-x.xpm"			LogoutFunc
++ "Logout%mini-x.xpm%"			LogoutFunc
 + "Restart%mini-turn.xpm%"		Restart

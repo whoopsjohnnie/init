@@ -5,12 +5,12 @@ AddToMenu "Programs"
 + "Accessories%mini-hammer.xpm%"	Popup Accessories
 + "Development%mini-bug1.xpm%"		Popup Devel
 + "Editors%mini-edit.xpm%"		Popup Editors
-+ "File managers%mini-filemgr.xpm" 	Popup FileManagers
++ "File managers%mini-filemgr.xpm%" 	Popup FileManagers
 + "Games%mini-happy.xpm%"		Popup Games
 + "Graphics%mini-paint.xpm%"		Popup Graphics
 + "Internet%mini-connect.xpm%"		Popup Internet
 + "Multimedia%mini-cd.xpm%"		Popup Multimedia
-+ "Scientific%mini-question.xpm"	Popup SciApps
++ "Scientific%mini-question.xpm%"	Popup SciApps
 + "Shells%mini-term.xpm%"		Popup Shells
 + "Viewers%mini-eye.xpm%"		Popup Viewers
 #+ ""					Nop
@@ -23,7 +23,7 @@ AddToMenu "Programs"
 
 DestroyMenu "Accessories"
 AddToMenu "Accessories"
-+ "Running processes%mini-run.xpm%"	Exec urxvt -e top
++ "Running processes%mini-run.xpm%"	ShowProcs
 #+ "Control processes%mini-hex.xpm%"	Exec tkps &
 #+ "Memory usage%mini-perf.xpm%"	Exec xmem &
 + "Calculator%mini-calc.xpm%"		Exec xcalc &
@@ -175,14 +175,14 @@ AddToMenu "FileManagers"
 
 DestroyMenu "Shells"
 AddToMenu "Shells"
-+ "Kvt%mini-term.xpm%"				Exec kvt &
++ "Kvt%mini-term.xpm%"				Exec urxvt &
 + "Xterm	(7x14 font)%mini-term.xpm%"	Exec xterm -sb -sl 500 -j -ls -fn 7x14 &
 #+ "Color Rxvt	(VT100)%mini-term.xpm%"		Exec rxvt -font 7x14 -ls &
 + "Color Xterm	(7x14 font)%mini-term.xpm%"	DefaultXterm
-+ "Color Xterm	(8x13 font)%mini-term.xpm%"	Exec color_xterm -sb -sl 500 -j -ls -fn 8x13 -title "Color_Xterm" &
++ "Color Xterm	(8x13 font)%mini-term.xpm%"	Exec xterm -sb -sl 500 -j -ls -fn 8x13 -title "Color_Xterm" &
 + ""					    	Nop
 + "Large Xterm	(10x20 font)%mini-term.xpm%"	Exec xterm -sb -sl 500 -j -ls -fn 10x20 &
-#+ "Large Rxvt	(10x20 font)%mini-term.xpm%"	Exec rxvt -font 10x20 -ls &
++ "Large Rxvt	(10x20 font)%mini-term.xpm%"	Exec urxvt -font 10x20 -ls &
 + "Large Color Xterm	(10x20 font)%mini-term.xpm%" Exec color_xterm -sb -sl 500 -j -ls -fn 10x20 &
 
 

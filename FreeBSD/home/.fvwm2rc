@@ -17,8 +17,12 @@
 # Module path and paths to the icons
 # Paths are a colon-separated list, just like regular unix PATH
 #
-ModulePath /afs/e.kth.se/misc/hacks/lib/X11/fvwm2/modules:/usr/lib/X11/fvwm2
-PixmapPath /afs/e.kth.se/misc/hacks/icons:/afs/e.kth.se/misc/hacks/icons/mini:/afs/e.kth.se/misc/hacks/icons/NEXT
+# ModulePath /afs/e.kth.se/misc/hacks/lib/X11/fvwm2/modules:/usr/lib/X11/fvwm2
+# PixmapPath /afs/e.kth.se/misc/hacks/icons:/afs/e.kth.se/misc/hacks/icons/mini:/afs/e.kth.se/misc/hacks/icons/NEXT
+
+ModulePath /usr/local/libexec/fvwm/2.6.9/
+PixmapPath /misc/hacks/icons:/misc/hacks/icons/mini:/misc/hacks/icons/NEXT
+
 IconPath   /usr/include/X11/bitmaps
 
 

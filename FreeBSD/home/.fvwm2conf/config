@@ -81,10 +81,10 @@ AddToMenu X11-Session
 DestroyFunc StartFunction
 AddToFunc StartFunction
 + I Module FvwmCommandS
-+ I Module FvwmPager
+#+ I Module FvwmPager
 + I Read mystyle quiet
 + I TestRc (-1) Read $./mystyle quiet
-+ I TestRc (-1) Exec exec xsetroot -solid \#202020
+#+ I TestRc (-1) Exec exec xsetroot -solid \#202020
 
 DestroyFunc InitFunction
 AddToFunc InitFunction
@@ -183,24 +183,24 @@ Style Fvwm* WindowListSkip
 #                                                                             #
 ###############################################################################
 
-Style FvwmPager BackColor #000000
-Style FvwmPager BorderWidth 1
-Style FvwmPager FixedPosition
-Style FvwmPager FixedSize
-Style FvwmPager HandleWidth 1
-Style FvwmPager HilightBack #000000
-Style FvwmPager StaysOnBottom
-
-*FvwmPager: Back #666666
-*FvwmPager: Fore #444444
-*FvwmPager: Font none
-*FvwmPager: Balloons All
-*FvwmPager: BalloonBack #ffffff
-*FvwmPager: BalloonBorderColor #000000
-*FvwmPager: BalloonBorderWidth 1
-*FvwmPager: BalloonFont xft:Sans:Normal:size=8:antialias=True
-*FvwmPager: BalloonFore #000000
-*FvwmPager: BalloonYOffset +2
-*FvwmPager: Geometry 35x150+0+0
-*FvwmPager: Hilight #111111
-*FvwmPager: SmallFont 5x8
+# Style FvwmPager BackColor #000000
+# Style FvwmPager BorderWidth 1
+# Style FvwmPager FixedPosition
+# Style FvwmPager FixedSize
+# Style FvwmPager HandleWidth 1
+# Style FvwmPager HilightBack #000000
+# Style FvwmPager StaysOnBottom
+# 
+# *FvwmPager: Back #666666
+# *FvwmPager: Fore #444444
+# *FvwmPager: Font none
+# *FvwmPager: Balloons All
+# *FvwmPager: BalloonBack #ffffff
+# *FvwmPager: BalloonBorderColor #000000
+# *FvwmPager: BalloonBorderWidth 1
+# *FvwmPager: BalloonFont xft:Sans:Normal:size=8:antialias=True
+# *FvwmPager: BalloonFore #000000
+# *FvwmPager: BalloonYOffset +2
+# *FvwmPager: Geometry 35x150+0+0
+# *FvwmPager: Hilight #111111
+# *FvwmPager: SmallFont 5x8
