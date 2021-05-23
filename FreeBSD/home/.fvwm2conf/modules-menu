@@ -1,0 +1,18 @@
+#--------- Modules
+
+DestroyMenu "Module-Popup"
+AddToMenu "Module-Popup"
++ "Button bar%mini-ball.xpm%"		Module FvwmButtons
++ "Mini button bar%mini-ball.xpm%"	Module FvwmButtons MiniButtons
++ "Configure%mini-hammer.xpm%"		Module FvwmConfig
++ "Console%mini-ball.xpm%"		Module FvwmConsole -sb -fn 8x13
++ "Debug%mini-bug2.xpm%"		Module FvwmDebug
++ "IconBox%mini-ball.xpm%"		Module	FvwmIconBox
++ "IconMan%mini-ball.xpm%"		Module  FvwmIconMan
++ "Identify%mini-question.xpm%"		Module FvwmIdent
++ "Pager%mini-pager.xpm%"		Module FvwmPager 0 3
++ "Pipe%mini-ball.xpm%"			Module FvwmPipe
++ "Save Desktop%mini-desktop.xpm%"	Module FvwmSave
++ "Talk%mini-ball.xpm%"			Module FvwmTalk
++ "Task bar%mini-exp.xpm"		Module FvwmTaskBar
++ "Window List%mini-windows.xpm%"	Module FvwmWinList
