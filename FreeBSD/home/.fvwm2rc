@@ -24,6 +24,9 @@ IconPath   /usr/include/X11/bitmaps
 
 Read .fvwm2conf/user-preconf
 
+# 
+Read .fvwm2conf/config
+
 #========================================================================#
 #
 # Set up the appearance and operation of fvwm2.

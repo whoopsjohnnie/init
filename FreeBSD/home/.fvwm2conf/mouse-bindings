@@ -23,10 +23,21 @@ Mouse 3         R       A       WindowList
 # Note the use of "Mouse 0" for AnyButton.
 
 #     Button	Context Modif 	Function
-Mouse 0		1    	A      	Function "window_ops_func"
-Mouse 1         2       A       Close
-Mouse 0		4    	A     	Function "Maximize-Func"
-Mouse 0		6    	A     	Iconify
+# Mouse 0		1    	A      	Function "window_ops_func"
+# Mouse 1         2       A       Close
+# Mouse 0		4    	A     	Function "Maximize-Func"
+# Mouse 0		6    	A     	Iconify
+
+Mouse 0	1 A           Menu Window-Ops Close
+Mouse 0	2 A           Maximize
+Mouse 0	4 A           Iconify
+
+Mouse 1	FS A          Resize-or-Raise
+Mouse 1	T A           Move-or-Raise
+Mouse 1	I A           Move-or-Iconify
+Mouse 2	I A           Iconify
+Mouse 2	FST A         Menu Window-Ops Nop
+Mouse 3	TSIF A        RaiseLower
 
 #
 # Now the rest of the frame

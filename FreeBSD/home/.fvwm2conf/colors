@@ -10,19 +10,3 @@
 #  titlebackcolor  is the background color used for title bars of 
 #                  non selected windows
 #
-Style "*"	Color white/#707000
-
-# Colors for the menus
-#
-MenuStyle black #c0c0c0 #000080 -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-*-* mwm
-#MenuColors	black #c0c0c0 white #000080
-
-
-# Text and background color for the title bar of the active (selected) window
-#
-HilightColor   white #702020
-
-
-# Text and background color for the title bar of sticky windows
-#
-#StickyColors    black grey30
