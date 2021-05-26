@@ -1,0 +1,114 @@
+
+!------------------------------------------------------------------------------
+! ** Session Manager **
+!
+!  Can't create the listbox using UIL because we need flexibility with
+!  the font to use
+!
+*PointerShape.x:				185
+*PointerShape.y:				57
+*PointerShape.visibleItemsCount:		6
+!
+!  Session Manager Applications Menu
+!
+*applications:	Bildläsning (scanner),Bookreader,CDA Viewer,Calculator,Calendar,Cardfiler,Clock,DECterm,DECwrite,Elmer,Emacs,Emacs version 19,Mail,Matlab,Matlab35,News,Notepad,Paint,Postscript Previewer,Puzzle,User Executive,LinkWorks Mgr,Xman,Mosaic,Xterm,xv
+
+*Bildläsning (scanner).command:	/usr/bin/isa_main
+*Bookreader.command:	/usr/bin/X11/dxbook
+*CDA Viewer.command:	/usr/bin/X11/dxvdoc
+*Calculator.command:	/usr/bin/X11/dxcalc
+*Calendar.command:	/usr/bin/X11/dxcalendar
+*Cardfiler.command:	/usr/bin/X11/dxcardfiler
+*Clock.command:		/usr/bin/X11/dxclock
+*DECterm.command:	/usr/bin/X11/dxterm -ls
+*DECwrite.command:	/usr/bin/decwrite
+*Elmer.command: 	/usr/local/bin/elmer
+*Emacs.command:		/usr/local/bin/emacs
+*Emacs version 19.command:	/usr/local/bin/emacs19
+*Mail.command:		/usr/local/bin/X11/xmh
+*Matlab.command: 	/usr/bin/X11/dxterm -xrm "*title:Matlab" -xrm "*iconName:Matlab" -e matlab -background white
+*Matlab35.command: 	xterm -xrm "*title:Matlab" -xrm "*iconName:Matlab" -e matlab35 -background white
+*News.command: 		/usr/local/bin/X11/mxrn
+*Notepad.command:	/usr/bin/X11/dxnotepad
+*Paint.command:		/usr/bin/X11/dxpaint
+*Postscript Previewer.command:	/usr/local/bin/X11/ghostview
+*Puzzle.command:	/usr/bin/X11/dxpuzzle
+*User Executive.command:	/usr/bin/X11/dxue
+*LinkWorks Mgr.command:	/usr/bin/X11/lwkmanager
+*Xman.command:		/usr/local/bin/X11/xman
+*Mosaic.command:	/usr/local/bin/X11/Mosaic
+*Xterm.command:		/usr/local/bin/X11/xterm
+*xv.command:		/usr/local/bin/X11/xv
+
+*AppMenu:	Bildläsning (scanner),Bookreader,CDA Viewer,Calculator,Calendar,Cardfiler,Clock,DECterm,DECwrite,Elmer,Emacs,Emacs version 19,Mail,Matlab,Matlab35,News,Notepad,Paint,Postscript Previewer,Puzzle,User Executive,LinkWorks Mgr,Xman,Mosaic,Xterm,xv
+*num_AppMenu:	26
+
+! From decw_sm_general.dat
+
+*DwtText.translations: #augment \n\
+     Ctrl<Key>e:        end-of-line()\n\
+     Ctrl<Key>j:        delete-previous-word()\n\
+     Ctrl<Key>h:        beginning-of-line()\n\
+     Ctrl<Key>r:        redraw-display()\n\
+     Ctrl<Key>u:        delete-to-start-of-line()\n
+
+*Stext.translations: #augment \n\
+     Ctrl<Key>e:        end-of-line()\n\
+     Ctrl<Key>j:        delete-previous-word()\n\
+     Ctrl<Key>h:        beginning-of-line()\n\
+     Ctrl<Key>r:        redraw-display()\n\
+     Ctrl<Key>u:        delete-to-start-of-line()\n
+
+! The following changed to mimic standard login/password behavior.
+! These are as close to the translations used by the Xprompter as can be.
+*PauseDialog.Password*translations: #override\n\
+	<Key>Delete :		delete-previous-character()\n\
+	:Ctrl<Key>r :		redraw-display()\n\
+	:Ctrl<Key>u :		beginning-of-line() kill-to-end-of-line()\n\
+	:Ctrl<Key>w :		delete-next-word()\n\
+	Any<Key>:		self-insert()
+
+*bell_percent: 50
+*bell_enable: enable
+*keyclick_enable: enable
+*keyclick_percent: 50
+*autorepeat_mode: enable
+*lock_state: caps
+*hold_screen_key: F1
+*operator_window_key: F2
+*operator_modifier_key: ctrl
+*screen_saver_enable: enable
+*screen_saver_period: 10
+*pointer_button_order: right
+*mouse_accel_numerator: 7
+*mouse_accel_denominator: 1
+*mouse_accel_threshold: 3
+*pointer_shape:	0
+*doubleClickDelay: 250
+*printer.aspect_ratio: 1,1
+*printer.color: bw
+*printer.filename: /tmp/printscreen.ps
+*printer.ribbon_saver: positive
+*printer.storage_format: postscript
+*printer.file_prompt: 1
+*startup_state: mapped
+*create_terminal: 0
+*create_vue: 0
+*host_list:		0  	
+*num_hosts:		0
+*keyboard_dialect:	System Default
+*WmIconForm.IconStyle:		1
+DXsession.x:	10
+DXsession.y:	30
+*pause_text:	Type your password to resume the session
+*windowManagerName_default:  /usr/bin/X11/mwm
+
+*decw_print_widget*options_button.sensitive: false
+
+*rootPasswd: true
+*pauseSaver: 10
+
+*AutoStart:   DECterm,Emacs
+*num_AutoStart:       2
+*PauseButton.sensitive:	false
+*confirm_endsession:	false
