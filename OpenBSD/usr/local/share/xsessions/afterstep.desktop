@@ -1,0 +1,17 @@
+
+#
+# Based on Debian GNU/Linux /usr/share/xsessions/fvwm.desktop
+#
+
+[Desktop Entry]
+Name=AfterStep
+Keywords=AfterStep Window Manager
+Comment=AfterStep Window Manager
+Exec=afterstep
+Terminal=False
+TryExec=afterstep
+Type=Application
+
+[Window Manager]
+SessionManaged=true
+

@@ -1,0 +1,17 @@
+
+#
+# Based on Debian GNU/Linux /usr/share/xsessions/fvwm.desktop
+#
+
+[Desktop Entry]
+Name=Fvwm
+Keywords=Fvwm Window Manager
+Comment=F? Virtual Window Manager
+Exec=fvwm2
+Terminal=False
+TryExec=fvwm2
+Type=Application
+
+[Window Manager]
+SessionManaged=true
+

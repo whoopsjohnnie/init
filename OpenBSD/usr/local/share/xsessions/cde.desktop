@@ -1,0 +1,17 @@
+
+#
+# Based on Debian GNU/Linux /usr/share/xsessions/fvwm.desktop
+#
+
+[Desktop Entry]
+Name=CDE
+Keywords=CDE
+Comment=CDE
+Exec=/usr/local/dt/bin/Xsession
+Terminal=False
+TryExec=/usr/local/dt/bin/Xsession
+Type=Application
+
+[Window Manager]
+SessionManaged=true
+
