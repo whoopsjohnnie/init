@@ -1,9 +1,14 @@
 
-;;
-;; This is my original Emacs config from the Digital UNIX kth.se AFS cell
-;;
-;; /afs/kth.se/home/e97/e97_jog/Public/.emacs, Feb 5 2001, 03:38:57
-;;
+
+;; 
+;; Incredible, I found my old Digital UNIX emacs files from e.kth.se
+;; 
+;; https://people.kth.se/~e97_jog/.emacs
+;; wget https://people.kth.se/~e97_jog/.emacs
+;; 
+;; Git is mangling timestamps, so adding the original timestamp here for reference
+;; -rw-r--r--  1 john  john  5320 Feb  5  2001 .emacs
+;; 
 
 ;;(setq debug-on-error t) ;; använd inte denna, ger fula debug-meddelanden
 ;*                    -*- emacs-lisp -*-
@@ -54,6 +59,15 @@
 ;; prevent silly initial splash screen
 (setq inhibit-splash-screen t)
 
+;; Zenburn theme
+; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+; (load-theme 'zenburn t)
+; (set-face-background 'fringe "#3f3f3f")
+
+; (load-theme 'leuven)
+; (load-theme 'tango)
+(load-theme 'adwaita)
+
 ;(set-foreground-color "white")
 ;(set-background-color "black")
 ;(set-border-color "black")
@@ -85,6 +99,40 @@
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
+;
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+
+(setq mac-command-modifier 'control)
+(setq mac-option-modifier 'meta)
+
+(define-key key-translation-map (kbd "s-x s-f") (kbd "C-x C-f"))
+(define-key key-translation-map (kbd "C-x s-f") (kbd "C-x C-f"))
+(define-key key-translation-map (kbd "C-x <f3>") (kbd "C-x C-f"))
+
+(define-key key-translation-map (kbd "s-x s-s") (kbd "C-x C-s"))
+(define-key key-translation-map (kbd "C-x s-s") (kbd "C-x C-s"))
+
+(define-key key-translation-map (kbd "s-x s-c") (kbd "C-x C-c"))
+(define-key key-translation-map (kbd "C-x s-c") (kbd "C-x C-c"))
+
+(define-key key-translation-map (kbd "s-k") (kbd "C-k"))
+(define-key key-translation-map (kbd "s-g") (kbd "C-g"))
+
+;; Markdown/MD
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;(custom-set-variables
+;	'(markdown-command "/usr/local/bin/pandoc"))
+
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
 ;;
 ; (setq default-directory "~/")
 ; (setq command-line-default-directory "~/")
@@ -102,10 +150,10 @@
 ;:*  Controlling editing this file
 ;:*===================================================================
 ;Local Variables:
-;mode:Emacs-Lisp
-;outline-regexp: ";:\\*\\**"
-;eval:(outl-mouse-minor-mode 0)
-;eval:(hide-body)
+;; mode:Emacs-Lisp
+;; outline-regexp: ";:\\*\\**"
+;; eval:(outl-mouse-minor-mode 0)
+;; eval:(hide-body)
 ;End:
 ;:*===================================================================
 ;:*

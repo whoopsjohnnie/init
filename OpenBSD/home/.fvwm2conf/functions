@@ -75,12 +75,12 @@ AddToFunc "window_ops_func"
 
 DestroyFunc "DefaultTerm"
 AddToFunc "DefaultTerm"
-+ "I"	Exec xterm &
++ "I"	Exec urxvt &
 
 
 DestroyFunc "ShowProcs"
 AddToFunc "ShowProcs"
-+ "I"	Exec xterm -e top &
++ "I"	Exec urxvt -e top &
 
 
 DestroyFunc "DefaultXterm"
