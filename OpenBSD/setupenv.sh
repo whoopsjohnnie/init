@@ -2,19 +2,19 @@
 
 cp ./home/.Xresources ~/
 
-rm -rf ~/.config
-cp -r ./home/.config ~/
+# rm -rf ~/.config
+# cp -r ./home/.config ~/
 
-cp ./home/.dtprofile ~/
-cp -r ./home/.dt ~/
+# cp ./home/.dtprofile ~/
+# cp -r ./home/.dt ~/
 
 cp ./home/.emacs ~/
 
 rm -rf ~/.emacs.d
 cp -r ./home/.emacs.d ~/
 
-cp ./home/.gtkrc ~/
-cp ./home/.gtkrc_afterstep ~/
+# cp ./home/.gtkrc ~/
+# cp ./home/.gtkrc_afterstep ~/
 
 cp ./home/.login ~/
 cp ./home/.logout ~/
