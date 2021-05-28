@@ -87,3 +87,11 @@ pkg_add -aI x48
 
 # GNU Octave will suffice for actual Matlab
 pkg_add -aI octave
+
+# 
+# cp ./usr/local/etc/X11/xorg.conf.d/screen-resolution.conf /usr/local/etc/X11/xorg.conf.d/
+cp ./usr/local/lib/X11/app-defaults/* /usr/local/lib/X11/app-defaults/
+cp ./usr/local/lib/X11/system.mwmrc /usr/local/lib/X11/
+
+# 
+cp -r ./usr/athena /usr/
