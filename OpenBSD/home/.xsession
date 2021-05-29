@@ -1,39 +1,26 @@
+#!/usr/local/bin/tcsh
 
-#!/bin/sh
+# Ladda .environment
+source ~/.environment
 
-# Set locales
-export CHARSET=UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
+# Ladda Xdefaults
+xrdb -load ~/.Xdefaults
 
-# Resolution on my MacBook Pro 13 inch
-xrandr -s 1440x900
+# Exekvera .starup.X
+source $HOME/.startup.X
 
-# I bet I had a black background with some image applied. 
-# In .steprc I have a ref to a Gigerdir folder, I bet this contained desktop images
-# ~/Public/Gigerdir/Giger/
-# xsetroot -solid "#505075"
-# xsetroot -solid "#505075"
+# Starta en console
+xconsole -iconic &
 
-xrdb -merge ~/.Xresources
+# Starta fönsterhanteraren
+# DET ÄR FÖNSTERHANTERAREN SOM ÄR MASTER PROCESS NÄR DEN AVSLUTAS LOGGAS MAN UT!!!
 
-# xterm &
-# aterm &
+if ( $?FVWM2WINDOWS ) then
+echo "FVWM2WINDOWS is set, loading standard FVWM2" > /dev/console
+exec fvwm2
+endif
 
-# xearth &
-
-# exec afterstep
-# exec fvwm2
-exec mwm
-
-#
-# exec /usr/local/dt/bin/dtsession
-# exec /usr/local/dt/bin/Xsession
-
-# 
-# exec mate-session
-
-# export AMIWM_HOME=/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/
-# echo "$AMIWM_HOME"
-# exec amiwm
+if ( $?WINDOW_MANAGER ) then
+echo "WINDOW_MANAGER is set to $WINDOW_MANAGER" > /dev/console
+$WINDOW_MANAGER >& /dev/console
+endif
