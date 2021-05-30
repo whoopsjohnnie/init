@@ -1,0 +1,17 @@
+DXterm*terminalMode:		2
+DXterm*autoWrapEnable:		on
+DXterm*autoResizeTerminal:      on
+DXterm*autoResizeWindow:        on
+DXterm.main.terminal.condensedFont:	on
+DXterm.main.terminal.controlQSHold:	off
+DXterm.main.terminal.saveLinesOffTop:	on
+DXterm.main.terminal.cursorBlinkEnable:	off
+DXterm.main.terminal.rows:	36
+DXterm.main.terminal.scrollVertical:	on
+DXterm.main.terminal.printingDestination:       0
+DXterm.main.terminal.printDataType:             0
+DXterm.main.terminal.f11EscapeKey:              1
+DXterm*Geometry: +10+245
+DXterm*userPreferenceSet: 1
+
+DXterm.main.terminal.fontSetSelection:  0

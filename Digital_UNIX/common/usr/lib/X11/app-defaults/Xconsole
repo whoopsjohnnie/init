@@ -1,0 +1,9 @@
+! xconsole
+
+Xconsole.initialState:	NormalState
+
+Xconsole.x:		580
+Xconsole.y:		30
+
+Xconsole*rows:		5
+Xconsole*columns:	54
