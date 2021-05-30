@@ -1,0 +1,8 @@
+#========================================================================#
+#
+# Fonts - one for window titles, another for icons, another for menus
+#
+
+WindowFont	-adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+IconFont	fixed
+

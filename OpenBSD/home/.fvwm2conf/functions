@@ -1,0 +1,101 @@
+#========================================================================#
+#
+# Some handy complex functions
+#
+
+# This one moves and then raises the window if you drag the mouse,
+# only raises the window if you click, or does a full maximize if 
+# you double click
+#
+
+DestroyFunc "Move-or-Raise"
+AddToFunc "Move-or-Raise"
++ "M"	Move
++ "M"	Raise
++ "C"	Raise
++ "D"	Maximize 100 96
+
+
+# This one maximizes vertically if you click (leaving room for the FvwmButtons
+# bar at the bottom, or does a full maximization if you double click, or a
+# true full vertical maximization if you just hold the mouse button down.
+#
+
+DestroyFunc "Maximize-Func"
+AddToFunc "Maximize-Func"
++ "C"	Maximize 0 96
++ "M"	Maximize 100 96
++ "D"	Maximize 0 80
+
+
+# This one moves and then lowers the window if you drag the mouse,
+# only lowers the window if you click, or does a RaiseLower if you double 
+# click
+#
+
+DestroyFunc "Move-or-Lower"
+AddToFunc "Move-or-Lower"
++ "M"	Move
++ "M"	Lower
++ "C"	Lower
++ "D"	RaiseLower
+
+
+# This one moves or (de)iconifies:
+#
+
+DestroyFunc "Move-or-Iconify"
+AddToFunc "Move-or-Iconify"
++ "M"	Move
++ "D"	Iconify
+
+
+# This one resizes and then raises the window if you drag the mouse,
+# only raises the window if you click,  or does a RaiseLower if you double 
+# click
+#
+
+DestroyFunc "Resize-or-Raise"
+AddToFunc "Resize-or-Raise"
++ "M"	Resize
++ "M"	Raise
++ "C"	Raise
++ "D"	RaiseLower
+
+
+# This creates the "system" menu for the title-bar window-ops pop-up
+#
+
+DestroyFunc "windows_ops_func"
+AddToFunc "window_ops_func"
++ "C"	PopUp WindowMenu
++ "M"	PopUp WindowMenu
++ "D"	Delete  
+
+
+DestroyFunc "DefaultTerm"
+AddToFunc "DefaultTerm"
++ "I"	Exec xterm &
+
+
+DestroyFunc "ShowProcs"
+AddToFunc "ShowProcs"
++ "I"	Exec xterm -e top &
+
+
+DestroyFunc "DefaultXterm"
+AddToFunc "DefaultXterm"
++ "I"	Exec xterm -sb -sl 500 -j -ls -fn fixed -bg black -fg white -cr red -geometry 80x35 &
+
+
+DestroyFunc "ActivateWindow"
+AddToFunc "ActivateWindow"
++ "I"	Next [$0] Iconify -1
++ "I"	Next [$0] Raise
++ "I"	Next [$0] Focus
++ "I"	None [$0] Exec $1
+
+
+DestroyFunc "LogoutFunc"
+AddToFunc "LogoutFunc"
++ "I"	Quit
