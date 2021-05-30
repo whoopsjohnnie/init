@@ -1,23 +1,18 @@
-*0*ColorPalette:	Delphinium.dp
-OpenWindows.DisplayLang:	en_US
-OpenWindows.WorkspaceColor:	#C8C8C8C8C8C8
-OpenWindows.WindowForeground:	#000000000000
-OpenWindows.BasicLocale:	en_US
-OpenWindows.TimeFormat:	en_US
-OpenWindows.DataBackground:	#FFFFFFFFE6E6
-OpenWindows.InputLang:	en_US
-OpenWindows.WindowColor:	#C8C8C8C8C8C8
-OpenWindows.NumericFormat:	en_US
-OpenWindows.DataForeground:	#000000000000
 *DtEditor*textFontList:	-dt-interface user-medium-r-normal-m*-*-*-*-*-*-*-*-*:
 *XmText*FontList:	-dt-interface user-medium-r-normal-m*-*-*-*-*-*-*-*-*:
+OpenWindows.WindowColor:	#C8C8C8C8C8C8
+OpenWindows.BasicLocale:	en_US
+OpenWindows.InputLang:	en_US
+OpenWindows.DataForeground:	#000000000000
+OpenWindows.DisplayLang:	en_US
+OpenWindows.NumericFormat:	en_US
+OpenWindows.WorkspaceColor:	#C8C8C8C8C8C8
+OpenWindows.WindowForeground:	#000000000000
+OpenWindows.TimeFormat:	en_US
+OpenWindows.DataBackground:	#FFFFFFFFE6E6
 *XmTextField*FontList:	-dt-interface user-medium-r-normal-m*-*-*-*-*-*-*-*-*:
-dtsession*displayResolution:	3781
-dtsession*sessionLanguage:	C.UTF-8
-Window.Color.Background:	#FFFFFFFFE6E6
-Window.Color.Foreground:	#000000000000
 Dtwm*0*FrontPanel*geometry:	-205-1
-Dtwm*0*ws0*backdrop*image:	Dune
+Dtwm*0*ws0*backdrop*image:	SkyLight
 Dtwm*0*helpResources:	\n\
   
 Dtwm*0*initialWorkspace:	ws0
@@ -26,12 +21,17 @@ Dtwm*gwmOnFrontPanel:	False
 Dtwm*showSwitchArea:	True
 Dtwm*syncDesktopSwitch:	False
 Dtwm*useSameBackdrop:	False
+dtsession*displayResolution:	3781
+dtsession*sessionLanguage:	C.UTF-8
+Window.Color.Background:	#FFFFFFFFE6E6
+Window.Color.Foreground:	#000000000000
+*0*ColorPalette:	dtu134P6.dp
 *textFontList:	-dt-interface user-medium-r-normal-m*-*-*-*-*-*-*-*-*:
 *userFont:	-dt-interface user-medium-r-normal-m*-*-*-*-*-*-*-*-*:
 *Font:	-dt-interface user-medium-r-normal-m*-*-*-*-*-*-*-*-*
 *FontList:	-dt-interface system-medium-r-normal-m*-*-*-*-*-*-*-*-*:
 *FontSet:	-dt-interface user-medium-r-normal-m*-*-*-*-*-*-*-*-*
-*background:	#7878B4B4BEBE
+*background:	#999999999999
 *buttonFontList:	-dt-interface system-medium-r-normal-m*-*-*-*-*-*-*-*-*:
 *systemFont:	-dt-interface system-medium-r-normal-m*-*-*-*-*-*-*-*-*:
 *labelFontList:	-dt-interface system-medium-r-normal-m*-*-*-*-*-*-*-*-*:

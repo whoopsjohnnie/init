@@ -1,4 +1,32 @@
 ! dtwm.db
 !
 .version: dtwm Version XSMP1.0
-.dtwmID: 2c805dd4a-a00f-11eb-b2cc-000c296232b9
+.dtwmID: 264774f28-bd47-11eb-adf5-000c296232b9
+!
+ProxyClient.0: 0
+!
+0.screen: 0
+0.wmCommand: xterm
+0.wmClientMachine: freebsd
+0.position.x: 78
+0.position.y: 78
+0.iconPos.x.ws0: 8
+0.iconPos.y.ws0: 87
+0.size.width: 80
+0.size.height: 24
+0.initialState: IconicState
+0.workspaces: ws0
+!
+ProxyClient.1: 1
+!
+1.screen: 0
+1.wmCommand: /usr/local/dt/bin/dtcm -session dtZBctgV
+1.wmClientMachine: freebsd
+1.position.x: 640
+1.position.y: 54
+1.iconPos.x.ws0: 8
+1.iconPos.y.ws0: 168
+1.size.width: 250
+1.size.height: 280
+1.initialState: IconicState
+1.workspaces: ws0
