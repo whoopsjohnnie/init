@@ -81,3 +81,88 @@ pkg install -y x48
 
 # GNU Octave will suffice for actual Matlab
 pkg install -y octave
+
+#
+# https://cyber.dabamos.de/unix/x11/
+#
+pkg install -y 3dpong
+pkg install -y angband
+pkg install -y appres
+pkg install -y fsv2
+pkg install -y vim
+pkg install -y ico
+pkg install -y mgdiff
+pkg install -y mxico
+pkg install -y nedit
+pkg install -y plan
+pkg install -y sunclock
+pkg install -y ted
+pkg install -y tiemu3
+pkg install -y tk86 wordnet
+pkg install -y x026
+pkg install -y x48
+pkg install -y xarchiver
+pkg install -y xascii
+pkg install -y xbiff
+pkg install -y xbill
+pkg install -y xboard
+pkg install -y xcalc
+pkg install -y xcalendar
+pkg install -y xchm
+pkg install -y xchomp
+pkg install -y xclipboard
+pkg install -y xclock
+pkg install -y xconsole
+pkg install -y xmdiary
+pkg install -y xdigger
+pkg install -y xearth
+pkg install -y xedit
+pkg install -y xev
+pkg install -y xeyes
+pkg install -y xfishtank
+pkg install -y xfontsel
+pkg install -y xgalaga
+pkg install -y xgc
+pkg install -y xinfocom
+pkg install -y xinvaders3d
+pkg install -y xkill
+pkg install -y xlaby
+pkg install -y xlennart
+pkg install -y xless
+pkg install -y xlife
+pkg install -y xload
+pkg install -y xlockmore
+pkg install -y xlogo
+pkg install -y xmahjongg
+pkg install -y xman
+pkg install -y xmaxima
+pkg install -y xmbibtex
+pkg install -y xmessage
+pkg install -y grace
+pkg install -y xmh
+pkg install -y xmixer
+pkg install -y xmore
+pkg install -y xmosaic
+pkg install -y xmotd
+pkg install -y xmountains
+pkg install -y xneko
+pkg install -y xoj
+pkg install -y xosview
+pkg install -y xplore
+pkg install -y xpostit
+pkg install -y xroach
+pkg install -y xscreensaver
+pkg install -y xsnow
+pkg install -y xspread
+pkg install -y xstarroll
+pkg install -y xtacy
+pkg install -y xtar
+pkg install -y xterm
+pkg install -y xtide
+pkg install -y xtrojka
+pkg install -y xv
+pkg install -y xvkbd
+pkg install -y xworld
+pkg install -y xwpe
+pkg install -y xzoom
+

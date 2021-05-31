@@ -6,16 +6,38 @@
 ProxyClient.PC0: PC0
 PC0.Command.0: /usr/local/dt/bin/dtterm
 PC0.Command.1: -session
-PC0.Command.2: dtbCsDFw
+PC0.Command.2: dtr1kPbN
 PC0.ScreenNum: 0
 !
 ProxyClient.PC1: PC1
-PC1.Command.0: dtpad
-PC1.Command.1: -server
+PC1.Command.0: /usr/local/dt/bin/dtcm
+PC1.Command.1: -session
+PC1.Command.2: dtZBctgV
 PC1.ScreenNum: 0
 !
 ProxyClient.PC2: PC2
-PC2.Command.0: /usr/local/dt/bin/dtterm
+PC2.Command.0: dtfile
 PC2.Command.1: -session
-PC2.Command.2: dtv7lxMh
+PC2.Command.2: dt3bMMI6
 PC2.ScreenNum: 0
+!
+ProxyClient.PC3: PC3
+PC3.Command.0: xterm
+PC3.ScreenNum: 0
+!
+ProxyClient.PC4: PC4
+PC4.Command.0: /usr/local/dt/bin/dtterm
+PC4.Command.1: -session
+PC4.Command.2: dtu7DZze
+PC4.ScreenNum: 0
+!
+ProxyClient.PC5: PC5
+PC5.Command.0: /usr/local/dt/bin/dtterm
+PC5.Command.1: -session
+PC5.Command.2: dtqR3Kw6
+PC5.ScreenNum: 0
+!
+ProxyClient.PC6: PC6
+PC6.Command.0: dtpad
+PC6.Command.1: -server
+PC6.ScreenNum: 0
