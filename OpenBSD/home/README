@@ -1,0 +1,101 @@
+					/usr/athena/lib/prototype_user/README
+					1994-08-23/patriks
+					1997-05-30/jf
+Hej datoranvändare! 
+
+		HJÄLP
+För att få information om hur man använder UNIX kan du
+
+	* läsa Elektros UNIX-häfte
+	* använda kommandona "apropos ämne" och "man ämne"
+        * surfa bland elhand:s sidor. Börja på
+           http://www.e.kth.se/elhand
+        
+
+
+		INITIERINGSFILER
+I din filkatalog finns några filer vars namn börjar med en punkt. Det
+är s.k. initieringsfiler, och eftersom det anses onödigt att alltid se
+sådana när man listar filer, visas dom normalt inte (t.ex. med
+kommandot "ls"). Vill man se dom kan man använda "ls -a".
+
+Initieringsfilerna "definierar din omgivning", dvs med hjälp av dom
+kan du påverka hur datorn och dess program beter sig. När du blivit
+mer van vid UNIX, kan du ändra i dom, men se till att du vet vad
+du gör när du ändrar, annars kan det bli förvillande.
+
+Ordförklaring: Att en fil "exekveras" innebär att filen läses och
+kommandona i den utförs.
+
+På Elektro använder vi kommandotolkaren (eng. shell) tcsh. tcsh liknar
+csh men har en del nya finesser.
+
+Dessa initieringsfiler finns normalt:
+
+.tcshrc		Exekveras när kommandotolkare tcsh startas, dvs i
+		samband med inloggning, men även vid andra tillfällen.
+		Exekverar filen /usr/athena/lib/dotfiles/tcshrc, som i sin
+		tur kör filen .tcshrc.mine i din hemkatalog om den finns.
+		
+.tcshrc.mine	Denna fil exekveras (om den existerar) när tcsh startas.
+		Lägg egna tillägg och förändringar som ska köras varje gång
+		du loggar in i .tcshrc.mine
+
+.login		Exekveras vid inloggning med vanlig terminal, dvs inte
+		när man använder någon av datorerna i våra datorsalar.
+		Denna fil exekverar /usr/athena/lib/dotfiles/login som i
+		sin tur kör filen .startup.tty i din hemkatalog om den finns.
+
+.startup.tty	Denna fil exekveras (om den existerar) när inloggning från
+		en "vanlig" terminal sker.
+		Lägg kommandon som bara ska utföras vid inloggning med vanlig
+		terminal i .startup.tty.
+
+.startup.X	Exekveras vid inloggning på en arbetsstation eller X-terminal.
+
+.mh_profile	Innehåller variabler som beskriver hur datorpost-systemet
+		MH ska uppföra sig.
+
+.emacs		Exekveras när Emacs (GNU Emacs) startas (om den finns).
+
+.logout		Exekveras alldeles innan man blir utloggad (om den finns).
+
+.environment	Talar om för systemet vilken fönstermiljö man vill använda.
+		Om raden "setenv DECWINDOWS" finns så används Motif. Om 
+		man kommenterar bort raden och skriver dit 
+                "setenv WINDOW_MANGER namn" så kan man välja en annan 
+		fönsterhanterare.
+
+.zephyr.subs	Innehåller en lista över vilka olika Zephyr meddelanden
+		som man vill få. Innehåller bla raden "mail,pop,%me%"
+		som betyder att man får meddelande om när det kommit
+		ny datorpost.
+
+.Xdefaults	Innehåller standardvärden för olika X-applikationer. Tex
+		 storlek på fönster, vilka fonter som ska användas etc.
+
+När du kört några gånger på datorn, kan följande filer dyka
+upp (bland andra):
+
+.newsrc		Uppdateras när man läser "news" (konferenssystemet
+		mellan UNIX-datorer).
+
+
+		FEL OCH KONSTIGHETER
+
+Om du upptäcker något som inte fungerar eller är konstigt på något
+sätt, skicka ett mail till 'felrapport'. Då kommer brevet till Elektros
+systemgrupp, som förhoppningsvis kan rätta til det...
+Handledare finns i korridoren mellan de båda Q-husen längst bort mot 
+Roslagsbanan och kan nås på telefon 790 7993. De är alltid på plats
+mellan kl 13 och 19. 
+
+Om du skulle råka göra något misstag med någon av initieringsfilerna
+kan du alltid återgå till ursprungsfilen genom att kopiera den från
+katalogen /usr/athena/lib/prototype_user/
+
+När du tröttnat på den här filen kan du ta bort den med kommadot
+"rm README". Om du ångrar dig kan du alltid kopiera en ny från
+/usr/athena/lib/prototype_user/README.
+
+					Lycka till!

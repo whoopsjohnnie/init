@@ -1,0 +1,35 @@
+På Elektros UNIX-system använder vi inte det traditionella 'mail' kommandot.
+Istället används MH - Message Handler.
+
+MH är inget program, utan snarare en samling kommandon som används för
+att läsa och skriva elektronisk post.
+
+Följande är en kort beskrivning av de mest använda mh-kommandona:
+
+inc	Hämtar nya meddelanden från det centrala "postkontoret" till din
+	privata "brevlåda".
+
+show	Visar meddelanden ur din brevlåda.
+
+scan	Ger en lista över alla meddelanden i din brevlåda.
+
+comp	Skriv ett nytt meddelande.
+
+repl	Skriv ett svar till ett meddelande.
+
+rmm	Ta bort meddelande ur brevlådan.
+
+
+I din hemkatalog finns en filkatalog, Mail, där brev till dig lagras.
+
+Häftet 'UNIX på Elektro' innehåller en lite utförligare beskrivning av
+hur man använder MH för att skicka och ta emot datorpost.
+
+I manualbladen till MH står allt beskrivet. Gör "man mh" för att tiita
+på manualsidan.
+
+Det finns också en X-baserad version av mh, xmh. 'man xmh' ger info.
+
+När du tröttnat på den här filen kan du ta bort den med kommadot
+"rm README.mail". Om du ångrar dig kan du alltid kopiera en ny från
+/usr/athena/lib/prototype_user/README.mail.

@@ -1,0 +1,13 @@
+#--------- Taskbar's start menu
+
+DestroyMenu "StartMenu"
+AddToMenu "StartMenu@digitalunix.xpm@^#808080^"
++ "&Programs%programs.xpm%"	Popup Programs
++ "&Documents%documents.xpm%"	Popup Documents
++ "&Settings%settings.xpm%"	Popup Settings
++ "&Find...%find1.xpm%"		Exec kfind &
++ "&Help...%help.xpm%"		Exec kdehelp &
++ "&Run...%run.xpm%"		Exec run -title Run &
++ ""				Nop 
++ "Susp&end%suspend.xpm%"	Popup Suspend
++ "Sh&ut Down%shutdown.xpm%"	Popup Shutdown
