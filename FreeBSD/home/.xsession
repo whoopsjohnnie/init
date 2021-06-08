@@ -19,11 +19,11 @@ xrdb -merge ~/.Xresources
 
 # exec afterstep
 # exec fvwm2
-exec mwm
+# exec mwm
 
 #
 # exec /usr/local/dt/bin/dtsession
-# exec /usr/local/dt/bin/Xsession
+exec /usr/local/dt/bin/Xsession
 
 # 
 # exec mate-session

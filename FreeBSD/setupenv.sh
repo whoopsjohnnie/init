@@ -23,6 +23,11 @@ cp ./home/.mh_profile ~/
 
 cp ./home/.steprc ~/
 
+cp ./home/.mwmrc ~/
+
+cp -r ./home/.fvwm2conf ~/
+cp ./home/.fvwm2rc ~/
+
 cp ./home/.tcshrc ~/
 cp ./home/.tcshrc.mine ~/
 

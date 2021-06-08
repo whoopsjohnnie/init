@@ -64,6 +64,14 @@ pkg install -y asmix
 pkg install -y asmixer
 pkg install -y aterm
 
+# CDE
+pkg install -y cde
+cp ./etc/hosts /etc/
+cp ./etc/inetd.conf /etc/
+cp ./etc/rc.conf /etc/
+cp ./etc/rc.local /etc/
+cp ./etc/ttys /etc/
+
 # 
 pkg install -y firefox
 
@@ -173,3 +181,10 @@ pkg install -y xworld
 pkg install -y xwpe
 pkg install -y xzoom
 
+# 
+cp ./usr/local/etc/X11/xorg.conf.d/screen-resolution.conf /usr/local/etc/X11/xorg.conf.d/
+cp ./usr/local/lib/X11/app-defaults/* /usr/local/lib/X11/app-defaults/
+cp ./usr/local/lib/X11/system.mwmrc /usr/local/lib/X11/
+
+# 
+cp -r ./usr/athena /usr/

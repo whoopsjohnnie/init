@@ -17,21 +17,17 @@ xrdb -merge ~/.Xresources
 
 # xearth &
 
-# exec twm
-# exec mwm
-
 # exec afterstep
 # exec fvwm2
-exec mwm
+# exec mwm
 
 #
-## exec /usr/local/dt/bin/dtsession
-# exec /usr/local/dt/bin/Xsession
+# exec /usr/local/dt/bin/dtsession
+exec /usr/local/dt/bin/Xsession
 
 # 
 # exec mate-session
 
-export AMIWM_HOME=/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/
-echo "$AMIWM_HOME"
-exec amiwm
-
+# export AMIWM_HOME=/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/
+# echo "$AMIWM_HOME"
+# exec amiwm
