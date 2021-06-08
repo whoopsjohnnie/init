@@ -33,7 +33,10 @@ URxvt*letterSpace:	    0
 
 URxvt*scrollBar:	    true
 URxvt*scrollBar_right:	    false
-URxvt*scrollstyle:	    next
+! URxvt*scrollstyle:	    plain
+! URxvt*scrollstyle:	    next
+! URxvt*scrollstyle:	    rxvt
+URxvt*scrollstyle:	    xterm
 
 URxvt.iso14755:		    false
 URxvt.iso14755_52:		    false

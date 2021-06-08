@@ -8,7 +8,7 @@ xrandr -s 1440x900
 # In .steprc I have a ref to a Gigerdir folder, I bet this contained desktop images
 # ~/Public/Gigerdir/Giger/
 # xsetroot -solid "#505075"
-# xsetroot -solid "#505075"
+xsetroot -solid "#505075"
 
 xrdb -merge ~/.Xresources
 
@@ -17,17 +17,19 @@ xrdb -merge ~/.Xresources
 
 # xearth &
 
+# exec twm
+# exec mwm
+
 # exec afterstep
 # exec fvwm2
-exec mwm
 
 #
-# exec /usr/local/dt/bin/dtsession
+## exec /usr/local/dt/bin/dtsession
 # exec /usr/local/dt/bin/Xsession
 
 # 
 # exec mate-session
 
-# export AMIWM_HOME=/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/
-# echo "$AMIWM_HOME"
-# exec amiwm
+export AMIWM_HOME=/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/
+exec amiwm
+
