@@ -20,6 +20,9 @@ pkg install -y xrandr
 pkg install -y xdm
 
 # 
+pkg install -y xf86-video-vmware
+
+# 
 pkg install -y xterm
 pkg install -y rxvt-unicode
 
