@@ -18,6 +18,8 @@ pkg install -y xset
 pkg install -y xsetroot
 pkg install -y xrandr
 pkg install -y xdm
+pkg install -y mwm
+pkg install -y fvwm
 
 # 
 pkg install -y xf86-video-vmware
