@@ -1,6 +1,7 @@
 #!/bin/sh
 
-cp ./home/.Xresources ~/
+# cp ./home/.Xresources ~/
+cp ./home/.Xdefaults ~/
 
 # rm -rf ~/.config
 # cp -r ./home/.config ~/
@@ -16,6 +17,7 @@ cp -r ./home/.emacs.d ~/
 # cp ./home/.gtkrc ~/
 # cp ./home/.gtkrc_afterstep ~/
 
+cp ./home/.environment ~/
 cp ./home/.login ~/
 cp ./home/.logout ~/
 
@@ -31,6 +33,7 @@ cp ./home/.fvwm2rc ~/
 cp ./home/.tcshrc ~/
 cp ./home/.tcshrc.mine ~/
 
+cp ./home/.startup.X ~/
 cp ./home/.xinitrc ~/
 cp ./home/.xsession ~/
 
@@ -46,6 +49,7 @@ cp -r ./home/emacs ~/
 
 
 # touch -d YYYY-MM-DDThh:mm:SS
+# touch -d 1997-08-21T10:51:25 ~/.environment
 touch -d 1997-08-21T10:51:25 ~/.login
 touch -d 1997-08-21T10:51:25 ~/.logout
 
