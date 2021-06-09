@@ -1,11 +1,10 @@
-
-#!/bin/sh
+#!/bin/tcsh
 
 # Set locales
-export CHARSET=UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
+setenv CHARSET UTF-8
+setenv LANG en_US.UTF-8
+setenv LC_AL en_US.UTF-8
+setenv LC_CTYPE en_US.UTF-8
 
 # Resolution on my MacBook Pro 13 inch
 xrandr -s 1440x900
@@ -16,24 +15,28 @@ xrandr -s 1440x900
 # xsetroot -solid "#505075"
 # xsetroot -solid "#505075"
 
-xrdb -merge ~/.Xresources
+# Ladda .environment
+source ~/.environment
 
-# xterm &
-# aterm &
+# Ladda Xdefaults
+# xrdb -merge ~/.Xresources
+xrdb -load ~/.Xdefaults
 
-# xearth &
+# Exekvera .starup.X
+source $HOME/.startup.X
 
-# exec afterstep
-# exec fvwm2
-# exec mwm
+# Starta en console
+xconsole -iconic &
 
-#
-# exec /usr/local/dt/bin/dtsession
-exec /usr/local/dt/bin/Xsession
+# Starta fönsterhanteraren
+# DET ÄR FÖNSTERHANTERAREN SOM ÄR MASTER PROCESS NÄR DEN AVSLUTAS LOGGAS MAN UT!!!
 
-# 
-# exec mate-session
+if ( $?FVWM2WINDOWS ) then
+echo "FVWM2WINDOWS is set, loading standard FVWM2" > /dev/console
+exec fvwm2
+endif
 
-# export AMIWM_HOME=/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/
-# echo "$AMIWM_HOME"
-# exec amiwm
+if ( $?WINDOW_MANAGER ) then
+echo "WINDOW_MANAGER is set to $WINDOW_MANAGER" > /dev/console
+$WINDOW_MANAGER >& /dev/console
+endif
