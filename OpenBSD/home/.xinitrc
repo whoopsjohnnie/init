@@ -28,8 +28,8 @@ source $HOME/.startup.X
 # Starta en console
 xconsole -iconic &
 
-# Starta fönsterhanteraren
-# DET ÄR FÖNSTERHANTERAREN SOM ÄR MASTER PROCESS NÄR DEN AVSLUTAS LOGGAS MAN UT!!!
+# Starta fÃ¶nsterhanteraren
+# DET Ã„R FÃ–NSTERHANTERAREN SOM Ã„R MASTER PROCESS NÃ„R DEN AVSLUTAS LOGGAS MAN UT!!!
 
 if ( $?FVWM2WINDOWS ) then
 echo "FVWM2WINDOWS is set, loading standard FVWM2" > /dev/console
