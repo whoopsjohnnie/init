@@ -1,0 +1,12 @@
+#========================================================================#
+#
+# Set the default window colors. The syntax is:
+#  DefaultColors winforecolor winbackcolor titleforecolor titlebackcolor
+# where:
+#  winforecolor    is used for the menu text
+#  winbackcolor    is the background (border) color of all windows,
+#                  including the menu windows 
+#  titleforecolor  is the color of the title text of non selected windows
+#  titlebackcolor  is the background color used for title bars of 
+#                  non selected windows
+#

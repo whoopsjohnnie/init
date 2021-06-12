@@ -1,0 +1,118 @@
+#========================================================================#
+#
+# Some mini-icons for the title bar
+#
+
+# Default Icon
+Style "*"		MiniIcon mini-x2.xpm, \
+			Icon unknown1.xpm, \
+			IconBox 0 1023 1280 1024
+
+# Misc
+Style "*console*"	MiniIcon mini-display.xpm, NoIcon
+Style "*xterm*"		MiniIcon mini-term.xpm, Icon kvt.xpm
+Style "rxvt"		MiniIcon mini-term.xpm
+Style "xsession"	MiniIcon mini-bx2.xpm
+Style "xmag"		MiniIcon mini-zoom.xpm
+Style "tkps"		MiniIcon mini-run.xpm
+Style "xexec"		MiniIcon mini-run2.xpm
+Style "run"		MiniIcon mini-run2.xpm
+Style "*hostview"	MiniIcon mini-gv.xpm
+Style "Xcolorsel"	MiniIcon mini-colors.xpm
+Style "IDL*"		MiniIcon mini-zoom.xpm
+Style "xeyes"		MiniIcon mini-eyes.xpm
+Style "*fm*"		MiniIcon mini-filemgr.xpm
+Style "*calc"		MiniIcon mini-calc.xpm
+Style "*atlab*"		MiniIcon mini-matlab.xpm
+Style "Explorer"	MiniIcon mini-ofolder.xpm
+Style "FvwmPager"	MiniIcon mini-pager.xpm
+Style "AcroRead"	MiniIcon mini-pdf.xpm
+Style "XClipboard"	MiniIcon mini-clipboard.xpm
+
+# Zephyr
+Style "*zwgc"		MiniIcon mini-zwgc.xpm, Icon zwgc.xpm
+Style "*XZ*"		MiniIcon mini-zwgc.xpm
+Style "*zwrite"		MiniIcon mini-zwgc.xpm
+Style "*znol"		MiniIcon mini-zwgc.xpm
+
+# kde
+Style "kvt"		MiniIcon mini-term.xpm
+Style "*find"		MiniIcon mini-zoom.xpm
+Style "kedit"		MiniIcon mini-notepad.xpm
+Style "khexdit"		MiniIcon mini-hex.xpm
+Style "kpaint"		MiniIcon mini-mspaint.xpm
+Style "kpat"		MiniIcon mini-cards.xpm
+Style "kdisplay"	MiniIcon mini-contpanel.xpm
+Style "krun"		MiniIcon mini-run2.xpm
+Style "kcli"		MiniIcon mini-run2.xpm
+Style "krlogin"		MiniIcon mini-connect.xpm
+
+# internet
+Style "NcFtp"		MiniIcon mini-ftp.xpm
+Style "Netscape*"	MiniIcon mini-nscape.xpm
+Style "Mosaic"		MiniIcon mini-mosaic.xpm
+Style "*elnet*"		MiniIcon mini-peer.xpm
+Style "*ppp*"		MiniIcon mini-connect.xpm
+Style "PPP"		MiniIcon mini-connect.xpm
+Style "Mail"		MiniIcon mini-mail.xpm
+Style "*exmh*"		MiniIcon mini-mail.xpm,		Icon mail2.xpm
+Style "knews"		MiniIcon mini-news.xpm, 	Icon News.xpm
+Style "real-knews"	MiniIcon mini-news.xpm, 	Icon News.xpm
+Style "*irc"		MiniIcon keirc.xpm,		Icon ksirc.xpm
+
+# emulators
+Style "x64"		MiniIcon mini-x64.xpm
+Style "VICE"		MiniIcon mini-x64.xpm, 		Icon x64.xpm
+Style "*Executor*"	MiniIcon mini-executor.xpm
+
+# comm
+Style "Seyon"		MiniIcon mini-hyperterm.xpm
+Style "Ucomm"		MiniIcon mini-hyperterm.xpm
+Style "dial"		MiniIcon mini-hyperterm.xpm
+Style "pbook"		MiniIcon mini-hyperterm.xpm
+Style "Xrz"		MiniIcon mini-hyperterm.xpm
+
+# game
+Style "*Boing*"		MiniIcon mini.xboing.xpm
+Style "*pilot*"		MiniIcon mini-xpilot.xpm, Icon xpilot.xpm
+Style "*tris*"		MiniIcon mini-tetris.xpm
+Style "dumb"		NoButton 2, NoButton 4, NoHandles
+
+# textutil
+Style "*Maker*"		MiniIcon mini-edit.xpm
+Style "emacs*"		MiniIcon mini-edit.xpm, Icon text.xpm
+Style "textedit"	MiniIcon mini-edit.xpm
+Style "Cedit"		MiniIcon mini-edit.xpm
+
+# multimedia
+Style "*playcd*"	MiniIcon mini-cdplayer.xpm
+Style "Workman"		MiniIcon mini-cdplayer.xpm
+Style "xmcd"		MiniIcon mini-cdplayer.xpm
+Style "xmixer"		MiniIcon mini-mixer.xpm
+Style "axset"		MiniIcon mini-mixer.xpm, Sticky, Icon mixer.xpm
+Style "audiocontrol"	MiniIcon mini-mixer.xpm, Sticky, Icon mixer.xpm
+
+
+# manualpagers icons
+Style "*man*"		MiniIcon mini-help.xpm
+Style "topBox"		MiniIcon mini-help.xpm
+Style "*help"		MiniIcon mini-help.xpm
+Style "manualBrowser"	MiniIcon mini-help.xpm
+
+# program developing
+Style "XDbx"		MiniIcon mini-bug2.xpm
+Style "*DDD*"		MiniIcon mini-bug2.xpm
+Style "*gdb*"		MiniIcon mini-bug2.xpm
+
+# graphics
+Style "*xv*"		MiniIcon mini-xv.xpm
+Style "*XVroot*"	MiniIcon mini-xv.xpm
+Style "*3.10*"		MiniIcon mini-xv.xpm
+Style "*Gimp*"		MiniIcon mini-paint.xpm
+Style "xpaint"		MiniIcon mini-palette.xpm
+Style "Canvas"		MiniIcon mini-paint.xpm
+Style "fatbits"		MiniIcon mini-paint.xpm
+Style "filebrowser"	MiniIcon mini-ofolder.xpm
+Style "XbmBrowser"	MiniIcon mini-paint.xpm
+Style "Bitmap"		MiniIcon mini-paint.xpm
+Style "Pixmap"		MiniIcon mini-paint.xpm
