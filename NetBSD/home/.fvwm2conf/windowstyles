@@ -1,0 +1,11 @@
+#========================================================================#
+#
+# Set the decoration styles and window options
+# Order is important!!!!
+# If compatible styles are set for a single window in multiple Style
+# commands, then the styles are ORed together. If conflicting styles
+# are set, the last one specified is used.
+#
+# These commands should command before any menus or functions are defined,
+# and before the internal pager is started.
+#

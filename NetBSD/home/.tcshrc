@@ -1,0 +1,52 @@
+
+#
+# This is my original tcsh shell config from the Digital UNIX kth.se AFS cell
+#
+# /afs/kth.se/home/e97/e97_jog/.tcshrc, Jan 16 2000, 23:33:08
+#
+
+# Prototype user .tcshrc file
+# Last modified by patriks/910730
+
+# This file sources a system-wide tcshrc file, which:
+#      - sets up standard environment variables
+#      - sources user file ~/.environment, if it exists
+#      - sets standard path, OR sources user file ~/.path, if it exists
+#      - sets up standard cshell variables, aliases, etc.
+#      - source user file ~/.tshrc.mine, if it exists
+
+set initdir=/usr/athena/lib/dotfiles
+
+if (-r $initdir/tcshrc) then
+        source $initdir/tcshrc
+else
+	if ($?prompt) then		# Don't echo if noninteractive
+	  echo "Warning: System-wide initialization files not found."
+	  echo "C Shell initialization has not been performed."
+	  stty dec
+	endif
+	# set some basic defaults if failed initialization
+	umask 22
+	set hosttype=`/bin/machine`
+	set bindir=${hosttype}bin
+	set path=( $HOME/$bindir /usr/local/bin /usr/local/bin/X11 /usr/athena/bin /bin/athena /usr/new/mh/bin /usr/ucb /bin /usr/bin . )
+endif
+
+# If you want to ADJUST the cshell initialization sequence, create any of 
+# the following files (as appropriate) in your home directory, with commands
+# to achieve the effect listed:
+#
+#      .environment - setup session environment (set environmental variables, 
+#                     attach lockers, etc.)
+#      .tcshrc.mine - setup cshell environment (set shell variables, aliases,
+#                     unset system defaults, etc.)
+                      
+# If you want to CHANGE the cshell initialization sequence, revise this .tcshrc
+# file (the one you're reading now).  You may want to copy the contents of
+# the system-wide tcshrc file as a starting point.
+#
+# WARNING: If you revise this .tcshrc file, you will not automatically
+# get any changes that may be made to the system-wide file at 
+# a later date.  Be sure you know what you are doing.
+
+xset -b
