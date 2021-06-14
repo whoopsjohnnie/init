@@ -20,6 +20,13 @@ pkg install -y xrandr
 pkg install -y xdm
 
 # 
+pkg install -y xf86-video-vmware
+
+# 
+pkg install -y xterm
+pkg install -y rxvt-unicode
+
+# 
 pkg install -y xv
 pkg install -y xman
 pkg install -y xmag
@@ -56,6 +63,14 @@ pkg install -y asmail
 pkg install -y asmix
 pkg install -y asmixer
 pkg install -y aterm
+
+# CDE
+pkg install -y cde
+cp ./etc/hosts /etc/
+cp ./etc/inetd.conf /etc/
+cp ./etc/rc.conf /etc/
+cp ./etc/rc.local /etc/
+cp ./etc/ttys /etc/
 
 # 
 pkg install -y firefox
