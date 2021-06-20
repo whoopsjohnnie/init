@@ -1,0 +1,20 @@
+wm*WmForm.BorderColor:	#FFFFEEEECCCC
+wm*WmForm.Foreground:	#111100001111
+DXsession*display_foreground:	#547A547A547A
+DXsession*display_background:	#444466665555
+DXsession*pointer_foreground:	white
+DXsession*pointer_background:	black
+DXsession*display_pattern:	40
+!*BorderColor:	#666666666666
+!*Foreground:	#111100001111
+!*Highlight:	#BBBB44444444
+!*Background:	#FFFFEEEECCCC
+
+emacs.geometry:         80x36+534+245
+emacs.font:             -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+emacs19.geometry:       80x36+534+245
+emacs19.font:           -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+Emacs*menubar.font:	-adobe-Helvetica-Bold-O-Normal--*-140-*-*-P-*-ISO8859-1
+
+matlab*background:      white
+matlab*foreground:      black
