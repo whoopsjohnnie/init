@@ -1,10 +1,3 @@
-
-#
-# This is my original tcsh shell config from the Digital UNIX kth.se AFS cell
-#
-# /afs/kth.se/home/e97/e97_jog/.tcshrc.mine, Oct 31 2000, 14:42:51
-#
-
 # I den här filen kan du lägga kommandon som du vill ska utföras varje
 # gång kommandotolkaren startas. Du kan t.ex. göra egna kortkommandon
 # för saker som du gör ofta, byta prompt etc.
@@ -42,6 +35,7 @@ set nobeep
 #
 alias emacs emacs -nw
 
-
+# AMIWM
+setenv AMIWM_HOME "/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/"
 
 
