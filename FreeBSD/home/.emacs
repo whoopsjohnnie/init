@@ -54,6 +54,10 @@
 ;; prevent silly initial splash screen
 (setq inhibit-splash-screen t)
 
+; (load-theme 'leuven)
+; (load-theme 'tango)
+(load-theme 'adwaita)
+
 ;(set-foreground-color "white")
 ;(set-background-color "black")
 ;(set-border-color "black")
@@ -85,6 +89,40 @@
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
+;
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+
+(setq mac-command-modifier 'control)
+(setq mac-option-modifier 'meta)
+
+(define-key key-translation-map (kbd "s-x s-f") (kbd "C-x C-f"))
+(define-key key-translation-map (kbd "C-x s-f") (kbd "C-x C-f"))
+(define-key key-translation-map (kbd "C-x <f3>") (kbd "C-x C-f"))
+
+(define-key key-translation-map (kbd "s-x s-s") (kbd "C-x C-s"))
+(define-key key-translation-map (kbd "C-x s-s") (kbd "C-x C-s"))
+
+(define-key key-translation-map (kbd "s-x s-c") (kbd "C-x C-c"))
+(define-key key-translation-map (kbd "C-x s-c") (kbd "C-x C-c"))
+
+(define-key key-translation-map (kbd "s-k") (kbd "C-k"))
+(define-key key-translation-map (kbd "s-g") (kbd "C-g"))
+
+;; Markdown/MD
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;(custom-set-variables
+;	'(markdown-command "/usr/local/bin/pandoc"))
+
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
 ;;
 ; (setq default-directory "~/")
 ; (setq command-line-default-directory "~/")
@@ -102,10 +140,10 @@
 ;:*  Controlling editing this file
 ;:*===================================================================
 ;Local Variables:
-;mode:Emacs-Lisp
-;outline-regexp: ";:\\*\\**"
-;eval:(outl-mouse-minor-mode 0)
-;eval:(hide-body)
+;; mode:Emacs-Lisp
+;; outline-regexp: ";:\\*\\**"
+;; eval:(outl-mouse-minor-mode 0)
+;; eval:(hide-body)
 ;End:
 ;:*===================================================================
 ;:*

@@ -35,7 +35,7 @@ Menu RootMenu
         "Options"         _O                      f.menu MwmCustomizeMenu
 	no-label	   	                  f.separator
 	"Restart..."	  _R	                  f.restart
-	"Quit..."	                          f.quit_mwm
+	"Quit..."	  			  f.quit_mwm
 	"Help"            _H                      f.menu MwmHelpMenu    
 }
 
@@ -51,7 +51,7 @@ Menu WorkspaceMenu
         "Options"         _O                      f.menu MwmCustomizeMenu
 	no-label	   	                  f.separator
 	"Restart..."	  _R	                  f.restart
-	"Quit..."	                          f.quit_mwm
+	"Quit..."	  			  f.quit_mwm
 }                         
 
 ! Customize menu from window menu 
@@ -80,32 +80,32 @@ Menu MwmHelpMenu
 ! Applications
 Menu AppMenu
 {
-	"Bildläsning (scanner)"	f.exec "/usr/bin/isa_main &"
-	"Bookreader"		f.exec "/usr/bin/dxbook &"
-	"CDA Viewer"		f.exec "/usr/bin/dxvdoc &"
-	"Calculator"		f.exec "/usr/bin/dxcalc &"
-	"Calendar"		f.exec "/usr/bin/dxcalendar &"
-	"Cardfiler"		f.exec "/usr/bin/dxcardfiler &"
-	"Clock"			f.exec "/usr/bin/dxclock &"
-	"DECterm"		f.exec "/usr/bin/dxterm -ls &"
-	"DECwrite"		f.exec "/usr/bin/decwrite &"
-	"Elmer"			f.exec "/usr/local/bin/elmer &"
+!	"Bildläsning (scanner)"	f.exec "/usr/bin/isa_main &"
+!	"Bookreader"		f.exec "/usr/bin/dxbook &"
+!	"CDA Viewer"		f.exec "/usr/bin/dxvdoc &"
+	"Calculator"		f.exec "xcalc &"
+	"Calendar"		f.exec "xcalendar &"
+!	"Cardfiler"		f.exec "/usr/bin/dxcardfiler &"
+	"Clock"			f.exec "xclock &"
+	"DECterm"		f.exec "/usr/local/bin/urxvt &"
+	"DECwrite"		f.exec "nedit &"
+!	"Elmer"			f.exec "/usr/local/bin/elmer &"
 	"Emacs"			f.exec "/usr/local/bin/emacs &"
-	"Emacs version 19"	f.exec "/usr/local/bin/emacs19 &"
-	"ghostview"		f.exec "/usr/local/bin/X11/ghostview &"
-	"Mail"			f.exec "/usr/local/bin/X11/xmh &"
-	"matlab"		f.exec "/usr/bin/dxterm -xrm '*title:Matlab' -xrm '*iconName:Malab' -e matlab -background white"
-	"Mosaic"		f.exec "/usr/local/bin/X11/Mosaic &"
-	"News"			f.exec "/usr/local/bin/X11/mxrn &"
-	"Notepad"		f.exec "/usr/bin/dxnotepad &"
-	"Paint"			f.exec "/usr/bin/dxpaint &"
-	"Postscript Previewer"	f.exec "/usr/bin/dxpsview &"
-	"User Executive"	f.exec "/usr/bin/dxue &"
-	"LinkWorks Mgr"		f.exec "/usr/bin/lwkmanager &"
-	"xpaint"		f.exec "/usr/local/bin/X11/xpaint &"
-	"xman"			f.exec "/usr/local/bin/X11/xman &"
+	"Emacs version 19"	f.exec "/usr/local/bin/emacs &"
+!	"ghostview"		f.exec "/usr/local/bin/X11/ghostview &"
+	"Mail"			f.exec "xmh &"
+	"matlab"		f.exec "xterm -xrm '*title:Matlab' -xrm '*iconName:Malab' -e matlab -background white"
+	"Mosaic"		f.exec "firefox &"
+!	"News"			f.exec "/usr/local/bin/X11/mxrn &"
+	"Notepad"		f.exec "nedit &"
+!	"Paint"			f.exec "xpaint &"
+!	"Postscript Previewer"	f.exec "/usr/bin/dxpsview &"
+!	"User Executive"	f.exec "/usr/bin/dxue &"
+!	"LinkWorks Mgr"		f.exec "/usr/bin/lwkmanager &"
+	"xpaint"		f.exec "xpaint &"
+	"xman"			f.exec "xman &"
 	"xterm"			f.exec "xterm &"
-	"xv"			f.exec "/usr/local/bin/X11/xv &"
+	"xv"			f.exec "xv &"
 }
 
 ! Default Window Menu

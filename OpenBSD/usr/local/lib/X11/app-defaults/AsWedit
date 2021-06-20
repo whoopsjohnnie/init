@@ -1,0 +1,3315 @@
+!
+!	AsWedit app-defaults file for asWedit program (ver. 3.0)
+!       Copyright (C) 1995, 1996 AdvaSoft Ltd, All rights reserved.
+!
+!	Version details:
+!	@(#) asWedit application defaults file; Version 3.0, 23 October 1996; (C) 1995, 1996 AdvaSoft Ltd.
+!	@(#) en - English language version
+!	@(#) Main English l10n database: Ver. 3.0, 14 October 1996; (C) 1995, 1996 AdvaSoft Ltd.
+!	@(#) HTML English l10n database: Ver. 3.0, 14 October 1996; (C) 1995, 1996 AdvaSoft Ltd.
+!
+!
+!	IMPORTANT: Resources in this file are grouped according to the
+!	probability of them being changed by a user. For most users
+!	parts 1, 2 and 3 are all they might ever want to change.
+!	So if personal customization files are needed we recommend to
+!	build them from these parts.
+!
+!	Note that option preferences set at run-time via menus are stored
+!	(when saved) in the user's ~/.asWedit-prefs file and they override
+!	any customization done via resources in this or any other
+!	X-resource file.
+!
+!
+!
+!	=====================================================================
+!	NOTE: is you are new to customization via X/Motif resources you might
+!	like to read the following asWedit on-line help topics:
+!		Help Index|Customization
+!		Help Index|Users' Q & A|Customization
+!	====================================================================
+!
+!
+!
+!
+!	Resources - Part 1 (the most likely to be customized by a user).
+!	----------------------------------------------------------------
+!
+!-----------------------------------------------------------------------------
+!
+!   LOCAL system-related definitions
+!
+!   System temporary directory, usually /tmp (uncomment and edit the following line)
+*tmpDir:	/tmp
+!
+!   Help directory (uncomment and edit the following line, if needed)
+*helpDir:	/misc/hacks/lib/X11/asWedit
+!
+!   Local printers/print queues list
+!   (Note resource definition change from 2.0!)
+!
+*printerList:		  lpr -Pprefix ,lpr -Pdryck ,lpr -Peuropa
+!
+!   Define the default printing command (if you want one)
+*print_dialog.textString: lpr
+!
+!
+!    Site installations note:
+!    For site installations the system administrator should/could pre-define
+!    the names of the HTTP and FTP servers in the system-wide resource file
+!    (so each user would have *initial* values already defined).
+!    To do that uncomment and edit the following resources:
+*httpServer:	www.e.kth.se
+*ftpServer:	ftp.e.kth.se
+!
+!    To define the default directory where the templates reside uncomment
+!    and edit the following line (the example is for an existing  directory called
+!    'templates' in the user's home directory but a global/company template
+!    directory is also a good choice;
+!    Note -- NO trailing spaces are allowed):
+!!*template_dialog.directory:	~/templates
+!
+!
+!   COLORS
+!
+!   NOTE: colors are done in rgb just in case your color database is 'weird'
+!	  (or simply you use the program in your 'locale' and the color
+!	   names are localized also)
+!   See also: COLORS for the HTML tags
+!
+!   Text color (foreground)
+*foreground:	#000000
+!
+!   Colors for menuBar (& all menus & most dialogs), help_dialog
+!   and save_warning,  and main text area (i.e. all the rest)
+!
+*menuBar*background:            #BFBFBF
+*QAccess_Popup*background:	#BFBFBF
+!
+!   asWedit 1.x versions had the following text background:
+!   *edit_text*background:	#c1adad
+*edit_text*background:          #B0B0B0
+*menuBar*reportTagsDlg*text.background: #B0B0B0
+!
+*help_dialog*background:        #C0C0C0
+*background:               	#C0C0C0
+*readOnlyBackground:            #C0C0C0
+*bottom_row*background:		#C0C0C0
+*help_dialog*XmText*background: #C0C0C0
+*helpLinkBg:			#C0C0C0
+*helpStrongBg:			#C0C0C0
+*helpLinkFg:			#23238E
+*helpStrongFg:			#A52A2A
+!
+*troughColor:                   #A0A0A0
+*menuBar*XmList.background:	#A0A0A0
+*menuBar*VkList.background:	#A0A0A0
+!
+*menuBar*XmText.background: 	#C7AAAA
+*menuBar*XmTextField.background: #C7AAAA
+!
+!   colors for important warning/error messages
+!   (if you want them more prominent use #c1adad,  #f8b39b or something else)
+!
+*save_warning*background:               #C0C0C0
+*menuBar*save_warning*background:       #C0C0C0
+*menuBar*error_message*background:      #C0C0C0
+!
+*hint*background:			#FFF8DC
+!   If you don't like the black box around the hint, comment out the following 2 lines
+!   (or change the color defintions to get a 3D effect)
+*hint*bottomShadowColor: 		#000000
+*hint*topShadowColor: 			#000000
+!
+!
+!   Specify different colors for the HTML required and optional attribute entries
+*menuBar*formR.XmText.background: #BC8F8F
+*menuBar*form.XmText.background:  #C7AAAA
+!
+!   Select color for the toggle buttons in toolbars & attribute editors
+*toolbar*selectColor:   grey95
+*attr_edit*selectColor:	grey95
+!
+!
+!
+!   FONTS .....
+!
+!
+!   FONTS note:
+!   All basic fonts have the same consistent size (except for the symbol
+!   font for the Greek entities). To change the font size and preserve
+!   the consistency, the easiest is to replace all occurrences of -14- with
+!   your preferred setting. For example, -12- might be suitable for lower
+!   display resolutions. You might decide to leave the mediumFont at size -14-;
+!   it is selectable at run-time via the Options|Font size|Medium command.
+!   If in doubt, check what fonts are available on your X server using
+!   the 'xlsfonts' program.
+!
+!   Bold font (labels etc., size 14)
+*menuBar*fontList:            	-adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*XmMenuShell*fontList:         	-adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*XmText.fontList:       -adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*XmTextField.fontList:  -adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*toolbar*fontList:            	-adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*help_dialog*fontList:          -adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*save_warning*fontList:         -adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*licenseDlg*fontList:		-adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+!
+*hint*fontList:			-adobe-helvetica-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
+!
+!   Fixed width font:
+*XmText.fontList:             	-adobe-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*text_dialog*XmText.fontList:	-adobe-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+!
+!   Plain fixed width font:
+*bottom_row*fontList:         	-adobe-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
+*licenseDlg*XmText.fontList:	-adobe-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*pickColorDlg*XmList.fontList:	-adobe-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*selectLinkDlg*XmList.fontList:	-adobe-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*replaceTagDlg*XmList.fontList:	-adobe-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*reportTagsDlg*XmText.fontList:	-adobe-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
+!
+!
+!  Latin1 fonts (iso8859-1)
+*menuBar*EntUser_PD*fontList:   -adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*EntSpecial_PD*fontList: -adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*Latin1_PD*fontList:    -adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*menuBar*Proposed_PD*fontList:	-adobe-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+!
+!
+!   Special symbol font for the greek labels...
+!   (Note: on SGI when the fonts schemes are used the symbol fonts are NOT properly found!; workaround needed)
+!   (See also the toolbar's greek fonts later in this file...)
+*menuBar*Greek_PD*fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+!   Alternate fixed width fonts for the editor:
+*smallFont:  			-adobe-courier-bold-r-normal-*-10-*-*-*-*-*-iso8859-1
+*mediumFont: 			-adobe-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*largeFont:  			-adobe-courier-bold-r-normal-*-20-*-*-*-*-*-iso8859-1
+*hugeFont:   			-adobe-courier-bold-r-normal-*-25-*-*-*-*-*-iso8859-1
+!
+!   OTHER DEFAULTS
+!
+!   Start up sizes of main text widget and hypertext text widget
+!
+*edit_text.rows:		24
+*edit_text.columns:		80
+!
+*hypertext_text.rows:		20
+*hypertext_text.columns: 	60
+!
+!   Preferred length for attribute editor text boxes (in characters)
+*menuBar*form.XmText.columns:   30
+*menuBar*formR.XmText.columns:  30
+!
+!
+!   default start-up Untitled file name  ('NoName')
+*noname:			NoName
+!
+!
+!   Default help file name
+*helpName:	asWedit.hlp
+!
+!   Backup file suffix:
+*backupFileSuffix:	~
+!
+!
+!
+!   	Part 2 - HTML related resources (likely to be customized)
+!	---------------------------------------------------------
+!
+!-----------------------------------------------------------------------------
+!
+!
+!   Definition of the standard templates used in the 2 supported HTML modes: basic HTML and experimental HTMLX
+!   (for backward compatibility their resources are prefixed with html2 and html3, respectively)
+*html2StdTemplOpen:	<!DOCTYPE HTML PUBLIC "-//AdvaSoft//DTD HTML 3.2 extended 961018//EN">\n<html>\n<head>\n<title>
+*html2StdTemplClose:	</title>\n</head>\n\n<body>\n\n</body>\n</html>\n
+!
+*html3StdTemplOpen:	<!DOCTYPE HTML PUBLIC "-//AdvaSoft//DTD HTML 3.2 experimental 961018//EN">\n<html>\n<head>\n <title>
+*html3StdTemplClose:	</title>\n</head>\n\n<body>\n\n</body>\n</html>\n
+!
+!
+!   To define permanently some 'unknown' tags uncomment and edit the 'learnTagNames' resource
+!   Important: use **lower** case tag names and separate them with commas (as in an example).
+!!*learnTagNames: 	blink
+!
+!   The tag and attribute names and some of the attribute values are case insensitive.
+!   You can decide what case is used for each category. As default the attribute
+!   and tag names are capitalized. You can change it. Simply uncomment and edit
+!   the following definitions.
+*useLowerTags:		True
+*useLowerAttrNames:	True
+*useLowerAttrValues:	True
+!
+!   The optionally closing tags are inserted according to the following heuristic rule:
+!	'when no text is selected insert only the opening tag'
+!   If you don't like it define 'noSelOmitCtag' as False.
+!
+!
+!   User definable entities (probaly just a German, French etc. from Latin1)
+!   (if you use an entity for which a labelString is not defined, than
+!   define the missing labelString yourself)
+*userEntities:	&Aring;, &Auml;, &Ouml;, &eacute;, &aring; &auml;, &ouml;,
+!
+!   Layout for the user entities sub-menu
+*EntUser_PD.numColumns:	2
+*EntUser_PD.packing:	XmPACK_COLUMN
+!
+!  Definition of HTML tags for which you want to insert the line feeds
+!  as well. You can insert the line feed before and/or after the
+!  opening tag. You can do the same for the closing tags. Use the
+!  standard tag names (lower case) and separate them with a comma.
+!
+*lfBeforeOtags: body,p,hr
+*lfAfterOtags:  body,html,head,p,ul,ol,dl,pre,address,hr,table,form,select,applet,map,math,box,array,thead,tbody,tfoot,frameset
+!
+*lfBeforeCtags: address,noframes
+*lfAfterCtags:  html,head,p,ul,ol,dl,li,dt,dd,pre,h1,h2,h3,h4,h5,h6,table,form,select,applet,map,math,box,array,thead,tbody,tfoot,frameset,noframes,frame
+!
+!   If the temporary *.html files are deleted to quickly (so Netscape, or other program)
+!   couldn't find them redefine the following resource (the default 'garbage collection'
+!   time is set for 30 seconds; note that the value is specified in msec !)
+!!*unlinkDelay:	30000
+!
+!
+!  COLORS for the HTML tags
+!  -----------------------
+!  There are 20 different tag groups and each of them can have its own
+!  foreground and background
+!
+!  Define a common background for all HTML tags, then define individual
+!  foreground colors (you can redefine the individual backgrounds
+!  by defining resources like: *background1, ..., *backgroundK)
+!
+!  Old color scheme NOTE
+!    In the previous versions of the program (before 3.0)
+!    the opposite color effect was used (i.e. one color for foreground
+!    and different colors for tag backgrounds). The old definitions
+!    are left commented out after the new definitions. You could use the other
+|    scheme as you wish (but do NOT use both color sets, as defined here,
+!    at the same time as some of the forground and background colors
+!    do not go together and the text might be even unreadable!)
+!
+*BackgroundTags: #B0B0B0
+!
+*foreground1:   #A52A2A
+*foreground2:   #3232CC
+*foreground3:   #23238E
+*foreground4:   #236B8E
+*foreground5:   #6F4242
+*foreground6:   #8E2323
+*foreground7:   #426F42
+*foreground8:   #CC3299
+*foreground9:   #6B8E23
+*foregroundA:   #551A8B
+*foregroundB:   #8E6B23
+*foregroundC:   #238E6B
+*foregroundD:   #545454
+*foregroundE:   #7E5E6F
+*foregroundF:   #6B238E
+*foregroundG:   #238E23
+*foregroundH:   #9F5F9F
+*foregroundI:   #706653
+*foregroundJ:   #8E236B
+*foregroundK:   #CC3232
+!
+!
+!  The previous 2.5 version color scheme follows (OLD, now commented out):
+!!!    Define a common foreground for all HTML tags (you can redefine
+!!!    the individual colors if you really want by defining *foreground1,...,
+!!!    *foregroundK)
+!!*ForegroundTags: grey20
+!!!
+!!!  define the individual foreground colors for tag groups
+!!!
+!!*background1:	darkseagreen
+!!*background2:	#cecece
+!!*background3:	palegoldenrod
+!!*background4:	#729c9c
+!!*background5:	#9f8484
+!!*background6:	#b98e8e
+!!*background7:	grey67
+!!*background8:	grey95
+!!*background9:	#6B8E23
+!!*backgroundA:	#9cb39b
+!!*backgroundB:	#a69b63
+!!*backgroundC:	#608189
+!!*backgroundD:	#8e8e8e
+!!*backgroundE:	#808080
+!!*backgroundF:	#cc9377
+!!*backgroundG:	#7e5e6f
+!!*backgroundH:	#7c917c
+!!*backgroundI:	#706653
+!!*backgroundJ:	#a4a4b4
+!!*backgroundK:	#f8b39b
+!
+!   Define the color tag groups
+!   Note that more elements are defined than is currently supported (many of them
+!   come from the, now obsoleted, HTML 3.0 draft)
+*color1Tags:    h1,h2,h3,h4,h5,h6,title,hr,th
+*color2Tags:    p,br,div
+*color3Tags:    a,link,base,applet
+*color4Tags:    img,range,nextid,param,area,frame,embed
+*color5Tags:    ul,ol,dl,table,isindex
+*color6Tags:    li,dt,dd,tr,meta,style,map,array,form
+*color7Tags:    html,banner,doctype,noframes,noscript
+*color8Tags:    t,--
+*color9Tags:	vec,frameset
+*colorATags:    strong,code,kbd
+*colorBTags:    td,col
+*colorCTags:    u,s,b,i,tt
+*colorDTags:    lang,abbrev,blockquote,address,ins,del,sub,sup
+*colorETags:    input,select,textarea,overlay
+*colorFTags:    em,samp,var,cite,item
+*colorGTags:	body,multicol
+*colorHTags:	font,center,basefont,nobr,wbr,script
+*colorITags:	head
+*colorJTags:    dir,menu,pre,span
+*colorKTags:    unknown
+!
+!   User customizable **hexadecimal** color list (one line)
+!
+!
+*pickColorList:	#000000, #0000EE, #007FFF, #008B8B, #00EE00, #00FFFF, #23238E, #236B8E, #238E23, #238E6B, #2F4F4F, #3232CC, #32CC99, #42426F, #426F42, #545454, #551A8B, #5F9F9F, #608189, #6495ED, #6B238E, #6B8E23, #6F4242, #706653, #7093DB, #70DB93, #70DBDB, #729C9C, #7C917C, #7CFC00, #7E5E6F, #7F00FF, #808080, #87CEFA, #8E2323, #8E236B, #8E6B23, #8E8E8E, #8F8FBC, #8FBC8F, #9370DB, #93DB70, #9CB39B, #9F5F9F, #9F8484, #9F9F5F, #A0A0A0, #A4A4B4, #A52A2A, #A69B63, #B0B0B0, #BC8F8F, #BDB76B, #BFD8D8, #C1C1C1, #C7AAAA, #CC3232, #CC3299, #CC9377, #CECECE, #D8BFD8, #D8D8BF, #DB7093, #DB70DB, #DB9370, #DBDB70, #E0FFFF, #EAADEA, #EAEAAD, #EE0000, #F0FFF0, #F2F2F2, #F4A460, #F8B39B, #FDF5E6, #FF1493, #FF7F00, #FFB6C1, #FFD700, #FFDEAD, #FFEBCD, #FFF8DC, #FFFF00, #FFFFFF
+!
+!
+!	Part 3 - User definable filters and commands
+!	--------------------------------------------
+!
+!-----------------------------------------------------------------------------
+!
+!
+!   FILTERS
+!   Number of user defined filters ( *important* to specify right)
+!
+*filterNum:	8
+!
+!   User defined filters (items in Tools/Filters menu):
+!
+*Filter1.labelString:		Word count
+*XmMenuShell*Filter1.mnemonic: 	W
+*filter1:			echo '     lines     words     bytes:' ; wc
+*filterExt1:			TO_TEXT_DIALOG\, Word count\, \, \, \,USE_FILE_OR_SELECTION
+!
+*Filter2.labelString:		Compress blank lines
+*XmMenuShell*Filter2.mnemonic: 	C
+*filter2:			cat -r
+!
+*Filter3.labelString:		Delete blank lines
+*XmMenuShell*Filter3.mnemonic: 	D
+*filter3:			sed  '/^[ 	]*$/d'
+!
+*Filter4.labelString:		Double Space
+*XmMenuShell*Filter4.mnemonic:	S
+*filter4:			sed G
+!
+*Filter5.labelString:		Delete Extra spaces
+*XmMenuShell*Filter5.mnemonic:	E
+*filter5:			sed 's/[ 	][ 	]*/ /g'
+!
+!
+!
+!!! asWedit ISO Latin1 characters <------> Entities translation filters
+!
+!   You can reduce the list below to entitites that are in your native
+!   language (that would speed up the filters)
+!
+!   NOTE: on some (older) systems a few 8-bit characters might not be accepted
+!   in the commands below. Notably on SunOS 4 the following confuse sed
+!   and you cannot use them and appropriate commands should be deleted
+!   (if not done already): 'ÿ' (&yuml;), 'Ü' (&Uuml;) . The problem
+!   with 'ÿ' (&yuml;) exists also on: IRIX 4 & Linux.
+!   Ultrix 4.4 has problems with the: 'Û' (&Ucirc;),  'Ü' (&Uuml;) .
+!   NOTE: the English distribution files have been modified for each
+!     platform to take care of the above bugs. But if you are using a generic
+!     resource file from the i18n-resources directory you should modify this
+!     file (for each of the above platforms) !
+!
+*Filter6.labelString:		Latin 1 --> Entitities
+*XmMenuShell*Filter6.mnemonic:	s
+*filter6:			\
+ sed -e 's/Æ/\\&AElig;/g' -e 's/Á/\\&Aacute;/g' -e 's/Â/\\&Acirc;/g' -e 's/À/\\&Agrave;/g' |\n\
+ sed -e 's/Å/\\&Aring;/g' -e 's/Ã/\\&Atilde;/g' -e 's/Ä/\\&Auml;/g' -e 's/Ç/\\&Ccedil;/g'  |\n\
+ sed -e 's/Ð/\\&ETH;/g' -e 's/É/\\&Eacute;/g' -e 's/Ê/\\&Ecirc;/g' -e 's/È/\\&Egrave;/g'   |\n\
+ sed -e 's/Ë/\\&Euml;/g' -e 's/Í/\\&Iacute;/g' -e 's/Î/\\&Icirc;/g' -e 's/Ì/\\&Igrave;/g'  |\n\
+ sed -e 's/Ï/\\&Iuml;/g' -e 's/Ñ/\\&Ntilde;/g' -e 's/Ó/\\&Oacute;/g' -e 's/Ô/\\&Ocirc;/g'  |\n\
+ sed -e 's/Ò/\\&Ograve;/g' -e 's/Ø/\\&Oslash;/g' -e 's/Õ/\\&Otilde;/g' -e 's/Ö/\\&Ouml;/g' |\n\
+ sed -e 's/Þ/\\&THORN;/g' -e 's/Ú/\\&Uacute;/g' -e 's/Û/\\&Ucirc;/g' -e 's/Ù/\\&Ugrave;/g' |\n\
+ sed -e 's/Ü/\\&Uuml;/g' -e 's/Ý/\\&Yacute;/g' -e 's/á/\\&aacute;/g' -e 's/â/\\&acirc;/g'  |\n\
+ sed -e 's/æ/\\&aelig;/g' -e 's/à/\\&agrave;/g' -e 's/å/\\&aring;/g' -e 's/ã/\\&atilde;/g' |\n\
+ sed -e 's/ä/\\&auml;/g' -e 's/ç/\\&ccedil;/g' -e 's/é/\\&eacute;/g' -e 's/ê/\\&ecirc;/g'  |\n\
+ sed -e 's/è/\\&egrave;/g' -e 's/ð/\\&eth;/g' -e 's/ë/\\&euml;/g' -e 's/í/\\&iacute;/g'    |\n\
+ sed -e 's/î/\\&icirc;/g' -e 's/ì/\\&igrave;/g' -e 's/ï/\\&iuml;/g' -e 's/ñ/\\&ntilde;/g'  |\n\
+ sed -e 's/ó/\\&oacute;/g' -e 's/ô/\\&ocirc;/g' -e 's/ò/\\&ograve;/g' -e 's/ø/\\&oslash;/g'|\n\
+ sed -e 's/õ/\\&otilde;/g' -e 's/ö/\\&ouml;/g' -e 's/ß/\\&szlig;/g' -e 's/þ/\\&thorn;/g'   |\n\
+ sed -e 's/ú/\\&uacute;/g' -e 's/û/\\&ucirc;/g' -e 's/ù/\\&ugrave;/g' -e 's/ü/\\&uuml;/g'  |\n\
+ sed -e 's/ý/\\&yacute;/g' -e 's/ÿ/\\&yuml;/g' \n
+*Filter7.labelString:		Entitities --> Latin 1
+*XmMenuShell*Filter7.mnemonic:	L
+*filter7:			\
+ sed -e 's/&AElig;/Æ/g' -e 's/&Aacute;/Á/g' -e 's/&Acirc;/Â/g' -e 's/&Agrave;/À/g' |\n\
+ sed -e 's/&Aring;/Å/g' -e 's/&Atilde;/Ã/g' -e 's/&Auml;/Ä/g' -e 's/&Ccedil;/Ç/g'  |\n\
+ sed -e 's/&ETH;/Ð/g' -e 's/&Eacute;/É/g' -e 's/&Ecirc;/Ê/g' -e 's/&Egrave;/È/g'   |\n\
+ sed -e 's/&Euml;/Ë/g' -e 's/&Iacute;/Í/g' -e 's/&Icirc;/Î/g' -e 's/&Igrave;/Ì/g'  |\n\
+ sed -e 's/&Iuml;/Ï/g' -e 's/&Ntilde;/Ñ/g' -e 's/&Oacute;/Ó/g' -e 's/&Ocirc;/Ô/g'  |\n\
+ sed -e 's/&Ograve;/Ò/g' -e 's/&Oslash;/Ø/g' -e 's/&Otilde;/Õ/g' -e 's/&Ouml;/Ö/g' |\n\
+ sed -e 's/&THORN;/Þ/g' -e 's/&Uacute;/Ú/g' -e 's/&Ucirc;/Û/g' -e 's/&Ugrave;/Ù/g' |\n\
+ sed -e 's/&Uuml;/Ü/g' -e 's/&Yacute;/Ý/g' -e 's/&aacute;/á/g' -e 's/&acirc;/â/g'  |\n\
+ sed -e 's/&aelig;/æ/g' -e 's/&agrave;/à/g' -e 's/&aring;/å/g' -e 's/&atilde;/ã/g' |\n\
+ sed -e 's/&auml;/ä/g' -e 's/&ccedil;/ç/g' -e 's/&eacute;/é/g' -e 's/&ecirc;/ê/g'  |\n\
+ sed -e 's/&egrave;/è/g' -e 's/&eth;/ð/g' -e 's/&euml;/ë/g' -e 's/&iacute;/í/g'    |\n\
+ sed -e 's/&icirc;/î/g' -e 's/&igrave;/ì/g' -e 's/&iuml;/ï/g' -e 's/&ntilde;/ñ/g'  |\n\
+ sed -e 's/&oacute;/ó/g' -e 's/&ocirc;/ô/g' -e 's/&ograve;/ò/g' -e 's/&oslash;/ø/g'|\n\
+ sed -e 's/&otilde;/õ/g' -e 's/&ouml;/ö/g' -e 's/&szlig;/ß/g' -e 's/&thorn;/þ/g'   |\n\
+ sed -e 's/&uacute;/ú/g' -e 's/&ucirc;/û/g' -e 's/&ugrave;/ù/g' -e 's/&uuml;/ü/g'  |\n\
+ sed -e 's/&yacute;/ý/g' -e 's/&yuml;/ÿ/g' \n
+!
+*Filter8.labelString:		HTML --> Text
+*XmMenuShell*Filter8.mnemonic:	T
+*filter8:			cat
+*filterExt8:			TO_CURRENT\, \, \, \, \,USE_FILE_OR_SELECTION \,SKIP_HTML_TAGS
+!
+!
+!   COMMANDS
+!   Number of user defined commands ( *important* to specify right)
+!
+*cmdNum: 3
+!
+!
+!   User defined commands (items in Tools/Commands menu):
+!
+!
+*Cmd1.labelString:      	Current directory
+*XmMenuShell*Cmd1.mnemonic: 	r
+*cmdDef1:               	pwd
+!
+*Cmd2.labelString:      	Date
+*XmMenuShell*Cmd2.mnemonic: 	D
+*cmdDef2:               	date
+!
+*Cmd3.labelString:      	Host name
+*XmMenuShell*Cmd3.mnemonic: 	H
+*cmdDef3:               	hostname
+!
+!    OTHERS
+!
+!    Select delimited text when found (when selectDelimitedText is True)
+*selectDelimitedText:		True
+!
+!    Word separators definition (used when a user double clicks a word etc.)
+*wordSeparators:	!\"#$%'()*+,./:;<=>?@[\\]^`{|}~
+!
+!    Default contents for the toolbars (list of command buttons) when the
+!    personal preferences file does not exist.
+*toolbar1Content:	New,Open,Spacer,Save,Print,Spacer,Cut,Copy,Paste,Spacer,Undo,Redo,Spacer,Find,Repeat,Change,Spacer,ShowToolbar2,ShowToolbar3,Split,Spacer,SavePrefs,On_Help,Spacer,Context
+*toolbar2Content:	HtmlMode,Refresh,Spacer,Template,standard,Spacer,EditTag,DeleteTag,ReplaceTag,Spacer,Parent,Child,Spacer,h1,h2,h3,Spacer,p,br,hr,Spacer,em,strong,Spacer,ol,ul,li,Spacer,a_target,a,img,Spacer,On_Tags
+*toolbar3Content:	Spell,Filter1,Spacer,Text2List,Text2Table,Spacer,Wrap,ColorTags,ShowContext,Spacer,MakeToC,ReportTags,Spacer,MoveLeft,MoveRight,Reformat,Spacer,Filter2,Filter3,Filter5,Spacer,SetMark1,GoMark1,Spacer,map,area,embed,Spacer,applet,param,On_Html,Spacer,EditToolbar3
+!
+!   Contents for the two user customizable popup menus.
+!   	Note that these lists cannot be (yet) modified via run-time customization,
+!   	as opposed to the toolbars. If you need a command name you may
+!   	play with the toolbar customization tool and check the ~/.asWedit-prefs
+!   	file for the name (or even the whole list).
+!
+*editorPopupContents:	Undo,Spacer,Cut,Copy,Paste,Spacer,EditTag,DeleteTag,ReplaceTag,Spacer,Open,Save,Spacer,Exit
+*statLinePopupContents:	Go_to,Spacer,Refresh,ShowContext
+!
+!   Some people might like to have a permanent display of their customized
+!   popup menu. To obtain such effect please uncomment the following resource
+!   and use the enabled tear-off button.
+*QAccess_Popup*tearOffModel: XmTEAR_OFF_ENABLED
+!
+!
+!**************************************************************************
+!		**	NOTE	**	NOTE	**	NOTE	**
+!
+!   If you would like to have your personalized application defaults file
+!   I recommend to copy ONLY the above parts of this file (it might
+!   be all you would ever need).
+!
+!**************************************************************************
+!
+!
+!
+!	Part 4 - general & visual consistency resources;
+!	------------------------------------------------
+!
+!-----------------------------------------------------------------------------
+!
+!
+!	general appearance and behaviour defaults
+!
+*borderWidth:		0
+*highlightThickness:	2
+*highlightColor: 	#000000
+!
+!
+!	allow Tear off menus for Motif 1.2 (and higher).
+!	NOTE: if on your system the tear-off does not work (i.e. there
+!	is a bug in the implementation of Motif) then disable the protocol
+!	as follow (Linux is an example here):
+!!!*menuBar*tearOffModel:	XmTEAR_OFF_DISABLED
+*menuBar*tearOffModel: 		XmTEAR_OFF_ENABLED
+!
+!       make the text widgets in diallogs small (the size is dynamically calculated)
+*columns:		3
+*textColumns:		3
+!
+!	display all the toggles even when they are not on
+!       color all radio and toggle buttons when they are selected
+!       (note: lampColor, checkColor and radioColor resources are specific to SGI)
+*visibleWhenOff:	true
+*fillOnSelect:          True
+*XmToggleButton*selectColor: #FFFF00
+*XmMenuShell*selectColor:    #FFFF00
+*checkColor:            #FF0000
+*radioColor:            #0000FF
+*lampColor:             #FFFF00
+!
+!	specific defaults for the program
+!
+!   setting the same visual pleasing margin (8) for all buttons
+!
+*XmPushButton.marginWidth:      8
+*XmCascadeButton.marginWidth:   8
+!
+!
+!   setting offsets affecting the status row (form_bottom)
+*form_bottom*topOffset:			2
+*form_bottom*bottomOffset:		2
+*form_bottom*leftOffset:		2
+*form_bottom*rightOffset:		2
+!
+!   setting shadowType & shadowThickness for frame_bottom_row;
+!   (to support SGI schemes mode)
+*frame_bottom_row.shadowType:		SHADOW_IN
+*frame_bottom_row.shadowThickness:	2
+!
+!   Symbol font for all toolbar's greek entity buttons (cannot be done shorter :-( )
+*toolbar*&alpha;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&beta;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&gamma;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&delta;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&epsilon;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&zeta;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&eta;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&theta;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&thetav;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&iota;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&kappa;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&lambda;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&mu;.fontList:		-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&nu;.fontList:		-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&xi;.fontList:		-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&omicron;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&pi;.fontList:		-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&varpi;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&rho;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&sigma;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&vsigma;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&tau;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&upsilon;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&phi;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&varphi;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&chi;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&psi;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&omega;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Gamma;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Delta;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Theta;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Lambda;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Xi;.fontList:		-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Pi;.fontList:		-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Sigma;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Upsilon;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Phi;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Psi;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+*toolbar*&Omega;.fontList:	-*-symbol-*-r-normal-*-20-*-*-*-*-*-*-*
+!
+!
+!
+!
+!	Part 5 - language dependent resources (to preserve consistency
+!	any changes here *should* be reflected in the on-line help file !)
+!	----------------------------------------------------------------
+!
+!-----------------------------------------------------------------------------
+!
+!   Menu bar & all menus resources:
+!   All necessary resources for an international application are specified
+!   here. This includes labels, mnemonics, accelerators and accelerator text.
+!   Note: you may safely add/remove/change accelerators and mnemonics, but
+!   be sure that the acceleratorText changes with accelerator. You may also
+!   change the labelString values (but do NOT remove them).
+!
+!   Menu bar:
+!
+*File.labelString:		File
+*File.mnemonic: 		F
+*Edit.labelString: 		Edit
+*Edit.mnemonic: 		E
+*Search.labelString: 		Search
+*Search.mnemonic: 		S
+*Tools.labelString:		Tools
+*Tools.mnemonic:		T
+*View.labelString: 		View
+*View.mnemonic: 		V
+*Options.labelString: 		Options
+*Options.mnemonic: 		O
+*menuBar.Help.labelString: 	Help
+*menuBar.Help.mnemonic: 	H
+!
+!
+! General (standard) labels for buttons in the dialogs
+!
+*OK.labelString:		OK
+*okLabelString:			OK
+*Apply.labelString:		Apply
+*applyLabelString:		Apply
+*Cancel.labelString:		Cancel
+*cancelLabelString:		Cancel
+*Help.labelString:		Help
+*helpLabelString:		Help
+!
+!
+!
+!   File PullDown menu:
+!
+*Open.labelString:		Open...
+*XmMenuShell*Open.mnemonic:	O
+*menuBar*Open.acceleratorText:  Ctrl+O
+*menuBar*Open.accelerator:  	Ctrl <Key>o
+*toolbar.Open.labelString:	Open a File...
+!
+*New.labelString:		New
+*XmMenuShell*New.mnemonic:  	N
+*menuBar*New.acceleratorText: 	Ctrl+N
+*menuBar*New.accelerator:     	Ctrl <Key>n
+*toolbar.New.labelString:	New File
+!
+*Template.labelString:     	Template...
+*XmMenuShell*Template.mnemonic:	T
+*toolbar.Template.labelString: 	Open a Template...
+!
+*Close.labelString:     	Close
+*XmMenuShell*Close.mnemonic: 	C
+*toolbar.Close.labelString:    	Close File and/or Window
+!
+*Save.labelString:      	Save
+*XmMenuShell*Save.mnemonic: 	S
+*menuBar*Save.acceleratorText:  Ctrl+S
+*menuBar*Save.accelerator:      Ctrl <Key>s
+*toolbar.Save.labelString:     	Save File
+!
+*Save_As.labelString:   	Save As...
+*XmMenuShell*Save_As.mnemonic: 	A
+*toolbar.Save_As.labelString:  	Save File As:...
+!
+*Insert.labelString:    	Insert...
+*XmMenuShell*Insert.mnemonic: 	I
+*toolbar.Insert.labelString:   	Insert a File...
+!
+*Print.labelString:     	Print...
+*XmMenuShell*Print.mnemonic: 	P
+*menuBar*Print.acceleratorText: Ctrl+P
+*menuBar*Print.accelerator:     Ctrl <Key>p
+!
+*Exit.labelString:      	Exit
+*XmMenuShell*Exit.mnemonic: 	x
+!
+!
+!
+!   Edit PullDown menu:
+!
+*Undo.labelString:      	Undo
+*XmMenuShell*Undo.mnemonic: 	U
+*menuBar*Undo.acceleratorText:  Ctrl+Z
+*menuBar*Undo.accelerator:      ~Shift Ctrl ~Meta ~Alt <Key>z
+!
+*Redo.labelString:      	Redo
+*XmMenuShell*Redo.mnemonic: 	R
+*menuBar*Redo.acceleratorText:  Shift+Ctrl+Z
+*menuBar*Redo.accelerator:	Shift Ctrl ~Meta ~Alt <Key>z
+!
+*Cut.labelString:       	Cut
+*XmMenuShell*Cut.mnemonic:  	t
+*menuBar*Cut.acceleratorText:   Ctrl+X
+*menuBar*Cut.accelerator:	~Shift Ctrl ~Meta ~Alt <Key>x
+!
+*Copy.labelString:      	Copy
+*XmMenuShell*Copy.mnemonic: 	C
+*menuBar*Copy.acceleratorText:  Ctrl+C
+*menuBar*Copy.accelerator:      ~Shift Ctrl ~Meta ~Alt <Key>c
+!
+*Paste.labelString:      	Paste
+*XmMenuShell*Paste.mnemonic: 	P
+*menuBar*Paste.acceleratorText: Ctrl+V
+*menuBar*Paste.accelerator:	~Shift Ctrl ~Meta ~Alt <Key>v
+!
+*Clear.labelString:      	Clear
+*XmMenuShell*Clear.mnemonic: 	e
+*menuBar*Clear.acceleratorText: Del
+*SelectAll.labelString:      	    Select All
+*XmMenuShell*SelectAll.mnemonic:    l
+*menuBar*SelectAll.acceleratorText: Ctrl+/
+*menuBar*SelectAll.accelerator:	    ~Meta ~Alt Ctrl <Key>slash
+!
+!  Additions for editing HTML files
+!
+*EditTag.labelString:		Edit Tag...
+*XmMenuShell*EditTag.mnemonic:	i
+*menuBar*EditTag.acceleratorText: Enter
+!
+*DeleteTag.labelString:		 	Delete Tag
+*XmMenuShell*DeleteTag.mnemonic: 	D
+!
+!   Alt key problem:
+!   if on your X server the sequence Alt+Del does not work
+!   (most probably you are using Sun's X server) then try the 'Alt+Meta'
+!   (on Sun's keyboards Meta is the Diamond key).
+!   If Meta+Del works modify the text visible to the user (i.e. the next line)
+!   (for more details see the 'Q&A HTML Editing' in the help or run 'xmodmap')
+*menuBar*DeleteTag.acceleratorText:	Alt+Del
+*menuBar*DeleteTag.accelerator:		~Shift ~Ctrl Meta  <Key>osfDelete
+!
+*ReplaceTag.labelString:		Replace...
+*XmMenuShell*ReplaceTag.mnemonic:	a
+*menuBar*ReplaceTag.acceleratorText:	Alt+Enter
+*menuBar*ReplaceTag.accelerator:	~Shift ~Ctrl Meta <Key>Return
+!
+!
+!
+!   Search PullDown menu:
+!
+*Find.labelString:    		Find...
+*XmMenuShell*Find.mnemonic: 	F
+*menuBar*Find.acceleratorText:	Ctrl+F
+*menuBar*Find.accelerator:  	Ctrl <Key>f
+!
+*Repeat.labelString:  		Find Next
+*XmMenuShell*Repeat.mnemonic: 	N
+*menuBar*Repeat.accelerator:  	Ctrl<Key>l
+*menuBar*Repeat.acceleratorText: Ctrl+L
+!
+*Change.labelString:  		Change...
+*XmMenuShell*Change.mnemonic: 	C
+*menuBar*Change.acceleratorText: Ctrl+H
+*menuBar*Change.accelerator: 	Ctrl <Key>h
+!
+*Go_to.labelString:     	Go to Line...
+*XmMenuShell*Go_to.mnemonic:    G
+*menuBar*Go_to.acceleratorText: Ctrl+G
+*menuBar*Go_to.accelerator:	 Ctrl <Key>g
+!
+*Bookmark.labelString:   	Bookmark
+*menuBar*Bookmark.mnemonic: 	B
+!
+*Match.labelString:   		Match delimiter
+*menuBar*Match.mnemonic:	M
+!
+!
+*Parent.labelString:  		Parent element
+*XmMenuShell*Parent.mnemonic: 	P
+*menuBar*Parent.acceleratorText: Ctrl+[
+*menuBar*Parent.accelerator: 	 Ctrl <Key>bracketleft
+!
+!   Parent/child selection NOTE:
+!   Once a parent or child element is found the default behaviour is to
+!   select it (highlight). To change this behaviour you can define
+!   the *selectFoundElement resource as False. In such a case
+!   the cursor will be positioned just inside the opening tag.
+!
+*Child.labelString:  		Child element
+*XmMenuShell*Child.mnemonic: 	d
+*menuBar*Child.acceleratorText:  Ctrl+]
+*menuBar*Child.accelerator: 	 Ctrl <Key>bracketright
+!
+!
+!
+!
+!
+!    Match PullDown menu:
+!
+!
+!    Selection NOTE:
+!    Once a matching delimiter is found the default behaviour is to
+!    select the pair (highlight it). You can change this behaviour
+!    by defining the *selectDelimitedText resource as False.
+!
+!    Alt key problem:
+!    if on your X server the sequences Alt+[ and Alt+] do not work
+!    (most probably you are using Sun's X server) then try Meta instead
+!    (on Sun's keyboards Meta is the Diamond key)
+!    If Meta works modify the text visible to the user (i.e. acceleratorText lines)
+!    (for more details see the Q&A in the help or run 'xmodmap')
+*Forward.labelString:			Forward
+*XmMenuShell*Match_PD*Forward.mnemonic:	F
+*menuBar*Forward.accelerator:		Meta <Key>bracketleft
+*menuBar*Forward.acceleratorText: 	Alt+[
+*toolbar.Forward.labelString:		Match Delimiter Forward
+!
+*Backward.labelString: 			Backward
+*XmMenuShell*Match_PD*Backward.mnemonic: B
+*menuBar*Backward.accelerator:		Meta <Key>bracketright
+*menuBar*Backward.acceleratorText: 	Alt+]
+*toolbar.Backward.labelString: 		Match Delimiter Backward
+!
+!    Bookmark PullDown menu:
+!
+*SetAMark.labelString:   	Set
+*menuBar*SetAMark.mnemonic:     S
+!
+*GoToMark.labelString:   	Go to
+*menuBar*GoToMark.mnemonic:     G
+!
+!
+!    Set & Go_to PullDown menu:
+!    (note that an alternate set of hotkeys is supported using asedit-mark-*
+!    text translations; this is mainly for asedit 1.2 backward compatibility)
+!
+*SetMark0.labelString:		0
+*SetMark1.labelString:		1
+*SetMark2.labelString:		2
+*SetMark3.labelString:		3
+*SetMark4.labelString:		4
+*SetMark5.labelString:		5
+*SetMark6.labelString:		6
+*SetMark7.labelString:		7
+*SetMark8.labelString:		8
+*SetMark9.labelString:		9
+!
+*toolbar.SetMark0.labelString:	Set Bookmark 0
+*toolbar.SetMark1.labelString:	Set Bookmark 1
+*toolbar.SetMark2.labelString:	Set Bookmark 2
+*toolbar.SetMark3.labelString:	Set Bookmark 3
+*toolbar.SetMark4.labelString:	Set Bookmark 4
+*toolbar.SetMark5.labelString:	Set Bookmark 5
+*toolbar.SetMark6.labelString:	Set Bookmark 6
+*toolbar.SetMark7.labelString:	Set Bookmark 7
+*toolbar.SetMark8.labelString:	Set Bookmark 8
+*toolbar.SetMark9.labelString:	Set Bookmark 9
+!
+*menuBar*SetMark0.acceleratorText:  Shift+Ctrl+0
+*menuBar*SetMark1.acceleratorText:  Shift+Ctrl+1
+*menuBar*SetMark2.acceleratorText:  Shift+Ctrl+2
+*menuBar*SetMark3.acceleratorText:  Shift+Ctrl+3
+*menuBar*SetMark4.acceleratorText:  Shift+Ctrl+4
+*menuBar*SetMark5.acceleratorText:  Shift+Ctrl+5
+*menuBar*SetMark6.acceleratorText:  Shift+Ctrl+6
+*menuBar*SetMark7.acceleratorText:  Shift+Ctrl+7
+*menuBar*SetMark8.acceleratorText:  Shift+Ctrl+8
+*menuBar*SetMark9.acceleratorText:  Shift+Ctrl+9
+!
+*menuBar*SetMark0.accelerator:  Shift Ctrl <Key>0
+*menuBar*SetMark1.accelerator:  Shift Ctrl <Key>1
+*menuBar*SetMark2.accelerator:  Shift Ctrl <Key>2
+*menuBar*SetMark3.accelerator:  Shift Ctrl <Key>3
+*menuBar*SetMark4.accelerator:  Shift Ctrl <Key>4
+*menuBar*SetMark5.accelerator:  Shift Ctrl <Key>5
+*menuBar*SetMark6.accelerator:  Shift Ctrl <Key>6
+*menuBar*SetMark7.accelerator:  Shift Ctrl <Key>7
+*menuBar*SetMark8.accelerator:  Shift Ctrl <Key>8
+*menuBar*SetMark9.accelerator:  Shift Ctrl <Key>9
+!
+*GoMark0.labelString:		0
+*GoMark1.labelString:		1
+*GoMark2.labelString:		2
+*GoMark3.labelString:		3
+*GoMark4.labelString:		4
+*GoMark5.labelString:		5
+*GoMark6.labelString:		6
+*GoMark7.labelString:		7
+*GoMark8.labelString:		8
+*GoMark9.labelString:		9
+!
+*toolbar.GoMark0.labelString:	Go to Bookmark 0
+*toolbar.GoMark1.labelString:	Go to Bookmark 1
+*toolbar.GoMark2.labelString:	Go to Bookmark 2
+*toolbar.GoMark3.labelString:	Go to Bookmark 3
+*toolbar.GoMark4.labelString:	Go to Bookmark 4
+*toolbar.GoMark5.labelString:	Go to Bookmark 5
+*toolbar.GoMark6.labelString:	Go to Bookmark 6
+*toolbar.GoMark7.labelString:	Go to Bookmark 7
+*toolbar.GoMark8.labelString:	Go to Bookmark 8
+*toolbar.GoMark9.labelString:	Go to Bookmark 9
+!
+*menuBar*GoMark0.acceleratorText:  Ctrl+0
+*menuBar*GoMark1.acceleratorText:  Ctrl+1
+*menuBar*GoMark2.acceleratorText:  Ctrl+2
+*menuBar*GoMark3.acceleratorText:  Ctrl+3
+*menuBar*GoMark4.acceleratorText:  Ctrl+4
+*menuBar*GoMark5.acceleratorText:  Ctrl+5
+*menuBar*GoMark6.acceleratorText:  Ctrl+6
+*menuBar*GoMark7.acceleratorText:  Ctrl+7
+*menuBar*GoMark8.acceleratorText:  Ctrl+8
+*menuBar*GoMark9.acceleratorText:  Ctrl+9
+!
+*menuBar*GoMark0.accelerator:   ~Shift Ctrl <Key>0
+*menuBar*GoMark1.accelerator:   ~Shift Ctrl <Key>1
+*menuBar*GoMark2.accelerator:   ~Shift Ctrl <Key>2
+*menuBar*GoMark3.accelerator:   ~Shift Ctrl <Key>3
+*menuBar*GoMark4.accelerator:   ~Shift Ctrl <Key>4
+*menuBar*GoMark5.accelerator:   ~Shift Ctrl <Key>5
+*menuBar*GoMark6.accelerator:   ~Shift Ctrl <Key>6
+*menuBar*GoMark7.accelerator:   ~Shift Ctrl <Key>7
+*menuBar*GoMark8.accelerator:   ~Shift Ctrl <Key>8
+*menuBar*GoMark9.accelerator:   ~Shift Ctrl <Key>9
+!
+!
+!
+!   View PullDown menu:
+!
+*Status.labelString:   		Status Line
+*XmMenuShell*Status.mnemonic:   L
+*toolbar.Status.labelString: 	Show Status Line
+!
+*Split.labelString:  		Split window
+*XmMenuShell*Split.mnemonic:    S
+!
+*Wrap.labelString:  		Wrap words
+*XmMenuShell*Wrap.mnemonic:     W
+!
+*ShowContext.labelString:  		SGML Context
+*XmMenuShell*ShowContext.mnemonic:	G
+!
+*ShowToolbar.labelString:  		Toolbar
+*XmMenuShell*ShowToolbar.mnemonic:    	T
+*ShowToolbar1.labelString:  		Main
+*XmMenuShell*ShowToolbar1.mnemonic:    	M
+*toolbar.ShowToolbar1.labelString: 	Show Main Toolbar
+*ShowToolbar2.labelString:  		HTML
+*XmMenuShell*ShowToolbar2.mnemonic:    	H
+*toolbar.ShowToolbar2.labelString: 	Show HTML Toolbar
+*ShowToolbar3.labelString:  		User
+*XmMenuShell*ShowToolbar3.mnemonic:    	U
+*toolbar.ShowToolbar3.labelString: 	Show User Toolbar
+*ShowToolbar4.labelString:  		Extra
+*XmMenuShell*ShowToolbar4.mnemonic:    	E
+*toolbar.ShowToolbar4.labelString: 	Show Extra Toolbar
+*ShowToolbar5.labelString:  		Super
+*XmMenuShell*ShowToolbar5.mnemonic:    	S
+*toolbar.ShowToolbar5.labelString: 	Show Super Toolbar
+*ShowToolbar6.labelString:  		Hyper
+*XmMenuShell*ShowToolbar6.mnemonic:    	r
+*toolbar.ShowToolbar6.labelString: 	Show Hyper Toolbar
+!
+!  Additions for previewing HTML files
+!
+*Refresh.labelString:  		Preview
+*XmMenuShell*Refresh.mnemonic:  P
+*menuBar*Refresh.accelerator:  	<Key>F5
+*menuBar*Refresh.acceleratorText: F5
+!
+*Browser.labelString:  		Browser
+*menuBar*Browser.mnemonic:     	B
+*ColorTags.labelString:  	Color Tags
+*XmMenuShell*ColorTags.mnemonic:    C
+*menuBar*ColorTags.acceleratorText: Shift+F5
+*menuBar*ColorTags.accelerator:	    Shift <Key>F5
+*HideTags.labelString:  	   Hide Tags
+*XmMenuShell*HideTags.mnemonic:    H
+!
+!  HTML browser sub-menu
+*Netscape.labelString:  	Netscape
+*XmMenuShell*Netscape.mnemonic: N
+*Mosaic.labelString:  		Mosaic
+*XmMenuShell*Mosaic.mnemonic:  	M
+*Arena.labelString:  		Arena
+*XmMenuShell*Arena.mnemonic:    A
+*Lynx.labelString:  		Lynx
+*XmMenuShell*Lynx.mnemonic:     L
+!
+!
+!   Tools PullDown menu:
+!
+*Spell.labelString:		Spell
+*XmMenuShell*Spell.mnemonic:	S
+*menuBar*Spell.acceleratorText: F7
+*menuBar*Spell.accelerator:     <Key>F7
+!   To use a non-standard spell checker re-define the following command.
+!   For example for ispell (Linux) use extra '-l' flag so it will report
+!   the misspelled words to our program. On some Linux systems you also
+!   have to use the ispell instead of the spell name.
+*spellCmd:			(cat; echo) | spell
+*spellExt:			TO_TEXT_DIALOG,\ Misspelled words:\, Spell \, DIALOG_INFORMATION ,\ Spelled correctly!\,USE_FILE_OR_SELECTION\,SKIP_HTML_TAGS
+!
+*Sort.labelString:		Sort
+*XmMenuShell*Sort.mnemonic:	t
+*sortCmd:			sort
+*sortExt:			TO_CURRENT
+!
+!
+*Format.labelString:		Format
+*menuBar*Format.mnemonic:	F
+!
+!  The default fmt command is as follows: 'fmt -%d'
+!  If on your system this command is called differently uncomment and edit
+!  the following line:
+!!*fmtCmd:			fmt -%d
+!
+!
+*Case.labelString:		Change Case to
+*menuBar*Case.mnemonic:		C
+!
+*Filters.labelString:		Filters
+*menuBar*Filters.mnemonic:	i
+!
+*Commands.labelString:		Commands
+*menuBar*Commands.mnemonic:	o
+!
+!
+!
+!   Format PullDown menu:
+!
+*MoveLeft.labelString:  	 Move Left...
+*XmMenuShell*MoveLeft.mnemonic:	 L
+!
+*MoveRight.labelString:		 Move Right...
+*XmMenuShell*MoveRight.mnemonic: R
+!
+*IndentWith.labelString: 	  Indent with...
+*XmMenuShell*IndentWith.mnemonic: I
+!
+*Reformat.labelString:		 Reformat...
+*XmMenuShell*Reformat.mnemonic:	 f
+!
+*Expand.labelString:		 Expand tabs
+*XmMenuShell*Expand.mnemonic:	 E
+!
+!  The default expand command (expandCmd) is set during compilation on a system
+!  basis; if you want to change the default then uncomment one of the following
+!  lines and edit it (NOTE the tabstop value is written into the command so
+!  the '%d' field must exist). Note that we use:
+!  'pr -t -e%d' on SGI computers (expand is not available there)
+!!*expandCmd:		expand -%d
+!!*expandCmd:		pr -t -e%d
+!
+!
+*Unexpand.labelString: 		Unexpand
+*XmMenuShell*Unexpand.mnemonic:	U
+!
+!  See the note about expand on different systems above. As default we use
+!  unexpand with the tabstop equal to 8. The default definitions used
+!  for unexpand are commented out just after this line.
+!!*unexpandCmd:		unexpand
+!!*unexpandCmd:		pr -t
+!
+!  For systems that have 'pr' command you can use the following definition
+!  to allow inserting tabs with the current tab interval:
+!!*unexpandCmd:		pr -t -i%d
+!
+!  For standard 'unexpand' only the leading spaces are converted to
+!  tabs. If you want to insert tabs whenever possible, use the following
+!  definition (note the Unix 'unexpand' does not allow inserting tabs
+!  with the tab interval different than 8, so we don't use '-%d' field):
+!!*unexpandCmd:		unexpand -a
+!
+!
+!
+!   Case PullDown menu:
+!
+*Upper.labelString:		Upper
+*XmMenuShell*Upper.mnemonic:	U
+*Lower.labelString:		Lower
+*XmMenuShell*Lower.mnemonic:	L
+*Title.labelString:		Title
+*XmMenuShell*Title.mnemonic:	T
+*Toggle.labelString:		Toggle
+*XmMenuShell*Toggle.mnemonic:	o
+!
+!
+!
+!   Filters PullDown menu:
+!
+*FilterNew.labelString:		 New Filter...
+*XmMenuShell*FilterNew.mnemonic: F
+!
+!
+!
+!   Commands PullDown menu
+!
+*CmdNew.labelString:		New Command...
+*XmMenuShell*CmdNew.mnemonic:	C
+!
+! Note that user definable entries in the Filters and Commands
+! menus are defined in part 1 (section USER DEFINABLE ...).
+!
+!
+!
+!   Options PullDown menu:
+!   (including the HTML extension)
+!
+*HtmlMode.labelString:			HTML mode
+*XmMenuShell*HtmlMode.mnemonic:		H
+*menuBar*HtmlMode.acceleratorText:  	Ctrl+W
+*menuBar*HtmlMode.accelerator:     	Ctrl <Key>w
+!
+*HtmlPrefs.labelString:			Project options...
+*XmMenuShell*HtmlPrefs.mnemonic:	P
+!
+*Autoindent.labelString:		Autoindent
+*XmMenuShell*Autoindent.mnemonic:	A
+!
+*InsertMode.labelString:		Insert mode
+*XmMenuShell*InsertMode.mnemonic:	I
+*menuBar*InsertMode.acceleratorText:  	Ins
+*menuBar*InsertMode.accelerator:     	<Key>osfInsert
+!
+*ToolIcons.labelString:			Icons in toolbars
+*XmMenuShell*ToolIcons.mnemonic: 	o
+!
+*menuBar*EditToolbar.labelString:	Customize toolbar
+*XmMenuShell*EditToolbar.mnemonic:	C
+*EditToolbar.labelString:		Customize
+*Toolbar.labelString:			Toolbar
+!
+*TabSize.labelString: 		Tab stops...
+*XmMenuShell*TabSize.mnemonic:  T
+!
+*Font.labelString:  		Font size
+*XmMenuShell*Font.mnemonic:     F
+!
+*SavePrefs.labelString:		 Save preferences
+*XmMenuShell*SavePrefs.mnemonic: S
+!
+!  Edit toolbar sub-menu
+!
+*EditToolbar1.labelString:  		Main
+*XmMenuShell*EditToolbar1.mnemonic:    	M
+*toolbar.EditToolbar1.labelString: 	Customize Main Toolbar
+*EditToolbar2.labelString:  		HTML
+*XmMenuShell*EditToolbar2.mnemonic:    	H
+*toolbar.EditToolbar2.labelString: 	Customize HTML Toolbar
+*EditToolbar3.labelString:  		User
+*XmMenuShell*EditToolbar3.mnemonic:    	U
+*toolbar.EditToolbar3.labelString: 	Customize User Toolbar
+*EditToolbar4.labelString:  		Extra
+*XmMenuShell*EditToolbar4.mnemonic:    	E
+*toolbar.EditToolbar4.labelString: 	Customize Extra Toolbar
+*EditToolbar5.labelString:  		Super
+*XmMenuShell*EditToolbar5.mnemonic:    	S
+*toolbar.EditToolbar5.labelString: 	Customize Super Toolbar
+*EditToolbar6.labelString:  		Hyper
+*XmMenuShell*EditToolbar6.mnemonic:  	r
+*toolbar.EditToolbar6.labelString: 	Customize Hyper Toolbar
+!
+!
+!   Font PullDown menu:
+!
+*Default.labelString:   	Default
+*XmMenuShell*Default.mnemonic:  D
+!
+*Small.labelString:   		Small
+*XmMenuShell*Small.mnemonic:    S
+!
+*Medium.labelString:   		Medium
+*XmMenuShell*Medium.mnemonic:   M
+!
+*Large.labelString:   		Large
+*XmMenuShell*Large.mnemonic:    L
+!
+*Huge.labelString:   		Huge
+*XmMenuShell*Huge.mnemonic:      H
+!
+!
+!
+!   Help PullDown menu:
+!
+*On_Keys.labelString:   	On Keys
+*XmMenuShell*On_Keys.mnemonic:  K
+!
+*Index.labelString:     	Index
+*XmMenuShell*Index.mnemonic:    I
+*toolbar.Index.labelString:    	Help Index
+!
+*On_Help.labelString:   	On Help
+*XmMenuShell*On_Help.mnemonic:  H
+*toolbar.On_Help.labelString:  	Help
+!
+*On_Html.labelString:   	On HTML
+*XmMenuShell*On_Html.mnemonic:  M
+*toolbar.On_Html.labelString:  	HTML Help
+!
+*On_Tags.labelString:   	On Tag
+*XmMenuShell*On_Tags.mnemonic:  T
+*toolbar.On_Tags.labelString:   Help on Tag
+!
+*Context.labelString:   	On Context
+*XmMenuShell*Context.mnemonic:  C
+!
+!  Sun users might have to replace the F1 below with Help (name for the special Sun's key)
+*menuBar*Context.acceleratorText: Shift+F1
+*menuBar*Context.accelerator:	Shift<Key>osfHelp
+*toolbar.Context.labelString:  	Help On Context
+!
+*License.labelString:     	License
+*XmMenuShell*License.mnemonic:  L
+*About.labelString:     	About...
+*XmMenuShell*About.mnemonic:    A
+!
+!   Other menu definitions:
+!
+*Text2Table.labelString:		Convert text to...
+*XmMenuShell*Text2Table.mnemonic:	v
+*menuBar*Text2Table.acceleratorText:	Shift+Ctrl+T
+*menuBar*Text2Table.accelerator:	Shift Ctrl <Key>T
+*toolbar.Text2Table.labelString:	Convert text to HTML table...
+*Text2List.labelString:			Convert text to...
+*XmMenuShell*Text2List.mnemonic:	v
+*menuBar*Text2List.acceleratorText:	Shift+Ctrl+M
+*menuBar*Text2List.accelerator:	Shift Ctrl <Key>M
+*toolbar.Text2List.labelString:		Convert text to HTML list...
+*HtmlTools.labelString:			HTML
+*XmMenuShell*HtmlTools.mnemonic:	H
+*MakeToC.labelString:			Make Table of Contents...
+*XmMenuShell*MakeToC.mnemonic:		T
+*ReportTags.labelString:		Report Tags...
+*XmMenuShell*ReportTags.mnemonic:	R
+*FormExamples.labelString:		Examples
+*XmMenuShell*FormExamples.mnemonic:	E
+!
+*Frames.labelString:		Frames
+*XmMenuShell*Frames.mnemonic:	F
+*frameset.labelString:		Frame Set
+*XmMenuShell*frameset.mnemonic:	S
+*noframes.labelString:		No frames
+*XmMenuShell*noframes.mnemonic:	N
+*frame.labelString:		Frame
+*XmMenuShell*XmRowColumn*frame.mnemonic:	F
+*embed.labelString:		Embed...
+*XmMenuShell*embed.mnemonic:	E
+!
+*center.labelString:		Center
+*XmMenuShell*center.mnemonic:	C
+*Layout_PD*center.acceleratorText: Shift+Ctrl+C
+*Layout_PD*center.accelerator:	Shift Ctrl <Key>C
+*nobr.labelString:		No line break (N)
+*XmMenuShell*nobr.mnemonic:	N
+*wbr.labelString:		Allow break (N)
+*XmMenuShell*wbr.mnemonic:	b
+!
+*font.labelString:		Font
+*XmMenuShell*font.mnemonic:	F
+*menuBar*font.acceleratorText:	Shift+Ctrl+F
+*menuBar*font.accelerator:	Shift Ctrl <Key>F
+*basefont.labelString:		Base font
+*XmMenuShell*basefont.mnemonic:	a
+!
+*script.labelString:		Script
+*XmMenuShell*script.mnemonic:	S
+*noscript.labelString:		No script
+*XmMenuShell*noscript.mnemonic:	N
+*multicol.labelString:		Multi column
+*XmMenuShell*multicol.mnemonic:	M
+*spacer.labelString:		Spacer
+*XmMenuShell*spacer.mnemonic:	S
+*span.labelString:		Span
+*XmMenuShell*span.mnemonic:	S
+!
+!
+!   User definable HTML form examples
+!
+!   Number of defined examples ( *important* to specify right)
+*formNum:	8
+!
+!   Visible names ...
+*Form1.labelString:		1 Text entry
+*XmMenuShell*Form1.mnemonic:	1
+*Form2.labelString:		2 Text entries
+*XmMenuShell*Form2.mnemonic:	2
+*Form3.labelString:		3 Text and checkboxes
+*XmMenuShell*Form3.mnemonic:	3
+*Form4.labelString:		4 Defaults changing
+*XmMenuShell*Form4.mnemonic:	4
+*Form5.labelString:		5 Using radio buttons
+*XmMenuShell*Form5.mnemonic:	5
+*Form6.labelString:		6 Questionnaire
+*XmMenuShell*Form6.mnemonic:	6
+*Form7.labelString:		7 Comments
+*XmMenuShell*Form7.mnemonic:	7
+*Form8.labelString:		8 Registration
+*XmMenuShell*Form8.mnemonic:	8
+!
+!   Text of the real HTML form examples .....
+!
+*form1txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<H2>Text entry</H2>\n<P> A very simple form example.\n\n<FORM METHOD="POST" ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query">\n <P> Enter the term: <INPUT NAME="entry">\n <P> To submit the query, select the following: <INPUT TYPE="submit" VALUE="Submit Query">.\n <P>\n</FORM>\n<!-- AS-EXAMPLE_END} -->\n
+!
+*form2txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<H2>Text entries</H2>\n<P> Multiple text entry fields. \n<HR>\n\n<FORM ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query" METHOD=POST>\n <P> Entry 1: <INPUT NAME="entry1">\n <P> Entry 2: <INPUT NAME="entry2">\n <P> Entry 3: <INPUT NAME="entry3">\n <P> To submit the query, select the following:\n	<INPUT TYPE=submit VALUE=" Submit Query ">.\n</FORM>\n<HR>\n<!-- AS-EXAMPLE_END} -->\n
+*form3txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<H2> Multiple text entry fields and checkboxes. </H2>\n<HR>\n\n<FORM METHOD="POST" ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query">\n <H2> Pizza Internet Delivery Service</H2>\n <P> Type in your street address: <INPUT NAME="address">\n <P> Type in your phone number: <INPUT NAME="phone">\n <P> Which toppings would you like?\n <OL>\n  <LI> <INPUT TYPE="checkbox" NAME="topping" VALUE="pepperoni">	Pepperoni.\n  <LI> <INPUT TYPE=checkbox VALUE="sausage" NAME="topping">   Sausage.\n  <LI> <INPUT TYPE="checkbox" NAME="topping" VALUE="anchovies"> Anchovies.\n</OL>\nTo order your pizza, select the following: <INPUT TYPE="submit"\nVALUE="Order Pizza">. <P>\n</FORM>\n<!-- AS-EXAMPLE_END} -->\n
+!
+*form4txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<H2>Defaults changing</H2>\n<P> Setting default values for text entry fields and checkboxes.\n<HR>\n\n<FORM METHOD="POST" ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query">\n <P> Text entry 1 (default value "foo"): <INPUT NAME="entry1" VALUE="foo">\n <P> Text entry 2 (no default value): <INPUT NAME="entry2">\n <P> Some checkboxes in a row: <P>\n <OL>\n  <LI> <INPUT TYPE="checkbox" NAME="box1" VALUE="activated" CHECKED> The first\n	checkbox, on by default.\n  <LI> <INPUT TYPE="checkbox" NAME="box2" VALUE="primed"> The second\n	checkbox, off by default.\n  <LI> <INPUT TYPE="checkbox" NAME="box3" CHECKED> The third\n     checkbox, on by default.\n </OL>\n <P> To submit the query, select the following: <INPUT TYPE="submit"\n	VALUE="Submit Query">.n\ <P> To reset the various form elements to their default states, select the\n	following: <INPUT TYPE="reset" VALUE="Reset To Default Values">.\n</FORM>\n<HR>\n<!-- AS-EXAMPLE_END} -->\n
+!
+*form5txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<H2>Using radio (toggle) buttons</H2>\n<HR>\n<FORM METHOD="POST" ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query">\n <H2>Quality Pizza Internet Delivery Service</H2>\n <P> Type in your street address: <INPUT NAME="address">\n <P> Type in your phone number: <INPUT NAME="phone">\n <P> Which toppings would you like?\n <OL>\n   <LI> <INPUT TYPE="checkbox" NAME="topping" VALUE="pepperoni"> Pepperoni.\n   <LI> <INPUT TYPE="checkbox" NAME="topping" VALUE="sausage"> Sausage.\n   <LI> <INPUT TYPE="checkbox" NAME="topping" VALUE="anchovies"> Anchovies.\n </OL>\n <P> How would you like to pay?  Choose any one of the following:\n <OL>\n   <LI> <INPUT TYPE="radio" NAME="paymethod" VALUE="cash" CHECKED> Cash.\n   <LI> <INPUT TYPE="radio" NAME="paymethod" VALUE="check"> Check.\n   <LI> <I>Credit card:</I>\n   <UL>\n     <LI> <INPUT TYPE="radio" NAME="paymethod" VALUE="mastercard"> Mastercard.\n     <LI> <INPUT TYPE="radio" NAME="paymethod" VALUE="visa"> Visa.\n     <LI> <INPUT TYPE="radio" NAME="paymethod" VALUE="americanexpress"> American Express.\n   </UL>\n </OL>\n <P> Would you like the driver to call before leaving the store?\n <DL>\n   <DD> <INPUT TYPE="radio" NAME="callfirst" VALUE="yes" CHECKED> <I>Yes.</I>\n   <DD> <INPUT TYPE="radio" NAME="callfirst" VALUE="no"> <I>No.</I>\n </DL>\n\n<P> To order your pizza, select the following: <INPUT TYPE="submit" VALUE="Order Pizza">.\n<P>\n</FORM>\n<HR>\n<!-- AS-EXAMPLE_END} -->\n
+!
+*form6txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<H2>Questionnaire</H2>\n<P>Please fill out this questionnaire:\n<FORM METHOD="POST" ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query">\n <P>Your name: <INPUT NAME="name" size="48">\n <P>Male <INPUT TYPE=radio CHECKED VALUE="male" NAME="gender">\n <P>Female <INPUT NAME="gender" TYPE=RADIO VALUE="female">\n <P>Number in family: <INPUT NAME="family" TYPE=text>\n <P>Cities in which you maintain a residence:\n <UL>\n  <LI>Kent <INPUT NAME="city" TYPE=checkbox VALUE="kent">\n  <LI>Miami <INPUT NAME="city" TYPE=checkbox VALUE="miami">\n  <LI>Other <TEXTAREA NAME="other" cols=48 rows=4></textarea>\n </UL>\n <P>Nickname: <INPUT NAME="nickname" SIZE="42">\n <P>Thank you for responding to this questionnaire.\n <P><INPUT TYPE=SUBMIT> <INPUT TYPE=RESET>\n</FORM>\n<!-- AS-EXAMPLE_END} -->\n
+!
+*form7txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<H2>XYZ Comment Form</H2>\n<HR>\n<P>\n<FORM ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query" METHOD=POST>\n <I>Name:</I> <INPUT SIZE="50" NAME="name"> <BR>\n <I>Email:</I> <INPUT SIZE="50" NAME="email">\n <HR>\n Please enter any comments about XYZ below:<BR>\n <TEXTAREA NAME="text" COLS=60 ROWS=8>Andrzej, </TEXTAREA>\n <P> <INPUT TYPE=submit VALUE=" Submit Comments ">\n</FORM>\n<HR>\n<!-- AS-EXAMPLE_END} -->\n
+!
+*form8txt:	\n<!-- AS-EXAMPLE_BEGIN{ -->\n<IMG SRC="../image/as.mini.gif" ALT=" ">\n<H1>Registration Form</H1>\n\nI'd like to know more about XYZ.\nPlease include me on the XYZ Newsletter mailing list and\nsend me information about ....\n\n<FORM ACTION="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query" METHOD=POST>\n <H2>Registration Information</H2>\n <DL compact>\n  <DT><B>Name</B>\n  <DD><INPUT SIZE="50" NAME="name">\n  <DT><B>Email</B>\n  <DD><INPUT SIZE="50" NAME="email">\n  <DT><B>Phone</B>\n  <DD><INPUT SIZE="50" NAME="phone">\n  <DT><B>Address</B>\n  <DD><TEXTAREA NAME="address" COLS=50 ROWS=7></TEXTAREA>\n </DL>\n <INPUT TYPE=submit VALUE="   Register   ">\n</FORM>\n<HR>\n<!-- AS-EXAMPLE_END} -->\n
+!
+!
+!
+!
+!
+!
+!
+! DIALOG resources ......
+!
+!
+! common resource for XmFileSelectionBox (to promote consistency)
+!
+*menuBar*fileListLabelString:			Files
+*menuBar*filterLabelString:			Filter
+*menuBar*dirListLabelString:			Directories
+*menuBar*XmFileSelectionBox*applyLabelString:	Filter
+*menuBar*noMatchString:				-- No matching files found --
+!
+! help dialog:
+*help_dialog.title:			asWedit - Help
+*help_dialog*Follow.labelString:	Follow
+*help_dialog*Back.labelString:		Back
+*help_dialog*Index.labelString:		Index
+*help_dialog*Close.labelString:		Close
+*help_dialog*Help.labelString:		Help
+!
+! open dialog:
+*open_dialog.dialogTitle: 		 Open a File
+*open_dialog*Selection.labelString: 	Open file:
+*open_dialog*open_view_only.labelString: Open for view only
+!    If you want to re-define the standard filter mask edit the following line:
+!    (when not defined than '*' is used)
+*open_dialog.pattern:	*.html
+!
+! Open template dialog:
+*template_dialog.dialogTitle: 		 Open a Template
+*template_dialog*Selection.labelString:	Open template:
+*template_dialog.noMatchString:		-- No templates found --
+*template_dialog.pattern:		*.html
+!   replace dialog resources
+!
+*replace_dialog.okLabelString:			Find & Verify
+*menuBar*replace_dialog.applyLabelString: 	Change All
+*replace_dialog.cancelLabelString:		Close
+*replace_dialog*text_to_find_title.labelString: Text to Find:
+*replace_dialog*new_text_title.labelString:     Change To:
+!
+*replace_dialog*options_title.labelString:      Options
+*replace_dialog*case_sensitive.labelString:	Case sensitive
+*replace_dialog*whole_words.labelString:	Whole words only
+!
+*replace_dialog*direction_title.labelString:    Direction
+*replace_dialog*Forward.labelString:    	Forward
+*replace_dialog*Backward.labelString:		Backward
+!
+!   initial settings for the different replace/find options:
+*replace_dialog*case_sensitive.set:		True
+*replace_dialog*whole_words.set:		False
+!   Define default search direction:
+!   (Note: only __one__ of the following two must be set to True)
+*replace_dialog*Forward.set:			True
+*replace_dialog*Backward.set:			False
+!
+!
+*change_prompt.dialogTitle: 			 Change Prompt
+*change_prompt.okLabelString:			Change
+*menuBar*change_prompt.applyLabelString:	Skip
+!
+*continue_search_question.dialogTitle: 		 Search
+*continue_search_question.okLabelString:	Yes
+*continue_search_question.cancelLabelString:	No
+!
+*search_end_message.dialogTitle: 	 Change All
+*search_end_message.cancelLabelString:	Close
+!
+*go_to_line.dialogTitle: 		 Go to Line
+*go_to_line.selectionLabelString:	Enter new line number:
+*go_to_line.cancelLabelString:		Close
+!
+!
+!   overwrite question dialog
+!
+*overwrite_question.dialogTitle: 	 Overwrite ?
+*overwrite_question.okLabelString:	Yes
+*overwrite_question.cancelLabelString:	Cancel
+!
+!   error message dialog resources (cancel button used to dismiss dialog)
+*error_message.dialogTitle: 		 Error!
+*error_message.cancelLabelString:	OK
+*error_message.messageString:		Error message
+!
+*save_dialog.dialogTitle: 		 Save As
+*save_dialog.selectionLabelString:	Save File As:
+!
+!
+*print_dialog.dialogTitle:		 Print
+*print_dialog.listLabelString: 		Printers
+*print_dialog.selectionLabelString:	Print using:
+*print_dialog.okLabelString:		Print
+*print_dialog*range_title.labelString:  Range
+*print_dialog*selection.labelString:	Selected text only
+*print_dialog*complete.labelString:	Complete document
+*print_dialog.listVisibleItemCount:     3
+!
+!   Define the default print range:
+!   (Note: only __one__ of the two following should be set to True)
+*print_dialog*selection.set:		True
+*print_dialog*complete.set:		False
+! NOTE: that part of the print_dialog was set up at the beginning of that file
+!
+*insert_dialog.dialogTitle:              Insert a File
+*insert_dialog*Selection.labelString:   Insert file:
+!
+!
+*save_warning.dialogTitle: 		 File not Saved !
+*save_warning.okLabelString:		Yes
+*save_warning.applyLabelString:		No
+!
+*about.dialogTitle:			asWedit - About
+*about.cancelLabelString:		Close
+!
+*bottom_row.line.labelString:		Line:
+*bottom_row.column.labelString:		Col:
+*bottom_row.sgml_context.labelString:	Context:
+!
+!
+!
+!   Dialogs from the Tools menu:
+!
+*filter_dialog.dialogTitle:		 New Filter
+*filter_dialog.selectionLabelString:	Filter selection using:
+!
+*command_dialog.dialogTitle:		 New Command
+*command_dialog.selectionLabelString:	Enter command to execute:
+!
+!   Common resources for filter_dialog and command_dialog:
+!
+*depot_title.labelString:		Direct output to:
+*to_current.labelString:		Current window
+*to_new.labelString:			New window
+*to_dialog.labelString:			Text dialog
+!
+*moveLeft_dialog.dialogTitle:		 Move Left
+*moveLeft_dialog.selectionLabelString:	Number of spaces to move left:
+*moveLeft_dialog.cancelLabelString:	Close
+*moveLeft_dialog.autoUnmanage:		False
+!
+*moveRight_dialog.dialogTitle:		 Move Right
+*moveRight_dialog.selectionLabelString:	Number of spaces to move right:
+*moveRight_dialog.cancelLabelString:	Close
+*moveRight_dialog.autoUnmanage:		False
+!
+*indentWith_dialog.dialogTitle:		 Indent with
+*indentWith_dialog.selectionLabelString: Enter the text to indent with:
+*indentWith_dialog.cancelLabelString:	Close
+*indentWith_dialog.textString:		> 
+*indentWith_dialog.autoUnmanage:	False
+!
+*reformat_dialog.dialogTitle:				 Reformat
+*reformat_dialog*left_margin_title.labelString:		New left margin:
+*reformat_dialog*right_margin_title.labelString:	Right margin:
+*reformat_dialog.cancelLabelString:	Close
+*reformat_dialog.autoUnmanage:		False
+!
+!   Default right margin (reformat):
+*reformat_dialog*right_margin.value:	75
+!
+!
+*errorChild.dialogTitle:		Command error!
+*errorChild.messageString:		Abnormal termination.\nDo you want to continue ?
+*errorChild.okLabelString:              Continue anyway
+*errorChild.cancelLabelString:          Cancel
+!
+*messageChild.dialogTitle:		Command message
+*messageChild.messageString:		Do you want to continue ?
+*messageChild.okLabelString:            Yes
+*messageChild.cancelLabelString:        No
+!
+*noOutDialog.dialogTitle:		No output
+*noOutDialog.messageString:		. No output from the command.
+*noOutDialog.cancelLabelString:         Close
+!
+*progress.dialogTitle:			Wait!
+*progress.messageString:		Waiting for the command to finish.
+!
+!
+!   Text dialog used for output of the child process:
+!
+!   (Note that we use, as default, the text_dialog in Spell and wc filters only;
+!   in such configuration we don't expect long lines so scrollHorizontal is set
+!   to False; you might like to change it to True or change wordWrap to True;
+!   Note also that the default initial maximum size is 16 rows by 80 columns)
+*text_dialog*scrollHorizontal: 		False
+*text_dialog*wordWrap:			False
+*text_dialog.dialogTitle:		Command output
+*text_dialog.cancelLabelString:		Close
+!
+!    reduce the default margins from 10 to 4 pixels
+*text_dialog.marginHeight:		4
+*text_dialog.marginWidth:		4
+!
+!
+!
+!    Dialogs from the options menu:
+!
+*tabsize_dialog.dialogTitle:		 Tab stops
+*tabsize_dialog.selectionLabelString:	Enter new tab stops interval:
+!
+!    Toolbar visual appearance options... (content is defined elsewhere)
+!
+*toolbar.marginHeight:	0
+*toolbar.marginWidth:	2
+!
+*main*pane.marginHeight:	0
+*main*pane.bottomOffset:	3
+*form_top.marginHeight: 	2
+!
+!    You might like to change the separator type (from XmSHADOW_ETCHED_OUT to
+!    XmSHADOW_ETCHED_IN) between the toolbars and/or in the following pop-up
+!    menus that have (or might have) titles in it
+*form_top*separatorType:	XmSHADOW_ETCHED_OUT
+*Top_Popup*separatorType:	XmSHADOW_ETCHED_OUT
+*Help_Popup*separatorType:	XmSHADOW_ETCHED_OUT
+!
+*Bottom_Popup*separatorType:	XmSHADOW_ETCHED_IN
+!
+!    Small border for toolbar icons...
+!
+*toolbar*marginWidth:	1
+*toolbar*marginHeight:	1
+*toolbar*shadowThickness: 2
+*toolbar.Spacer.labelString:	:
+!
+!    editToolbar dialog:
+*editToolbar_dialog.dialogTitle:		 Customize toolbar
+*editToolbar_dialog.selectionLabelString: 	To Add a command to the toolbar, choose that command from \na pulldown menu.\n \nTo Delete a toolbar item, click on it.
+*menuBar*editToolbar_dialog.applyLabelString:	Add Spacer
+!
+!    htmlPrefs (HTML) dialog:
+*htmlPrefs_dialog.dialogTitle:			 Project options
+*htmlPrefs_dialog*projectBase.labelString:	Project base:
+*htmlPrefs_dialog*httpServer.labelString:	HTTP server:
+*htmlPrefs_dialog*ftpServer.labelString:	FTP server:
+*htmlPrefs_dialog*yourEmail.labelString:	Your E-mail:
+!
+!
+!   Other dialogs
+!   -------------
+!   File browse dialog:
+*browse_dialog.dialogTitle:			Select file for URL
+*browse_dialog*urlType.labelString:		URL type to use:
+*browse_dialog*relative.labelString:		Relative
+*browse_dialog*http.labelString:		http://...
+*browse_dialog*ftp.labelString:			ftp://...
+*browse_dialog*file.labelString:		file:/...
+*browse_dialog*relative.mnemonic:		R
+*browse_dialog*http.mnemonic:			h
+*browse_dialog*ftp.mnemonic:			f
+*browse_dialog*file.mnemonic:			e
+!
+*browse.navigationType:		XmTAB_GROUP
+*browse.labelString:		Browse...
+*browse.labelType:		PIXMAP
+!
+!   License dialog (DO NOT change the labels!)
+*licenseDlg*text.background:	#C7AAAA
+*licenseDlg.marginHeight:       4
+*licenseDlg.marginWidth:        4
+*licenseDlg.dialogTitle:	asWedit - Please read and accept the License...
+*licenseDlg.okLabelString:      Accept
+*licenseDlg.cancelLabelString:  Do Not Accept
+*licenseDlg*text.columns:	74
+*licenseDlg*text.rows:		24
+*licenseDlg*text.scrollHorizontal: False
+*licenseDlg*text.wordWrap:	True
+!
+*licenseDlg.messageAlignment: XmALIGNMENT_CENTER
+*licenseDlg.messageString:	asWedit - End User License Agreement.\nFree educational and evaluation use.
+*acceptPrompt.labelString:	If you accept the terms of this License Agreement,\nselect 'Accept'.  Otherwise select 'Do Not Accept'.
+!  Workaround for the few Motif 1.1 systems still installed out there :-(
+*licenseDlg.selectionLabelString: asWedit - End User License Agreement.\nFree educational and evaluation use.
+!
+!   Text to table dialog
+*text2TableDlg.dialogTitle:		Convert text to HTML table
+*text2TableDlg.okLabelString:		Convert
+*text2TableDlg*use.labelString:		Create:
+*useCaption.labelString:		Caption (1st line)
+*colHeaders.labelString:		Column headers
+*rowHeaders.labelString:		Row headers
+*sepChar.labelString:			Separate text at:
+*tabSep.labelString:			Tabs
+*commaSep.labelString:			Commas
+*userSep.labelString:			Semicolons
+!
+!   To set the initial table creation defaults re-define the following flags:
+*useCaption.set: 	True
+*colHeaders.set:	False
+*rowHeaders.set:	True
+!
+!   To specify the default character used to separate the text data define _one_
+!   of the following to True: *tabSep.set , *commaSep.set, *userSep.set :
+*tabSep.set:		True
+!
+!   Note: you can redefine the user separator character. To do
+!   that uncomment and redefine the following (change *also* the label above!)
+!!*tableUserSeparator:	;
+!
+!
+!   Text to list dialog
+*text2ListDlg.dialogTitle:		Convert text to HTML list
+*text2ListDlg.okLabelString:		Convert
+*text2ListDlg*doList.labelString:	List to create:
+*doUnordered.labelString:		Unordered
+*doOrdered.labelString:			Ordered
+*doDefinition.labelString:		Glossary
+*lfSep.labelString:			Line feeds
+*paraSep.labelString:			Paragraphs
+*userListSep.labelString:		Tabs
+!
+!   To specify the default type of List to create define _one_
+!   of the following to True:  *doUnordered.set, *doOrdered.set, *doDefinition.set :
+*doUnordered.set:	True
+!
+!   To specify the default character used to separate the text data define _one_
+!   of the following to True: *lfSep.set , *paraSep.set, *userListSep.set :
+*lfSep.set:		True
+!
+!   Note: you can redefine the user list separator character (also used
+!   as a secondary separator for Defintion lists to separate DD's). To do
+!   that uncomment and redefine the following (change *also* the label above!)
+!!*listUserSeparator:	\t
+!
+!
+!   Common entries for the HTML link/report tags dialogs:
+*a name.labelString:		 Targets
+*any href.labelString:		 URL's
+*img src.labelString:		 Images
+*title any.labelString:		 Title
+*h1 anyORemb_a_name.labelString: H1
+*h2 anyORemb_a_name.labelString: H2
+*h3 anyORemb_a_name.labelString: H3
+*h4 anyORemb_a_name.labelString: H4
+*h5 anyORemb_a_name.labelString: H5
+*h6 anyORemb_a_name.labelString: H6
+*show yourEmail.labelString:	 My mailto
+*any src.labelString:		 SRC's
+*any name.labelString:		 NAMEs
+*any usemap.labelString:	 USEMAPs
+*any codebase.labelString:	 codebase's
+*any code.labelString:		 CODE's
+*any background.labelString:	 background's
+*any action.labelString:	 ACTIONs
+*any script.labelString:	 SCRIPTs
+*any imagemap.labelString:	 IMAGEMAPs
+!
+!
+!   Make Table of Contents dialog
+*tocDlg.dialogTitle:		Make Table of Contents
+*tocDlg*use.labelString:	Based on:
+*tocDlg*order.labelString:	Use <OL> for:
+*tocDlg*useEntries.numColumns:	2
+*tocDlg*useEntries.packing:	XmPACK_COLUMN
+*tocDlg*useEntries.orientation:	XmVERTICAL
+*tocDlg*orderLevels.numColumns:	2
+*tocDlg*orderLevels.packing:	XmPACK_COLUMN
+*tocDlg*orderLevels.orientation: XmVERTICAL
+!
+!   To specify the default destination for the ToC define _one_ of the
+!   following to True:
+!	*tocDlg*to_current.set , *tocDlg*to_new.set , *tocDlg*to_dialog .
+!   The implicit default is commented out below:
+!!*tocDlg*to_current.set:                True
+!
+*useEntries*h1 anyORemb_a_name.set:	True
+*useEntries*h2 anyORemb_a_name.set:	True
+*orderLevels*h1 anyORemb_a_name.set:	True
+!
+!   Define ToC header and footer; define also a template for the document needed
+!   when the user requests a new document to be created to contain the ToC:
+*tocHeader:		<H1 ALIGN=center>Table of Contents</H1>\n
+*tocFooter:		\n
+*tocDocTitle:		Table of Contents
+*tocNewToTitle:		<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html>\n<head>\n<title>
+*tocNewAfterTitle:	</title>\n</head>\n\n<body>\n
+*tocNewClose:		\n</body>\n</html>\n
+*tocReplaceQ:		Replace existing table of contents ?
+!
+!
+!
+!   Select a Link dialog:
+*selectLinkDlg.dialogTitle:		Select a Link
+*selectLinkDlg.listLabelString: 	Name (ID)                          Description
+*menuBar*selectLinkDlg.applyLabelString: Clear
+*selectLinkDlg*use.labelString:		Show:
+*selectLinkDlg*useOptions.numColumns:	2
+*selectLinkDlg*useOptions.orientation:	XmHORIZONTAL
+*selectLinkDlg*useOptions.packing:	XmPACK_COLUMN
+*selectLinkDlg.selectionLabelString:	Link To:
+*selectLink.navigationType:		XmTAB_GROUP
+*selectLink.labelString:		Select...
+*selectLink.labelType:			PIXMAP
+!
+!
+!
+!   Report Tags dialog:
+*reportTagsDlg*useOptions.numColumns:	5
+*reportTagsDlg*useOptions.orientation:	XmHORIZONTAL
+*reportTagsDlg*useOptions.packing:	XmPACK_COLUMN
+*reportTagsDlg.dialogTitle:		Report Tags
+*reportTagsDlg*report.labelString: 	Output:
+*reportTagsDlg*use.labelString:		Show:
+*reportTagsDlg.selectionLabelString:	Filter through:
+*reportTagsDlg.okLabelString:		Apply
+*reportTagsDlg.cancelLabelString:	Close
+*reportTagsDlg*text*wordWrap:		False
+!   You might like to change some of the defaults below...
+*reportTagsDlg*text*scrollHorizontal:	False
+*reportTagsDlg*text*editable:		False
+*reportTagsDlg*text*rows:		8
+!
+!   Pick Color dialog and the button that calls it
+*pickColorDlg.dialogTitle:		Choose a Color
+*pickColorDlg.selectionLabelString:	Use Color:
+*pickColorDlg.listLabelString:		Colors
+*pickColorDlg.listVisibleItemCount:	12
+!
+*customWindow.height:		40
+*customWindow.borderWidth:	1
+*red.titleString:		Red  
+*red*foreground:		#EE0000
+*green.titleString:		Green
+*green*foreground:		#238E23
+*blue.titleString:		Blue
+*blue*foreground:		#0000EE
+*userColors.labelString:        User Colors
+*customColor.labelString:       Custom Color
+!  The value below actually specifies the number of rows (horizontal orientation)
+*colorSet.numColumns: 		7
+!  Size of the color pixmaps (you might change it, e.g. when you modify
+!  the default size -14- of the fonts or when you don't like the default size)
+*colorButtonSize:		14
+!
+*colorSet*shadowThickness:	2
+*slideRow*scaleMultiple:	16
+!  Initial positions for the sliders (give the initial color)
+*red.value:			193
+*green.value:			193
+*blue.value:			193
+!
+*colors.navigationType:			XmTAB_GROUP
+*colors.labelString:			Colors...
+*colors.labelType:			PIXMAP
+!
+!   Toggles for automatic image size setting (with and/or height)
+*findImgWidth.navigationType:		XmTAB_GROUP
+*findImgWidth.labelString:		= ?
+*findImgWidth.set:			True
+*findImgHeight.navigationType:		XmTAB_GROUP
+*findImgHeight.labelString:		= ?
+*findImgHeight.set:			True
+!
+!
+!
+!   Language specific messages/questions etc....
+!
+!   fm_... file messages ...
+!
+*fm_unable_to_open:		Error: unable to open file:\n'%s'
+*fm_unable_to_save:		Error: unable to save file:\n'%s'
+*fm_not_closed:			\nFile not closed!
+*fm_print_failed:		Print failed!
+*fm_exit_aborted:		\nExit aborted!
+*fm_not_printed:		\nFile not printed!
+*fm_not_regular:		'%s'\n- not a regular file!
+*fm_not_directory:		'%s'\n- not a directory!
+*fm_need_full_dir:		You have to specify a full path!\nDirectory: '%s'\ndoes NOT start with  '/'.
+*fm_no_selection:		Cannot print selection. Text not selected!
+*fm_no_printer:			Select or specify a printer, please!
+*fm_no_filename:		Select or specify a file name, please!
+*fm_cannot_edit_nul:		Cannot edit the file!\nIt contains nul character(s) (ASCII 0).\nYou can only view it!
+*fm_cannot_insert_nul:		Cannot insert the file!\nIt contains nul character(s) (ASCII 0).
+!
+!   fq_... file questions ...
+*fq_overwrite:			Overwrite existing file:\n'%s'
+*fq_save_changes:		Do you want to save changes to:\n%s ?
+!
+!   labels for find/change buttons (shared widget)
+*find_label:			Find
+*find_next_label:		Find Next
+*change_label:			Change
+*find_n_verify_label: 		Find & Verify
+!
+!   titles for find/change dialogs (shared widget)
+*find_dialogTitle:		 Find
+*change_dialogTitle:  		 Change
+!
+!   sm_... search messages ...
+*sm_have_to_enter:		You have to enter a string to search for!
+*sm_not_found: 			Search string not found!
+*sm_change_all_completed: 	Change All has been completed.\nNumber of items changed: %d.
+*sm_line_range:			Line number is not within the existing range.\nThe range is:\n               1 - %ld
+*sm_have_to_select:		To search for the next string select it in the edit area\nor enter it first in the Find dialog.
+!
+!   sq_... search questions ...
+*sq_change:     		Change this occurrence ?
+*sq_doc_end:			Reached end of document.\nContinue search at beginning ?
+*sq_doc_beg:			Reached beginning of document.\nContinue search at end ?
+!
+!   string (character) to be shown for read-only files
+*read_only_marker:		R
+!   extra text (changeHint) to be shown in the title bar as a hint that file was changed
+*changeHint:			(Changed)
+*readOnlyHint:			(Read Only)
+!
+!   flt_... filter related messages
+!
+*flt_no_selection:	Cannot process selection. Text not selected !
+*flt_no_filter:		Specify a command, please!
+!
+*flt_no_value:		Enter a value, please!
+*flt_no_text:		Enter text, please!
+!
+*flt_wrong_margins:	Wrong margin values!\nRight margin must be bigger than the left one.
+*flt_missing_margins:	Missing margin values!\nYou have to specify at least right margin.
+!
+*cant_find_lf:		Can't find line feed!
+!
+!
+!   text used in the ht_help.c (hypertext help)
+*help_err_fopen:		Help ERROR. Can't open Help file '%s'.\n\
+\n(If the help file is in different directory you might use the command option '-helpdir dir_name' to specify it)
+*help_err_finc:			Help ERROR. Incorrect Help file '%s'.
+*help_no_info:			SORRY. No help information for this item.
+!
+!   Other locale dependent messages:
+*load_font_err:			Could not open font '%s'\n
+*open_tmp_err:			Warning: unable to open temp file '%s', file not saved.\n
+*close_tmp_err:			Warning: unable to close temp file '%s'.\n
+*backup_file_err:		Warning: unable to create backup file '%s'.\nFile '%s' not saved.\n
+*file_close_err:		Warning: unable to close file '%s'.\n
+*file_move_err:			Warning: unable to move temp file. File '%s' not saved.\n
+*open_tmp_print_err:		Warning: unable to open temp file '%s', text not printed.\n
+!
+!   syntax error messages
+*wrong_syntax:			Unrecognized option '%s'\n
+*syntax:                       Usage:  asWedit [options] [filename(s)]\nwhere available options include:\n \n\
+  -bg       <COLOR>      sets background (page) color for all elements\n\
+  -fg       <COLOR>      sets foreground (text) color\n\
+  -bgtags   <COLOR>      sets one background color for all HTML tags\n\
+  -fgtags   <COLOR>      sets one foreground color for all HTML tags\n\
+  -fn       <FONT>       sets one font list for the whole program\n\
+  -fnm      <FONT>       sets font list for menu items and dialogs\n\
+  -fnt      <FONT>       sets font list for the edit text area\n\
+  -helpdir  <DIR>        sets directory for the ASWedit help file (asWedit.hlp)\n\
+  -tab      <N>          sets the tabstops to interval of N characters\n\
+  +<N>                   after opening the file go to line <N>\n\
+  -emacs                 turns on Emacs mode/shortcuts (AsWedit_em resources are required)\n\
+  -/+ai                  turns on/off autoindent\n\
+  -/+status              turns on/off status line\n\
+  -/+wrapmenu            turns on/off the wrap menu\n\
+  -/+wrap                turns on/off auto wraparound (*slow* before Motif 1.2)\n\
+  -/+v                   turns on/off view only mode\n\
+  -version               shows the version number and build date\n\
+  .....          and all standard X-Window options including:\n\
+  -display  <HOST:SCREEN> sets the display where the window will appear\n\
+  -geometry <WIDTHxHEIGHT+X+Y> sets window size and position (in pixels)\n\
+  -iconic                starts the program up iconified\n\
+  -xrm      <RESOURCE>   sets additional X resource specification\n\
+  =====>        '3-in-1' switches:\n\
+  -html                  allows 2 modes: HTML 3.2x and text; (default)\n\
+  -htmlx                 allows 2 modes: HTML 3.2x experimental and text\n\
+  -nohtml                allows text-only mode (no HTML extensions)\n
+!
+!
+!
+!	Part 5B - language dependent resources for HTML extensions
+!	----------------------------------------------------------
+!
+!
+!-----------------------------------------------------------------------------
+!
+!
+!   Html menus in the top menu Bar
+!
+*Markup.labelString:			Markup
+*menuBar*Markup.mnemonic:   		M
+!
+*Layout.labelString:			Layout
+*menuBar*Layout.mnemonic:   		a
+!
+*Html3.labelString:			HTML
+*menuBar*Html3.mnemonic:   		L
+!
+*Html2.labelString:			HTML
+*menuBar*Html2.mnemonic:   		L
+!
+!   Markup menus (some)
+!
+*Phrase.labelString:			Phrase
+*menuBar*Phrase.mnemonic:   		P
+*HFont.labelString:			Font
+*menuBar*HFont.mnemonic:   		F
+*Misc.labelString:			Others
+*menuBar*Misc.mnemonic:   		O
+*Entities.labelString:			Entities
+*menuBar*Entities.mnemonic:   		E
+!
+!   Entities sub-menu
+*EntUser.labelString:			User's
+*menuBar*EntUser.mnemonic:   		U
+*EntSpecial.labelString:		Standard
+*menuBar*EntSpecial.mnemonic:   	S
+*Latin1.labelString:			Latin1
+*menuBar*Latin1.mnemonic:   		L
+*Proposed.labelString:			Proposed
+*menuBar*Proposed.mnemonic:   		P
+*Greek.labelString:			Greek
+*menuBar*Greek.mnemonic:   		G
+*EntSpacing.labelString:		Spacing
+*menuBar*EntSpacing.mnemonic:   	a
+*EntDots.labelString:			Dots
+*menuBar*EntDots.mnemonic:   		D
+!
+!  Html layout menu ...
+!
+*Document.labelString:			Document
+*menuBar*Document.mnemonic:   		D
+*Heading.labelString:			Heading
+*menuBar*Heading.mnemonic:   		H
+*Lists.labelString:			List
+*menuBar*Lists.mnemonic:   		L
+*L_extra.labelString:			Others
+*menuBar*L_extra.mnemonic:   		O
+*standard.labelString:			Standard
+*XmMenuShell*standard.mnemonic:   	S
+*menuBar*standard.acceleratorText:	Shift+Ctrl+X
+*menuBar*standard.accelerator:		Shift Ctrl <Key>X
+*toolbar.standard.labelString:		Standard HTML Layout
+*Head.labelString:			Head
+*menuBar*Head.mnemonic:   		H
+*comment.labelString:			Comment
+*XmMenuShell*comment.mnemonic:   	m
+*menuBar*comment.acceleratorText:	Shift+Ctrl+W
+*menuBar*comment.accelerator:		Shift Ctrl <Key>W
+*unknown.labelString:			Unknown tag...
+*XmMenuShell*unknown.mnemonic:   	U
+!  Html3  menu ...
+!
+*Forms.labelString:			Forms
+*menuBar*Forms.mnemonic:   		F
+*Figures.labelString:			Figures
+*menuBar*Figures.mnemonic:   		s
+*Tables.labelString:			Tables
+*menuBar*Tables.mnemonic:   		T
+*Maths.labelString:			Maths
+*menuBar*Maths.mnemonic:   		M
+*Applets.labelString:			Applets
+*menuBar*Applets.mnemonic:   		A
+!  Html tags menu entries ...
+!  Since 2.0 we define shortcuts for the more common tags
+!
+*a.labelString:			Hyperlink...
+*XmMenuShell*a.mnemonic:   	H
+*menuBar*a.acceleratorText:	Shift+Num/
+*menuBar*a.accelerator:		Shift <Key>KP_Divide
+*a_target.labelString:		   Target...
+*XmMenuShell*a_target.mnemonic:    T
+*menuBar*a_target.acceleratorText: Shift+Num*
+*menuBar*a_target.accelerator:	   Shift <Key>KP_Multiply
+*abbrev.labelString:		Abbreviation
+*XmMenuShell*abbrev.mnemonic:   b
+*above.labelString:		Above
+*XmMenuShell*above.mnemonic:   	A
+*acronym.labelString:		Acronym
+*XmMenuShell*acronym.mnemonic:  m
+*address.labelString:		Address
+*XmMenuShell*address.mnemonic:  A
+*menuBar*address.acceleratorText: Shift+Ctrl+A
+*menuBar*address.accelerator:	Shift Ctrl <Key>A
+*applet.labelString:		Java Applet...
+*XmMenuShell*applet.mnemonic:   A
+*area.labelString:		Active Area
+*XmMenuShell*area.mnemonic:   	c
+*row.labelString:		Row
+*XmMenuShell*row.mnemonic:   	w
+*array.labelString:		Array
+*XmMenuShell*array.mnemonic:   	y
+*atop.labelString:		No-line denominator
+*XmMenuShell*atop.mnemonic:   	N
+*au.labelString:		Author
+*XmMenuShell*au.mnemonic:   	A
+*b.labelString:			Bold
+*XmMenuShell*b.mnemonic:   	B
+*menuBar*b.acceleratorText:	Shift+Ctrl+B
+*menuBar*b.accelerator:		Shift Ctrl <Key>B
+*banner.labelString:		Banner
+*XmMenuShell*banner.mnemonic:   n
+*base.labelString:		Base context...
+*XmMenuShell*XmRowColumn*base.mnemonic:   	B
+*below.labelString:		Below
+*XmMenuShell*below.mnemonic:   	B
+*big.labelString:		Big
+*XmMenuShell*big.mnemonic:   	g
+*blockquote.labelString:	Quoted Passage
+*XmMenuShell*blockquote.mnemonic:   Q
+*body.labelString:		Body
+*XmMenuShell*body.mnemonic:   	B
+*box.labelString:		Box items
+*XmMenuShell*box.mnemonic:   	B
+*bq.labelString:		Quoted passage
+*XmMenuShell*bq.mnemonic:   	Q
+*br.labelString:		Line break
+*XmMenuShell*br.mnemonic:   	b
+*menuBar*br.acceleratorText:	Shift+Enter
+*menuBar*br.accelerator:	Shift <Key>Return
+*caption.labelString:		Caption
+*XmMenuShell*caption.mnemonic:  C
+*cite.labelString:		Citation
+*XmMenuShell*cite.mnemonic:   	C
+*code.labelString:		Code
+*XmMenuShell*XmRowColumn*code.mnemonic:   	o
+*col.labelString:		Column properties
+*XmMenuShell*col.mnemonic:   	o
+*colgroup.labelString:		Column Group
+*XmMenuShell*colgroup.mnemonic: G
+*credit.labelString:		Credits
+*XmMenuShell*credit.mnemonic:   C
+*dd.labelString:		Term definition
+*XmMenuShell*dd.mnemonic:   	d
+*menuBar*dd.acceleratorText:	Shift+Ctrl+K
+*menuBar*dd.accelerator:	Shift Ctrl <Key>K
+*dfn.labelString:		Term definition
+*XmMenuShell*dfn.mnemonic:   	T
+*dir.labelString:		Directory (O)
+*XmMenuShell*XmRowColumn*dir.mnemonic:   	e
+*div.labelString:		Division
+*XmMenuShell*div.mnemonic:   	D
+*dl.labelString:		Glossary
+*XmMenuShell*dl.mnemonic:   	G
+*menuBar*dl.acceleratorText:	Shift+Ctrl+G
+*menuBar*dl.accelerator:	Shift Ctrl <Key>G
+*dt.labelString:		Term
+*XmMenuShell*dt.mnemonic:   	T
+*menuBar*dt.acceleratorText:	Shift+Ctrl+J
+*menuBar*dt.accelerator:	Shift Ctrl <Key>J
+*em.labelString:		Emphasis
+*XmMenuShell*em.mnemonic:   	E
+*menuBar*em.acceleratorText:	Shift+Ctrl+E
+*menuBar*em.accelerator:	Shift Ctrl <Key>E
+*fig.labelString:		Figure...
+*XmMenuShell*fig.mnemonic:   	F
+*fn.labelString:		Footnote
+*XmMenuShell*fn.mnemonic:   	F
+*form.labelString:		Form
+*XmMenuShell*form.mnemonic:   	F
+*h1.labelString:		H1
+*XmMenuShell*h1.mnemonic:   	1
+*menuBar*h1.acceleratorText:    Ctrl+F1
+*menuBar*h1.accelerator:        Ctrl <Key>F1
+*h2.labelString:		H2
+*XmMenuShell*h2.mnemonic:   	2
+*menuBar*h2.acceleratorText:    Ctrl+F2
+*menuBar*h2.accelerator:        Ctrl <Key>F2
+*h3.labelString:		H3
+*XmMenuShell*h3.mnemonic:   	3
+*menuBar*h3.acceleratorText:    Ctrl+F3
+*menuBar*h3.accelerator:        Ctrl <Key>F3
+*h4.labelString:		H4
+*XmMenuShell*h4.mnemonic:   	4
+*menuBar*h4.acceleratorText:    Ctrl+F4
+*menuBar*h4.accelerator:        Ctrl <Key>F4
+*h5.labelString:		H5
+*XmMenuShell*h5.mnemonic:   	5
+*menuBar*h5.acceleratorText:    Ctrl+F5
+*menuBar*h5.accelerator:        Ctrl <Key>F5
+*h6.labelString:		H6
+*XmMenuShell*h6.mnemonic:   	6
+*menuBar*h6.acceleratorText:    Ctrl+F6
+*menuBar*h6.accelerator:        Ctrl <Key>F6
+*toolbar.h1.labelString:	Header H1
+*toolbar.h2.labelString:	Header H2
+*toolbar.h3.labelString:	Header H3
+*toolbar.h4.labelString:	Header H4
+*toolbar.h5.labelString:	Header H5
+*toolbar.h6.labelString:	Header H6
+*head.labelString:		Head
+*XmMenuShell*head.mnemonic:   	H
+*hr.labelString:		Horizontal rule
+*XmMenuShell*hr.mnemonic:   	r
+*menuBar*hr.acceleratorText:    Shift+Num-
+*menuBar*hr.accelerator:        Shift <Key>KP_Subtract
+*html.labelString:		HTML
+*XmMenuShell*html.mnemonic:   	T
+*i.labelString:			Italic
+*XmMenuShell*i.mnemonic:   	I
+*menuBar*i.acceleratorText:	Shift+Ctrl+I
+*menuBar*i.accelerator:		Shift Ctrl <Key>I
+*img.labelString:		Image...
+*XmMenuShell*img.mnemonic:   	I
+*menuBar*img.acceleratorText:	Shift+Num+
+*menuBar*img.accelerator:	Shift <Key>KP_Add
+*input.labelString:		Input element
+*XmMenuShell*input.mnemonic:   	I
+*isindex.labelString:		Searchable index
+*XmMenuShell*isindex.mnemonic:  i
+*item.labelString:		Array item
+*XmMenuShell*item.mnemonic:   	i
+*kbd.labelString:		Keyboard
+*XmMenuShell*kbd.mnemonic:   	K
+*map.labelString:		Image Map
+*XmMenuShell*XmRowColumn*map.mnemonic:   	M
+*lang.labelString:				Language
+*XmMenuShell*XmRowColumn*lang.mnemonic:   	L
+*left.labelString:		Left
+*XmMenuShell*left.mnemonic:   	L
+*lh.labelString:		Header
+*XmMenuShell*lh.mnemonic:   	H
+*li.labelString:		Item
+*XmMenuShell*li.mnemonic:   	I
+*menuBar*li.acceleratorText:	Shift+Ctrl+L
+*menuBar*li.accelerator:	Shift Ctrl <Key>L
+*toolbar.li.labelString:	List Item
+*link.labelString:		Link from this document...
+*XmMenuShell*link.mnemonic:   	L
+*math.labelString:		Math
+*XmMenuShell*math.mnemonic:   	M
+*menu.labelString:		Menu (O)
+*XmMenuShell*menu.mnemonic:   	M
+*meta.labelString:		Meta-information...
+*XmMenuShell*meta.mnemonic:   	M
+*nextid.labelString:		Next ID (O)...
+*XmMenuShell*nextid.mnemonic:   N
+*note.labelString:		Note
+*XmMenuShell*note.mnemonic:   	N
+*ol.labelString:		Ordered
+*XmMenuShell*ol.mnemonic:   	O
+*menuBar*ol.acceleratorText:	Shift+Ctrl+O
+*menuBar*ol.accelerator:	Shift Ctrl <Key>O
+*toolbar.ol.labelString:	Ordered List
+*option.labelString:		Option
+*XmMenuShell*option.mnemonic:   O
+*over.labelString:		Over
+*XmMenuShell*over.mnemonic:   	O
+*overlay.labelString:		Overlay...
+*XmMenuShell*overlay.mnemonic:  O
+*p.labelString:			Paragraph
+*XmMenuShell*p.mnemonic:   	P
+*menuBar*p.acceleratorText:	Shift+Num Enter
+*menuBar*p.accelerator:		Shift <Key>KP_Enter
+*param.labelString:		Parameter
+*XmMenuShell*param.mnemonic:   	P
+*person.labelString:		Person
+*XmMenuShell*person.mnemonic:   P
+*pre.labelString:		Preformatted
+*XmMenuShell*pre.mnemonic:   	P
+*q.labelString:			Short quotation
+*XmMenuShell*q.mnemonic:   	q
+*right.labelString:		Right
+*XmMenuShell*XmRowColumn*right.mnemonic:   	R
+*root.labelString:		Root
+*XmMenuShell*root.mnemonic:   	o
+*s.labelString:			Strikeout
+*XmMenuShell*s.mnemonic:   	S
+*samp.labelString:		Sample
+*XmMenuShell*samp.mnemonic:   	a
+*select.labelString:		Selection of option(s)...
+*XmMenuShell*select.mnemonic:   S
+*small.labelString:		Small
+*XmMenuShell*small.mnemonic:   	m
+*strong.labelString:		Strong
+*XmMenuShell*strong.mnemonic:   S
+*menuBar*strong.acceleratorText:Shift+Ctrl+S
+*menuBar*strong.accelerator:	Shift Ctrl <Key>S
+*style.labelString:		Style
+*XmMenuShell*XmRowColumn*style.mnemonic:   	e
+*sub.labelString:		Subscript
+*XmMenuShell*sub.mnemonic:   	c
+*sup.labelString:		Superscript
+*XmMenuShell*sup.mnemonic:   	e
+*tab.labelString:		Tab stop
+*XmMenuShell*tab.mnemonic:   	T
+*table.labelString:		Table
+*XmMenuShell*table.mnemonic:   	T
+*td.labelString:		Data cell
+*XmMenuShell*td.mnemonic:   	D
+*menuBar*td.acceleratorText:	Shift+Ctrl+D
+*menuBar*td.accelerator:	Shift Ctrl <Key>D
+*textarea.labelString:		Text area...
+*XmMenuShell*textarea.mnemonic: T
+*th.labelString:		Header cell
+*XmMenuShell*th.mnemonic:   	H
+*menuBar*th.acceleratorText:	Shift+Ctrl+H
+*menuBar*th.accelerator:	Shift Ctrl <Key>H
+*thead.labelString:		Static header
+*XmMenuShell*thead.mnemonic:   	S
+*tfoot.labelString:		Static Footer
+*XmMenuShell*tfoot.mnemonic:   	F
+*tbody.labelString:		Body section
+*XmMenuShell*tbody.mnemonic:   	B
+*title.labelString:		Title
+*XmMenuShell*XmRowColumn*title.mnemonic:   	T
+*tr.labelString:		Row
+*XmMenuShell*tr.mnemonic:   	R
+*menuBar*tr.acceleratorText:	Shift+Ctrl+R
+*menuBar*tr.accelerator:	Shift Ctrl <Key>R
+*tt.labelString:		Typewriter
+*XmMenuShell*tt.mnemonic:   	T
+*u.labelString:			Underline
+*XmMenuShell*u.mnemonic:   	U
+*ul.labelString:		Unordered
+*XmMenuShell*ul.mnemonic:   	U
+*menuBar*ul.acceleratorText:	Shift+Ctrl+U
+*menuBar*ul.accelerator:	Shift Ctrl <Key>U
+*toolbar.ul.labelString:	Unordered List
+*var.labelString:		Variable
+*XmMenuShell*var.mnemonic:   	V
+!
+*range.labelString:		Range...
+*XmMenuShell*range.mnemonic:   	R
+*spot.labelString:		Spot...
+*XmMenuShell*spot.mnemonic:   	S
+*ins.labelString:		Inserted
+*XmMenuShell*ins.mnemonic:   	I
+*del.labelString:		Deleted
+*XmMenuShell*del.mnemonic:   	e
+!
+!   Maths specific entries ...
+*Mathvec.labelString:		Accent above
+*XmMenuShell*Mathvec.mnemonic:   	v
+*vec.labelString:		-->
+*bar.labelString:		__
+*dot.labelString:		.
+*ddot.labelString:		..
+*hat.labelString:		^
+*tilde.labelString:		~
+!
+*Mathpos.labelString:		Position
+*XmMenuShell*Mathpos.mnemonic:  P
+*choose.labelString:		Choose
+*XmMenuShell*choose.mnemonic:   C
+*Symline.labelString:		Symbol line
+*XmMenuShell*Symline.mnemonic:  l
+!
+*Roots.labelString:		Roots
+*XmMenuShell*Roots.mnemonic:   	R
+*sqrt.labelString:		SQRT
+*XmMenuShell*sqrt.mnemonic:   	S
+*of.labelString:		Of
+*XmMenuShell*of.mnemonic:   	O
+!
+*Mathface.labelString:		Font
+*XmMenuShell*Mathface.mnemonic: F
+*t.labelString:			Upright
+*XmMenuShell*t.mnemonic:   	U
+*bt.labelString:		Upright bold
+*XmMenuShell*bt.mnemonic:   	o
+!
+!
+!   Latin1 entities: user visible labels...
+!
+*&AElig;.labelString:	Æ
+*&Aacute;.labelString:	Á
+*&Acirc;.labelString:	Â
+*&Agrave;.labelString:	À
+*&Aring;.labelString:	Å
+*&Atilde;.labelString:	Ã
+*&Auml;.labelString:	Ä
+*&Ccedil;.labelString:	Ç
+*&ETH;.labelString:	Ð
+*&Eacute;.labelString:	É
+*&Ecirc;.labelString:	Ê
+*&Egrave;.labelString:	È
+*&Euml;.labelString:	Ë
+*&Iacute;.labelString:	Í
+*&Icirc;.labelString:	Î
+*&Igrave;.labelString:	Ì
+*&Iuml;.labelString:	Ï
+*&Ntilde;.labelString:	Ñ
+*&Oacute;.labelString:	Ó
+*&Ocirc;.labelString:	Ô
+*&Ograve;.labelString:	Ò
+*&Oslash;.labelString:	Ø
+*&Otilde;.labelString:	Õ
+*&Ouml;.labelString:	Ö
+*&THORN;.labelString:	Þ
+*&Uacute;.labelString:	Ú
+*&Ucirc;.labelString:	Û
+*&Ugrave;.labelString:	Ù
+*&Uuml;.labelString:	Ü
+*&Yacute;.labelString:	Ý
+*&aacute;.labelString:	á
+*&acirc;.labelString:	â
+*&aelig;.labelString:	æ
+*&agrave;.labelString:	à
+*&aring;.labelString:	å
+*&atilde;.labelString:	ã
+*&auml;.labelString:	ä
+*&ccedil;.labelString:	ç
+*&eacute;.labelString:	é
+*&ecirc;.labelString:	ê
+*&egrave;.labelString:	è
+*&eth;.labelString:	ð
+*&euml;.labelString:	ë
+*&iacute;.labelString:	í
+*&icirc;.labelString:	î
+*&igrave;.labelString:	ì
+*&iuml;.labelString:	ï
+*&ntilde;.labelString:	ñ
+*&oacute;.labelString:	ó
+*&ocirc;.labelString:	ô
+*&ograve;.labelString:	ò
+*&oslash;.labelString:	ø
+*&otilde;.labelString:	õ
+*&ouml;.labelString:	ö
+*&szlig;.labelString:	ß
+*&thorn;.labelString:	þ
+*&uacute;.labelString:	ú
+*&ucirc;.labelString:	û
+*&ugrave;.labelString:	ù
+*&uuml;.labelString:	ü
+*&yacute;.labelString:	ý
+*&yuml;.labelString:	ÿ
+!
+!   Other HTML (RFC 1866) proposed entities: user visible labels...
+!
+*&iexcl;.labelString:	¡
+*&cent;.labelString:	¢
+*&pound;.labelString:	£
+*&curren;.labelString:	¤
+*&yen;.labelString:	¥
+*&brvbar;.labelString:	¦
+*&sect;.labelString:	§
+*&uml;.labelString:	¨
+*&copy;.labelString:	©
+*&ordf;.labelString:	ª
+*&laquo;.labelString:	«
+*&not;.labelString:	¬
+*&shy;.labelString:	­
+*&reg;.labelString:	®
+*&macr;.labelString:	¯
+*&deg;.labelString:	°
+*&plusmn;.labelString:	±
+*&sup2;.labelString:	²
+*&sup3;.labelString:	³
+*&acute;.labelString:	´
+*&micro;.labelString:	µ
+*&para;.labelString:	¶
+*&middot;.labelString:	·
+*&cedil;.labelString:	¸
+*&sup1;.labelString:	¹
+*&ordm;.labelString:	º
+*&raquo;.labelString:	»
+*&frac14;.labelString:	¼
+*&frac12;.labelString:	½
+*&frac34;.labelString:	¾
+*&iquest;.labelString:	¿
+*&divide;.labelString:	÷
+!
+!   Greek, dots, spacing, etc. entities: user visible labels...
+!
+*&alpha;.labelString:	a
+*&beta;.labelString:	b
+*&gamma;.labelString:	g
+*&delta;.labelString:	d
+*&vepsilon;.labelString: e
+*&zeta;.labelString:	z
+*&eta;.labelString:	h
+*&theta;.labelString:	q
+*&vtheta;.labelString:	J
+*&iota;.labelString:	i
+*&kappa;.labelString:	k
+*&lambda;.labelString:	l
+*&mu;.labelString:	m
+*&nu;.labelString:	n
+*&xi;.labelString:	x
+*&omicron;.labelString:	o
+*&pi;.labelString:	p
+*&varpi;.labelString:	v
+*&rho;.labelString:	r
+*&sigma;.labelString:	s
+*&vsigma;.labelString:	V
+*&tau;.labelString:	t
+*&upsilon;.labelString:	u
+*&phi;.labelString:	f
+*&varphi;.labelString:	j
+*&chi;.labelString:	c
+*&psi;.labelString:	y
+*&omega;.labelString:	w
+*&Gamma;.labelString:	G
+*&Delta;.labelString:	D
+*&Theta;.labelString:	Q
+*&Lambda;.labelString:	L
+*&Xi;.labelString:	X
+*&Pi;.labelString:	P
+*&Sigma;.labelString:	S
+*&Upsilon;.labelString:	U
+*&Phi;.labelString:	F
+*&Psi;.labelString:	Y
+*&Omega;.labelString:	W
+!
+!
+*&ldots;.labelString:	... (baseline)
+*&cdots;.labelString:	... (- level)
+*&vdots;.labelString:	Vertical
+*&ddots;.labelString:	Diagonal
+*&dotfill;.labelString:	Filling
+!
+*&thinsp;.labelString:	Thin
+*&sp;.labelString:	Medium
+*&emsp;.labelString:	Thick
+*&quad;.labelString:	Huge
+!
+*&lt;.labelString:	<
+*&gt;.labelString:	>
+*&amp;.labelString:	&
+*&quot;.labelString:	"
+*&copy;.labelString:	©
+*&trade;.labelString:	TM
+*&reg;.labelString:	®
+*&emsp;.labelString:	em space
+*&ensp;.labelString:	en space
+*&mdash;.labelString:	em dash
+*&ndash;.labelString:	en dash
+*&nbsp;.labelString:	non breaking space
+*&shy;.labelString:	­ (soft)
+!
+!
+!   User visible shortcuts for entities implemented via htmlBindings
+!   (the first entry shows the HTML context mode shortcut, while the
+!   second entry shows the text-only mode shortcut; note also that
+!   the other one always inserts just a single character -- see
+!   htmlBindings for more)
+*&lt;.acceleratorText:  <  ||  Alt+<
+*&gt;.acceleratorText:  >  ||  Alt+>
+*&amp;.acceleratorText: &  ||  Alt+&
+!
+!   Other shortcuts for standard entities (implemented as accelerators)
+*&copy;.acceleratorText:  Alt+Ctrl+C
+*&copy;.accelerator:  	  Ctrl Meta <Key>c
+*&trade;.acceleratorText: Alt+Ctrl+T
+*&trade;.accelerator:  	  Ctrl Meta <Key>t
+*&reg;.acceleratorText:   Alt+Ctrl+R
+*&reg;.accelerator:  	  Ctrl Meta <Key>r
+*&nbsp;.acceleratorText:  Shift+Space
+*&nbsp;.accelerator:  	  Shift <Key>space
+!
+!
+!   Dingbat user visible names ...
+!
+*dingbat_PD.ftp.labelString: 		Ftp
+*dingbat_PD.gopher.labelString: 	Gopher
+*dingbat_PD.telnet.labelString: 	Telnet
+*dingbat_PD.archive.labelString: 	Archive
+!
+*dingbat_PD.audio.labelString: 		Audio
+*dingbat_PD.film.labelString: 		Film
+*dingbat_PD.image.labelString: 		Image
+*dingbat_PD.map.labelString: 		Map
+*dingbat_PD.form.labelString: 		Form
+!
+*dingbat_PD.parent.labelString: 	Parent
+*dingbat_PD.next.labelString: 		Next
+*dingbat_PD.previous.labelString: 	Previous
+*dingbat_PD.home.labelString: 		Home
+*dingbat_PD.toc.labelString: 		TOC
+*dingbat_PD.glossary.labelString: 	Glossary
+*dingbat_PD.index.labelString: 		Index
+*dingbat_PD.summary.labelString: 	Summary
+*dingbat_PD.caution.labelString: 	Caution
+!
+*dingbat_PD.folder.labelString:			Folder
+*dingbat_PD.filing_cabinet.labelString: 	Filing ca.
+*dingbat_PD.document.labelString: 		Document
+*dingbat_PD.unknown_document.labelString: 	? Document
+*dingbat_PD.text_document.labelString: 		Text doc
+*dingbat_PD.binary_document.labelString: 	Bin doc
+*dingbat_PD.binhex_document.labelString: 	BinHex doc
+*dingbat_PD.compressed_document.labelString: 	Compressed
+*dingbat_PD.uuencoded_document.labelString: 	Uuencoded
+!
+*dingbat_PD.mail.labelString: 		Mail
+*dingbat_PD.mail_in.labelString: 	Mail In
+*dingbat_PD.mail_out.labelString: 	Mail Out
+!
+*dingbat_PD.calculator.labelString: 	Calculator
+*dingbat_PD.clock.labelString: 		Clock
+!
+*dingbat_PD.display.labelString: 	Display
+*dingbat_PD.diskette.labelString: 	Diskette
+*dingbat_PD.mouse.labelString: 		Mouse
+*dingbat_PD.printer.labelString: 	Printer
+*dingbat_PD.trash.labelString: 		Trash
+*dingbat_PD.tn3270.labelString: 	TN3270
+*dingbat_PD.fax.labelString: 		Fax
+*dingbat_PD.fixed_disk.labelString: 	Fixed Disk
+*dingbat_PD.disk_drive.labelString: 	Disk Drive
+!
+!
+!   Attribute labels ...
+!
+*accept.labelString:	Accept content:
+*action.labelString:	Action's URL:
+*action_html2.labelString:	Action's URL:
+*align_item.labelString:	Align:
+*align.labelString:	Align:
+*alt.labelString:	Alternative text:
+*axes.labelString:	Axis names list:
+*axis.labelString:	Short axis name:
+*background.labelString:	Background's URL:
+*border.labelString:	Frame width:
+*cellpadding.labelString:	Spacing within cells:
+*cellspacing.labelString:	Spacing between cells:
+*char.labelString:	Align on character:
+*charoff.labelString:	Align offset:
+*checked.labelString:	Initial state:
+*class.labelString:	Class:
+*clear.labelString:	Clear flow:
+*attr_edit*code.labelString: Code File:
+*codebase.labelString:	Code base:
+*coldef.labelString:	Columns definition:
+*cols.labelString:	Number of columns:
+*colspan.labelString:	Columns spanned:
+*colspec.labelString:	Column specification:
+*compact.labelString:	Compact style:
+*content.labelString:	Content (HTTP response):
+*continue.labelString:	Continue sequence number:
+*coords.labelString:	Coordinates:
+*dingbat.labelString:	Dingbat icon entity:
+*disabled.labelString:	Disabled:
+*dp.labelString:	Decimal point:
+*error.labelString:	Error message:
+*from.labelString:	Range start:
+*until.labelString:	Range end:
+*enctype.labelString:	Submitted data format:
+*height.labelString:	Height:
+*height_img.labelString:	Height:
+*height_applet.labelString:	Height:
+*href.labelString:	Link destination:
+*href_link.labelString:	Link address:
+*href_base.labelString:	Base address:
+*hspace.labelString:	Horizontal spacing:
+*http-equiv.labelString:	HTTP response header:
+*id.labelString:	Link end ID:
+*id_tab.labelString:	Named tab ID:
+*imagemap.labelString:	URL for image clicks:
+*indent.labelString:	Indent by:
+*ismap.labelString:	Sensitive Map:
+*labels.labelString:	Array labels:
+*ldelim.labelString:	Left delimiter:
+*min.labelString:	Lower bound:
+*max.labelString:	Upper bound:
+*attr_edit*lang.labelString:	Language:
+*maxlength.labelString:	Maximum length:
+*md.labelString:	Message digest:
+*method.labelString:	HTTP method:
+*methods.labelString:	HTTP methods supported:
+*multiple.labelString:	Multiple selections:
+*n.labelString:		Next document number:
+*name.labelString:	Name:
+*name_a.labelString:	Named link end:
+*name_select.labelString:	Formal name:
+*name_input.labelString:	Name:
+*name_map.labelString:		Name:
+*name_param.labelString:	Name:
+*noflow.labelString:	Flow around:
+*nohref.labelString:	Act on clicks:
+*notation.labelString:	Style notation:
+*nowrap.labelString:	Wordwrap:
+*plain.labelString:	Plain list:
+*prompt.labelString:	Prompt message:
+*rdelim.labelString:	Right delimiter:
+*rel.labelString:	Link relationship(s):
+*rev.labelString:	Reverse relationship(s):
+*role.labelString:	Role:
+*rows.labelString:	Height:
+*rowspan.labelString:	Rows spanned:
+*rules.labelString:	Rules to render:
+*script_form.labelString:	Script's URL:
+*selected.labelString:	Initially selected:
+*seqnum.labelString:	Sequence number:
+*shape.labelString:	Hotzone shape:
+*size.labelString:	Size:
+*size_html2.labelString:	Size:
+*size_box.labelString:	Delimiters Size:
+*skip.labelString:	Skip sequence by:
+*span_num.labelString:	Span number:
+*src.labelString:	Custom image's URL:
+*src_img.labelString:	Graphics' URL:
+*sym.labelString:	Symbol:
+*attr_edit*style.labelString:	Style:
+*attr_edit*title.labelString:	Title:
+*to.labelString:	Tab name to move to:
+*type.labelString:	Type of accepted data:
+*type_html2.labelString:	Type of accepted data:
+*units.labelString:	Units:
+*units_colspec.labelString:	Units:
+*urn.labelString:	Universal Resource Name:
+*usemap.labelString:	Client usemap:
+*valign.labelString:	Vertical align:
+*value.labelString:	Value:
+*version.labelString:	DTD version:
+*version_html2.labelString:	DTD version:
+*vspace.labelString:	Vertical spacing:
+*width.labelString:	Width:
+*width_img.labelString:	Width:
+*width_applet.labelString:	Width:
+*width_table.labelString:	Width:
+*wrap.labelString:		Multicolumn wrapping:
+*x.labelString:			Left offset:
+*y.labelString:			Top offset:
+*alink.labelString:		Activated link color:
+*bgcolor.labelString:		Background color:
+*border_img.labelString:	Border:
+*color.labelString:		Color:
+*cols_frameset.labelString:	Columns:
+*link_color.labelString:	Link color:
+*marginheight.labelString:	Margin height:
+*marginwidth.labelString:	Margin width:
+*name_applet.labelString:	Applet name:
+*rows_frameset.labelString:	Rows:
+*size_basefont.labelString:	Size:
+*size_font.labelString:		Size:
+*src_embed.labelString:		Object's URL:
+*src_frame.labelString:		Frame's URL:
+*start.labelString:		Start number:
+*target.labelString:		Target frame name:
+*text.labelString:		Text color:
+*type_ol.labelString:		Numbering style:
+*value_li.labelString:		New number:
+*vlink.labelString:		Visited link color:
+*vrml.labelString:		VRML (N):
+!
+*archive.labelString:		Archive:
+*bordercolor.labelString:	Border Color:
+*face.labelString:		Face:
+*frameborder.labelString:	Frame border:
+*gutter.labelString:		Gutter:
+*language.labelString:		Language:
+*src_script.labelString:	Source URL:
+*alt_area.labelString:       	Alternative text:
+!
+!
+!
+*attr_edit*XmRowColumn*IMPLIED.labelString:	(Implied)
+*attr_edit*XmRowColumn*IMPLIED.mnemonic:	i
+!
+!   Use pixmaps instead of text labels in the following option menus ...
+!   (if you prefer to use the text description instead of graphics
+!   comment out the appropriate labelType or define it as STRING)
+!
+*align_PD*labelType:			PIXMAP
+*frame_PD*labelType:			PIXMAP
+*position_PD*labelType:			PIXMAP
+*rules_PD*labelType:			PIXMAP
+*shape_PD*labelType:			PIXMAP
+*valign_PD*labelType:			PIXMAP
+*typeNul_PD*labelType:			PIXMAP
+!
+*align_PD.CENTER.labelString:		(Center)
+*align_PD.CENTER.mnemonic:		e
+*align_PD.bleedleft.labelString:	Flush left to window
+*align_PD.bleedleft.mnemonic:		l
+*align_PD.LEFT.labelString:		(Left)
+*align_PD.LEFT.mnemonic:		e
+*align_PD.left.labelString:		Left
+*align_PD.left.mnemonic:		L
+*align_PD.center.labelString:		Center
+*align_PD.center.mnemonic:		C
+*align_PD.decimal.labelString:		Decimal point
+*align_PD.decimal.mnemonic:		D
+*align_PD.right.labelString:		Right
+*align_PD.right.mnemonic:		R
+*align_PD.bleedright.labelString:	Flush right to window
+*align_PD.bleedright.mnemonic:		w
+*align_PD.justify.labelString:		Justify
+*align_PD.justify.mnemonic:		J
+*align_PD.TOP.labelString:		(Top)
+*align_PD.TOP.mnemonic:			o
+*align_PD.top.labelString:		Top
+*align_PD.top.mnemonic:			T
+*align_PD.texttop.labelString:		Text Top
+*align_PD.texttop.mnemonic:		T
+*align_PD.BASELINE.labelString:		(Base line)
+*align_PD.BASELINE.mnemonic:		e
+*align_PD.baseline.labelString:		Base line
+*align_PD.baseline.mnemonic:		a
+*align_PD.absbottom.labelString:	Abs Bottom
+*align_PD.absbottom.mnemonic:		o
+*align_PD.bottom.labelString:		Bottom
+*align_PD.bottom.mnemonic:		B
+*align_PD.absmiddle.labelString:	Abs Middle
+*align_PD.absmiddle.mnemonic:		s
+*align_PD.middle.labelString:		Middle
+*align_PD.middle.mnemonic:		M
+*align_PD.MIDDLE.labelString:		(Middle)
+*align_PD.MIDDLE.mnemonic:		d
+*align_PD.char.labelString:		Character
+*align_PD.char.mnemonic:		C
+!
+*border_PD.border.labelString:		Draw
+*border_PD.border.mnemonic:		D
+!
+*center_PD.center.labelString:		Center
+*center_PD.center.mnemonic:		C
+!
+*checked_PD.checked.labelString:	Checked
+*checked_PD.checked.mnemonic:		C
+!
+*compact_PD.compact.labelString:	Compact
+*compact_PD.compact.mnemonic:		C
+!
+*continue_PD.continue.labelString:	Continue
+*continue_PD.continue.mnemonic:		C
+!
+*attr_edit*dir.labelString:		Characters direction:
+*dir_PD.ltr.labelString:		Left to Right
+*dir_PD.ltr.mnemonic:			L
+*dir_PD.rtl.labelString:		Right to Left
+*dir_PD.rtl.mnemonic:			R
+!
+*disabled_PD.disabled.labelString:	Disabled
+*disabled_PD.disabled.mnemonic:		D
+!
+*frameborder_PD.YES.labelString:	(Yes)
+*frameborder_PD.YES.mnemonic:		e
+*frameborder_PD.yes.labelString:	Yes
+*frameborder_PD.yes.mnemonic:		Y
+*frameborder_PD.no.labelString:		No
+*frameborder_PD.no.mnemonic:		N
+*typeSpacer.labelString:		Type:
+*typeSpacer_PD.horizontal.labelString:	Horizontal
+*typeSpacer_PD.horizontal.mnemonic:	H
+*typeSpacer_PD.vertical.labelString:	Vertical
+*typeSpacer_PD.vertical.mnemonic:	V
+*typeSpacer_PD.block.labelString:	Block
+*typeSpacer_PD.block.mnemonic:		B
+!
+*attr_edit*frame.labelString:  		Frame side(s) to render:
+*frame_PD.void.labelString:		None
+*frame_PD.void.mnemonic:		N
+*frame_PD.above.labelString:		Top
+*menuBar*frame_PD.above.mnemonic:	T
+*frame_PD.below.labelString:		Bottom
+*frame_PD.below.mnemonic:		B
+*frame_PD.hsides.labelString:		Top & Bottom
+*frame_PD.hsides.mnemonic:		o
+*frame_PD.lhs.labelString:		Left
+*frame_PD.lhs.mnemonic:			L
+*frame_PD.rhs.labelString:		Right
+*frame_PD.rhs.mnemonic:			R
+*frame_PD.vsides.labelString:		Left & Right
+*frame_PD.vsides.mnemonic:		e
+*frame_PD.box.labelString:		All
+*menuBar*frame_PD.box.mnemonic:		A
+*frame_PD.border.labelString:		All (border)
+*frame_PD.border.mnemonic:		d
+!
+*inherit_PD.inherit.labelString:	Inherit
+*inherit_PD.inherit.mnemonic:		I
+!
+*ismap_PD.ismap.labelString:		Map
+*ismap_PD.ismap.mnemonic:		M
+!
+*labels_PD.labels.labelString:		Labels
+*labels_PD.labels.mnemonic:		L
+!
+*method_PD.GET.labelString:		(Get)
+*method_PD.GET.mnemonic:		e
+*method_PD.get.labelString:		Get
+*method_PD.get.mnemonic:		G
+*method_PD.post.labelString:		Post
+*method_PD.post.mnemonic:		P
+!
+*multiple_PD.multiple.labelString:	Multiple
+*multiple_PD.multiple.mnemonic:		M
+!
+*noflow_PD.noflow.labelString:		No flow
+*noflow_PD.noflow.mnemonic:		N
+!
+*nohref_PD.nohref.labelString:		No
+*nohref_PD.nohref.mnemonic:		N
+!
+*nowrap_PD.nowrap.labelString:		Disable
+*nowrap_PD.nowrap.mnemonic:		D
+!
+*plain_PD.plain.labelString:		Plain
+*plain_PD.plain.mnemonic:		P
+!
+*position_PD.FLOAT.labelString:		(Float)
+*position_PD.FLOAT.mnemonic:		o
+*position_PD.left.labelString:		Left
+*position_PD.left.mnemonic:		L
+*position_PD.right.labelString:		Right
+*position_PD.right.mnemonic:		R
+*position_PD.top.labelString:		Top
+*position_PD.top.mnemonic:		T
+*position_PD.bottom.labelString:	Bottom
+*position_PD.bottom.mnemonic:		B
+*position_PD.float.labelString:		Float
+*position_PD.float.mnemonic:		F
+!
+*right_PD.right.labelString:		Right
+*right_PD.right.mnemonic:		R
+!
+*role_PD.SIMPLE.labelString:		(Simple)
+*role_PD.SIMPLE.mnemonic:		i
+*role_PD.simple.labelString:		Simple
+*role_PD.simple.mnemonic:		S
+*role_PD.note.labelString:		Note
+*role_PD.note.mnemonic:			N
+*role_PD.caution.labelString:		Caution
+*role_PD.caution.mnemonic:		C
+*role_PD.warning.labelString:		Warning
+*role_PD.warning.mnemonic:		W
+!
+*rules_PD.none.labelString:		None
+*rules_PD.none.mnemonic:		N
+*rules_PD.groups.labelString:		Groups
+*rules_PD.groups.mnemonic:		G
+*rules_PD.rows.labelString:		Rows
+*rules_PD.rows.mnemonic:		R
+*rules_PD.cols.labelString:		Columns
+*rules_PD.cols.mnemonic:		C
+*rules_PD.all.labelString:		All
+*rules_PD.all.mnemonic:			A
+!
+*selected_PD.selected.labelString:	Selected
+*selected_PD.selected.mnemonic:		s
+!
+*size_PD.NORMAL.labelString:		(Normal)
+*size_PD.NORMAL.mnemonic:		N
+*size_PD.normal.labelString:		Normal
+*size_PD.normal.mnemonic:		o
+*size_PD.medium.labelString:		Medium
+*size_PD.medium.mnemonic:		M
+*size_PD.large.labelString:		Large
+*size_PD.large.mnemonic:		L
+*size_PD.huge.labelString:		Huge
+*size_PD.huge.mnemonic:			H
+!
+*shape_PD.RECT.labelString:		(Rectangle)
+*shape_PD.RECT.mnemonic:		e
+*shape_PD.rect.labelString:		Rectangle
+*shape_PD.rect.mnemonic:		R
+*shape_PD.circle.labelString:		Circle
+*shape_PD.circle.mnemonic:		C
+*shape_PD.poly.labelString:		Polygon
+*shape_PD.poly.mnemonic:		P
+*shape_PD.default.labelString:		Default
+*shape_PD.default.mnemonic:		D
+!
+*sym_PD.LINE.labelString:		(Line)
+*sym_PD.LINE.mnemonic:			L
+*sym_PD.line.labelString:		-----
+*sym_PD.cub.labelString:		}
+*sym_PD.larr.labelString:		<
+*sym_PD.rarr.labelString:		>
+*sym_PD.hat.labelString:		^
+*sym_PD.tilde.labelString:		~
+!
+*type_PD.TEXT.labelString:		(Text)
+*type_PD.TEXT.mnemonic:			e
+*type_PD.text.labelString:		Text
+*type_PD.text.mnemonic:			T
+*type_PD.password.labelString:		Password
+*type_PD.password.mnemonic:		P
+*type_PD.checkbox.labelString:		Checkbox
+*type_PD.checkbox.mnemonic:		C
+*type_PD.radio.labelString:		Radio button
+*type_PD.radio.mnemonic:		R
+*type_PD.submit.labelString:		Submit
+*type_PD.submit.mnemonic:		S
+*type_PD.reset.labelString:		Reset
+*type_PD.reset.mnemonic:		R
+*type_PD.range.labelString:		Range control
+*type_PD.range.mnemonic:		R
+*type_PD.audio.labelString:		Audio
+*type_PD.audio.mnemonic:		A
+*type_PD.file.labelString:		File
+*type_PD.file.mnemonic:			F
+*type_PD.scribble.labelString:		Scribble
+*type_PD.scribble.mnemonic:		b
+*type_PD.hidden.labelString:		Hidden
+*type_PD.hidden.mnemonic:		H
+*type_PD.image.labelString:		Image
+*type_PD.image.mnemonic:		I
+!
+*type_PD.arabic.labelString:		Arabic
+*type_PD.arabic.mnemonic:		A
+*type_PD.upperalpha.labelString:	Upper alpha
+*type_PD.upperalpha.mnemonic:		U
+*type_PD.loweralpha.labelString:	Lower alpha
+*type_PD.loweralpha.mnemonic:		L
+*type_PD.upperroman.labelString:	Upper roman
+*type_PD.upperroman.mnemonic:		r
+*type_PD.lowerroman.labelString:	Lower roman
+*type_PD.lowerroman.mnemonic:		r
+*type_PD.local.labelString:		Local
+*type_PD.local.mnemonic:		L
+!
+*units_PD.PIXELS.labelString:		(Pixels)
+*units_PD.PIXELS.mnemonic:		i
+*units_PD.pixels.labelString:		Pixels
+*units_PD.pixels.mnemonic:		P
+*units_PD.en.labelString:		en
+*units_PD.en.mnemonic:			n
+*units_PD.EN.labelString:		(en)
+*units_PD.EN.mnemonic:			e
+*units_PD.relative.labelString:		Relative
+*units_PD.relative.mnemonic:		R
+!
+!
+*valign_PD.TOP.labelString:		(Top)
+*valign_PD.TOP.mnemonic:		o
+*valign_PD.top.labelString:		Top
+*valign_PD.top.mnemonic:		T
+*valign_PD.middle.labelString:		Middle
+*valign_PD.middle.mnemonic:		M
+*valign_PD.bottom.labelString:		Bottom
+*valign_PD.bottom.mnemonic:		B
+*valign_PD.baseline.labelString:	Base line
+*valign_PD.baseline.mnemonic:		a
+*wrap_PD.NONE.labelString:		(None)
+*wrap_PD.NONE.mnemonic:			o
+*wrap_PD.vert.labelString:		Vertical
+*wrap_PD.vert.mnemonic:			V
+*wrap_PD.horiz.labelString:		Horizontal
+*wrap_PD.horiz.mnemonic:		H
+*wrap_PD.none.labelString:		None
+*wrap_PD.none.mnemonic:			N
+*scrolling.labelString:			Scrollbars:
+*scrolling_PD.AUTO.labelString:		(Auto)
+*scrolling_PD.AUTO.mnemonic:		u
+*scrolling_PD.yes.labelString:		Yes
+*scrolling_PD.yes.mnemonic:		Y
+*scrolling_PD.no.labelString:		No
+*scrolling_PD.no.mnemonic:		N
+*scrolling_PD.auto.labelString:		Auto
+*scrolling_PD.auto.mnemonic:		A
+*noresize.labelString:			Resizable:
+*noresize_PD.noresize.labelString:	No
+*noresize_PD.noresize.mnemonic:		N
+*noshade.labelString:			Shadow:
+*noshade_PD.noshade.labelString:	No
+*noshade_PD.noshade.mnemonic:		N
+*typeNul.labelString:			Mark type:
+*typeNul_PD.disc.labelString:		Disc
+*typeNul_PD.disc.mnemonic:		D
+*typeNul_PD.circle.labelString:		Circle
+*typeNul_PD.circle.mnemonic:		C
+*typeNul_PD.square.labelString:		Square
+*typeNul_PD.square.mnemonic:		S
+*clear_PD.all.labelString:		All
+*clear_PD.all.mnemonic:			A
+*clear_PD.left.labelString:		Left
+*clear_PD.left.mnemonic:		L
+*clear_PD.none.labelString:		None
+*clear_PD.none.mnemonic:		N
+*clear_PD.NONE.labelString:		(None)
+*clear_PD.NONE.mnemonic:		o
+*clear_PD.right.labelString:		Right
+*clear_PD.right.mnemonic:		R
+!
+!   Unknown attribute editor dialog ...
+!
+*unknown_attr_dlg.dialogTitle: 		 Unknown tag editor
+*unknown_attr_dlg.selectionLabelString:	Edit the unknown tag:
+*unknown_attr_dlg.listVisibleItemCount:	3
+*unknown_attr_dlg.listLabelString:	Learned tags:
+!
+!   Attribute editors ...
+!
+*attribTitle:			 <%s> attribute editor
+*moreAttrLabel:			More ...
+*lessAttrLabel:			Less ...
+!
+!    htmlErrorDlg dialog:
+*htmlErrorDlg.dialogTitle:			 HTML error
+*htmlErrorDlg.okLabelString:			Delete
+*menuBar*htmlErrorDlg.applyLabelString:		Do All
+!
+!    replaceTagDlg dialog:
+*replaceTagTitle:				 Replace <%s> tag with...
+*replaceTagDlg.listLabelString:			Tags:
+!    List of tags that must NOT be used in this dialog (obsoleted, not very useful in this context, etc.)
+*forgetForTagReplace:				dir, menu, applet
+!
+!    htmlCtagDelDlg dialog:
+*htmlCtagDelDlg.dialogTitle:			 HTML context hint
+*htmlCtagDelDlg.okLabelString:			Delete
+*htmlCtagDelDlg.cancelLabelString:		No
+!
+!    htmlUnTagErrDlg dialog:
+*htmlUnTagErrDlg.dialogTitle:			 HTML error
+*htmlUnTagErrDlg.okLabelString:			Delete
+*menuBar*htmlUnTagErrDlg.applyLabelString:	Learn it
+!
+!    htmlMissCharDlg dialog:
+!
+*htmlMissCharDlg.dialogTitle: 			 Missing character error
+*htmlMissCharDlg.okLabelString:			Insert
+*menuBar*htmlMissCharDlg.applyLabelString:	Do All
+!
+!    htmlMissCtagDlg dialog:
+!
+*htmlMissCtagDlg.dialogTitle: 			 Missing tag error
+*htmlMissCtagDlg.okLabelString:			Insert
+*menuBar*htmlMissCtagDlg.applyLabelString:	Do All
+!
+!   htmlCorrectProgress dialog
+*htmlCorrectProgress.dialogTitle: 		 Auto correction
+*htmlCorrectProgress.cancelLabelString:		Stop
+!
+!    htmlShortRefDlg dialog:
+!    (exists only for HTML 3)
+!
+*htmlShortRefDlg.dialogTitle: 			 Replace reference
+*htmlShortRefDlg.okLabelString:			Replace
+*menuBar*htmlShortRefDlg.applyLabelString:	Replace All
+!
+!   Errors for HTML tag parsing
+*tagErrParse:	 Error parsing text!
+*tagErrNull:	 Null text found during parsing a tag!
+*tagErrNoOchar:	 Character  '<' expected but missing!
+*tagErrNoCchar:	 Character  '>' expected but missing!
+*tagErrNoCcomment: Closing comment tag '%s' is missing!
+*tagErrUnsup:	 An unsupported tag '%s' found!
+*tagErrObsolete: A deprecated or obsoleted tag '%s' found!
+*tagErrNoSQuote: closing single quote
+*tagErrNoDQuote: closing double quote
+*tagErrName:	 Cannot get a valid tag name!
+!   Context errors/hints for HTML
+*ctxErrAllow:	Tag <%s> is NOT allowed in the context of <%s> !
+*ctxErrNesting:	Invalid nesting of elements! \n Tag expected: </%s>\n Tag found: </%s>
+*ctxErrOptionalNesting:	Invalid nesting of elements! The optional\n closing tag </%s> cannot be there!
+*ctxErrCtag:	Closing tag </%s> without an opening one is not allowed!
+*ctxErrCtagMissing:	Closing required tag </%s> is missing!
+*ctxErrTitle1:	Only one <%s> tag per document is allowed!
+*ctxErrOnly1:	Only one <%s> tag is\nallowed in the <%s> context.
+*ctxErrNotHere:	Caption tag <%s> must be the first inside <%s> tag.
+*ctxErrInFront:	Tag <%s> is NOT allowed in front of <%s> tag !
+*ctxErrFirst:	Tag <%s> cannot be THE first one!
+*ctxErrLast:	No tag is allowed after the closing </HTML> tag!
+*ctxErrSref:	Short reference '%c' is not supported by asWedit,\n you must use the full %s tag name instead.
+*ctxErrTableSeq: Invalid tag sequence inside <TABLE>!\nValid sequence is: an optional CAPTION element,\noptionally followed by one or more COL or COLGROUP\nelements, then an optional THEAD, an optional TFOOT,\nand finally one or more TBODY elements.
+*hintAllowEl:	 To allow element <%s> that follows!
+*corrProgress:	 Done in %3d
+*contextOff:	OFF
+*contextCorr:	Correcting...
+!
+    Attribute errors
+*atrErrRequired:	You are required to define '%s' attribute!
+*atrErrSgmlName:	Only name tokens are allowed here!\n(sequence of letters, digits, periods or hyphens)
+*atrErrSet:		Cannot set attribute editor data for:\nattribute: '%s'\nvalue: '%s'
+!
+!   Other errors
+*errOnlySpaces:	Only white spaces are allowed here!
+*undoInvalidHtml:	Switching the HTML mode Off!\nHTML-invalid undo/redo action executed:
+*errMarkupPaste:	Switching the HTML mode Off!\nHTML-invalid edit action executed:
+*qDeleteTag:		Delete the wrong tag now ?\n
+*qDeleteCTag:		Delete the optional closing tag ?\n
+*qDeleteReqCTag:	Delete the required closing tag ?\n
+*qInsertCtag:		Insert the missing closing tag now ?\n
+*qInsertChar:		Insert the missing character now ?
+*qReplaceSref:		Replace short reference found ?\n
+*errNoBrowser:		Cannot preview! Please select\nthe browser(s) to use first!
+*errMosaicCCI:		Cannot contact Mosaic on CCI port!\nAre you running Mosaic that listens on CCI port 2500 ?\nFor details see the following asWedit help topic:\nView|Browser|Mosaic
+*errNetscapeRun:	Cannot preview in Netscape Navigator!\nNetscape is NOT running on display '%s' \nFor details see the following help topic:\n        View|Browser|Netscape
+*errNetscapeCon:	Cannot connect with Netscape Navigator window!
+*errNetName:		Only network name or address is allowed here!\n(sequence of letters, digits, periods or hyphens;\nthe name may be followed by a colon and port number)
+*htmlReadOnly:		HTML error found !\nCannot correct a read-only document!\nEither reopen the file for writing,\n or save it as a writable file.
+!
+!
+!   Do not allow tear off menus inside the attribute editors, pop-up help & browse_dialog
+*menuBar*attr_edit*tearOffModel:	XmTEAR_OFF_DISABLED
+*menuBar*Help_Popup.tearOffModel: 	XmTEAR_OFF_DISABLED
+*menuBar*browse_dialog*tearOffModel: 	XmTEAR_OFF_DISABLED
+!   Modify gadget's margin
+*attr_edit.form.XmRowColumn.marginWidth: 0
+!
+!
+!
+!   Layout for HTML multi-column option & pulldown menus
+!
+*dingbat_PD.numColumns:	3
+!
+!
+*Greek_PD.numColumns:	6
+*Greek_PD.packing:	XmPACK_COLUMN
+!
+*Latin1_PD.numColumns:	8
+*Latin1_PD.packing:	XmPACK_COLUMN
+!
+*Proposed_PD.numColumns: 5
+*Proposed_PD.packing:	 XmPACK_COLUMN
+!
+!
+!
+!	Part 6  - keyboard bindings.
+!	----------------------------
+!
+!-----------------------------------------------------------------------------
+!
+!	Keyboard bindings (do NOT change unless you really have to do that;
+!	if you change anything there might be inconsistency with the
+!	help file! )
+!
+!
+! special bindings for hypertext Help widget and Emacs bindings
+!
+*hypertext_text.translations: #override\n\
+	     <Btn1Down>:        move-destination()\n\
+	     <Btn2Down>:        move-destination()\n\
+	     <Btn1Up>(2):       activate()\n\
+	     <Btn2Up>(2):       activate()\n\
+	     <Key>Return:       activate()\n\
+	Ctrl <Key>osfPageDown:   end-of-file()\n\
+	Ctrl <Key>osfPageUp:     beginning-of-file()\n
+!
+!
+!
+*edit_text.translations: #override\n\
+	Ctrl <Key>Return:			asedit-newline()\n\
+	     <Key>Return:			asedit-newline-and-indent()\n\
+	~Meta ~Alt <Key>osfBackSpace:           asedit-delete-previous-character()\n\
+	~Shift ~Ctrl ~Meta ~Alt <Key>osfDelete: asedit-delete-next-character()\n\
+	~Shift Ctrl ~Meta ~Alt <Key>osfDelete:  asedit-delete-to-end-of-line()\n\
+	Shift ~Ctrl Meta <Key>osfBackSpace: 	asedit-redo()\n\
+	Shift ~Ctrl Alt  <Key>osfBackSpace: 	asedit-redo()\n\
+	~Shift ~Ctrl Meta <Key>osfBackSpace: 	asedit-undo()\n\
+	~Shift ~Ctrl Alt <Key>osfBackSpace: 	asedit-undo()\n\
+	Ctrl <Key>q, Ctrl <Key>[: 		asedit-forward-match()\n\
+	Ctrl <Key>q, Ctrl <Key>]: 		asedit-backward-match()\n\
+	Ctrl <Key>q, Ctrl <Key>f: 		asedit-find()\n\
+	Ctrl <Key>q, Ctrl <Key>a: 		asedit-change()\n
+!
+!
+! Some extra bindigs to enable Clipboard operations in all Text widgets
+! with the user defined cut/copy/paste key shortcuts
+!
+*XmText.translations: #override\n\
+	~Shift Ctrl ~Meta ~Alt <Key>x:		cut-clipboard()\n\
+	~Shift Ctrl ~Meta ~Alt <Key>c:		copy-clipboard()\n\
+	~Shift Ctrl ~Meta ~Alt <Key>v:		paste-clipboard()\n
+!
+!
+! Some extra bindings for text widgets inside attribute editors ....
+! (including translation of '"' and '>' into appropriate entities)
+!
+*attr_edit*XmText.translations: #override\n\
+	~Shift Ctrl ~Meta ~Alt <Key>x:		cut-clipboard()\n\
+	~Shift Ctrl ~Meta ~Alt <Key>c:		copy-clipboard()\n\
+	<Key>osfDown:		end-of-line() forward-character()\n\
+	<Key>osfUp:		beginning-of-line() backward-character() beginning-of-line()\n\
+	:~c ~m ~a <Key>>: 	insert-string(&gt;)\n:~c m <Key>>: self-insert()\n:~c a <Key>>: self-insert()\n\
+	:~c ~m ~a <Key>": 	insert-string(&quot;)\n:~c m <Key>": self-insert()\n:~c a <Key>": self-insert()\n\
+	~Shift Ctrl ~Meta ~Alt <Key>v:		paste-clipboard()\n
+!
+! Extra bindings for 'on-the-fly' translation of the following key strokes:
+!
+! 	Key	HTML mode	normal text (no HTML)
+!	&	&amp;		&
+!	<	&lt;		<
+!	>	&gt;		>
+!	Alt+&	&		&amp;
+!	Alt+<	<		&lt;
+!	Alt+>	>		&gt;
+!	Meta+&	&		&amp;
+!	Meta+<	<		&lt;
+!	Meta+>	>		&gt;
+!
+! You can also add some personal bindings, for example for automatic inserting
+! of your native language entitities while you type in the HTML mode, see the
+! example for inserting the '&szlig;' entity instead of German 'ß' character:
+!
+!!! :~c ~m ~a <Key>ssharp: insert-string(&szlig;)\n :~c a <Key>ssharp: self-insert()\n:~c m <Key>ssharp: self-insert()\n
+!
+! NOTE - The bindings below might have to be customized for some systems
+! and/or keyboard layouts. This is because on some systems translations
+! are broken and you might not be able to access the Alt+something
+! or Meta+something shortcuts as they are defined with the ':' prefix.
+! On such systems *IF* you HAVE to access those shortcuts you might define
+! the translations using the following syntax (note that this one depends
+! on the Shift key as well - look at your keyboard layout) :
+!~c ~m ~a s <Key>&: insert-string(&amp;)\n~c m s <Key>&: self-insert()\n~c a s <Key>&: self-insert()
+!
+!
+!
+*htmlBindings:		\
+ :~c ~m ~a <Key>&: insert-string(&amp;)\n:~c m <Key>&: self-insert()\n:~c a <Key>&: self-insert()\n\
+ :~c ~m ~a <Key><: insert-string(&lt;)\n :~c m <Key><: self-insert()\n:~c a <Key><: self-insert()\n\
+ :~c ~m ~a <Key>>: insert-string(&gt;)\n :~c m <Key>>: self-insert()\n:~c a <Key>>: self-insert()\n
+!
+*nohtmlBindings:	\
+ :~c ~m ~a <Key>&: self-insert()\n:~c m <Key>&: insert-string(&amp;)\n:~c a <Key>&: insert-string(&amp;)\n\
+ :~c ~m ~a <Key><: self-insert()\n:~c m <Key><: insert-string(&lt;)\n :~c a <Key><: insert-string(&lt;)\n\
+ :~c ~m ~a <Key>>: self-insert()\n:~c m <Key>>: insert-string(&gt;)\n :~c a <Key>>: insert-string(&gt;)\n
+!
+!   The following defines additional translations (bindings) for all the text
+!   typed in the URL type attribute boxes. It is used primarily to hex-encode
+!   some characters that must be encoded in URL's (extend that if you wish; you
+!   might even add shortcuts or macros for some frequently used strings; see the
+!   example for the F12 key below).
+*urlBindings:		\
+ ~c ~m ~a ~s <Key>space: insert-string(%20)\n :<Key>%: insert-string(%25)\n\
+ :<Key>~: insert-string(%7E)\n\
+ :a <Key>colon: insert-string(%3A)\n\
+ <Key>F12: insert-string(http://www.advasoft.com/order.html)\n
+!
+!
+!   Some consistency bindings for text widgets (or fields) inside selection
+!   boxes
+!
+!
+*textTranslations: #override\n\
+	~Shift Ctrl ~Meta ~Alt <Key>x:		cut-clipboard()\n\
+	~Shift Ctrl ~Meta ~Alt <Key>c:		copy-clipboard()\n\
+	~Shift Ctrl ~Meta ~Alt <Key>v:		paste-clipboard()\n
+!
+!
+!	Workaround for the Motif 1.2.2 FSB cursor visibility bug
+*XmFileSelectionBox.XmTextField.width: 400
+!
+!	Another workaround: Switch off all the ''extensions'' implemented by IXI ...
+!	(what is definitely needed is the disabling of their ''improved''
+!	geometry and layout handling for XmForm widgets!! Note that on some
+!	older Motif versions useIxiAdds might be defined as Boolean --
+!	in such case replace NONE with False)
+!
+*useIxiAdds:	NONE
+!
+! Do NOT remove or alter the setting of allowShellResize (must be true)
+*allowShellResize:      true
+!
+! Do NOT modify the translations below (unless you *really* know what you're doing)
+*toolbar.XmPushButton.translations: #override\n\
+	<Btn2Down>:	\n
+!
+*toolbar.XmToggleButton.translations: #override\n\
+	<Btn2Down>:	\n
+!
+!
+!
+!
+!       Part 7  - Version definitions.
+!       -----------------------------
+!
+!-----------------------------------------------------------------------------
+!
+!   appDefaultsVersion (Version number of ths file) should only be defined in
+!   the site-wide file
+!   ***** Do NOT remove or alter this setting!!!!!
+*appDefaultsVersion:	3000
+!
+!
+*oldAppDefs:            Warning: Old 'AsWedit' application defaults file loaded!\n(version found: '%d', version required: '%d')\n
+*errHelpVer:	ERROR: Incompatible help file '%s' found!\n(version found: '%d', version required: '%d')\n
+!
+!
+!
+!
+!
+!
+!
+!
+!!!!!!!!!!     End of AsWedit application defaults file     !!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
