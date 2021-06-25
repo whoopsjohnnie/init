@@ -8,6 +8,16 @@ sudo apt-get install -y snapd
 
 # Env
 sudo apt-get install -y zsh
+
+# Editors
+
+# !! POSIX/UNIX !!
+sudo apt-get install -y ed
+sudo apt-get install -y nvi
+sudo update-alternatives --set vi /usr/bin/nvi
+
+# Better
+sudo apt-get install -y vim
 sudo apt-get install -y emacs
 
 sudo snap install --classic sublime-text
