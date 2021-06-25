@@ -1,0 +1,24 @@
+# Global tcshrc file
+# This file is sourced by default user file ~/.tcshrc
+
+#
+# Ported from csh/tcsh to bash by john on June 23, 2021
+# 
+
+# Hist:
+#  9705*/MiA - Total rewrite. Now is enviroment already set when coming here.
+#  970530/jf - Added system_path
+#  970612/jf - Added coredumpsize
+#  970718/jf - More tests to make rcp work, errors are not allowed!
+#  980401/LHA - Added root bits
+#  980714/max - Added >/dev/null after the klist-line to remove extra newline
+
+# modules
+# source /mpkg/modules/current/init/tcsh
+# module use /afs/e.kth.se/system/modulefiles
+
+# Source the ~/.bashrc.mine file if it exists
+if [ -r ~/.bashrc.mine ]
+then
+	source ~/.bashrc.mine
+fi

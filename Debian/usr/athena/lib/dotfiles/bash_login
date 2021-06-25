@@ -1,0 +1,7 @@
+# Prototype global .bash_login file
+# This file is sourced by default user file ~/.bash_login
+#
+
+#
+# Ported from csh/tcsh to bash by john on June 23, 2021
+# 
