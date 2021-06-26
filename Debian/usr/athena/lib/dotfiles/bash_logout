@@ -1,0 +1,11 @@
+#!/bin/bash -f
+
+#
+# Ported from csh/tcsh to bash by john on June 23, 2021
+# 
+
+# Run the ~/.bash_logout.mine file if it exists
+if [ -r ~/.bash_logout.mine ]
+then
+	source ~/.bash_logout.mine
+fi
