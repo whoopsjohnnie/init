@@ -115,3 +115,13 @@ fi
 #   fi
 # fi
 
+#---------------------------
+#Mina ändringar
+
+# Need to port this from csh to sh
+# set autolist
+# set correct=cmd
+# set nobeep
+
+#
+alias emacs='emacs -nw'
