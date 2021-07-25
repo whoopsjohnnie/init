@@ -41,3 +41,6 @@ fi
 # a later date.  Be sure you know what you are doing.
 
 xset -b
+
+source ~/.bash_environment
+
