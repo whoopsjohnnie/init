@@ -1,6 +1,7 @@
 #!/bin/sh
 
-cp ./home/.Xresources ~/
+# cp ./home/.Xresources ~/
+cp ./home/.Xdefaults ~/
 
 # rm -rf ~/.config
 # cp -r ./home/.config ~/
@@ -16,6 +17,7 @@ cp -r ./home/.emacs.d ~/
 # cp ./home/.gtkrc ~/
 # cp ./home/.gtkrc_afterstep ~/
 
+cp ./home/.bash_environment ~/
 cp ./home/.bash_login ~/
 cp ./home/.bash_logout ~/
 cp ./home/.bash_profile ~/
@@ -27,6 +29,7 @@ cp ./home/.mh_profile ~/
 cp ./home/.bashrc ~/
 cp ./home/.bashrc.mine ~/
 
+cp ./home/.startup.X ~/
 cp ./home/.xinitrc ~/
 cp ./home/.xsession ~/
 
