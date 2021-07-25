@@ -16,14 +16,14 @@ xrandr -s 1440x900
 # xsetroot -solid "#505075"
 
 # Ladda .environment
-source ~/.bash_environment
+. ~/.bash_environment
 
 # Ladda Xdefaults
 # xrdb -merge ~/.Xresources
 xrdb -load ~/.Xdefaults
 
 # Exekvera .starup.X
-source $HOME/.startup.X
+. $HOME/.startup.X
 
 # Starta en console
 xconsole -iconic &
@@ -37,6 +37,6 @@ xconsole -iconic &
 # endif
 
 # if ( $?WINDOW_MANAGER ) then
-echo "WINDOW_MANAGER is set to $WINDOW_MANAGER" > /dev/console
-$WINDOW_MANAGER >& /dev/console
+echo "WINDOW_MANAGER is set to $WINDOW_MANAGER" # > /dev/console
+exec $WINDOW_MANAGER # >& /dev/console
 # endif
