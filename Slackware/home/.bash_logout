@@ -1,10 +1,8 @@
-#!/bin/csh -f
+#!/bin/bash -f
 
 #
-# This is my original tcsh shell config from the Digital UNIX kth.se AFS cell
-#
-# /afs/kth.se/home/e97/e97_jog/.logout, Aug 21 1997, 10:51:25
-#
+# Ported from csh/tcsh to bash by john on June 23, 2021
+# 
 
 # This file sources a system-wide logout file, which:
 #	- destroys kerberos tickets
