@@ -1,0 +1,65 @@
+#========================================================================#
+#
+# FvwmButtons
+#
+
+Style "FvwmButtons"  NoTitle,NoHandles,Sticky,WindowListSkip,BorderWidth 0
+
+*FvwmButtonsFore Black
+*FvwmButtonsBack #c0c0c0
+*FvwmButtonsFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+# Geometry - really likes to pick its own size, but giving a position is OK
+*FvwmButtonsGeometry -2-36
+# Layout: specify rows or columns, not both
+*FvwmButtonsRows 1
+
+# Define the buttons to use.....
+
+#*FvwmButtons(Swallow(UseOld) "xclock" 'Exec xclock -bg \#c0c0c0 \
+             -padding 0 -geometry -1500-1500 &')
+*FvwmButtons(Title kvt, Icon kvt.xpm, \
+             Action 'DefaultTerm')
+#*FvwmButtons(Title xfm, Icon Xfm.xpm, \
+             Action 'Exec "Xfm" xfm -title "File Manager" &') 
+*FvwmButtons(Title emacs, Icon text.xpm, \
+             Action 'Exec "Emacs" emacs &')
+#*FvwmButtons(Title kcalc, Icon rcalc.xpm, \
+#             Action 'Exec "kcalc" kcalc &')
+*FvwmButtons(Title xview, Icon xview.xpm, \
+             Action 'Exec "xv" xv &')
+#*FvwmButtons(Title gview, Icon gv.xpm, \
+             Action 'Exec "ghostview" ghostview &')
+*FvwmButtons(Title exmh, Icon mail2.xpm, \
+             Action 'Exec "Exmh" /misc/hacks/vol/sysapps/exmh &')
+*FvwmButtons(Title knews, Icon NewspaperRoll.xpm, \
+             Action 'Exec "knews" knews &')
+*FvwmButtons(Title "Netscape", Icon nscape.xpm, \
+             Action 'Exec "Netscape" netscape -ncols 80 &')
+*FvwmButtons(Title kill, Icon rbomb.xpm, Action Destroy)
+*FvwmButtons(2x1, \
+             Swallow(UseOld) "xload" 'Exec xload \
+                     -nolabel -bg gray  -update 5 -geometry -1500-1500 &')
+*FvwmButtons(2x1, Swallow(UseOld) "Desktop" 'FvwmPager 0 0')
+
+#========================================================================#
+#
+# MiniButtons
+#
+
+Style "MiniButtons"  NoTitle,NoHandles,Sticky,StaysOnTop,WindowListSkip,BorderWidth 0
+
+*MiniButtonsFore Black
+*MiniButtonsBack #c0c0c0
+*MiniButtonsFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+*MiniButtonsGeometry -5+5
+*MiniButtonsRows 1
+*MiniButtonsPadding 1 1
+
+*MiniButtons -   mini-term.xpm		DefaultTerm
+#*MiniButtons -   mini-filemgr.xpm     Exec    "Xfm" xfm -title "File Manager" & 
+*MiniButtons -   mini-edit.xpm        Exec  "Textedit" textedit -En 32 &
+*MiniButtons -   mini-calc.xpm        Exec    "kcalc" kcalc &
+*MiniButtons -   mini-xv.xpm          Exec    "xv" xv &  
+*MiniButtons -   mini-gv.xpm          Exec    "ghostview" gv &
+*MiniButtons -   mini-nscape.xpm      Exec    "Netscape" netscape -geometry 790x543+0+0 &
+*MiniButtons -   mini-bomb.xpm        Destroy

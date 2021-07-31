@@ -1,0 +1,112 @@
+#========================================================================#
+#
+# Some mini-icons for the title bar
+#
+
+# Default Icon
+Style "*"		TitleIcon mini-x2.xpm
+
+# Misc
+Style "*console*"	TitleIcon mini-display.xpm
+Style "*xterm*"		TitleIcon mini-term.xpm
+Style "rxvt"		TitleIcon mini-term.xpm
+Style "xsession"	TitleIcon mini-bx2.xpm
+Style "xmag"		TitleIcon mini-zoom.xpm
+Style "tkps"		TitleIcon mini-run.xpm
+Style "xexec"		TitleIcon mini-run2.xpm
+Style "run"		TitleIcon mini-run2.xpm
+Style "*hostview"	TitleIcon mini-gv.xpm
+Style "Xcolorsel"	TitleIcon mini-colors.xpm
+Style "IDL*"		TitleIcon mini-zoom.xpm
+Style "xeyes"		TitleIcon mini-eyes.xpm
+Style "*fm*"		TitleIcon mini-filemgr.xpm
+Style "*calc"		TitleIcon mini-calc.xpm
+Style "*atlab*"		TitleIcon mini-matlab.xpm
+Style "Explorer"	TitleIcon mini-ofolder.xpm
+Style "FvwmPager"	TitleIcon mini-pager.xpm
+Style "AcroRead"	TitleIcon mini-pdf.xpm
+Style "XClipboard"	TitleIcon mini-clipboard.xpm
+
+# Zephyr
+Style "*zwgc"		TitleIcon mini-zwgc.xpm
+Style "*XZ*"		TitleIcon mini-zwgc.xpm
+Style "*zwrite"		TitleIcon mini-zwgc.xpm
+Style "*znol"		TitleIcon mini-zwgc.xpm
+
+# kde
+Style "kvt"		TitleIcon mini-term.xpm
+Style "*find"		TitleIcon mini-zoom.xpm
+Style "kedit"		TitleIcon mini-notepad.xpm
+Style "khexdit"		TitleIcon mini-hex.xpm
+Style "kpaint"		TitleIcon mini-mspaint.xpm
+Style "kpat"		TitleIcon mini-cards.xpm
+Style "kdisplay"	TitleIcon mini-contpanel.xpm
+Style "krun"		TitleIcon mini-run2.xpm
+Style "kcli"		TitleIcon mini-run2.xpm
+Style "krlogin"		TitleIcon mini-connect.xpm
+
+# internet
+Style "NcFtp"		TitleIcon mini-ftp.xpm
+Style "Netscape*"	TitleIcon mini-nscape.xpm
+Style "Mosaic"		TitleIcon mini-mosaic.xpm
+Style "*elnet*"		TitleIcon mini-peer.xpm
+Style "*ppp*"		TitleIcon mini-connect.xpm
+Style "PPP"		TitleIcon mini-connect.xpm
+Style "Mail"		TitleIcon mini-mail.xpm
+Style "*exmh*"		TitleIcon mini-mail.xpm
+
+# emulators
+Style "x64"		TitleIcon mini-x64.xpm
+Style "*Executor*"	TitleIcon mini-executor.xpm
+
+# comm
+Style "Seyon"		TitleIcon mini-hyperterm.xpm
+Style "Ucomm"		TitleIcon mini-hyperterm.xpm
+Style "dial"		TitleIcon mini-hyperterm.xpm
+Style "pbook"		TitleIcon mini-hyperterm.xpm
+Style "Xrz"		TitleIcon mini-hyperterm.xpm
+
+# game
+Style "*Boing*"		TitleIcon mini.xboing.xpm
+Style "*pilot*"		TitleIcon mini-xpilot.xpm
+Style "*tris*"		TitleIcon mini-tetris.xpm
+Style "dumb"		NoButton 2, NoButton 4, NoHandles
+
+# textutil
+Style "*Maker*"		TitleIcon mini-edit.xpm
+Style "emacs*"		TitleIcon mini-edit.xpm
+Style "textedit"	TitleIcon mini-edit.xpm
+Style "Cedit"		TitleIcon mini-edit.xpm
+
+# multimedia
+Style "*playcd*"	TitleIcon mini-cdplayer.xpm
+Style "Workman"		TitleIcon mini-cdplayer.xpm
+Style "xmcd"		TitleIcon mini-cdplayer.xpm
+Style "xmixer"		TitleIcon mini-mixer.xpm
+Style "axset"		TitleIcon mini-mixer.xpm, Sticky
+Style "audiocontrol"	TitleIcon mini-mixer.xpm, Sticky
+
+
+# manualpagers icons
+Style "*man*"		TitleIcon mini-help.xpm
+Style "topBox"		TitleIcon mini-help.xpm
+Style "*help"		TitleIcon mini-help.xpm
+Style "manualBrowser"	TitleIcon mini-help.xpm
+
+# program developing
+Style "XDbx"		TitleIcon mini-bug2.xpm
+Style "*DDD*"		TitleIcon mini-bug2.xpm
+Style "*gdb*"		TitleIcon mini-bug2.xpm
+
+# graphics
+Style "*xv*"		TitleIcon mini-xv.xpm
+Style "*XVroot*"	TitleIcon mini-xv.xpm
+Style "*3.10*"		TitleIcon mini-xv.xpm
+Style "*Gimp*"		TitleIcon mini-paint.xpm
+Style "xpaint"		TitleIcon mini-palette.xpm
+Style "Canvas"		TitleIcon mini-paint.xpm
+Style "fatbits"		TitleIcon mini-paint.xpm
+Style "filebrowser"	TitleIcon mini-ofolder.xpm
+Style "XbmBrowser"	TitleIcon mini-paint.xpm
+Style "Bitmap"		TitleIcon mini-paint.xpm
+Style "Pixmap"		TitleIcon mini-paint.xpm

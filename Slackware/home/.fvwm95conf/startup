@@ -1,0 +1,18 @@
+#========================================================================#
+#
+# Stuff to do at start-up
+#
+
+DestroyFunc "InitFunction" 
+AddToFunc "InitFunction"
+# uncomment the followin line to enable auto-raise with mouse focus:
+#+ "I"  Module FvwmAuto 500
++ "I"	Exec krlogin -geometry -0-114 &
++ "I"	RestartFunction
+
+DestroyFunc "RestartFunction"
+AddToFunc "RestartFunction"
++ "I"	Exec xsetroot -cursor_name top_left_arrow
++ "I"	Module FvwmTaskBar
++ "I"	Module FvwmButtons
+#+ "I"	Module FvwmButtons MiniButtons
