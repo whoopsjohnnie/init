@@ -1,0 +1,371 @@
+##############################################################################
+# FVWM - F? Virtual Window Manager, Version 2.x (fvwm2) Configuration File
+# Section added April 1997 James G. Feeney <james@albion.glarp.com>
+#
+
+##############################################################################
+# Menu
+#
+AddToMenu "Automata-Lock"
++	"Automata-Lock"	Title
++	"Ant"		Exec	hlock -mode ant -neighbors 4 +truchet
++	"Ant Truchet"	Exec	hlock -mode ant -neighbors 4 -truchet
++	"Bee"		Exec	hlock -mode ant -neighbors 6 +truchet
++	"Bee Truchet"	Exec	hlock -mode ant -neighbors 6 -truchet
++	"Bug"		Exec	hlock -mode bug
++	"Demon"		Exec	hlock -mode demon
++	"Life"		Exec	hlock -mode life
++	"Life1d"	Exec	hlock -mode life1d
++	"Life3d"	Exec	hlock -mode life3d
++	"Loop"		Exec	hlock -mode loop
++	"Voters"	Exec	hlock -mode voters
++	"Wator"		Exec	hlock -mode wator
++	"Wire"		Exec	hlock -mode wire
++	"Random"	Exec	hlock -mode random -modelist ant,bug,demon,life,life1d,life3d,loop,voters,wator,wire -fullrandom -neighbors 0
+
+##############################################################################
+# Menu
+#
+AddToMenu "Fractal-Lock"
++	"Fractal-Lock"	Title
++	"Drift"		Exec	hlock -mode drift -fullrandom
++	"Flame"		Exec	hlock -mode flame
++	"Forest"	Exec	hlock -mode forest
++	"Fract"	Exec	hlock -mode fract
++	"Hop"		Exec	hlock -mode hop -fullrandom
++	"IFS"	Exec	hlock -mode ifs
++	"Julia"		Exec	hlock -mode julia
++	"Lightning"	Exec	hlock -mode lightning
++	"Mountain"	Exec	hlock -mode mountain
++	"Sierpinski"	Exec	hlock -mode sierpinski 
++	"Strange"	Exec	hlock -mode strange 
++	"Triangle"	Exec	hlock -mode triangle
++	"Turtle"	Exec	hlock -mode turtle
++	"Random"	Exec	hlock -mode random -modelist drift,flame,forest,fract,hop,ifs,julia,lightning,mountain,sierpinski,strange,triangle,turtle -fullrandom
+
+##############################################################################
+# Menu
+#
+AddToMenu "Geometry-Lock"
++	"Geometry-Lock"	Title
++	"Braid"		Exec	hlock -mode braid
+#	"Gear"		Exec	hlock -mode gear
++	"Geometry"	Exec	hlock -mode geometry
++	"Helix"		Exec	hlock -mode helix -fullrandom
++	"Hyper"		Exec	hlock -mode hyper
++	"Ico"		Exec	hlock -mode ico
++	"Kaleid"	Exec	hlock -mode kaleid
++	"Laser"		Exec	hlock -mode laser
++	"Lisa"	Exec	hlock -mode lisa
++	"Lissie"	Exec	hlock -mode lissie
++	"Penrose"	Exec	hlock -mode penrose +ammann
++	"Penrose Ammann"	Exec hlock -mode penrose -ammann
++	"Petal"		Exec	hlock -mode petal
++	"Qix"		Exec	hlock -mode qix
++	"Rotor"		Exec	hlock -mode rotor
++	"Shape"		Exec	hlock -mode shape
++	"Sphere"	Exec	hlock -mode sphere
++	"Spiral"	Exec	hlock -mode spiral
++	"Spline"	Exec	hlock -mode spline
++	"Random"	Exec	hlock -mode random -modelist braid,geometry,helix,hyper,ico,kaleid,laser,lisa,lissie,penrose,petal,qix,shape,sphere,spiral,spline -fullrandom
+
+##############################################################################
+# Menu
+#
+AddToMenu "Space-Lock"
++	"Space-Lock"	Title
++	"Bouboule"	Exec	hlock -mode bouboule +use3d
++	"Bouboule3d"	Exec	hlock -mode bouboule -use3d
++	"Galaxy"	Exec	hlock -mode galaxy
++	"Grav"		Exec	hlock -mode grav +trail +decay
++	"Grav Trail"	Exec	hlock -mode grav -trail
++	"Grav Decay"	Exec	hlock -mode grav -decay
++	"Rock"		Exec	hlock -mode star -rock
++	"Star"		Exec	hlock -mode star +rock +use3d +trek 0
++	"Star3d"	Exec	hlock -mode star -use3d
++	"Star Trek"	Exec	hlock -mode star -trek 100
++	"World"		Exec	hlock -mode world
++	"Random Space"	Exec	hlock -mode random -modelist bouboule,galaxy,grav,star,world
+
+##############################################################################
+# Menu
+#
+AddToMenu "Assorted-Lock"
++	"Assorted-Lock"	Title
++	"Ball"		Exec	hlock -mode ball
++	"Bat"		Exec	hlock -mode bat
++	"Blot"		Exec	hlock -mode blot
++	"Bounce"	Exec	hlock -mode bounce
++	"Cartoon"	Exec	hlock -mode cartoon
++	"Clock"		Exec	hlock -mode clock
++	"Crystal"	Exec	hlock -mode crystal
++	"Daisy"		Exec	hlock -mode daisy
++	"Dclock"	Exec	hlock -mode dclock
++	"Eyes"		Exec	hlock -mode eyes
++	"Flag"		Exec	hlock -mode flag
++	"Image"		Exec	hlock -mode image
++	"Marquee"	Exec	hlock -mode marquee
++	"Maze"		Exec	hlock -mode maze
++	"Nose"		Exec	hlock -mode nose
++	"Pacman"	Exec	hlock -mode pacman
++	"Puzzle"	Exec	hlock -mode puzzle
++	"Pyro"		Exec	hlock -mode pyro +use3d
++	"Pyro3d"	Exec	hlock -mode pyro -use3d
++	"Roll"		Exec	hlock -mode roll
++	"Slip"		Exec	hlock -mode slip
++	"Swarm"		Exec	hlock -mode swarm
++	"Swirl"		Exec	hlock -mode swirl -install
++	"Worm"		Exec	hlock -mode worm +use3d
++	"Worm3d"	Exec	hlock -mode worm -use3d
+
+##############################################################################
+# Menu
+#
+AddToMenu "GL-Lock"
++	"GL-Lock"	Title	
++	"Escher"		Exec	hlock -mode escher
++	"Gears"		Exec	hlock -mode gears
++	"Morph3d"		Exec	hlock -mode morph3d
++	"Pipes"		Exec	hlock -mode pipes
++	"Sproingies"		Exec	hlock -mode sproingies
++	"Superquadrics"		Exec	hlock -mode superquadrics
++ "Random"   Exec	hlock -mode random -modelist allgl -fullrandom
+
+##############################################################################
+# Menu
+#
+AddToMenu "Marquee-Message-Lock"
++	"Message-Lock"	Title	
++	"Back Soon"		Exec	hlock -mode marquee -message "$LOGNAME will be back soon."
++	"Overnight"		Exec	hlock -mode marquee -message "$LOGNAME will be back in the morning."
++	"Rude"		Exec	hlock -mode marquee -message "$LOGNAME not here, please go away!"
+
+##############################################################################
+# Menu
+#
+AddToMenu "Nose-Message-Lock"
++ "Nose-Message"  Title
++	"Message-Lock"	Title	
++	"Back Soon"		Exec	hlock -mode nose -message "$LOGNAME will be back soon."
++	"Overnight"		Exec	hlock -mode nose -message "$LOGNAME will be back in the morning."
++	"Rude"		Exec	hlock -mode nose -message "$LOGNAME not here, please go away!"
+
+##############################################################################
+# Menu
+#
+AddToMenu "Special-Lock"
++	"Special-Lock"	Title	
++	"Blank"		Exec	hlock -mode blank
++	"Bomb"		Exec	hlock -mode bomb
++	"Random nice"	Exec	hlock -mode random -modelist allnice -fullrandom -neighbors 0
++	"Random standard"	Exec	hlock -mode random -modelist allstandard -fullrandom -neighbors 0
++	"Random stable"	Exec	hlock -mode random -modelist allstable -fullrandom -neighbors 0
++	"Random all"	Exec	hlock -mode random -modelist all -fullrandom -neighbors 0
+
+##############################################################################
+# Menu
+#
+AddToMenu "Automata-Saver"
++	"Automata-Saver"	Title
++	"Ant"		Exec	hlock -nolock -mode ant -neighbors 4 +truchet
++	"Ant Truchet"	Exec	hlock -nolock -mode ant -neighbors 4 -truchet
++	"Bee"		Exec	hlock -nolock -mode ant -neighbors 6 +truchet
++	"Bee Truchet"	Exec	hlock -nolock -mode ant -neighbors 6 -truchet
++	"Bug"		Exec	hlock -nolock -mode bug
++	"Demon"		Exec	hlock -nolock -mode demon
++	"Life"		Exec	hlock -nolock -mode life
++	"Life1d"	Exec	hlock -nolock -mode life1d
++	"Life3d"	Exec	hlock -nolock -mode life3d
++	"Loop"		Exec	hlock -nolock -mode loop
++	"Voters"	Exec	hlock -nolock -mode voters
++	"Wator"		Exec	hlock -nolock -mode wator
++	"Wire"		Exec	hlock -nolock -mode wire
++	"Random"	Exec	hlock -nolock -mode random -modelist ant,bug,demon,life,life1d,life3d,loop,voters,wator,wire -fullrandom -neighbors 0
+
+##############################################################################
+# Menu
+#
+AddToMenu "Fractal-Saver"
++	"Fractal-Saver"	Title
++	"Drift"		Exec	hlock -nolock -mode drift -fullrandom
++	"Flame"		Exec	hlock -nolock -mode flame
++	"Forest"	Exec	hlock -nolock -mode forest
++	"Fract"		Exec	hlock -nolock -mode fract
++	"Hop"		Exec	hlock -nolock -mode hop -fullrandom
++	"IFS"		Exec	hlock -nolock -mode ifs
++	"Julia"		Exec	hlock -nolock -mode julia
++	"Lightning"	Exec	hlock -nolock -mode lightning
++	"Mountain"	Exec	hlock -nolock -mode mountain
++	"Sierpinski"	Exec	hlock -nolock -mode sierpinski
++	"Strange"		Exec	hlock -nolock -mode strange
++	"Triangle"	Exec	hlock -nolock -mode triangle
++	"Turtle"	Exec	hlock -nolock -mode turtle
++	"Random"	Exec	hlock -nolock -mode random -modelist drift,flame,forest,fract,hop,ifs,julia,lightning,mountain,sierpinski,strange,triangle,turtle -fullrandom
+
+##############################################################################
+# Menu
+#
+AddToMenu "Geometry-Saver"
++	"Geometry-Saver"	Title
++	"Braid"		Exec	hlock -nolock -mode braid
+#	"Gear"		Exec	hlock -nolock -mode gear
++	"Geometry"	Exec	hlock -nolock -mode geometry
++	"Helix"		Exec	hlock -nolock -mode helix -fullrandom
++	"Hyper"		Exec	hlock -nolock -mode hyper
++	"Ico"		Exec	hlock -nolock -mode ico
++	"Kaleid"	Exec	hlock -nolock -mode kaleid
++	"Laser"		Exec	hlock -nolock -mode laser
++	"Lisa"	Exec	hlock -nolock -mode lisa
++	"Lissie"	Exec	hlock -nolock -mode lissie
++	"Penrose"	Exec	hlock -nolock -mode penrose +ammann
++	"Penrose Ammann"	Exec hlock -nolock -mode penrose -ammann
++	"Petal"		Exec	hlock -nolock -mode petal
++	"Qix"		Exec	hlock -nolock -mode qix
++	"Rotor"		Exec	hlock -nolock -mode rotor
++	"Shape"		Exec	hlock -nolock -mode shape
++	"Sphere"	Exec	hlock -nolock -mode sphere
++	"Spiral"	Exec	hlock -nolock -mode spiral
++	"Spline"	Exec	hlock -nolock -mode spline
++	"Random"	Exec	hlock -nolock -mode random -modelist braid,geometry,helix,hyper,kaleid,laser,lisa,lissie,penrose,petal,qix,shape,sphere,spiral,spline
+
+##############################################################################
+# Menu
+#
+AddToMenu "Space-Saver"
++	"Space-Saver"	Title
++	"Bouboule"	Exec	hlock -nolock -mode bouboule +use3d
++	"Bouboule3d"	Exec	hlock -nolock -mode bouboule -use3d
++	"Galaxy"	Exec	hlock -nolock -mode galaxy
++	"Grav"		Exec	hlock -nolock -mode grav +trail +decay
++	"Grav Trail"	Exec	hlock -nolock -mode grav -trail
++	"Grav Decay"	Exec	hlock -nolock -mode grav -decay
++	"Rock"		Exec	hlock -nolock -mode star -rock
++	"Star"		Exec	hlock -nolock -mode star +rock +use3d +trek 0
++	"Star3d"	Exec	hlock -nolock -mode star -use3d
++	"Star Trek"	Exec	hlock -nolock -mode star -trek 100
++	"World"		Exec	hlock -nolock -mode world
++	"Random Space"	Exec	hlock -nolock -mode random -modelist bouboule,galaxy,grav,star,world
+
+##############################################################################
+# Menu
+#
+AddToMenu "Assorted-Saver"
++	"Assorted-Saver"	Title
++	"Ball"		Exec	hlock -nolock -mode ball
++	"Bat"		Exec	hlock -nolock -mode bat
++	"Blot"		Exec	hlock -nolock -mode blot
++	"Bounce"	Exec	hlock -nolock -mode bounce
++	"Cartoon"	Exec	hlock -nolock -mode cartoon
++	"Clock"		Exec	hlock -nolock -mode clock
++	"Crystal"	Exec	hlock -nolock -mode crystal
++	"Daisy"		Exec	hlock -nolock -mode daisy
++	"Dclock"	Exec	hlock -nolock -mode dclock
++	"Eyes"		Exec	hlock -nolock -mode eyes
++	"Flag"		Exec	hlock -nolock -mode flag
++	"Image"		Exec	hlock -nolock -mode image
++	"Marquee"	Exec	hlock -nolock -mode marquee
++	"Maze"		Exec	hlock -nolock -mode maze
++	"Nose"		Exec	hlock -nolock -mode nose
++	"Pacman"	Exec	hlock -nolock -mode pacman
++	"Puzzle"	Exec	hlock -nolock -mode puzzle
++	"Pyro"		Exec	hlock -nolock -mode pyro +use3d
++	"Pyro3d"	Exec	hlock -nolock -mode pyro -use3d
++	"Roll"		Exec	hlock -nolock -mode roll
++	"Slip"		Exec	hlock -nolock -mode slip
++	"Swarm"		Exec	hlock -nolock -mode swarm
++	"Swirl"		Exec	hlock -nolock -mode swirl -install
++	"Worm"		Exec	hlock -nolock -mode worm +use3d
++	"Worm3d"	Exec	hlock -nolock -mode worm -use3d
+
+##############################################################################
+# Menu
+#
+AddToMenu "GL-Saver"
++	"GL-Saver"	Title	
++	"Escher"		Exec	hlock -nolock -mode escher
++	"Gears"		Exec	hlock -nolock -mode gears
++	"Morph3d"		Exec	hlock -nolock -mode morph3d
++	"Pipes"		Exec	hlock -nolock -mode pipes
++	"Sproingies"		Exec	hlock -nolock -mode sproingies
++	"Superquadrics"		Exec	hlock -nolock -mode superquadrics
++ "Random"   Exec	hlock -nolock -mode random -modelist allgl -fullrandom
+
+##############################################################################
+# Menu
+#
+AddToMenu "Marquee-Message-Saver"
++	"Marquee-Message"	Title
++	"Brilliant!"	Exec	hlock -nolock -mode marquee -message "WOW! $LOGNAME, You're Brilliant!"
++	"Love You"	Exec	hlock -nolock -mode marquee -message "You know, I Love You $LOGNAME."
++	"Available"	Exec	hlock -nolock -mode marquee -message "Hey, I'm available now!"
+
+##############################################################################
+# Menu
+#
+AddToMenu "Nose-Message-Saver"
++	"Nose-Message"	Title
++	"Brilliant!"	Exec	hlock -nolock -mode nose -message "WOW! $LOGNAME, You're Brilliant!"
++	"Love You"	Exec	hlock -nolock -mode nose -message "You know, I Love You $LOGNAME."
++	"Available"	Exec	hlock -nolock -mode nose -message "Hey, I'm available now!"
+
+##############################################################################
+# Menu
+#
+AddToMenu "Special-Saver"
++	"Special-Saver"	Title	
++	"Blank"		Exec	hlock -nolock -mode blank
++	"Bomb"		Exec	hlock -nolock -mode bomb
++	"Random nice"	Exec	hlock -nolock -mode random -modelist allnice -fullrandom -neighbors 0
++	"Random standard"	Exec	hlock -nolock -mode random -modelist allstandard -fullrandom -neighbors 0
++	"Random stable"	Exec	hlock -nolock -mode random -modelist allstable -fullrandom -neighbors 0
++	"Random all"	Exec	hlock -nolock -mode random -modelist all -fullrandom -neighbors 0
+
+##############################################################################
+# Menu
+#
+
+DestroyMenu Screenlock
+AddToMenu Screenlock
++	"Screen Lock"		Title
++	"Cellular Automata"	Popup Automata-Lock
++       ""                      Nop
++	"Fractal"		Popup Fractal-Lock
++       ""                      Nop
++	"Geometry"		Popup Geometry-Lock
++       ""                      Nop
++	"Space"			Popup Space-Lock
++       ""                      Nop
++	"Assorted"		Popup Assorted-Lock
++       ""                      Nop
+#+	"GL"		Popup GL-Lock
+#+       ""                      Nop
++	"Marquee Message"	Popup Marquee-Message-Lock
++       ""                      Nop
++	"Nose Message"		Popup Nose-Message-Lock
++       ""                      Nop
++	"Special"		Popup Special-Lock
+
+##############################################################################
+# Menu
+#
+
+DestroyMenu Screensaver
+AddToMenu Screensaver
++	"Screensaver"		Title
++	"Cellular Automata"	Popup Automata-Saver
++	""			Nop
++	"Fractal"		Popup Fractal-Saver
++       ""      		Nop
++	"Geometry"		Popup Geometry-Saver
++       ""      		Nop
++	"Space"			Popup Space-Saver
++       ""      		Nop
++	"Assorted"		Popup Assorted-Saver
++       ""      		Nop
+#+	"GL"		Popup GL-Saver
+#+       ""      		Nop
++	"Marquee Message"	Popup Marquee-Message-Saver
++       ""                      Nop
++	"Nose Message"		Popup Nose-Message-Saver
++       ""                      Nop
++	"Special"		Popup Special-Saver

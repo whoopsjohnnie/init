@@ -1,0 +1,119 @@
+#
+#                   Configuration file for fvwm95
+#
+#         Administrated by Marcus Sundberg <e94_msu@e.kth.se>
+# 
+#                    Last changed:  03-Sep 1997
+#
+# Om du vill ändra på några inställningar i fvwm95 så skall du skapa
+# en katalog '.fvwm95conf' i din hemkatalog.
+# Där skall konfigurationsfilerna ligga.
+# Använd i första hand filen user-conf för dina inställningar.
+# I katalogen /misc/hacks/lib/X11/fvwm95/config ligger
+# standardinställlningarna, titta på dessa för att se vad som kan ändras.
+#
+#========================================================================#
+#
+# Module path and paths to the icons
+# Paths are a colon-separated list, just like regular unix PATH
+#
+# ModulePath /misc/hacks/lib/X11/fvwm95/modules
+ModulePath /usr/lib64/X11/fvwm95/
+PixmapPath /misc/hacks/icons:/misc/hacks/icons/mini:/misc/hacks/icons/NEXT
+IconPath   /usr/include/X11/bitmaps
+
+
+Read .fvwm95conf/user-preconf
+
+#========================================================================#
+#
+# Set up the appearance and operation of fvwm95.
+#
+Read .fvwm95conf/fonts
+
+Read .fvwm95conf/colors
+
+Read .fvwm95conf/operation
+
+#========================================================================#
+#
+# Set the decoration styles and window options
+#
+Read .fvwm95conf/windowstyles
+
+#========================================================================#
+#
+# Some mini-icons for the title bar
+#
+Read .fvwm95conf/mini-icons
+
+#========================================================================#
+#
+# Stuff to do at start-up
+#
+Read .fvwm95conf/startup
+
+#========================================================================#
+#
+# Now define some handy complex functions
+#
+Read .fvwm95conf/functions
+
+#========================================================================#
+#
+# Configure the menus
+#
+Read .fvwm95conf/start-menu
+
+Read .fvwm95conf/root-menu
+
+Read .fvwm95conf/menus
+
+Read .fvwm95conf/modules-menu
+
+Read .fvwm95conf/hlock-menus
+
+Read .fvwm95conf/window-menu
+
+#========================================================================#
+#
+# Mouse bindings
+#
+Read .fvwm95conf/mouse-bindings
+
+#========================================================================#
+#
+# Key bindings
+#
+Read .fvwm95conf/key-bindings
+
+#========================================================================#
+#
+# Definitions used by the modules
+#
+
+Read .fvwm95conf/misc-modules
+
+Read .fvwm95conf/fvwmpager
+
+Read .fvwm95conf/fvwmbuttons
+
+
+#========================================================================#
+#
+# User specified settings
+#
+Read .fvwm95conf/user-conf
+
+#========================================================================#
+#
+# Settings made by FvwmConfig
+#
+Read .fvwm95rc-config
+
+#========================================================================#
+#
+# TaskBar settings, must be loaded last.
+#
+Read .fvwm95conf/fvwmtaskbar
+

@@ -118,6 +118,13 @@ fi
 #---------------------------
 #Mina ändringar
 
+# Håll ner en knapp för repeat
+xset r
+
+# Pager i git skriver ESC
+export PAGER="less"
+export LESS="R"
+
 # Need to port this from csh to sh
 # set autolist
 # set correct=cmd

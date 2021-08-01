@@ -1,0 +1,75 @@
+#========================================================================#
+#
+# FvwmTaskBar
+#
+Style "FvwmTaskBar" NoTitle,BorderWidth 4,HandleWidth 4,Sticky,StaysOnTop,WindowListSkip,CirculateSkip
+
+
+*FvwmTaskBarGeometry	+0-0
+*FvwmTaskBarFore	Black
+*FvwmTaskBarBack	#c0c0c0
+*FvwmTaskBarTipsFore	black
+*FvwmTaskBarTipsBack	bisque
+*FvwmTaskBarFont	-adobe-helvetica-medium-r-*-*-*-120-*-*-*-*-*-*
+*FvwmTaskBarSelFont	-adobe-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
+*FvwmTaskBarAction	Click1 Raise, Focus, Iconify -1
+*FvwmTaskBarAction	Click2 Module "FvwmIdent" FvwmIdent
+*FvwmTaskBarAction	Click3 Popup WindowMenu
+*FvwmTaskBarUseSkipList
+*FvwmTaskBarAutoStick
+*FvwmTaskBarStartName	Start
+*FvwmTaskBarStartMenu	StartMenu
+*FvwmTaskBarStartIcon	/misc/hacks/icons/mini/mini-start.xpm
+*FvwmTaskBarUpdateInterval 1
+*FvwmTaskBarShowTips
+*FvwmTaskBarUseIconNames
+
+# Now the goodies....
+
+*FvwmTaskBarGoodyLoadablePlugins /misc/hacks/lib/X11/fvwm95/plugins
+*FvwmTaskBarGoodyLoadableQuiet
+
+# Mail
+#*FvwmTaskBarGoodyLoadableSymbol MailCheckModuleSymbol
+#*FvwmTaskBarGoodyLoadableId .MAIL
+*FvwmTaskBarMailCheckModuleMailIcon.MAIL mini-mail.xpm
+*FvwmTaskBarMailCheckModuleCommand.MAIL ActivateWindow exmh exmh
+*FvwmTaskBarMailCheckModuleNewMailIcon.MAIL mini-unreadmail.xpm
+*FvwmTaskBarMailCheckModuleNewMailTip.MAIL You have new mail
+*FvwmTaskBarMailCheckModuleNewMailCommand.MAIL beep
+*FvwmTaskBarMailCheckModuleUnreadMailIcon.MAIL mini-newmail.xpm
+*FvwmTaskBarMailCheckModuleMsgChk.MAIL /usr/local/mh/bin/msgchk
+*FvwmTaskBarMailCheckModuleRate.MAIL 1
+#*FvwmTaskBarMailCheckModuleAutoMailTip.MAIL
+#*FvwmTaskBarMailCheckModuleMailTipUnblankScreen.MAIL
+#*FvwmTaskBarMailCheckModuleMailTipFormat.MAIL 1 0 10 2 10
+
+# Sound mixer
+*FvwmTaskBarGoodyLoadableSymbol GoodyModuleSymbol
+*FvwmTaskBarGoodyLoadableId .SPEAKER
+*FvwmTaskBarGoodyModuleIcon.SPEAKER mini-speaker.xpm
+*FvwmTaskBarGoodyModuleTip.SPEAKER Soundprogs are in /usr/opt/MME241/bin/mme/
+*FvwmTaskBarGoodyModuleCommand.SPEAKER ActivateWindow audiocontrol /usr/opt/MME241/bin/mme/audiocontrol
+
+# Screen lock
+*FvwmTaskBarGoodyLoadableSymbol GoodyModuleSymbol
+*FvwmTaskBarGoodyLoadableId .LOCK
+*FvwmTaskBarGoodyModuleIcon.LOCK mini-lock.xpm
+*FvwmTaskBarGoodyModuleTip.LOCK Lock Screen
+*FvwmTaskBarGoodyModuleCommand.LOCK Exec xlock
+
+# Date
+*FvwmTaskBarGoodyLoadableSymbol ShowDateModuleSymbol
+*FvwmTaskBarGoodyLoadableId .DATE
+*FvwmTaskBarShowDateModuleTip.DATE Date
+*FvwmTaskBarShowDateModuleCommand.DATE Exec xmessage `date` 
+*FvwmTaskBarShowDateModuleClockFormat.DATE %H:%M:%S
+#*FvwmTaskBarShowDateModuleHourlyCommand.DATE beep
+
+
+# -----------------------------------------------
+# Obsloleted stuff
+#*FvwmTaskBarMixer
+#*FvwmTaskBarMixTip	Soundprogs are in /usr/opt/MME241/bin/mme/
+#*FvwmTaskBarMixCommand	ActivateWindow audiocontrol /usr/opt/MME241/bin/mme/audiocontrol
+#*FvwmTaskBarClockFormat	%H:%M:%S
