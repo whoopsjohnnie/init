@@ -1,0 +1,19 @@
+#
+# $Header: /afs/.nada.kth.se/usr/local/etc/nadaskel/srcfiles/sv/RCS/.aliases,v 1.2 1997/08/07 10:22:08 fjo Exp $
+#
+#  Här kan du definiera "alias" för ofta använda kommandon.
+#
+#  Tecknen \!* märker ut platsen där ev. argument hamnar.
+#  Vill du veta mer om denna fil, läs i filen README i din hemkatalog.
+#
+#  (.aliases 2.0)
+
+alias lf 'ls -F'		# lista filer och visa typ-markering
+alias ll 'ls -laF'		# lista alla filer på långt format
+alias lsd 'cd \!* ; ls -aF'	# gå till en katalog och lista innehållet
+alias h 'history -r | more'	# visa skalets historielista
+alias logo 'logout'
+
+#  Denna låter emacs köra i bakgrunden om man är i X-miljö, i förgrunden annars.
+alias em 'eval "emacs \!* "`if ( $?DISPLAY ) echo "&"`'
+

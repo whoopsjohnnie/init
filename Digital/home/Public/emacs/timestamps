@@ -1,0 +1,11 @@
+
+-rw-r--r--   1 john  wheel   5320  5 Feb 12:41:51 2001 .emacs
+-rw-r--r--   1 john  wheel   1817  5 Feb 12:40:44 2001 FSF-emacs
+-rw-r--r--   1 john  wheel   1535  5 Feb 12:40:44 2001 xemacs-c.el
+-rw-r--r--   1 john  wheel   7111  5 Feb 12:40:44 2001 xemacs-general.el
+-rw-r--r--   1 john  wheel   2160  5 Feb 12:40:44 2001 xemacs-idl.el
+-rw-r--r--   1 john  wheel   3789  5 Feb 12:40:44 2001 xemacs-keys.el
+-rw-r--r--   1 john  wheel   3154  5 Feb 12:40:45 2001 xemacs-latex.el
+-rw-r--r--   1 john  wheel  10071  5 Feb 12:40:45 2001 xemacs-mail.el
+-rw-r--r--   1 john  wheel   4799  5 Feb 12:40:45 2001 xemacs-packages.el
+
