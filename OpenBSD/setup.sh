@@ -5,10 +5,13 @@
 # 
 pkg_add -aI sudo--
 
-# 
+# Editors
 pkg_add -aI vim--gtk3
 pkg_add -aI emacs--gtk3
 # pkg_add -aI emacs-nox
+pkg_add -aI xemacs--
+
+# 
 pkg_add -aI git
 
 # 
