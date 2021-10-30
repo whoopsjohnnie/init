@@ -43,7 +43,7 @@ export PROMPT="%n@%M %~>"
 
 # Env
 export EDITOR="vim"
-export PAGER="less"
+#export PAGER="less"
 
 # JAVA
 # export JAVA_HOME=$(/usr/libexec/java_home)
@@ -83,3 +83,33 @@ export PAGER="less"
 
 # The next line enables shell command completion for gcloud.                                                                                                                                      
 # if [ -f '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# 
+# ssh agent
+#
+mkdir -p ~/.tmp
+ 
+check-ssh-agent() {
+    [ -S "$SSH_AUTH_SOCK" ] && { ssh-add -l >& /dev/null || [ $? -ne 2 ]; }
+}
+
+# attempt to connect to a running agent
+check-ssh-agent || export SSH_AUTH_SOCK="$(< ~/.tmp/ssh-agent.env)"
+# if agent.env data is invalid, start a new one
+check-ssh-agent || {
+    eval "$(ssh-agent -s)" > /dev/null
+    echo "$SSH_AUTH_SOCK" > ~/.tmp/ssh-agent.env
+}
+
+# 
+# ssh agent
+# https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+# 
+# killall ssh-agent
+# eval "$(ssh-agent -s)"
+
+# 
+# ssh keys
+# 
+ssh-add ~/.ssh/john_github
+

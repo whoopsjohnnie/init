@@ -4,18 +4,52 @@
 # Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2016-01-04_at_00:22:49
 ##
 
+# 
+# emulate sh -c 'source /etc/profile'
+
+# 
+autoload -U compinit promptinit
+promptinit
+compinit
+
+# 
+zstyle ':completion:*' insert-tab false
+# zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# LSCOLORS
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# Aliases
+# alias h='history 1'
+alias history='history 1'
+alias ll='ls -lG'
+alias la='ls -aG'
+alias ls='ls -G'
+
+# Path
 # MacPorts Installer addition on 2016-01-04_at_00:22:49: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# Local bin
+export PATH="$HOME/bin/:$PATH"
+
 # prompt
-export PS1="\u@\h \w>"
+# export PS1="\u@\h \w>"
+# export PROMPT="%n@%m %~>"
+export PROMPT="%n@%M %~>"
+
+# Env
+# export EDITOR="vim"
+# export PAGER="less"
 
 # JAVA
 # export JAVA_HOME=$(/usr/libexec/java_home)
 # export PATH=${JAVA_HOME}/bin:$PATH
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
 # jenv global 1.8.0.92
 
 # Python path, set $PATH before so system python is default to not screw with system and installers
@@ -27,12 +61,12 @@ eval "$(jenv init -)"
 # export GOPATH=$HOME/go
 
 # NPM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -44,11 +78,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # uninstall by removing these lines or running `tabtab uninstall slss`
 # [ -f /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/slss.bash ] && . /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/slss.bash
 
-# The next line updates PATH for the Google Cloud SDK.                                                                                                          
+# The next line updates PATH for the Google Cloud SDK.                                                                                                                                            
 # if [ -f '/Users/john/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/john/Downloads/google-cloud-sdk/path.bash.inc'; fi
 
-# The next line enables shell command completion for gcloud.                                                                                                    
+# The next line enables shell command completion for gcloud.                                                                                                                                      
 # if [ -f '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc'; fi
-
-# Local bin                                                                                                                                                                                      
-export PATH="$HOME/bin/:$PATH"

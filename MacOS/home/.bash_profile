@@ -19,19 +19,26 @@ eval "$(jenv init -)"
 # jenv global 1.8.0.92
 
 # Python path, set $PATH before so system python is default to not screw with system and installers
-export PATH="$PATH:~/Library/Python/2.7/bin/:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/"
+# export PATH="$PATH:~/Library/Python/2.7/bin/:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/"
 
 # GO
-# export GOPATH=/usr/local/go
-export PATH="$PATH:/usr/local/go/bin"
-export GOPATH=$HOME/go 
+# # export GOPATH=/usr/local/go
+# export PATH="$PATH:/usr/local/go/bin"
+# export GOPATH=$HOME/go 
 
+# NPM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/john/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/john/Downloads/google-cloud-sdk/path.bash.inc'; fi
+# if [ -f '/Users/john/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/john/Downloads/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+# if [ -f '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# Local bin                                                                                                                                                                                               
+export PATH="$HOME/bin/:$PATH"
