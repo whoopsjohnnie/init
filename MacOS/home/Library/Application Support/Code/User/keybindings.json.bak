@@ -1,0 +1,16 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+x 2",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+v",
+        "command": "-emacs.cursorPageUp",
+        "when": "editorTextFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "cmd+x",
+        "command": "-workbench.action.showCommands"
+    }
+]
