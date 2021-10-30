@@ -1,13 +1,21 @@
 
 Ubuntu versions
 
-12.04 Precise Server - AWS EC2 AMI Image in 2012 (Fri Aug 03 2012 PDT)
-16.04 Xenial - 
-16.04 Xenial Server - Basis for many of my early Docker images
-16.10 Yakkety - VMWare/Virtual Box image
-18.04 Bionic - Vagrant testing
-18.04 Bionic Server - AWS EC2 AMI Image
-20.04 Focal - Ran native/bare metal for a while on my 15 inch MBP in 2020, still boot it via USB stick
-20.04 Focal Server - Container runner (ship) on hypervisor NAS in 2021 
-20.10 Groovy - VMWare linux dev env on my 13 inch MPB in 2020
-
+05.04   Hoary - Ubuntu with kernel 2.6.14, Sat Oct 29 12:11:11 2005. This Ubuntu was most probably 5.04 Hoary as we had a set of official CDs/DVDs back in SF on Cesar Chavez
+12.04   Precise Server - AWS EC2 AMI Image in 2012 (Fri Aug 03 2012 PDT)
+14.04   Trusty - 2016 Botcanics test VM, one of Jeremys example VMs
+16.04   Xenial Server LTS - 2016, 2017 base image for MF servers deployed via vagrant
+16.04   Xenial Server - Basis for many of my early Docker images
+16.04.7 Xenial LTS - 2021 Python 3.6 GFS/Bootplane/Botcanics dev server, running on proxmox hypervisor
+16.10   Yakkety - VMWare/Virtual Box image
+18.04   Bionic - 2018 - 2019, Vagrant testing
+18.04   Bionic Server - AWS EC2 AMI Image
+18.04   Bionic - 2019 Botcanics/Bootplane test VM
+18.04.6 Bionic LTS - 2021 Python 3.6 GFS/Bootplane/Botcanics dev server, running on proxmox hypervisor
+19.10   Eoan - 2019 Botcanics/Bootplane test VM
+20.04.2 Focal - Ran native/bare metal for a while on my 15 inch MBP in 2020, still boot it via USB stick
+20.04   Focal Server - Container runner (ship) on hypervisor NAS in 2021 
+20.04.3 Focal LTS - 2021 GFS/Bootplane/Botcanics dev desk, running on proxmox hypervisor
+20.10   Groovy - VMWare linux dev env on my 13 inch MPB in 2020
+21.04   Hirsuite - 2021 Proxmox VM
+21.10   Impish - 2021, fetched ISOs but no install yet :)
