@@ -48,25 +48,21 @@
 ;:*=====================================================================
 
 ;; prevent silly initial splash screen
-;(setq inhibit-splash-screen t)
-
-(cond ((window-system)
-;; (cond ((display-graphic-p)
-;;
-
-;; Zenburn theme
-; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-; (load-theme 'zenburn t)
-; (set-face-background 'fringe "#3f3f3f")
-
-(load-theme 'leuven)
-; (load-theme 'tango)
+(setq inhibit-splash-screen t)
 
 ;; My theme
-; (set-background-color "white")
-; (set-border-color "white")
-(set-face-background 'fringe "white")
-(set-face-attribute 'fringe nil :background nil)
+;(set-foreground-color "white")
+;;(set-background-color "black")
+;(set-background-color "#3f3f3f")
+;;(set-border-color "black")
+;(set-border-color "#3f3f3f")
+;;(set-face-background 'fringe "black")
+;(set-face-background 'fringe "#3f3f3f")
+
+;; Zenburn theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'zenburn t)
+(set-face-background 'fringe "#3f3f3f")
 
 ;; Disable menubar
 ; (menu-bar-mode -1) 
@@ -75,49 +71,13 @@
 ; (tool-bar-mode -1)
 
 ;; turn off toolbar
-; (tool-bar-mode -1)
+(if window-system
+    (tool-bar-mode -1))
+(if window-system
+    (global-tab-line-mode t))
+(if window-system
+    (tab-line-mode 1))
 
-;; tabs, tabs, tabs
-(global-tab-line-mode t)
-(tab-line-mode 1)
-
-(setq tab-line-new-button-show nil)
-;; (setq tab-line-close-button-show nil)
-
-(set-face-attribute 'tab-line nil ;; background behind tabs
-      :background "white"
-      :foreground "black"
-      :family "Menlo" :height 1.0 :box nil)
-;(set-face-attribute 'tab-line-tab nil ;; active tab in another window
-;      :inherit 'tab-line
-;      :foreground "#88887f" :background "#3f3f3f" :box nil)
-;(set-face-attribute 'tab-line-tab-current nil ;; active tab in current window
-;      :background "#3f3f3f" :foreground "#dcdcca" :box nil)
-;(set-face-attribute 'tab-line-tab-inactive nil ;; inactive tab
-;      :background "#353535" :foreground "#88887f" :box nil)
-;(set-face-attribute 'tab-line-highlight nil ;; mouseover
-;      :background "white" :foreground 'unspecified)
-
-;; Scrollbars on Mac
-; (set-frame-parameter nil 'ns-appearance 'dark)
-; (set-frame-parameter nil 'ns-transparent-titlebar nil)
-
-;; Tabbar
-;(require 'tabbar)
-;(tabbar-mode t)
-;(setq tab-bar-mode t)
-;(setq tab-bar-show nil)
-;(setq global-tab-line-mode t)
-
-;(global-tab-line-mode t)
-;;(tab-line-mode)
-;;(tab-line-mode--turn-on)
-;(tab-line-mode 1)
-
-;; 
-;; Making Emacs tabs work like in Atom
-;; https://andreyorst.gitlab.io/posts/2020-05-07-making-emacs-tabs-work-like-in-atom/
-;; 
 (defun tab-line-close-tab (&optional e)
   "Close the selected tab.
 If tab is presented in another window, close the tab by using `bury-buffer` function.
@@ -148,39 +108,21 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
                  (ignore-errors (delete-window window)))))))
     (force-mode-line-update)))
 
-;;
-;; Create and open new untitled buffer
-;; https://stackoverflow.com/questions/25791605/emacs-how-do-i-create-a-new-empty-buffer-whenever-creating-a-new-frame
-;;
-(defun create-untitled-buffer ()
-  "Create a new frame with a new empty buffer."
-  (interactive)
-  (let ((buffer (generate-new-buffer "untitled")))
-    (set-buffer-major-mode buffer)
-    ; (display-buffer buffer '(display-buffer-pop-up-frame . nil))))
-    (display-buffer buffer '(display-buffer-same-window . nil))))
+;; Scrollbars on Mac
+(set-frame-parameter nil 'ns-appearance 'dark)
+(set-frame-parameter nil 'ns-transparent-titlebar nil)
 
-;;
-; (global-set-key (kbd "C-c n") #'create-untitled-buffer)
-(global-set-key (kbd "C-n") #'create-untitled-buffer)
+;; Tabbar
+;(require 'tabbar)
+;(tabbar-mode t)
+;(setq tab-bar-mode t)
+;(setq tab-bar-show nil)
+;(setq global-tab-line-mode t)
 
-;;
-(setq default-directory "~/")
-(setq command-line-default-directory "~/")
-
-;;
-))
-
-(cond ((not window-system)
-;; (cond ((not display-graphic-p)
-;;
-
-;;
-;(setq default-directory "~/")
-;(setq command-line-default-directory "~/")
-
-;;
-))
+;(global-tab-line-mode t)
+;;(tab-line-mode)
+;;(tab-line-mode--turn-on)
+;(tab-line-mode 1)
 
 ;; dired mode, click opens subfolder in same frame
 (eval-after-load "dired" '(progn
@@ -192,43 +134,14 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 (transient-mark-mode 1) ;; No region when it is not highlighted
 (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
-;
-; (setq cua-prefix-override-inhibit-delay nil)
-
 ;; CUA Mode, this lets me paste into the search bar
 ; (define-key isearch-mode-map "\C-v" 'isearch-yank-kill)
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
-;; Ctrl-a should mark whole buffer
-(global-set-key (kbd "C-a") 'mark-whole-buffer)
-
-;; Option1
-(setq mac-command-modifier 'control)
-(setq mac-option-modifier 'meta)
-
-;; Option2
-; (setq mac-command-modifier 'super)
-; (setq mac-option-modifier 'meta)
-
-;; Enable Evil
-(require 'evil)
-(evil-mode 1)
-
-;; Markdown/MD
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-
-(custom-set-variables
- '(markdown-command "/opt/local/bin/pandoc "))
-
-(autoload 'markdown-mode "markdown-mode"
-   "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-
-(autoload 'gfm-mode "markdown-mode"
-   "Major mode for editing GitHub Flavored Markdown files" t)
-(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+;;
+; (setq default-directory "~/")
+; (setq command-line-default-directory "~/")
 
 (load-file "~/.emacs.d/FSF-emacs")
 
@@ -242,24 +155,11 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ;:*===================================================================
 ;:*  Controlling editing this file
 ;:*===================================================================
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil))
- '(paren-mode 'paren nil (paren)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 ;Local Variables:
-;; mode:Emacs-Lisp
-;; outline-regexp: ";:\\*\\**"
-;; eval:(outl-mouse-minor-mode 0)
-;; eval:(hide-body)
+;mode:Emacs-Lisp
+;outline-regexp: ";:\\*\\**"
+;eval:(outl-mouse-minor-mode 0)
+;eval:(hide-body)
 ;End:
 ;:*===================================================================
 ;:*

@@ -48,7 +48,7 @@
 ;:*=====================================================================
 
 ;; prevent silly initial splash screen
-;(setq inhibit-splash-screen t)
+(setq inhibit-splash-screen t)
 
 (cond ((window-system)
 ;; (cond ((display-graphic-p)
@@ -212,8 +212,8 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ; (setq mac-option-modifier 'meta)
 
 ;; Enable Evil
-(require 'evil)
-(evil-mode 1)
+; (require 'evil)
+; (evil-mode 1)
 
 ;; Markdown/MD
 (add-to-list 'load-path "~/.emacs.d/lisp/")
