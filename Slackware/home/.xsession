@@ -1,10 +1,19 @@
 #!/bin/sh
 
-# Set locales
+# 
+# Charset och locale
+# 
+# EN/US Amerikanska
+# export CHARSET="UTF-8"
+# export LANG="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"
+# export LC_CTYPE="en_US.UTF-8"
+
+# SV/SE Svenska
 export CHARSET="UTF-8"
-export LANG="en_US.UTF-8"
-export LC_AL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
+export LANG="sv_SE.UTF-8"
+export LC_ALL="sv_SE.UTF-8"
+export LC_CTYPE="sv_SE.UTF-8"
 
 # Resolution on my MacBook Pro 13 inch
 xrandr -s 1440x900
