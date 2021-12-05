@@ -154,8 +154,8 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ;;
 
 ;;
-;(setq default-directory "~/")
-;(setq command-line-default-directory "~/")
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
 
 ;;
 ))
@@ -175,7 +175,7 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
-(load-file "~/emacs/FSF-emacs")
+(load-file "~/.emacs.d/FSF-emacs")
 
 ;:*======================== S L U T ====================================
 
