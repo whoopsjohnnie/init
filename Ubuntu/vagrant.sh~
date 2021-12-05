@@ -1,0 +1,5 @@
+
+# Install VirtualBox
+> sudo apt install ./Install/Ubuntu/deb/virtualbox-6.1_6.1.18-142142\~Ubuntu\~eoan_amd64.deb
+
+
