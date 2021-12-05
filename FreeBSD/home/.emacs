@@ -1,9 +1,14 @@
 
-;;
-;; This is my original Emacs config from the Digital UNIX kth.se AFS cell
-;;
-;; /afs/kth.se/home/e97/e97_jog/Public/.emacs, Feb 5 2001, 03:38:57
-;;
+
+;; 
+;; Incredible, I found my old Digital UNIX emacs files from e.kth.se
+;; 
+;; https://people.kth.se/~e97_jog/.emacs
+;; wget https://people.kth.se/~e97_jog/.emacs
+;; 
+;; Git is mangling timestamps, so adding the original timestamp here for reference
+;; -rw-r--r--  1 john  john  5320 Feb  5  2001 .emacs
+;; 
 
 ;;(setq debug-on-error t) ;; använd inte denna, ger fula debug-meddelanden
 ;*                    -*- emacs-lisp -*-
@@ -53,6 +58,11 @@
 
 ;; prevent silly initial splash screen
 (setq inhibit-splash-screen t)
+
+;; Zenburn theme
+; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+; (load-theme 'zenburn t)
+; (set-face-background 'fringe "#3f3f3f")
 
 ; (load-theme 'leuven)
 ; (load-theme 'tango)

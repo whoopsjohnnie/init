@@ -1,4 +1,4 @@
-#!/bin/tcsh
+#!/usr/local/bin/tcsh
 
 # Set locales
 setenv CHARSET UTF-8

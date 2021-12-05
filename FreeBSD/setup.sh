@@ -29,13 +29,6 @@ pkg install -y xterm
 pkg install -y rxvt-unicode
 
 # 
-pkg install -y xf86-video-vmware
-
-# 
-pkg install -y xterm
-pkg install -y rxvt-unicode
-
-# 
 pkg install -y xv
 pkg install -y xman
 pkg install -y xmag

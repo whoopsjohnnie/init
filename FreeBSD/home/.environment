@@ -5,8 +5,6 @@
 # To use a windowmanager other than mwm or fvwm2 with the site-
 # specific configuration uncomment the next line.
 # setenv WINDOW_MANAGER twm
-# setenv WINDOW_MANAGER fvwm2
-setenv WINDOW_MANAGER mwm
 
 # If the environment variable FVWM2WINDOWS is set fvwm2 is started
 # with the site-specific (Elektro-specific) configuration, allowing
@@ -16,3 +14,28 @@ setenv WINDOW_MANAGER mwm
 
 # Load modules. The module fvwm2 is needed if FVWM2WINDOWS is set.
 # module add fvwm2
+
+# MWM
+# Uncomment the next line if you want to use the old Motif based 
+# windowmanager MWM that was the default before 980818.
+# setenv WINDOW_MANAGER mwm
+
+# AfterStep
+# I know I settled on AfterStep (1.x) or WindowMaker on DEC UNIX,
+# for some reason CDE wasn't available, or at least I have no
+# memory of ever running it except on Solaris at Nada
+# setenv WINDOW_MANAGER afterstep
+
+# FVWM/2/95
+# I do remember playing around with fvwm, fvwm2, fvwm95(!), twm/mwm(?).
+# I cannot find any of these dotfiles but there is a fvwm2 config found on
+# the KTH AFS cell here.
+setenv WINDOW_MANAGER fvwm2
+
+# CDE
+# I did eventually find some CDE settings and old sessions on DEC UNIX,
+# so I must have run that at some time. Please see the .dt.digital folder here.
+# I know I ran CDE almost all the time on Solaris. I did find some WindowMaker
+# config files in my old Solaris home so I must have played around with that too.
+## setenv WINDOW_MANAGER /usr/local/dt/bin/dtsession
+# setenv WINDOW_MANAGER /usr/local/dt/bin/Xsession

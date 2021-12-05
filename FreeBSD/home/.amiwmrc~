@@ -1,0 +1,19 @@
+FastQuit Off
+SizeBorder Right
+IconPalette MagicWB
+IconDir "/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/"
+#DefaultIcon "/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/def_tool.info"
+DefaultIcon "def_tool.info"
+AutoRaise no
+ForceMove auto
+Screen "Workbench Screen"
+#Module "Background" "/home/matt/xpm/textures/slate.xpm"
+Screen "Second Screen"
+#Module "Background" "/home/matt/xpm/textures/slate_green.xpm"
+Module "Keyboard" "Meta<M>:all:rotatescreens"
+#AutoRaise yes
+ToolItem Separator
+ToolItem "Kvt" "xterm"
+ToolItem "Netscape" "hnetscape"
+ToolItem "Emacs" "emacs"
+ToolItem "XPaint" "xpaint"
