@@ -42,6 +42,10 @@ pkg install -y xmag
 pkg install -y xpaint
 pkg install -y xcalc
 pkg install -y xbiff
+
+# 
+pkg install -y nmh
+pkg install -y xmh
 pkg install -y exmh
 
 pkg install -y xclock
