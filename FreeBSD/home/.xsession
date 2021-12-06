@@ -32,11 +32,12 @@ xconsole -iconic &
 # DET ÄR FÖNSTERHANTERAREN SOM ÄR MASTER PROCESS NÄR DEN AVSLUTAS LOGGAS MAN UT!!!
 
 if ( $?FVWM2WINDOWS ) then
-echo "FVWM2WINDOWS is set, loading standard FVWM2" > /dev/console
+# echo "FVWM2WINDOWS is set, loading standard FVWM2" > /dev/console
 exec fvwm2
 endif
 
 if ( $?WINDOW_MANAGER ) then
-echo "WINDOW_MANAGER is set to $WINDOW_MANAGER" > /dev/console
-$WINDOW_MANAGER >& /dev/console
+# echo "WINDOW_MANAGER is set to $WINDOW_MANAGER" > /dev/console
+exec $WINDOW_MANAGER # >& /dev/console
 endif
+
