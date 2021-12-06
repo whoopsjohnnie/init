@@ -21,6 +21,11 @@ pkg install -y xdm
 pkg install -y mwm
 pkg install -y fvwm
 
+# Verified on FreeBSD 12.2
+pkg install -y slim
+pkg install -y slim-themes
+cp ./usr/local/etc/slim.conf /usr/local/etc/
+
 # 
 pkg install -y xf86-video-vmware
 
@@ -74,6 +79,7 @@ pkg install -y asmixer
 pkg install -y aterm
 
 # CDE
+# Verified on FreeBSD 12.2 and 13.0
 pkg install -y cde
 cp ./etc/hosts /etc/
 cp ./etc/inetd.conf /etc/
