@@ -154,6 +154,7 @@ DeskTopScale 20
 # ModulePath is a colon-separated list, just like a regular unix PATH
 # Any Module must be found within the path in order to be located
 # and executed
+# ModulePath          /usr/local/lib/X11/afterstep
 ModulePath          /misc/hacks/lib/X11/afterstep/modules:/usr/local/lib/X11/afterstep
 
 #Line added by John --------------
@@ -161,6 +162,7 @@ ModulePath          /misc/hacks/lib/X11/afterstep/modules:/usr/local/lib/X11/aft
 #---------------------------------
 
 # Another colon-separated list pointing to your pixmaps (color icons)
+# PixmapPath          /misc/hacks/lib/X11/icons/:/usr/local/include/X11/pixmaps:/usr/local/share/pixmaps
 PixmapPath          /misc/hacks/icons/:/misc/hacks/icons/mini/:/usr/local/include/X11/pixmaps:/usr/local/share/pixmaps
 # Path for your ugly black&white icons
 IconPath            /usr/local/include/X11/bitmaps:/usr/local/share/bitmaps
@@ -224,6 +226,7 @@ Module Wharf
   # Don't have any Maple, but we have octave which will make a fine Matlab substitute
   # Maple (e97_etj)
 # *Wharf xmaple mini-maple.xpm	Exec "-" xmaple &
+# *Wharf octave matlab.xpm	Exec "-" xterm -T "Ersatz Matlab" -n "Ersatz Matlab" -e octave &
 *Wharf octave matlab.xpm	Exec "-" urxvt --title "Ersatz Matlab" -e octave &
 
 #////////////////#

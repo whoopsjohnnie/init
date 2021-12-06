@@ -1,124 +1,579 @@
+#From: c1dmurph@CompApp.DCU.IE (David Murphy CA1)
 #
-#                   Configuration file for fvwm2
-#
-#         Administrated by Marcus Sundberg <e94_msu@e.kth.se>
-# 
-#                    Last changed:  07-May 1998
-#
-# Om du vill ändra på några inställningar i fvwm2 så skall du skapa
-# en katalog '.fvwm2conf' i din hemkatalog.
-# Där skall konfigurationsfilerna ligga.
-# Använd i första hand filen user-conf för dina inställningar.
-# I katalogen /misc/hacks/lib/X11/fvwm2/config ligger
-# standardinställlningarna, titta på dessa för att se vad som kan ändras.
-#
-#========================================================================#
-#
-# Module path and paths to the icons
-# Paths are a colon-separated list, just like regular unix PATH
-#
-# ModulePath /afs/e.kth.se/misc/hacks/lib/X11/fvwm2/modules:/usr/lib/X11/fvwm2
-# PixmapPath /afs/e.kth.se/misc/hacks/icons:/afs/e.kth.se/misc/hacks/icons/mini:/afs/e.kth.se/misc/hacks/icons/NEXT
+#####################################################################################
+# Dave's <94096350@dcu.ie> .fvwm2rc with Virtual Jolt Extensions 
 
-ModulePath /usr/local/libexec/fvwm/2.6.9/
-PixmapPath /misc/hacks/icons:/misc/hacks/icons/mini:/misc/hacks/icons/NEXT
-
-IconPath   /usr/include/X11/bitmaps
-
-
-Read .fvwm2conf/user-preconf
-
-# 
-Read .fvwm2conf/config
-
-#========================================================================#
+# ButtonStyle button# lots-of-numbers
+#       Defines a decoration shape to be used in a title-bar button.  button#
+#       is the title-bar button number, and is between 0 and 9.  A description
+#       of title-bar button numbers is given in the Mouse section below.  The
+#       specification is a little cumbersome:
 #
-# Set up the appearance and operation of fvwm2.
+#            ButtonStyle 2 4 50x30@1 70x70@0 30x70@0 50x30@1
 #
-Read .fvwm2conf/fonts
+#       then the button 2 decoration will use a 4-point pattern consisting of
+#       a line from (x=50,y=30) to (70,70) in the shadow color (@0), and then
+#       to (30,70) in the shadow color, and finally to (50,30) in the
+#       highlight color (@1).  Is that too confusing? See the sample .fvwm2rc
+#       for a few examples.
 
-Read .fvwm2conf/colors
+#  ColormapFocus [FollowsMouse | FollowsFocus]
+#       By default, fvwm installs the colormap of the window that the cursor
+#       is in.  If you use ColormapFocus FollowsFocus, then the installed
+#       colormap will be the one for the window that currently has the key-
+#       board focus.
+ColormapFocus FollowsFocus
 
-Read .fvwm2conf/operation
-
-#========================================================================#
+#  EdgeScroll horizontal vertical
+#       Specifies the percentage of a page to scroll when the cursor hits the
+#       edge of a page.  If you don't want any paging or scrolling when you
+#       hit the edge of a page include "EdgeScroll 0 0" in your .fvwm2rc file.
+#       If you want whole pages, use "EdgeScroll 100 100".  Both horizontal
+#       and vertical should be positive numbers.
 #
-# Set the decoration styles and window options
-#
-Read .fvwm2conf/windowstyles
+#       If the horizontal and vertical percentages are multiplied by 1000 then
+#       scrolling will wrap around at the edge of the desktop.  If "EdgeScroll
+#       100000 100000" is used fvwm will scroll by whole pages, wrapping
+#       around at the edge of the desktop.
+# flip by whole pages on the edge of the screen.
+EdgeScroll 100 100
 
-#========================================================================#
+#EdgeResistance scrolling moving
+#       Tells how hard it should be to change the desktop viewport by moving
+#       the mouse over the edge of the screen and how hard it should be to
+#       move a window over the edge of the screen.
 #
-# Some mini-icons for the title bar
+#       The first parameter tells how milliseconds the pointer must spend on
+#       the screen edge before fvwm will move the viewport.  This is intended
+#       for people who use "EdgeScroll 100 100" but find themselves acciden-
+#       tally flipping pages when they don't want to.
 #
-Read .fvwm2conf/mini-icons
+#       The second parameter tells how many pixels over the edge of the screen
+#       a window's edge must move before it actually moves partially off the
+#       screen.
+#
+#       Note that, with "EdgeScroll 0 0", it is still possible to move or
+#       resize windows across the edge of the current screen.  By making the
+#       first parameter to EdgeResistance 10000 this type of motion is impos-
+#       sible.  With EdgeResistance less than 10000 but greater than 0 moving
+#       over pages becomes difficult but not impossible.
 
-#========================================================================#
+# A modest delay before flipping pages seems to be nice...
+# I thresh in a 50 pixel Move-resistance too, just so people
+# can try it out.
+EdgeResistance 250 300
+
+#  ExecUseShell [shell]
+#       Makes the Exec command use the specified shell, or the value of the
+#       $SHELL environment variable if no shell is specified, instead of the
+#
+#       default Bourne shell (/bin/sh).
+#
+#            ExecUseShell
+#            ExecUseShell /usr/local/bin/tcsh
+ExecUseShell
+
+# Paths
+PixmapPath /usr/local/vol/fvwm2/icons:/home/staff/jom/src/3d_pixmaps_1.0/3dpixmaps
+
+ 
+# Fonts
+WindowFont           "-*-helvetica-bold-r-*-*-16-*-*-*-*-*-*-*"
+
+# Misc Config Settings
+OpaqueMoveSize 100
+XORvalue 5
+
+###############################################################################
+#
+# Set up the virtual desktop and pager
+#
+
+#  DeskTopSize HorizontalxVertical
+#       Defines the virtual desktop size in units of the physical screen size.
+DeskTopSize 3x3
+
+
+
+##############################################################################
+#
+# Styles
+##############################################################################
+# Menu Style ....
+#
+#  HilightColor textcolor backgroundcolor
+#       Specified the text and background colors for the decorations on the
+#       window which currently has the keyboard focus.
+HilightColor Blue  Gray86
+
+MenuStyle Black Gray86 Gray86 "-*-helvetica-medium-r-*-*-18-120-*-*-*-*-*-*" fvwm
+
+###############################################################################
+#
+# Fvwm main style declarations
+#
+# All clients 
+#
+Style "*"		BorderWidth 0, HandleWidth 4, IconBox -100 0 0 -200 
+Style "*"		MWMButtons, MWMFunctions, MWMDecor,OLDecor, 
+Style "*"		HintOverride, ForeColor black, BackColor Gray
+Style "*"		SmartPlacement, SloppyFocus, NoIcon
+#Style "*" NoPPosition
+
+#
+# Fvwm program styles
+#
+Style "xclock"		Sticky, NoTitle, NoHandles, StaysOnTop
+Style "About"		Sticky, NoTitle, NoHandles, StaysOnTop
+Style "*Form"		Sticky, NoTitle, NoHandles
+Style "*Verify"		Sticky, NoTitle, NoHandles
+Style "xload"		Sticky, NoTitle
+Style "xeyes"		NoTitle
+Style "oclock"		NoTitle
+Style "xlogout"		NoTitle, NoHandles
+Style "xbiff"		NoTitle, Sticky
+Style "FvwmPager"	NoTitle, Sticky
+Style "FvwmPrompt"	Notitle, NoHandles, Sticky, StaysOnTop
+Style "FvwmIconMan"     NoTitle, NoHandles, Sticky
+Style "FvwmIconMan"     HandleWidth 5, BorderWidth 5
+Style "FvwmIconBox"	Sticky
+Style "*Buttons"	NoTitle, Sticky, NoHandles
+
+Style "xconsole"	Sticky,NoIcon,StartIconic
+Style "*zwgc*"		WindowListSkip, Sticky
+Style "Root"		IconBox 0 0 100 200
+# Icons 
+#Style "*xterm*"		Icon xterm-axp.xpm
+#Style "rxvt"            Icon xterm-axp.xpm
+#Style "xcalc"		Icon xcalc.xpm
+#Style "xbiff"		Icon mail1.xpm
+#Style "xman"		Icon xman.xpm	
+#Style "*mac*"		Icon gnu-animal.xpm
+#Style "xcon*"		Icon nose.xpm
+#Style "xpaint"		Icon daisy.xpm
+#Style "emacs:"		Icon word_processor.xpm
+#Style "ghostview"	Icon ghostview.xpm
+
+###############################################################################
+#
+# Thats all for styles ... refer to the man page for more info as well as the
+# /usr/lib/X11/fvwm/sample.fvwmrc or .fvwmrc file ...
+#
+###############################################################################
+
+###############################################################################
 #
 # Stuff to do at start-up
 #
-Read .fvwm2conf/startup
 
-#========================================================================#
+# AddToFunc
+#       Begins or add to a function definition.  Here's an example:
+
+AddToFunc InitFunction "I" Exec xsetroot -solid darkblue &
+#+       "I"      Module FvwmButtons
++       "I"     Module FvwmAuto 150
++       "I"	 Exec xterm -name Root -T Root -n Root -geometry 80x25+1280+1140
++	"I"	Exec module add exmh hacks; exmh -geometry 415x672+12+1229; module unload hacks exmh
++               "I" Exec xrolodex ~/stuff/xrolo/tele.xrolo -geometry 566x372+2560+2048 &
++               "I" Exec xrolodex ~/stuff/xrolo/fel.xrolo -geometry 566x372+3135+2048 &
+
+AddToFunc RestartFunction
+#+       "I"      Module FvwmButtons
+#+        "I" Exec xsetroot -solid darkblue &
++       "I"     Module FvwmAuto 150
+
+###############################################################################
 #
-# Now define some handy complex functions
+# Now define the menus - defer bindings until later
+
+# AddToMenu
+#       Begins or adds to a menu definition.  Typically a menu definition
+#       looks like this:
+
+
+AddToMenu Net "Net Clients"	Title
++	%mini.letter.xpm%"Mail (Exmh)"		Exec exec exmh &
++	%mini.letter.xpm%"Mail (xmh, obsolete)"	Exec exec xmh &
++	%jball.xpm%"News (tin)"			Exec exec xterm -geometry 113x51  -T News -n News -e sh -c "tin"
++	%mini.netscape.xpm%"Netscape"		Exec exec /misc/hacks/bin/netscape -geometry 719x917
+
+AddToMenu Games "Games"		Title
++	%jball.xpm%"XBoing"		Exec exec xboing
+
+AddToMenu Toys	"Toys"		Title
+
+
+AddToMenu Modules "Modules"	Title
++	%mini.fvwm.xpm%"FvwmConfig"		FvwmConfig
++	%mini.fvwm.xpm%"FvwmButtons"		FvwmButtons
++	%mini.fvwm.xpm%"FvwmTalk"		FvwmTalk
++	%mini.fvwm.xpm%"FvwmPrompt"		FvwmPrompt
++	%mini.fvwm.xpm%"FvwmBanner"		FvwmBanner
++	%mini.fvwm.xpm%"FvwmIdent"		FvwmIdent
++	%mini.fvwm.xpm%"FvwmIconBox"		FvwmIconBox
++	%mini.fvwm.xpm%"SaveDesktop"  		FvwmSaveDesk
++	%mini.fvwm.xpm%"FvwmSave"  		FvwmSave
++	%mini.fvwm.xpm%"FvwmWinList"   	FvwmWinList
++	%mini.fvwm.xpm%"FvwmScroll"		FvwmScroll
+
+AddToMenu WM-Change "Switch to?" Title
++	%mini.exit.xpm%"Fvwm 1.xx"		Restart fvwm
++	%mini.exit.xpm%"Twm"			Restart twm
++	%mini.exit.xpm%"Mwm"			Restart mwm
+#+	%mini.exit.xpm%"Fvwm-95"		Restart /home/staff/jom/bin/fvwm95-2
++	""			Nop
++	%jball.xpm%"Stay with Fvwm2"	Nop
+
+AddToMenu Utilities "Utilities" Title
++	%jball.xpm%"Xterm"			Exec exec /usr/X11R6/bin/xterm -sb -sl 500 -j -ls  -geometry 100x28
++	%jball.xpm%"Custom Xterm"		Module FvwmForm XtermForm
++	%jball.xpm%"XLock"			Exec  exec /usr/local/bin/X11/xlock -nice 19 -mode image
++	%jball.xpm%"XV"			Exec exec xv
++ 	%jball.xpm%"XCalc"			Exec exec xcalc
++	%jball.xpm%"System Monitor"	Exec exec xterm -geometry 166x56  -T "System Monitor" -n "Monitor" -e top
++	%jball.xpm%"Telnet..."		Module FvwmForm TelnetForm
++	""			Nop
++	%jball.xpm%"Net"			Popup Net
++	""			Nop
++	%jball.xpm%"Games"			Popup Games
++	""			Nop
++	%jball.xpm%"Toys"			Popup Toys
++	""			Nop
++	%jball.xpm%"Modules"		Popup Modules
++	""			Nop
++	%jball.xpm%"Other WM"		Popup WM-Change
++	""			Nop
++	%jball.xpm%"About..."		Module FvwmForm About
++	%mini.excl.xpm%"Restart"		Module FvwmForm RVerify
+
+AddToMenu Window-Ops "Window Ops" Title
++	%jball.xpm%"Move" 			Function Move-or-Raise
++	%jball.xpm%"Resize" 		Function Resize-or-Raise
++	%jball.xpm%"Raise"			Raise
++	%jball.xpm%"Lower"			Lower
++	%jball.xpm%"(De)Iconify" 		Iconify
++	%jball.xpm%"(Un)Stick"		Stick
++	%jball.xpm%"(Un)Maximize" 		Maximize 100 100
++	""			Nop
++	%jball.xpm%"Refresh Screen"	Refresh
++	""			Nop
++	%mini.destroy.xpm%"Destroy"		Destroy
++	%jbomb.xpm%"Delete"		Delete
+
+####################################################################################
+# Complex Functions
+AddToFunc Move-or-Raise		"I" Raise
++				"M" Move
++				"D" Lower
+
+AddToFunc Move-or-Lower		"I" Lower
++				"M" Move
++				"D" RaiseLower
+
+AddToFunc Move-or-Iconify	"M" Move
++				"D" Iconify
+
+AddToFunc Resize-or-Raise	"I" Raise
++				"M" Resize
++				"D" RaiseLower
+
+##############################################################################
+# This defines the mouse bindings
+
+# First, for the mouse in the root window
+# Button 1 gives the Utilities menu
+# Button 2 gives the Window Ops menu
+# Button 3 gives the WindowList (like TwmWindows)
+# I use the AnyModifier (A) option for the modifier field, so you can hold down
+# any shift-control-whatever combination you want!
+
+#     Button	Context Modifi 	Function
+Mouse 1		R   	A       Menu Utilities
+Mouse 2		R    	A      	Menu Window-Ops
+Mouse 3		R    	A      	WindowList 2
+
+# Now the title bar buttons
+# Any button in the left title-bar button gives the window ops menu
+# Any button in the right title-bar button Iconifies the window
+# Any button in the rightmost title-bar button maximizes
+# Note the use of "Mouse 0" for AnyButton.
+
+#     Button	Context Modifi 	Function
+Mouse 0		1    	A      	Popup Window-Ops
+Mouse 0		2    	A     	Maximize 100 94
+Mouse 0		3    	A      	Popup Utilities
+Mouse 0		4    	A     	Maximize 50 94
+Mouse 0		5	A	WindowList 1
+Mouse 0		6	A	Iconify
+#Mouse 0		7    	A     	Exec exec /usr/local/bin/X11/xlock -nice 19 -mode image
+
+# Now the rest of the frame
+# Here I invoke my complex functions for Move-or-lower, Move-or-raise,
+# and Resize-or-Raise. 
+# Button 1 in the corner pieces, with any modifiers, gives resize or raise
+Mouse 1		F	A	Function "Resize-or-Raise"
+# Button 1 in the title, sides, or icon, w/ any modifiers, gives move or raise
+Mouse 1		TS	A	Function "Move-or-Raise"
+
+# Button 1 in an icons gives move for a drag, de-iconify for a double-click,
+# nothing for a single click
+# Button 2 in an icon, w/ any modifiers, gives de-iconify
+
+Mouse 1		I	A	Function "Move-or-Iconify"
+Mouse 2		I	A	Iconify
+
+# Button 2 in the corners, sides, or title-bar gives the window ops menu
+Mouse 2		FST	A	Module "fvwmident" FvwmIdent
+# Button 3 anywhere in the decoration (except the title-bar buttons)
+# does a raise-lower
+Mouse 3		TSIF	A	RaiseLower
+
+# Button 3 in the window, with the Modifier-1 key (usually alt or diamond)
+# gives Raise-Lower. Used to use control here, but that interferes with xterm
+Mouse 3         W       M       RaiseLower
+
+############################################################################
+# Now some keyboard shortcuts.
+
+# Arrow Keys
+# press arrow + control anywhere, and scroll by 1 page
+Key Left	A	C	Scroll -100 0
+Key Right	A	C	Scroll +100 +0
+Key Up		A	C	Scroll +0   -100
+Key Down	A	C	Scroll +0   +100
+
+# press shift arrow + control anywhere, and move the pointer by 1% of a page
+Key Left	A	SC	CursorMove -1 0
+Key Right	A	SC	CursorMove +1 +0
+Key Up		A	SC	CursorMove +0   -1
+Key Down	A	SC	CursorMove +0   +1
+
+# press shift arrow + meta key, and move the pointer by 1/10 of a page
+Key Left	A	SM	CursorMove -10 +0
+Key Right	A	SM	CursorMove +10 +0
+Key Up		A	SM	CursorMove +0   -10
+Key Down	A	SM	CursorMove +0   +10
+
+# Keyboard accelerators
+Key F1          WTSFI   A       Iconify
+Key F1		A	M	Popup Utilities
+Key F1		A	C	Desk 0 1
+Key F2          WTSFI   A       RaiseLower
+Key F2		A	M	Popup Window-Ops
+#Key F2		A	C	Desk 0 1
+Key F3		A	M	WindowList 
+Key F4		A	M	Iconify
+Key F5		A	M	Move
+Key F5          WTSFI   A       Maximize
+Key F6		A	M	Resize
+
+###################FvwmButtons#################################################
 #
-Read .fvwm2conf/functions
+*FvwmButtonsFore Black
+*FvwmButtonsBack Gray63
+*FvwmButtonsGeometry -1-1
+*FvwmButtonsRows 1
+#*FvwmButtons 		-	whatever		Swallow	"xclock" exec  xclock -fg Black -bg Gray63 -geometry 100x100 &
 
-#========================================================================#
+#*FvwmButtons 		-	whatever		Swallow	"xload"	exec nice -16 xload -nolabel -fg Black -bg Gray63 -update 1 -geometry -1500-1500
+#*FvwmButtons 		XLock	Jlock.xpm		Exec	""	exec /usr/local/bin/X11/xlock -nice 19 -mode image   
+#*FvwmButtons		Xman	xman.xpm		Exec 	""	exec xman &
+#*FvwmButtons		News	Jnews.xpm		Exec	""	exec xterm -e tin &
+#*FvwmButtons		Emacs	gnu-animal.xpm		Exec	""	exec emacs &	
+#*FvwmButtons 		Telnet	rterm.xpm 		Module	FvwmForm TelnetForm
+#*FvwmButtons 		XTerm	xterm-dec.xpm 		Exec	""	xterm -sb -sl 500 -j -ls  -geometry 54x50
+#*FvwmButtons 		Netscape bomb.xpm	Exec	""	/misc/hacks/bin/netscape &
+#*FvwmButtons		Mosaic	Mosaic.xpm		Exec	""	Mosaic &
+#*FvwmButtons 		Exmh	mail1.xpm		Exec	""	exmh &
+#*FvwmButtons		Matlab  math4.xpm		Exec	""	xterm -e matlab &
+#*FvwmButtons  	-	whatever		Swallow	 "FvwmPager" FvwmPager 0 0
+#*FvwmButtons  	-	whatever		Swallow	 "FvwmPager" FvwmPager 1 1
+##############################################################################
+# FvwmPager
+##############################################################################
 #
-# Configure the menus
+Module FvwmPager 0 0
+style "FvwmPager" NoTitle, NoHandles
+*FvwmPagerBack Gray63
+*FvwmPagerFore Black
+*FvwmPagerHilight Grey
+*FvwmPagerLabel 0 FvwmPager
+*FvwmPagerLabel 1 Two
+*FvwmPagerLabel 2 Three
+*FvwmPagerSmallFont 5x8
+*FvwmPagerGeometry -0-0
+###############################################################################
+# The Identify Module...
+###############################################################################
 #
-Read .fvwm2conf/start-menu
+*FvwmIdentBack  Gray86
+*FvwmIdentFore  Black
+*FvwmIdentFont  -times-medium-r-*-*-18-160-*-*-*-*-*-*
 
-Read .fvwm2conf/root-menu
-
-Read .fvwm2conf/menus
-
-Read .fvwm2conf/modules-menu
-
-Read .fvwm2conf/hlock-menus
-
-Read .fvwm2conf/window-menu
-
-#========================================================================#
+###############################################################################
+# The Window List Module
+###############################################################################
 #
-# Mouse bindings
-#
-Read .fvwm2conf/mouse-bindings
+*FvwmWinListBack        Gray86
+*FvwmWinListFore        Black
+*FvwmWinListFont        -bitstream-charter-medium-r-*-*-18-160-*-*-*-*-*-*
+*FvwmWinListAction Click1 Iconify -1,Raise
+*FvwmWinListAction Click2 Iconify 1
+*FvwmWinListAction Click3 Module "FvwmIdent" FvwmIdent
+*FvwmWinListUseSkipList
+*FvwmWinListGeometry +0-1
 
-#========================================================================#
-#
-# Key bindings
-#
-Read .fvwm2conf/key-bindings
+###############################################################################
+# FvwmPrompt
+###############################################################################
+*FvwmPromptFore		Black
+*FvwmPromptBack		Gray86
 
-#========================================================================#
-#
-# Definitions used by the modules
-#
+###############################################################################
+# FvwmPrompt
+###############################################################################
+Module FvwmIconMan
 
-Read .fvwm2conf/misc-modules
+#Definitions used by the modules
 
-Read .fvwm2conf/fvwmpager
+*FvwmIconMan*nummanagers 2
+*FvwmIconMan*resolution  global
+*FvwmIconMan*showtitle   false
+*FvwmIconMan*background  slategrey
+*FvwmIconMan*foreground  white
+*FvwmIconMan*font        7x13
 
-Read .fvwm2conf/fvwmbuttons
+*FvwmIconMan*1*geometry  50x100+0-0
+*FvwmIconMan*1*show      resource=Root
+*FvwmIconMan*2*geometry  140x100-0+0
+*FvwmIconMan*2*dontshow  resource="*ogout" resource="*Fvwm*"
+*FvwmIconMan*action 	 select Focus
+*FvwmIconMan*action 	 Mouse  1 N sendcommand select select Focus
+*FvwmIconMan*action 	 Mouse  2 N sendcommand select Iconify -1, Raise
+*FvwmIconMan*action 	 Mouse  3 N sendcommand select select "Module FvwmIdent FvwmIdent"
+
+*FvwmIconMan*followfocus true
+
+###############################################################################
+# The IconBox
+###############################################################################
+#
+# Module FvwmIconBox
+*FvwmIconBoxSortIcons
+*FvwmIconBoxPlacement Top Left
+*FvwmIconBoxGeometry +1-1
+
+###############################################################################
+# Telnet Form
+###############################################################################
+#
+# General Appearance
+*TelnetFormWarpPointer
+*TelnetFormFore 	Black
+*TelnetFormBack 	Gray86
+*TelnetFormItemFore 	Black
+*TelnetFormItemBack	Gray86
+*TelnetFormFont         *helvetica*m*o*n*12*
+*TelnetFormButtonFont   *helvetica*m*o*n*12*
+*TelnetFormInputFont    *helvetica*m*o*n*12*
+
+# Gadgets
+*TelnetFormLine		expand
+*TelnetFormSelection	CommonTarget	single
+*TelnetFormChoice	barButton	bartender	off	"Bartender"
+*TelnetFormChoice	agatButton	agat		off	"Agat"
+*TelnetFormChoice	rubinButton	rubin		off	"Rubin"
+
+*TelnetFormLine		center
+*TelnetFormText		"Or somewhere else:"
+*TelnetFormInput	CustomTarget		20	""
+
+*TelnetFormLine		expand
+*TelnetFormButton	quit		"Go"	^M
+
+# Action
+*TelnetFormCommand	Exec exec xterm  -T $(CommonTarget) $(CustomTarget)  -e telnet $(CommonTarget) $(CustomTarget)
+
+*TelnetFormButton	restart		"Clear"
+*TelnetFormButton	quit		"Cancel"	^[
+*TelnetFormCommand	Nop
+
+###############################################################################
+# Xterm Form
+###############################################################################
+#
+# General Appearance
+*XtermFormWarpPointer
+*XtermFormFore 	Black
+*XtermFormBack 	Gray86
+*XtermFormItemFore 	Black
+*XtermFormItemBack	gray63
+
+# Gadgets
+*XtermFormLine		center
+*XtermFormText		"Foreground"
+*XtermFormInput		Fore		20	"Black"
+
+*XtermFormLine		center
+*XtermFormText		"Background"
+*XtermFormInput		Back		20	"Gray86"
+
+*XtermFormLine		center
+*XtermFormText		"Title Bar"
+*XtermFormInput		Title		20	"Term"
+
+*XtermFormLine		expand
+*XtermFormButton	quit		"Go"	^M
+
+# Action
+*XtermFormCommand	Exec exec xterm -fg $(Fore) -bg $(Back) -T $(Title)
+
+*XtermFormButton	restart		"Clear"
+*XtermFormButton	quit		"Cancel"	^[
+*XtermFormCommand	Nop
 
 
-#========================================================================#
+###############################################################################
+# About Box
+###############################################################################
 #
-# User specified settings
-#
-Read .fvwm2conf/user-conf
+# General Appearance
+*AboutWarpPointer
+*AboutFore		Black
+*AboutBack		Gray86
+*AboutFont		*helvetica*m*r*n*12*
+# Gadgets
 
-#========================================================================#
-#
-# Settings made by FvwmConfig
-#
-Read .fvwm2rc-config
+*AboutLine		center
+*AboutText		"Fvwm version 2.0.38"
 
-#========================================================================#
+*AboutLine		center
+*AboutText		"Virtual Jolt Extensions version 1.0"
+
+*AboutLine		expand
+*AboutButton		quit	"Dismiss"	^M
+
+
+###############################################################################
+# Restart Verification
+###############################################################################
 #
-# TaskBar settings, must be loaded last.
-#
-Read .fvwm2conf/fvwmtaskbar
+# General Appearance
+*RVerifyGrabServer
+*RVerifyWarpPointer
+*RVerifyFore		Black
+*RVerifyBack		Gray86
+*RVerifyFont		*helvetica*m*r*n*12*
+
+*RVerifyLine		center
+*RVerifyText		"Are you sure?"
+
+*RVerifyLine		expand
+
+*RVerifyButton		quit	"Restart"	^M
+*RVerifyCommand		Restart fvwm2
+
+*RVerifyButton		quit	"Don't"	^[
+*RVerifyCommand		Nop
+
+

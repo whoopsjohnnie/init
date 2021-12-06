@@ -1,0 +1,24 @@
+
+if (! defined $ENV{MODULE_VERSION} ) {
+	$ENV{MODULE_VERSION_STACK}="3.0.8-rko";
+	$ENV{MODULE_VERSION}="3.0.8-rko";
+} else {
+	$ENV{MODULE_VERSION_STACK}="$MODULE_VERSION";
+}
+
+sub module {
+        local ($exec_prefix);
+        $exec_prefix = "/mpkg/modules/3.0.8";
+
+	eval `$exec_prefix/bin/modulecmd perl @_`;
+}
+
+if (! defined $ENV{MODULEPATH} ) {
+  $ENV{MODULEPATH} = `sed 's/#.*$//' ${MODULESHOME}/init/.modulespath | awk 'NF==1{printf("%s:",$1)}'` 
+}
+
+if (! defined $ENV{LOADEDMODULES} ) {
+  $ENV{LOADEDMODULES} = "";
+}
+
+$ENV{MODULESHOME} = "/mpkg/modules/3.0.8";

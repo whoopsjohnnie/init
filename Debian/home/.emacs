@@ -1,9 +1,13 @@
 
-;;
-;; This is my original Emacs config from the Digital UNIX kth.se AFS cell
-;;
-;; /afs/kth.se/home/e97/e97_jog/Public/.emacs, Feb 5 2001, 03:38:57
-;;
+;; 
+;; Incredible, I found my old Digital UNIX emacs files from e.kth.se
+;; 
+;; https://people.kth.se/~e97_jog/.emacs
+;; wget https://people.kth.se/~e97_jog/.emacs
+;; 
+;; Git is mangling timestamps, so adding the original timestamp here for reference
+;; -rw-r--r--  1 john  john  5320 Feb  5  2001 .emacs
+;; 
 
 ;;(setq debug-on-error t) ;; använd inte denna, ger fula debug-meddelanden
 ;*                    -*- emacs-lisp -*-
@@ -43,6 +47,15 @@
 ;:*===================== Johns grejor, för FSF Emacs ===================
 ;:*=====================================================================
 
+;; set a nice retro font, ala Digital UNIX circa 1997 
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;; ;; '(default ((t (:family "Misc Fixed" :foundry "Misc" :slant normal :weight normal :height 98 :width normal)))))
+;;  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal)))))
+
 ;; prevent silly initial splash screen
 (setq inhibit-splash-screen t)
 
@@ -69,8 +82,11 @@
 ;; Disable toolbar
 ; (tool-bar-mode -1)
 
+;; John: I am pretty sure emacs 19 did not have a tool bar
+;; However XEmacs did, but this is the FSF Emacs clause
 ;; turn off toolbar
-(tool-bar-mode -1)
+(if window-system
+    (tool-bar-mode -1))
 
 ;; tabs, tabs, tabs
 (global-tab-line-mode t)
@@ -175,6 +191,10 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
+;;
+; (setq default-directory "~/")
+; (setq command-line-default-directory "~/")
+
 (load-file "~/emacs/FSF-emacs")
 
 ;:*======================== S L U T ====================================
@@ -187,6 +207,23 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ;:*===================================================================
 ;:*  Controlling editing this file
 ;:*===================================================================
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(column-number-mode t)
+;;  '(cua-mode t nil (cua-base))
+;;  '(display-time-mode t)
+;;  '(paren-mode (quote paren) nil (paren))
+;;  '(show-paren-mode t)
+;;  '(tool-bar-mode nil))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal)))))
 ;Local Variables:
 ;mode:Emacs-Lisp
 ;outline-regexp: ";:\\*\\**"

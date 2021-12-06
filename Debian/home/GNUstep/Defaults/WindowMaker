@@ -1,0 +1,46 @@
+{
+  ClipAutocollapseDelay = "";
+  DragMaximizedWindow = Move;
+  DoNotMakeAppIconsBounce = NO;
+  MiniwindowPreviewBalloons = NO;
+  MiniwindowTitleBalloons = NO;
+  OpaqueResize = NO;
+  IconTitleFont = "sans serif:bold:pixelsize=9:xlfd=-*-helvetica-bold-r-normal-*-9-*-*-*-*-*-*-*";
+  RaiseAppIconsWhenBouncing = NO;
+  LargeDisplayFont = "sans serif:bold:pixelsize=24:xlfd=-*-helvetica-bold-r-normal-*-24-*-*-*-*-*-*-*";
+  ResizeIncrement = 0;
+  OpaqueMoveResizeKeyboard = NO;
+  SingleClickLaunch = NO;
+  Attraction = NO;
+  ClipAutolowerDelay = "";
+  MenuTitleFont = "sans serif:bold:pixelsize=12:xlfd=-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*";
+  NewStyle = old;
+  IconPosition = brh;
+  NoWindowOverDock = NO;
+  MenuTextFont = "sans serif:bold:pixelsize=12:xlfd=-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*";
+  WorkspaceBack = (solid, "#505075");
+  ClipAutoexpandDelay = "";
+  HelpBalloons = NO;
+  AppIconBalloons = NO;
+  WorkspaceBorder = None;
+  WindowTitleFont = "sans serif:bold:pixelsize=12:xlfd=-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*";
+  DisableDrawers = NO;
+  IconPath = (
+    "~/GNUstep/Library/Icons",
+    "~/GNUstep/Library/WindowMaker/Pixmaps",
+    "~/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "/usr/share/WindowMaker/Icons",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/icons",
+    "/usr/local/share/WindowMaker/Icons",
+    "/usr/local/share/WindowMaker/Pixmaps",
+    "/usr/local/share/icons",
+    "/misc/hacks/icons",
+    "/misc/hacks/icons/mini"
+  );
+  ClipAutoraiseDelay = "";
+  WorkspaceBorderSize = 0;
+  BounceAppIconsWhenUrgent = YES;
+  ViKeyMenus = NO;
+  CirculateRaise = NO;
+}

@@ -1,0 +1,33 @@
+{
+  ClipAutocollapseDelay = "";
+  ClipAutoexpandDelay = "";
+  HelpBalloons = NO;
+  DragMaximizedWindow = Move;
+  MiniwindowPreviewBalloons = NO;
+  AppIconBalloons = NO;
+  DoNotMakeAppIconsBounce = NO;
+  MiniwindowTitleBalloons = NO;
+  IconTitleFont = "sans serif:bold:pixelsize=9:xlfd=-*-helvetica-bold-r-normal-*-9-*-*-*-*-*-*-*";
+  WorkspaceBorder = None;
+  OpaqueResize = NO;
+  WindowTitleFont = "sans serif:bold:pixelsize=12:xlfd=-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*";
+  LargeDisplayFont = "sans serif:bold:pixelsize=24:xlfd=-*-helvetica-bold-r-normal-*-24-*-*-*-*-*-*-*";
+  RaiseAppIconsWhenBouncing = NO;
+  ResizeIncrement = 0;
+  DisableDrawers = NO;
+  OpaqueMoveResizeKeyboard = NO;
+  SingleClickLaunch = NO;
+  ClipAutoraiseDelay = "";
+  Attraction = NO;
+  WorkspaceBorderSize = 0;
+  ViKeyMenus = NO;
+  BounceAppIconsWhenUrgent = YES;
+  CirculateRaise = NO;
+  ClipAutolowerDelay = "";
+  MenuTitleFont = "sans serif:bold:pixelsize=12:xlfd=-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*";
+  NewStyle = old;
+  IconPosition = brh;
+  NoWindowOverDock = NO;
+  MenuTextFont = "sans serif:bold:pixelsize=12:xlfd=-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*";
+  WorkspaceBack = (solid, "#554466");
+}

@@ -1,41 +1,34 @@
-# I den här filen kan du lägga kommandon som du vill ska utföras varje
-# gång kommandotolkaren startas. Du kan t.ex. göra egna kortkommandon
-# för saker som du gör ofta, byta prompt etc.
-# Läs manualbladet till tcsh om du vill veta allt som går att ställa in 
+# I den h�r filen kan du l�gga kommandon som du vill ska utf�ras varje
+# g�ng kommandotolkaren startas. Du kan t.ex. g�ra egna kortkommandon
+# f�r saker som du g�r ofta, byta prompt etc.
+# L�s manualbladet till tcsh om du vill veta allt som g�r att st�lla in 
 # i kommandotolkaren.
 
-# Några exempel. (Ta bort kommentarstecknet (#) i början av raden om du 
-# vill att raden ska utföras.)
+# N�gra exempel. (Ta bort kommentarstecknet (#) i b�rjan av raden om du 
+# vill att raden ska utf�ras.)
 
 # definiera kommandot 'show_la' som 
-# visar innehållet i kön till de båda stora laserskrivarna
+# visar inneh�llet i k�n till de b�da stora laserskrivarna
 #alias show_la 'lpq -Pprefix; echo " "; lpq -Pdryck'
 
-# Gör så att prompten (normalt 'datornamn>') också innehåller aktuell
+# G�r s� att prompten (normalt 'datornamn>') ocks� inneh�ller aktuell
 # katalog, t.ex. hertz:~/numme>:
 #set prompt = '%m:%~>'
 
-# Säg åt kommandotolkaren att rätta stavfel i kommandon:
+# S�g �t kommandotolkaren att r�tta stavfel i kommandon:
 #set correct=all
 alias gcc gcc -Wall -ansi -pedantic -g
 set prompt="%m:%~>"
 
 #---------------------------
-#Mina ändringar
-
-setenv CHARSET UTF-8
-setenv LANG en_US.UTF-8
-setenv LC_ALL en_US.UTF-8
-setenv LC_CTYPE en_US.UTF-8
+#Mina �ndringar
 
 set autolist
 set correct=cmd
 set nobeep
 
-#
-alias emacs emacs -nw
 
-# AMIWM
-setenv AMIWM_HOME "/usr/home/john/Documents/development/init/Digital_UNIX/misc/hacks/lib/amiwm/"
+
+
 
 

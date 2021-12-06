@@ -1,0 +1,35 @@
+{
+  "x-terminal-emulator.XTerm" = {
+    Icon = GNUterm.tiff;
+  };
+  thunderbird.Thunderbird = {
+    Icon = writeletter.xpm;
+  };
+  xload.XLoad = {
+    Icon = xload.XLoad.xpm;
+  };
+  "Navigator.Firefox-esr" = {
+    AlwaysUserIcon = Yes;
+    Icon = netscape3.xpm;
+  };
+  groupLeader.WPrefs = {
+    Icon = groupLeader.WPrefs.xpm;
+  };
+  rxvt.URxvt = {
+    Icon = monitor.xpm;
+  };
+  emacs.Emacs = {
+    AlwaysUserIcon = Yes;
+    Icon = "gnu-animal.xpm";
+  };
+  Mail.thunderbird = {
+    AlwaysUserIcon = Yes;
+    Icon = writeletter.xpm;
+  };
+  "firefox-esr.Firefox-esr" = {
+    Icon = netscape3.xpm;
+  };
+  xterm.UXTerm = {
+    Icon = xterm.UXTerm.xpm;
+  };
+}
