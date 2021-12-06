@@ -1,0 +1,81 @@
+
+
+
+
+> echo "net.link.tap.up_on_open=1" >> /etc/sysctl.conf
+> sysctl net.link.tap.up_on_open=1
+
+> kldload vmm
+> kldload nmdm
+
+> echo 'vmm_load="YES"' >> /boot/loader.conf
+> echo 'nmdm_load="YES"' >> /boot/loader.conf
+> echo 'if_tap_load="YES"' >> /boot/loader.conf
+> echo 'if_bridge_load="YES"' >> /boot/loader.conf
+
+# 
+# This is done via /etc/rc.conf below
+# 
+# > ifconfig bridge create
+# > ifconfig bridge0 addm em0 - vmware/virtualbox
+# > ifconfig bridge0 addm vtnet0 - proxmox
+# 
+# > ifconfig bridge0 name em0bridge
+# > ifconfig em0bridge up
+# 
+# > ifconfig tap0 create
+# > ifconfig em0bridge addm tap0
+
+# vmware/virtualbox
+(add to /etc/rc.conf)
+# byhve and jail settings bridges 
+cloned_interfaces="bridge0 tap0"
+ifconfig_bridge0_name="em0bridge"
+ifconfig_em0bridge="addm em0 addm tap0 up"
+
+# proxmox
+(add to /etc/rc.conf)
+# byhve and jail settings bridges 
+cloned_interfaces="bridge0 tap0"
+ifconfig_bridge0_name="vtnet0bridge"
+ifconfig_em0bridge="addm vtnet0 addm tap0 up"
+
+
+> zfs create -V20G -o volmode=dev zroot/debianvm
+> cd /tmp/
+> wget .../iso-cd/debian-10.8.0-amd64-netinst.iso
+
+
+
+> pkg install grub2-bhyve
+
+
+> bhyve -c 1 -m 1G -w -H \
+-s 0,hostbridge \
+-s 3,ahci-cd,/tmp/debian-10.8.0-amd64-netinst.iso \
+-s 4,virtio-blk,/dev/zvol/zroot/debianvm \
+-s 5,virtio-net,tap0 \
+-s 29,fbuf,tcp=0.0.0.0:5900,w=800,h=600,wait \
+-s 30,xhci,tablet \
+-s 31,lpc -l com1,stdio \
+-l bootrom,/usr/local/share/uefi-firmware/BHYVE_UEFI.fd \
+debianvm
+
+
+VNC:
+Connect to 192.168.125.140:5900, where 192.168.125.140 is IP of FreeBSD hypervisor
+
+
+Error1: 
+vm_create: Device not configured
+
+-> enable hypervisor capabilities in VMWare, reboot VM
+
+
+
+Error2: 
+Error opening bootrom "/usr/local/share/uefi-firmware/BHYVE_UEFI.fd": No such file or directory
+device emulation initialization error: No such file or directory
+
+> pkg install bhyve-firmware
+

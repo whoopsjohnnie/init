@@ -1,0 +1,25 @@
+bhyve -c 1 -m 1G -w -H \
+-s 0,hostbridge \
+-s 3,ahci-cd,/tmp/debian-10.8.0-amd64-netinst.iso \
+-s 4,virtio-blk,/dev/zvol/zroot/debianvm \
+-s 5,virtio-net,tap0 \
+-s 29,fbuf,tcp=0.0.0.0:5900,w=800,h=600,wait \
+-s 30,xhci,tablet \
+-s 31,lpc -l com1,stdio \
+-l bootrom,/usr/local/share/uefi-firmware/BHYVE_UEFI.fd \
+debianvm
+
+
+Error1: 
+vm_create: Device not configured
+
+-> enable hypervisor capabilities in VMWare, reboot VM
+
+
+
+Error2: 
+Error opening bootrom "/usr/local/share/uefi-firmware/BHYVE_UEFI.fd": No such file or directory
+device emulation initialization error: No such file or directory
+
+> pkg install bhyve-firmware
+

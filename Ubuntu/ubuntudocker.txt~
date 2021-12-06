@@ -1,0 +1,73 @@
+
+
+ 2004  sudo apt-get install git
+ 2005  sudo snap install docker
+ 2006  sudo snap install aws-cli
+
+
+docker run --restart unless-stopped -d -v /tmp/data/neo4j/:/data/ -v /bootplane/controller/etc/gremlin/config/gremlin-server-custom.yml:/gremlin-server/conf/gremlin-server-custom.yml -v /bootplane/controller/etc/gremlin/config/neo4j.properties:/gremlin-server/conf/neo4j.properties -v /bootplane/controller/etc/gremlin/script/neo4j.groovy:/gremlin-server/scripts/neo4j.groovy -p 0.0.0.0:8182:8182 --network botcanics --name gremlin 513562861795.dkr.ecr.us-west-2.amazonaws.com/gfs-gremlin:latest
+# 785a248c4820dd0ae61a22f702d62344da64da7f5cd660edb424844423ea0873
+# docker: Error response from daemon: error while creating mount source path '/bootplane/controller/etc/gremlin/config/gremlin-server-custom.yml': mkdir /bootplane: read-only file system.
+
+snap remove docker
+rm -R /var/lib/docker
+sudo apt-get remove docker docker-engine docker.io
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+sudo apt-get update
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+sudo groupadd docker
+sudo adduser bots docker
+sudo chown root:docker /var/run/docker.sock
+
+/home/bots/Documents/development/bootplane
+sudo cp -r system/controller /
+
+
+----
+
+
+ 1972  snap remove docker
+ 1973  sudo snap remove docker
+ 1974  sudo rm -R /var/lib/docker
+ 1975  sudo apt-get remove docker docker-engine docker.io
+ 1976  sudo apt-get remove docker docker-engine docker.io containerd runc
+ 1977  sudo apt-get update
+ 1978  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+ 1979  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ 1980  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+ 1981    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ 1982  sudo apt-get update
+ 1983  sudo apt-get install docker-ce docker-ce-cli containerd.io
+ 1984  docker ps
+ 1985  sudo docker ps
+ 1986  sudo docker run hello-world
+ 1987  sudo apt-get install docker-ce docker-ce-cli containerd.io
+ 1988  sudo docker run hello-world
+ 1989  cat /etc/hosts
+ 1990  ping registry-1.docker.io
+ 1991  sudo docker run hello-world
+ 1992  sudo systemctl daemon-reload
+ 1993  sudo systemctl restart docker
+ 1994  sudo docker run hello-world
+ 1995  ls
+ 1996  docker ps
+ 1997  sudo groupadd docker
+ 1998  sudo adduser bots docker
+ 1999  sudo chown root:docker /var/run/docker.sock
+
