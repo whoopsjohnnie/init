@@ -16,6 +16,7 @@ pkg install -y htop
 pkg install -y mc
 
 # Modern
+pkg install -y vscode
 pkg install -y kubectl
 pkg install -y helm
 
