@@ -9,16 +9,16 @@ pkg install -y sudo
 pkg install -y vim
 pkg install -y emacs
 # pkg install -y emacs-nox
+
+# Modern
 pkg install -y git
+pkg install -y vscode
+pkg install -y kubectl
+pkg install -y helm
 
 # 
 pkg install -y htop
 pkg install -y mc
-
-# Modern
-pkg install -y vscode
-pkg install -y kubectl
-pkg install -y helm
 
 # 
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=244079
