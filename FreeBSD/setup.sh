@@ -16,6 +16,31 @@ pkg install -y vscode
 pkg install -y kubectl
 pkg install -y helm
 
+# pkg install -y python36
+# pkg install -y py36-pip
+# pkg install -y py36-virtualenv
+# pkg install -y py36-pipenv
+
+# pkg install -y python37
+# pkg install -y py37-pip
+# pkg install -y py37-virtualenv
+# pkg install -y py37-pipenv
+
+pkg install -y python38
+pkg install -y py38-pip
+pkg install -y py38-virtualenv
+pkg install -y py38-pipenv
+
+pkg install -y python39
+pkg install -y py39-pip
+pkg install -y py39-virtualenv
+pkg install -y py39-pipenv
+
+pkg install -y python310
+pkg install -y py310-pip
+pkg install -y py310-virtualenv
+pkg install -y py310-pipenv
+
 # 
 pkg install -y htop
 pkg install -y mc
@@ -92,6 +117,10 @@ pkg install -y asmail
 pkg install -y asmix
 pkg install -y asmixer
 pkg install -y aterm
+
+# 
+pkg install -y windowmaker
+pkg install -y wmcalclock
 
 # CDE
 # Verified on FreeBSD 12.2 and 13.0
@@ -219,3 +248,4 @@ cp ./usr/local/lib/X11/system.mwmrc /usr/local/lib/X11/
 
 # 
 cp -r ./usr/athena /usr/
+
