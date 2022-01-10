@@ -12,7 +12,7 @@
 #
 ::1			localhost localhost.my.domain
 127.0.0.1		localhost localhost.my.domain
-127.0.0.1		freebsd freebsd.my.domain
+127.0.0.1		pepsi pepsi.localdomain
 #
 # Imaginary network.
 #10.0.0.2		myname.my.domain myname
