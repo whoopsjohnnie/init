@@ -9,7 +9,41 @@ pkg install -y sudo
 pkg install -y vim
 pkg install -y emacs
 # pkg install -y emacs-nox
+
+# Modern
 pkg install -y git
+pkg install -y vscode
+pkg install -y kubectl
+pkg install -y helm
+
+# pkg install -y python36
+# pkg install -y py36-pip
+# pkg install -y py36-virtualenv
+# pkg install -y py36-pipenv
+
+# pkg install -y python37
+# pkg install -y py37-pip
+# pkg install -y py37-virtualenv
+# pkg install -y py37-pipenv
+
+pkg install -y python38
+pkg install -y py38-pip
+pkg install -y py38-virtualenv
+pkg install -y py38-pipenv
+
+pkg install -y python39
+pkg install -y py39-pip
+pkg install -y py39-virtualenv
+pkg install -y py39-pipenv
+
+pkg install -y python310
+pkg install -y py310-pip
+pkg install -y py310-virtualenv
+pkg install -y py310-pipenv
+
+# 
+pkg install -y htop
+pkg install -y mc
 
 # 
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=244079
@@ -83,6 +117,10 @@ pkg install -y asmail
 pkg install -y asmix
 pkg install -y asmixer
 pkg install -y aterm
+
+# 
+pkg install -y windowmaker
+pkg install -y wmcalclock
 
 # CDE
 # Verified on FreeBSD 12.2 and 13.0
