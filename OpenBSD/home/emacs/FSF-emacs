@@ -1,10 +1,3 @@
-
-;;
-;; This is my original Emacs config from the Digital UNIX kth.se AFS cell
-;;
-;; /afs/kth.se/home/e97/e97_jog/Public/emacs/FSF-emacs, Feb 5 2001, 03:40:44
-;;
-
 ;;Goto line
 (global-set-key (quote [f12]) (quote goto-line))
 
