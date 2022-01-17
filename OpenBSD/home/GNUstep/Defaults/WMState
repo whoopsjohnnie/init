@@ -1,0 +1,135 @@
+{
+  Dock = {
+    AutoRaiseLower = No;
+    Applications = (
+      {
+        Forced = No;
+        Name = dockit.Dockit;
+        DropCommand = "wmsetbg -u -t %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = dockit;
+      },
+      {
+        Forced = No;
+        Name = urxvt.URxvt;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = No;
+        Command = urxvt;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,2";
+        Lock = No;
+        Command = WPrefs;
+      },
+      {
+        Forced = No;
+        Name = xemacs.Emacs;
+        DropCommand = "xemacs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,4";
+        Lock = No;
+        PasteCommand = "xemacs %s";
+        Command = xemacs;
+      },
+      {
+        Forced = No;
+        Name = xconsole.XConsole;
+        DropCommand = "xconsole -iconic %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = No;
+        PasteCommand = "xconsole -iconic %s";
+        Command = "xconsole -iconic";
+      }
+    );
+    Lowered = Yes;
+    Position = "-64,0";
+    Applications900 = (
+      {
+        Forced = No;
+        Name = dockit.Dockit;
+        DropCommand = "wmsetbg -u -t %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = dockit;
+      },
+      {
+        Forced = No;
+        Name = urxvt.URxvt;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = No;
+        Command = urxvt;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,2";
+        Lock = No;
+        Command = WPrefs;
+      },
+      {
+        Forced = No;
+        Name = xemacs.Emacs;
+        DropCommand = "xemacs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,4";
+        Lock = No;
+        PasteCommand = "xemacs %s";
+        Command = xemacs;
+      },
+      {
+        Forced = No;
+        Name = xconsole.XConsole;
+        DropCommand = "xconsole -iconic %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,5";
+        Lock = No;
+        PasteCommand = "xconsole -iconic %s";
+        Command = "xconsole -iconic";
+      }
+    );
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    DropCommand = "wmsetbg -u -t %d";
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "0,0";
+    Lock = No;
+    Command = "-";
+  };
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = Main;
+    }
+  );
+}

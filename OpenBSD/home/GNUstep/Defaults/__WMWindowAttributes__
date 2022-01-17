@@ -1,0 +1,5 @@
+{
+  xterm.XTerm = {
+    Icon = xterm.XTerm.xpm;
+  };
+}
