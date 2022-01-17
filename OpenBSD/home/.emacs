@@ -1,10 +1,3 @@
-
-;;
-;; This is my original Emacs config from the Digital UNIX kth.se AFS cell
-;;
-;; /afs/kth.se/home/e97/e97_jog/Public/.emacs, Feb 5 2001, 03:38:57
-;;
-
 ;;(setq debug-on-error t) ;; använd inte denna, ger fula debug-meddelanden
 ;*                    -*- emacs-lisp -*-
 ;:*========================================================
