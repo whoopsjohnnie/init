@@ -12,6 +12,12 @@ pkg install -y emacs
 pkg install -y git
 
 # 
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=244079
+# 
+# pkg install -y misc/utouch-kmod
+pkg install -y utouch-kmod
+
+# 
 pkg install -y xorg
 pkg install -y xinit
 pkg install -y xset
@@ -198,8 +204,10 @@ pkg install -y xzoom
 
 # 
 cp ./usr/local/etc/X11/xorg.conf.d/screen-resolution.conf /usr/local/etc/X11/xorg.conf.d/
+cp ./usr/local/etc/X11/xorg.conf.d/99-qemu-input.conf /usr/local/etc/X11/xorg.conf.d/
 cp ./usr/local/lib/X11/app-defaults/* /usr/local/lib/X11/app-defaults/
 cp ./usr/local/lib/X11/system.mwmrc /usr/local/lib/X11/
 
 # 
 cp -r ./usr/athena /usr/
+
