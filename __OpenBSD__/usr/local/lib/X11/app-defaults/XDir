@@ -1,0 +1,361 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                                                                       !
+!                 LLNL XDIR's application defaults file                 !
+!                                                                       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!
+! Colors
+!
+XDir*background: grey76
+XDir*foreground: brown
+XDir*highlightColor: brown
+
+!
+! Font
+!
+XDir*defaultFontList: *hel*-b*-r-*-12-*,variable
+XDir.fixedWidthLayoutFont: 7x13bold
+XDir.variableWidthLayoutFont: *hel*-b*-r-*-12-*
+XDir*view*text.fontList: 7x13bold,fixed
+
+
+!
+! Make sure borders look good
+!
+XDir*borderWidth: 0
+
+
+!
+! Diagnostics Window resources
+!
+XDir.title: Diagnostics
+XDir.iconName: Xdir Diag
+XDir.form*closeButton.labelString: Close
+XDir.form*saveButton.labelString: Save
+XDir.form*clearButton.labelString: Clear
+XDir.form*helpButton.labelString: Help
+XDir.form*diagnosticsLabel1.labelString: Diagnostics
+XDir.form*diagnosticsLabel2.labelString: Level
+XDir.form*quietToggle.labelString: Quiet
+XDir.form*normalToggle.labelString: Normal
+XDir.form*verboseToggle.labelString: Verbose
+XDir.form*debugToggle.labelString: Debug
+XDir.form*diagnosticsFrame.shadowType: SHADOW_ETCHED_IN
+XDir.form*log.rows: 8
+XDir.form*log.width: 450
+
+
+!
+! Preferences Window resources
+!
+*prefs.title: General Preferences
+*prefs.iconName: Xdir GP
+*prefs*okButton.labelString: OK
+*prefs*applyButton.labelString: Apply
+*prefs*cancelButton.labelString: Cancel
+*prefs*helpButton.labelString: Help
+*prefs*scrolledWindow.height: 250
+*prefs*scrolledWindow*rowColumn.frame.shadowType: SHADOW_OUT
+*prefs*scrolledWindow*radioBoxFrame.shadowType: SHADOW_ETCHED_IN
+*prefs*scrolledWindow.width: 447
+
+
+!
+! Remote Connect Dialog resources
+!
+*rConnect_popup.title: Connect to Remote
+*rConnect.okLabelString: Connect
+*rConnect*hostListLabel.labelString: Recently Referenced Hosts:
+*rConnect*hostList.visibleItemCount: 6
+*rConnect*hostList.scrollBarDisplayPolicy: STATIC
+*rConnect*hostNameLabel.labelString: Host Name:
+*rConnect*userNameLabel.labelString: User Name:
+
+
+!
+! Anonymous Remote Connect Dialog resources
+!
+*aConnect_popup.title: Connect to Anonymous
+*aConnect.okLabelString: Connect
+*aConnect*hostListLabel.labelString: Recently Referenced Hosts:
+*aConnect*hostList.visibleItemCount: 6
+*aConnect*hostList.scrollBarDisplayPolicy: STATIC
+*aConnect*hostNameLabel.labelString: Host Name:
+*aConnect*userNameLabel.labelString: User Name:
+*aConnect*passwordLabel.labelString: Password:
+
+
+!
+! Password Dialog resources
+!
+*password_popup.title: Password
+*password.selectionLabelString: Type password
+
+
+!
+! Account Dialog resources
+!
+*account_popup.title: Account
+*account.selectionLabelString: Type account
+
+
+!
+! Wildcard Dialog resources
+!
+*wildcard_popup.title: Wildcard
+*wildcard*listLabel.labelString: Recently Referenced Wildcards:
+*wildcard*list.visibleItemCount: 6
+*wildcard*list.scrollBarDisplayPolicy: STATIC
+*wildcard*list.width: 220
+*wildcard*textLabel.labelString: Wildcard to Apply:
+*wildcard*replaceToggle.labelString: Replace Selection
+*wildcard*addToggle.labelString: Add to Selection
+
+
+!
+! Help Window resources
+!
+*help_popup.title: Help
+*help.width: 500
+*help.height: 350
+
+
+!
+! Make Directory Dialog resources
+!
+*makeDir_popup.title: Make Directory
+*makeDir.selectionLabelString: Directory Name:
+
+
+!
+! Verify Dialog resources
+!
+*verify_popup.title: Verify Selection
+*verify*list.visibleItemCount: 8
+*verify*list.scrollBarDisplayPolicy: STATIC
+
+
+!
+! Monitor Dialog resources
+!
+*mpMonitor_popup.title: Monitor
+*mpMonitor.width: 500
+
+
+!
+! Go to Directory Dialog resources
+!
+*gotoDir_popup.title: Go to Directory
+*gotoDir.listLabelString: Recently Referenced Directories:
+*gotoDir.selectionLabelString: Directory:
+
+
+!
+! Question Dialog resources
+!
+*question_popup.title: Question
+*question.okLabelString: Yes
+*question.cancelLabelString: No
+
+
+!
+! Viewer Preferences Window resources
+!
+*viewPrefs.title: Viewer Preferences
+*viewPrefs.iconName: Xdir VP
+*viewPrefs*listLabel.labelString: Extensions:
+*viewPrefs*list.visibleItemCount: 8
+*viewPrefs*list.scrollBarDisplayPolicy: STATIC
+*viewPrefs*extensionLabel.labelString: Extension:
+*viewPrefs*commandLineLabel.labelString: Viewer Command Line:
+*viewPrefs*editFrame.shadowType: SHADOW_ETCHED_IN
+*viewPrefs*addButton.labelString: Add
+*viewPrefs*replaceButton.labelString: Replace
+*viewPrefs*deleteButton.labelString: Delete
+*viewPrefs*messageFrame.shadowType: SHADOW_ETCHED_OUT
+*viewPrefs*message1.labelString: If "Viewer Command Line" is blank then the built-in
+*viewPrefs*message1.alignment: ALIGNMENT_BEGINNING
+*viewPrefs*message2.labelString: viewer will be used for that extension.
+*viewPrefs*message2.alignment: ALIGNMENT_BEGINNING
+*viewPrefs*okButton.labelString: OK
+*viewPrefs*applyButton.labelString: Apply
+*viewPrefs*cancelButton.labelString: Cancel
+*viewPrefs*helpButton.labelString: Help
+
+
+!
+! File Transfer Monitor Dialog resources
+!
+*xfermon_popup.title: File Transfer Monitor
+*xfermon.width: 400
+*xfermon*statusLabel.labelString: Status:
+*xfermon*nameLabel.labelString: File Name:
+*xfermon*lengthLabel.labelString: File Length:
+*xfermon*bytesMovedLabel.labelString: Bytes Moved:
+
+
+!
+! Rename Dialog resources
+!
+*rename_popup.title: Rename
+*rename.okLabelString: Rename
+*rename.applyLabelString: Skip
+*rename*dirNameLabel.labelString: Directory:
+*rename*oldNameLabel.labelString: Old name:
+*rename*newNameLabel.labelString: New name:
+
+
+!
+! Launcher Preferences Window resources
+!
+*launchPrefs.title: Launcher Preferences
+*launchPrefs.iconName: Xdir LP
+*launchPrefs*listLabel.labelString: Command Names:
+*launchPrefs*list.visibleItemCount: 8
+*launchPrefs*list.scrollBarDisplayPolicy: STATIC
+*launchPrefs*commandNameLabel.labelString: Command Name:
+*launchPrefs*commandLineLabel.labelString: Command Line:
+*launchPrefs*editFrame.shadowType: SHADOW_ETCHED_IN
+*launchPrefs*addButton.labelString: Add
+*launchPrefs*replaceButton.labelString: Replace
+*launchPrefs*deleteButton.labelString: Delete
+*launchPrefs*messageFrame.shadowType: SHADOW_ETCHED_OUT
+*launchPrefs*message1.labelString: In Command Line, use "%h" for host, "%u" for user, "%s"
+*launchPrefs*message1.alignment: ALIGNMENT_BEGINNING
+*launchPrefs*message2.labelString: for single selected entry, and "%l" for all selected entries.
+*launchPrefs*message2.alignment: ALIGNMENT_BEGINNING
+*launchPrefs*okButton.labelString: OK
+*launchPrefs*applyButton.labelString: Apply
+*launchPrefs*cancelButton.labelString: Cancel
+*launchPrefs*helpButton.labelString: Help
+
+
+!
+! View Dialog resources
+!
+*view.iconName: Xdir View
+*view*text.rows: 18
+
+
+!
+! Get Filename Dialog resources
+!
+*getFilename.resizePolicy: RESIZE_NONE
+*getFilename.width: 350
+
+
+!
+! Quote Dialog resources
+!
+*quote_popup.title: Send Quoted Command
+*quote.okLabelString: Send
+*quote*listLabel.labelString: Recently Referenced Commands:
+*quote*list.visibleItemCount: 6
+*quote*list.scrollBarDisplayPolicy: STATIC
+*quote*list.width: 220
+*quote*textLabel.labelString: Low-level FTP Command:
+*quote*warningLabel.labelString: WARNING!
+*quote*warningFrame.shadowType: SHADOW_ETCHED_OUT
+*quote*warningMsg1.labelString: Do not send commands directly to the
+*quote*warningMsg1.alignment: ALIGNMENT_BEGINNING
+*quote*warningMsg2.labelString: FTP server unless you know what you
+*quote*warningMsg2.alignment: ALIGNMENT_BEGINNING
+*quote*warningMsg3.labelString: are doing.  Press Help for details.
+*quote*warningMsg3.alignment: ALIGNMENT_BEGINNING
+
+
+!
+! About XFTP Dialog resources
+!
+*about_popup.title: About LLNL XDIR
+*about.cancelLabelString: Close
+*about.helpLabelString: More
+
+
+!
+! Directory Window
+!
+XDir*dirWindow.keyboardFocusPolicy: POINTER
+XDir*dirWindow.iconName: Xdir Dir
+XDir*dirWindow*scrolledWindow.height: 230
+XDir*dirWindow*popupAncestorsMenuLabel.labelString: Go to Ancestor
+XDir*dirWindow*popupLaunchMenuLabel.labelString: Launch Command
+XDir*dirWindow*llnlxdirButton.foreground: DeepSkyBlue4
+XDir*dirWindow*toolbarForm.tabularButton.foreground: DarkGreen
+XDir*dirWindow*toolbarForm.iconicButton.foreground: DarkGreen
+XDir*dirWindow*toolbarForm.treeButton.foreground: DarkGreen
+XDir*dirWindow*toolbarForm.fullInfoButton.foreground: DarkGreen
+XDir*dirWindow*toolbarForm.tunnelingButton.foreground: DeepSkyBlue4
+XDir*dirWindow*toolbarForm.dotFilesButton.foreground: DarkOrchid
+XDir*dirWindow*toolbarForm.cacheButton.foreground: DarkGreen
+XDir*dirWindow*toolbarForm.refreshDirButton.foreground: Red3
+XDir*dirWindow*toolbarForm.upArrowButton.foreground: Red3
+XDir*dirWindow*toolbarForm.homeButton.foreground: Red3
+XDir*dirWindow*toolbarForm.mkdirButton.foreground: Red3
+XDir*dirWindow*toolbarForm.deleteButton.foreground: Red3
+XDir*dirWindow*toolbarForm.closeButton.foreground: Red3
+
+
+!
+! Search Dialog resources
+!
+*search_popup.title: Search
+*search*textLabel.labelString: Search for:
+*search*depth.titleString: Maximum Search Depth
+*search*matchCaseToggle.labelString: Match Case
+*search*searchThisDirToggle.labelString: Search this directory
+*search*searchThisHostToggle.labelString: Search all displayed directories of this host
+*search*searchAllHostsToggle.labelString: Search all displayed directories of all hosts
+
+
+!
+! Find Dialog resources
+!
+*find_popup.title: Find
+*find*form.width: 270
+*find*patternLabel.labelString: Search for:
+*find*matchCaseLabel.labelString: Case Sensitivity
+*find*matchCaseYesToggle.labelString: Match Case
+*find*matchCaseNoToggle.labelString: Ignore Case
+*find*directionLabel.labelString: Search Direction
+*find*searchForwardToggle.labelString: Forward
+*find*searchBackwardToggle.labelString: Backward
+
+
+!
+! Search Monitor Dialog resources
+!
+*searchMonitor_popup.title: Searching
+*searchMonitor.width: 450
+*searchMonitor*patternLabel.labelString: Pattern:
+*searchMonitor*hostLabel.labelString: Host:
+*searchMonitor*userLabel.labelString: User:
+*searchMonitor*dirLabel.labelString: Directory:
+
+
+!
+! Alert Dialog resources
+!
+*alert_popup.title: Error
+*alert.cancelLabelString: Diagnostics
+
+
+!
+! Edit History Dialog resources
+!
+*editHistory_popup.title: Edit History
+*editHistory.width: 550
+*editHistory*okButton.labelString: OK
+*editHistory*cancelButton.labelString: Cancel
+*editHistory*helpButton.labelString: Help
+*editHistory*XmList.visibleItemCount: 9
+*editHistory*XmList.scrollBarDisplayPolicy: STATIC
+*editHistory*hostsLabel.labelString: Hosts
+*editHistory*deleteHostButton.labelString: Delete Host
+*editHistory*categoriesLabel.labelString: Categories
+*editHistory*itemsLabel.labelString: Items
+*editHistory*deleteItemButton.labelString: Delete Item
+*editHistory.ResizePolicy: RESIZE_NONE
+
