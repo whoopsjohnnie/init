@@ -1,0 +1,55 @@
+{
+  Dock = {
+    Applications = (
+      {
+        Command = dockit;
+        Name = dockit.Dockit;
+        AutoLaunch = No;
+        Forced = No;
+        BuggyApplication = No;
+        Position = "0,0";
+        DropCommand = "wmsetbg -u -t %d";
+      },
+      {
+        Command = urxvt;
+        Name = urxvt.URxvt;
+        AutoLaunch = No;
+        Forced = No;
+        BuggyApplication = No;
+        Position = "0,1";
+      },
+      {
+        Command = WPrefs;
+        Name = groupLeader.WPrefs;
+        AutoLaunch = No;
+        Forced = No;
+        BuggyApplication = No;
+        Position = "0,2";
+      }
+    );
+    Position = "-64,0";
+    Lowered = Yes;
+  };
+  Clip = {
+    Command = "-";
+    Name = Logo.WMClip;
+    AutoLaunch = No;
+    Forced = No;
+    BuggyApplication = No;
+    Position = "0,0";
+    DropCommand = "wmsetbg -u -t %d";
+  };
+  Workspaces = (
+    {
+      Name = Main;
+      Clip = {
+        Applications = ();
+        Lowered = Yes;
+        Collapsed = No;
+        AutoCollapse = No;
+        AutoAttractIcons = No;
+        KeepAttracted = No;
+      };
+    }
+  );
+}
