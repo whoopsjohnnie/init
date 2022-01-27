@@ -13,6 +13,9 @@
   Netscape = {
     Icon = netscape.xpm;
   };
+  xterm.XTerm = {
+    Icon = Terminal.Appn.jpg;
+  };
   xv = {
     AlwaysUserIcon = Yes;
     Icon = xv.xpm;
@@ -62,37 +65,37 @@
   NXTerm = {
     Icon = xterm.xpm;
   };
+  xplaycd = {
+    Icon = cdrom1.xpm;
+  };
   xcalc = {
     AlwaysUserIcon = Yes;
     Icon = xcalc.xpm;
   };
-  xplaycd = {
-    Icon = cdrom1.xpm;
+  Logo.WMPanel = {
+    Icon = GNUstep3D.xpm;
   };
   URxvt = {
     Icon = GNUterm.tiff;
   };
-  Logo.WMPanel = {
-    Icon = GNUstep3D.xpm;
-  };
   xjed = {
     Icon = clipboard.xpm;
-  };
-  xedit = {
-    Icon = xedit.xpm;
-  };
-  XTerm = {
-    Icon = xterm.xpm;
   };
   Xmessage = {
     Icon = Reference.xpm;
   };
-  XPaint = {
-    AlwaysUserIcon = Yes;
-    Icon = xpaint.xpm;
+  XTerm = {
+    Icon = xterm.xpm;
+  };
+  xedit = {
+    Icon = xedit.xpm;
   };
   Xmag = {
     Icon = mag_glass.xpm;
+  };
+  XPaint = {
+    AlwaysUserIcon = Yes;
+    Icon = xpaint.xpm;
   };
   Logo.WMDock = {
     Icon = GNUstep3D.xpm;
