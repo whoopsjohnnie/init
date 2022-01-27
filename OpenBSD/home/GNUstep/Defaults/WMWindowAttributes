@@ -52,7 +52,7 @@
     Icon = xpaint.xpm;
   };
   groupLeader.WPrefs = {
-    Icon = groupLeader.WPrefs.xpm;
+    Icon = WPrefs.xpm;
   };
   AcroRead = {
     AlwaysUserIcon = Yes;
@@ -65,12 +65,12 @@
   NXTerm = {
     Icon = xterm.xpm;
   };
-  xplaycd = {
-    Icon = cdrom1.xpm;
-  };
   xcalc = {
     AlwaysUserIcon = Yes;
     Icon = xcalc.xpm;
+  };
+  xplaycd = {
+    Icon = cdrom1.xpm;
   };
   Logo.WMPanel = {
     Icon = GNUstep3D.xpm;
@@ -81,21 +81,21 @@
   xjed = {
     Icon = clipboard.xpm;
   };
-  Xmessage = {
-    Icon = Reference.xpm;
+  xedit = {
+    Icon = xedit.xpm;
   };
   XTerm = {
     Icon = xterm.xpm;
   };
-  xedit = {
-    Icon = xedit.xpm;
-  };
-  Xmag = {
-    Icon = mag_glass.xpm;
+  Xmessage = {
+    Icon = Reference.xpm;
   };
   XPaint = {
     AlwaysUserIcon = Yes;
     Icon = xpaint.xpm;
+  };
+  Xmag = {
+    Icon = mag_glass.xpm;
   };
   Logo.WMDock = {
     Icon = GNUstep3D.xpm;
