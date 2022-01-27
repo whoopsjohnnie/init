@@ -1,5 +1,0 @@
-{
-  SystemFont = "-*-helvetica-medium-r-normal-*-%d-*-*-*-*-*-*-*";
-  BoldSystemFont = "-*-helvetica-bold-r-normal-*-%d-*-*-*-*-*-*-*";
-  DoubleClickTime = 250;
-}
