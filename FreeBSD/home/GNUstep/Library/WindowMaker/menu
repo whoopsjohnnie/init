@@ -110,7 +110,7 @@
 		"Manual Browser" EXEC xman
 	"Info" END
 	"XTerm" EXEC xterm -sb 
-	"Rxvt" EXEC rxvt -bg black -fg white -fn fixed
+	"Rxvt" EXEC urxvt -bg black -fg white -fn fixed
 	"Workspaces" WORKSPACE_MENU
 	"Applications" MENU
 		"Graphics" MENU

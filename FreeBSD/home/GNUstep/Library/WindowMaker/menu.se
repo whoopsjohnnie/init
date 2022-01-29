@@ -110,8 +110,8 @@
 		"Manualläsare" EXEC xman
 	"Info" END
 	"XTerm" EXEC xterm -sb 
-	"Rxvt (fixed)" EXEC rxvt -bg black -fg white -fn fixed
-	"Rxvt (9x15)" EXEC rxvt -bg black -fg white -fn 9x15
+	"Rxvt (fixed)" EXEC urxvt -bg black -fg white -fn fixed
+	"Rxvt (9x15)" EXEC urxvt -bg black -fg white -fn 9x15
 	"Arbetsbord" WORKSPACE_MENU
 	"Program" MENU
 		"Grafik" MENU
