@@ -1,33 +1,113 @@
 {
-  Logo.WMDock = {Icon = GNUstep3D.xpm;};
-  Logo.WMPanel = {Icon = GNUstep3D.xpm;};
-  Logo.WMClip = {Icon = clip.xpm;};
-  Dockit = {Icon = GNUstep3D.xpm;};
-  WMSoundServer = {Icon = Sound.tiff;};
-  XTerm = {Icon = xterm.xpm;};
-  NXTerm = {Icon = xterm.xpm;};
-  URxvt = {Icon = GNUterm.tiff;};
-  xcalc = {AlwaysUserIcon = Yes;Icon = xcalc.xpm;};
-  Netscape = {Icon = netscape.xpm;};
-  Emacs = {AlwaysUserIcon = Yes;Icon = "gnu-animal.xpm";};
-  Ghostview = {Icon = gv.xpm;};
-  AcroRead = {AlwaysUserIcon = Yes;Icon = xpaint.xpm;};
-  Gimp = {AlwaysUserIcon = Yes;Icon = xpaint.xpm;};
-  xv = {AlwaysUserIcon = Yes;Icon = xv.xpm;};
-  lyX.XForm = {AlwaysUserIcon = Yes;Icon = word_processor.xpm;};
-  XPaint = {AlwaysUserIcon = Yes;Icon = xpaint.xpm;};
-  Fig = {AlwaysUserIcon = Yes;Icon = xpaint.xpm;};
-  XLess = {AlwaysUserIcon = YES;Icon = Reference.xpm;};
-  manualBrowser.Xman = {AlwaysUserIcon = Yes;Icon = xman.xpm;};
-  Xman = {AlwaysUserIcon = Yes;Icon = book.xpm;};
-  Stepman = {Icon = book.xpm;};
-  Xmag = {Icon = mag_glass.xpm;};
-  Xmessage = {Icon = Reference.xpm;};
-  XConsole = {Icon = tile.xpm;Omnipresent = Yes;};
-  Fte = {Icon = clipboard.xpm;};
-  xjed = {Icon = clipboard.xpm;};
-  xedit = {Icon = xedit.xpm;};
-  xmcd = {Icon = cdrom1.xpm;};
-  xplaycd = {Icon = cdrom1.xpm;};
-  "*" = {Icon = defaultAppIcon.xpm;};
+  Xman = {
+    AlwaysUserIcon = Yes;
+    Icon = book.xpm;
+  };
+  lyX.XForm = {
+    AlwaysUserIcon = Yes;
+    Icon = word_processor.xpm;
+  };
+  Fte = {
+    Icon = clipboard.xpm;
+  };
+  Netscape = {
+    Icon = netscape.xpm;
+  };
+  xterm.XTerm = {
+    Icon = Terminal.Appn.jpg;
+  };
+  xv = {
+    AlwaysUserIcon = Yes;
+    Icon = xv.xpm;
+  };
+  XLess = {
+    AlwaysUserIcon = YES;
+    Icon = Reference.xpm;
+  };
+  Emacs = {
+    AlwaysUserIcon = Yes;
+    Icon = "gnu-animal.xpm";
+  };
+  Stepman = {
+    Icon = book.xpm;
+  };
+  WMSoundServer = {
+    Icon = Sound.tiff;
+  };
+  Ghostview = {
+    Icon = gv.xpm;
+  };
+  XConsole = {
+    Icon = tile.xpm;
+    Omnipresent = Yes;
+  };
+  Dockit = {
+    Icon = GNUstep3D.xpm;
+  };
+  xmcd = {
+    Icon = cdrom1.xpm;
+  };
+  Fig = {
+    AlwaysUserIcon = Yes;
+    Icon = xpaint.xpm;
+  };
+  groupLeader.WPrefs = {
+    Icon = WPrefs.xpm;
+  };
+  AcroRead = {
+    AlwaysUserIcon = Yes;
+    Icon = xpaint.xpm;
+  };
+  manualBrowser.Xman = {
+    AlwaysUserIcon = Yes;
+    Icon = xman.xpm;
+  };
+  NXTerm = {
+    Icon = xterm.xpm;
+  };
+  xcalc = {
+    AlwaysUserIcon = Yes;
+    Icon = xcalc.xpm;
+  };
+  xplaycd = {
+    Icon = cdrom1.xpm;
+  };
+  Logo.WMPanel = {
+    Icon = GNUstep3D.xpm;
+  };
+  URxvt = {
+    Icon = GNUterm.tiff;
+  };
+  xjed = {
+    Icon = clipboard.xpm;
+  };
+  xedit = {
+    Icon = xedit.xpm;
+  };
+  XTerm = {
+    Icon = xterm.xpm;
+  };
+  Xmessage = {
+    Icon = Reference.xpm;
+  };
+  XPaint = {
+    AlwaysUserIcon = Yes;
+    Icon = xpaint.xpm;
+  };
+  Xmag = {
+    Icon = mag_glass.xpm;
+  };
+  Logo.WMDock = {
+    Icon = GNUstep3D.xpm;
+  };
+  "*" = {
+    Icon = defaultAppIcon.xpm;
+  };
+  Gimp = {
+    AlwaysUserIcon = Yes;
+    Icon = xpaint.xpm;
+  };
+  Logo.WMClip = {
+    Icon = clip.xpm;
+  };
 }

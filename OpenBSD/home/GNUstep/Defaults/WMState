@@ -1,55 +1,135 @@
 {
   Dock = {
+    AutoRaiseLower = No;
     Applications = (
       {
-        Command = dockit;
+        Forced = No;
         Name = dockit.Dockit;
-        AutoLaunch = No;
-        Forced = No;
-        BuggyApplication = No;
-        Position = "0,0";
         DropCommand = "wmsetbg -u -t %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = dockit;
       },
       {
-        Command = urxvt;
+        Forced = No;
         Name = urxvt.URxvt;
-        AutoLaunch = No;
-        Forced = No;
         BuggyApplication = No;
-        Position = "0,1";
+        AutoLaunch = No;
+        Position = "0,3";
+        Lock = No;
+        Command = urxvt;
       },
       {
-        Command = WPrefs;
-        Name = groupLeader.WPrefs;
-        AutoLaunch = No;
         Forced = No;
+        Name = groupLeader.WPrefs;
         BuggyApplication = No;
+        AutoLaunch = No;
         Position = "0,2";
+        Lock = No;
+        Command = WPrefs;
+      },
+      {
+        Forced = No;
+        Name = wmCalClock.wmCalClock;
+        DropCommand = "wmCalClock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "wmCalClock %s";
+        Command = wmCalClock;
+      },
+      {
+        Forced = No;
+        Name = xterm.XTerm;
+        DropCommand = "xterm -sb %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,4";
+        Lock = No;
+        PasteCommand = "xterm -sb %s";
+        Command = "xterm -sb";
       }
     );
-    Position = "-64,0";
     Lowered = Yes;
+    Position = "-64,0";
+    Applications900 = (
+      {
+        Forced = No;
+        Name = dockit.Dockit;
+        DropCommand = "wmsetbg -u -t %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = dockit;
+      },
+      {
+        Forced = No;
+        Name = urxvt.URxvt;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,3";
+        Lock = No;
+        Command = urxvt;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,2";
+        Lock = No;
+        Command = WPrefs;
+      },
+      {
+        Forced = No;
+        Name = wmCalClock.wmCalClock;
+        DropCommand = "wmCalClock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "wmCalClock %s";
+        Command = wmCalClock;
+      },
+      {
+        Forced = No;
+        Name = xterm.XTerm;
+        DropCommand = "xterm -sb %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,4";
+        Lock = No;
+        PasteCommand = "xterm -sb %s";
+        Command = "xterm -sb";
+      }
+    );
   };
   Clip = {
-    Command = "-";
-    Name = Logo.WMClip;
-    AutoLaunch = No;
     Forced = No;
-    BuggyApplication = No;
-    Position = "0,0";
+    Name = Logo.WMClip;
     DropCommand = "wmsetbg -u -t %d";
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "0,0";
+    Lock = No;
+    Command = "-";
   };
+  Drawers = ();
   Workspaces = (
     {
-      Name = Main;
       Clip = {
-        Applications = ();
-        Lowered = Yes;
-        Collapsed = No;
+        AutoRaiseLower = No;
         AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
         AutoAttractIcons = No;
-        KeepAttracted = No;
+        Lowered = Yes;
       };
+      Name = Main;
     }
   );
 }
