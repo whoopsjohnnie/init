@@ -1,0 +1,84 @@
+{
+  FTitleColor = "#ffffff";
+  FrameBorderColor = "#000000";
+  DontLinkWorkspaces = NO;
+  MenuDisabledColor = "#666666";
+  OnTopTransients = YES;
+  Superfluous = NO;
+  ConstrainWindowSize = NO;
+  IconTitleBack = black;
+  PixmapPath = (
+    "/home/john/GNUstep/Library/WindowMaker/Pixmaps",
+    "/home/john/GNUstep/Library/WindowMaker/Backgrounds",
+    "/misc/hacks/vol/x11-wm/wmaker/0.19.3/share/WindowMaker/Pixmaps",
+    "/misc/hacks/vol/x11-wm/wmaker/0.19.3/share/WindowMaker/Backgrounds",
+    "/misc/hacks/icons",
+    "/usr/X11R6/include/X11/pixmaps",
+    "/usr/local/share/pixmaps",
+    "/usr/share/pixmaps",
+    "/usr/local/share/pixmaps",
+    "/usr/local/share/WindowMaker/Icons",
+    "/usr/local/share/WindowMaker/Pixmaps",
+    "/usr/local/share/WPrefs"
+  );
+  FTitleBack = (solid, black);
+  ClipTitleFont = "Verdana:bold:pixelsize=10";
+  IconTitleFont = "Arial,Luxi Sans:pixelsize=9";
+  MenuTextBack = (solid, "rgb:aa/aa/aa");
+  LargeDisplayFont = "Trebuchet MS,Luxi Sans:pixelsize=24";
+  ClipRaiseKey = None;
+  ClipLowerKey = None;
+  MoveDisplay = corner;
+  TitleJustify = center;
+  IconTitleColor = white;
+  MenuTextColor = "#000000";
+  NoWindowUnderDock = YES;
+  IconBack = (dgradient, "rgb:a6/a6/b6", "rgb:51/55/61");
+  MenuTitleColor = "#ffffff";
+  MenuTitleFont = "Trebuchet MS,Luxi Sans:bold:pixelsize=11";
+  WindowTitleExtendSpace = "-1";
+  NormalCursor = (builtin, left_ptr);
+  NewStyle = old;
+  ShadeSpeed = medium;
+  MenuTextFont = "Trebuchet MS,Luxi Sans:pixelsize=11";
+  WorkspaceBack = (solid, "rgb:50/52/6E");
+  HighlightTextColor = "#000000";
+  MenuTitleBack = (solid, black);
+  MenuScrollSpeed = medium;
+  WindowListMouseButton = middle;
+  ClipTitleColor = black;
+  ApplicationMenuMouseButton = right;
+  HighlightColor = "#ffffff";
+  FrameFocusedBorderColor = "#000000";
+  WindowTitleFont = "Trebuchet MS,Luxi Sans:bold:pixelsize=12";
+  WindowPlaceOrigin = (64, 64);
+  CClipTitleColor = gray20;
+  IconSlideSpeed = medium;
+  MenuStyle = normal;
+  ResizebarBack = (solid, "#848484");
+  IconPath = (
+    "/home/john/GNUstep/Library/Icons",
+    "/misc/hacks/vol/x11-wm/wmaker/0.19.3/share/WindowMaker/Icons",
+    "/misc/hacks/vol/x11-wm/wmaker/0.19.3/share/WindowMaker/Pixmaps",
+    "/misc/hacks/icons",
+    "/usr/X11R6/include/X11/pixmaps",
+    "/home/john/GNUstep/Library/WindowMaker/Pixmaps",
+    "/usr/local/share/pixmaps",
+    "/usr/share/pixmaps",
+    "/usr/local/share/pixmaps",
+    "/usr/local/share/WindowMaker/Pixmaps",
+    "/usr/local/share/WindowMaker/Backgrounds",
+    "/usr/local/share/WPrefs"
+  );
+  DisplayFont = "Trebuchet MS,Luxi Sans:pixelsize=11";
+  DisableSound = NO;
+  PTitleBack = (solid, gray40);
+  MenuTextExtendSpace = "-1";
+  SelectWindowsMouseButton = left;
+  UTitleColor = "#000000";
+  UTitleBack = (solid, "#848484");
+  PTitleColor = "#ffffff";
+  ResizeDisplay = line;
+  MenuTitleExtendSpace = "-1";
+  FrameSelectedBorderColor = "#ffffff";
+}
