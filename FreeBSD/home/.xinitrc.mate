@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# marco --replace
+
+# dbus-launch
+exec ck-launch-session mate-session
+
