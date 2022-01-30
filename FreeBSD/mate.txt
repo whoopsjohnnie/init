@@ -1,0 +1,34 @@
+
+
+> pkg install xorg
+> pkg install slim
+> pkg install mate
+> pkg install mate-desktop
+
+> pkg install mate
+> pkg install mate-extras
+> pkg install gnome-keyring
+> update-mime-database /usr/local/share/mime/
+> chmod 644 /usr/local/share/applications/mimeinfo.cache
+> gdk-pixbuf-query-loaders --update-cache
+
+
+/etc/fstab
+proc /proc procfs rw 0 0
+
+
+/etc/rc.conf:
+hald_enable="YES"
+dbus_enable="YES"
+polkitd_enable="YES"
+volmand_enable="YES"
+slim_enable="YES"
+
+
+.xinitrc:
+#!/bin/sh
+
+# marco --replace
+
+# dbus-launch
+exec ck-launch-session mate-session
