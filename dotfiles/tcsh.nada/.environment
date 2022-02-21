@@ -1,0 +1,27 @@
+
+#
+# This is my original tcsh shell config from the Solaris UNIX nada.kth.se AFS cell
+#
+# /afs/nada.kth.se/home/e97/e97_jog/.environment, 27 Mar 13:31:11 2001
+#
+
+#
+# $Header: /afs/.nada.kth.se/usr/local/etc/nadaskel/srcfiles/sv/RCS/.environment,v 1.3 1997/08/07 10:25:31 fjo Exp $
+#
+#  Här kan du specifiera dina "environment"-variabler
+#
+#  Vill du veta mer om denna fil, läs i filen README i din hemkatalog.
+#
+#  (.environment 2.0)
+
+#module add jdk/latest
+#module add staroffice/5.2
+
+setenv EDITOR emacs
+setenv VISUAL emacs
+
+# setenv PRINTER <skrivarnamn>
+setenv WINDOW_MANAGER wmaker
+
+# Använd Common Desktop Environment
+#setenv CDE
