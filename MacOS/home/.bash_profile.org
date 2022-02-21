@@ -1,0 +1,40 @@
+
+# ??
+# /Applications/acquia-drupal/mysql/bin/:/opt/subversion/bin/
+
+##
+# Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2014-06-02_at_21:30:07
+##
+
+# MacPorts Installer addition on 2014-06-02_at_21:30:07: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+
+# export PATH="$PATH:/Applications/AcquiaDevDesktop/drush"
+
+##
+# Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2016-01-04_at_00:22:49
+##
+
+# MacPorts Installer addition on 2016-01-04_at_00:22:49: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+#
+export PATH="~/Library/Python/2.7/bin/:$PATH"
+
+# prompt
+export PS1="\u@\h \w>"
+
+# MacPorts Installer addition on 2017-01-05_at_09:29:52: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# JAVA
+# export JAVA_HOME=$(/usr/libexec/java_home)
+# export PATH=${JAVA_HOME}/bin:$PATH
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
