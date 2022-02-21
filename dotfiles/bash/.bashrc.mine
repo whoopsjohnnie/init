@@ -1,0 +1,106 @@
+
+# 
+# Slackware Linux bashrc init konverterad från MacOS.
+# Skriven i vim på buss 312 på Ekerö den 7:e och 8:e Augusti 2021.
+# 
+
+# 
+##
+# Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2016-01-04_at_00:22:49
+##
+
+# # MacPorts Installer addition on 2016-01-04_at_00:22:49: adding an appropriate PATH variable for use with MacPorts.
+# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# # Finished adapting your PATH environment variable for use with MacPorts.
+
+# 
+# prompt
+# 
+# Denna prompt har jag använt så länge jag kommer ihåg. Den började som "host:folder>" i csh/tcsh på Digital UNIX OSF/1 
+# 1997, men konverterades till "user@host folder>" någon gång senare och har stannat så sedan dess. 
+# 
+export PS1="\u@\h \w>"
+
+# 
+# JAVA
+# 
+# Om java är installerat är det bra att sätta up JAVA HOME och lägga till java i pathen.
+# jenv är bra att använda för att hantera olika JDK versioner och installationer.
+# 
+# # export JAVA_HOME=$(/usr/libexec/java_home)
+# # export PATH=${JAVA_HOME}/bin:$PATH
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+# # jenv global 1.8.0.92
+
+# 
+# Python
+#
+# Det här är lite legacy, innan jag började använda pipenv och virtuella miljöer i python så satte jag pathen så här.
+# 
+# # Python path, set $PATH before so system python is default to not screw with system and installers
+# export PATH="$PATH:~/Library/Python/2.7/bin/:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/"
+
+# 
+# GO
+# 
+# # export GOPATH=/usr/local/go
+# export PATH="$PATH:/usr/local/go/bin"
+# export GOPATH=$HOME/go
+
+# 
+# node/NVM
+# 
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# 
+# Serverless och annat
+# 
+# # tabtab source for serverless package
+# # uninstall by removing these lines or running `tabtab uninstall serverless`
+# [ -f /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/serverless.bash
+# # tabtab source for sls package
+# # uninstall by removing these lines or running `tabtab uninstall sls`
+# [ -f /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/sls.bash ] && . /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/sls.bash
+# # tabtab source for slss package
+# # uninstall by removing these lines or running `tabtab uninstall slss`
+# [ -f /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/slss.bash ] && . /Users/john/Documents/development/serverless/node_modules/tabtab/.completions/slss.bash
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# 
+# Charset och locale
+# 
+# EN/US Amerikanska
+# export CHARSET="UTF-8"
+# export LANG="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"
+# export LC_CTYPE="en_US.UTF-8"
+
+# SV/SE Svenska
+export CHARSET="UTF-8"
+export LANG="sv_SE.UTF-8"
+export LC_ALL="sv_SE.UTF-8"
+export LC_CTYPE="sv_SE.UTF-8"
+
+# Håll ner en knapp för repeat
+xset r
+
+# 
+# Git och pager
+# 
+# Pager i git skriver ESC
+export PAGER="less"
+export LESS="R"
+
+# Need to port this from csh to sh
+# set autolist
+# set correct=cmd
+# set nobeep
+
+# 
+# Alias
+# 
+alias emacs='emacs -nw'
+
