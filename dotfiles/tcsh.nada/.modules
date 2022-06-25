@@ -1,0 +1,34 @@
+
+#
+# This is my original tcsh shell config from the Solaris UNIX nada.kth.se AFS cell
+#
+# /afs/nada.kth.se/home/e97/e97_jog/.modules, 27 Mar 14:44:11 2001
+#
+
+#
+# $Header: /afs/.nada.kth.se/usr/local/etc/nadaskel/srcfiles/sv/RCS/.modules,v 1.2 1997/08/07 10:24:40 fjo Exp $
+#
+#  Här kan du ange vilka moduler du vill använda.
+#
+#  Denna fil bör innehålla en rad som det står "module add" på, direkt
+#  följt av namnen på de moduler du vill använda.
+#  Vill du veta mer om denna fil, läs i filen README i din hemkatalog.
+#
+#  (.modules 2.0)
+
+# Skriv modulnamnen på raden nedan direkt efter "module add"
+# module add jdk/latest staroffice/5.2 tcl-tk/latest
+# module add hacks windowmaker
+# module add emacs/20.7
+
+
+
+
+
+
+
+
+
+
+
+
