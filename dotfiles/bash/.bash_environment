@@ -4,9 +4,9 @@
 
 # To use a windowmanager other than mwm or fvwm2 with the site-
 # specific configuration uncomment the next line.
-export WINDOW_MANAGER="twm"
+export WINDOW_MANAGER="mwm"
+# export WINDOW_MANAGER="twm"
 # export WINDOW_MANAGER="fvwm2"
-# export WINDOW_MANAGER="mwm"
 
 # If the environment variable FVWM2WINDOWS is set fvwm2 is started
 # with the site-specific (Elektro-specific) configuration, allowing
