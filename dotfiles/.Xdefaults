@@ -1,0 +1,110 @@
+
+! ##############
+! # Xft settings
+! ##############
+
+Xft.dpi:                    96
+! Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+! ################
+! # URXVT settings
+! ################
+
+! MacOS
+URxvt*termName: xterm-256color
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.loginShell:           true
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+URxvt*saveLines:	    12000
+
+URxvt.foreground:	    #FFFFFF
+URxvt*foreground:	    #FFFFFF
+URxvt*background:	    #000000
+
+! URxvt*font:		    xft:Misc Fixed:medium:size=12
+URxvt*font:		    7x13
+! URxvt*boldFont:		    7x13bold
+URxvt*boldFont:		    7x13bold
+URxvt*letterSpace:	    0
+
+URxvt*scrollBar:	    true
+URxvt*scrollBar_right:	    false
+URxvt*scrollstyle:	    next
+
+URxvt.iso14755:		    false
+URxvt.iso14755_52:		    false
+
+! URxvt*altSendsEscape:	    true
+
+! URxvt.perl-ext-common: 	  	default,clipboard,url-select,keyboard-select
+URxvt.perl-ext-common: 			default,selection-to-clipboard,clipboard-osc
+! URxvt.keysym.M-u:    	  	perl:url-select:select_next
+! URxvt.keysym.M-Escape:		perl:keyboard-select:activate
+! URxvt.keysym.M-s:		perl:keyboard-select:search
+! URxvt.url-select.launcher:	chromium
+! URxvt.url-select.underline:	true
+! URxvt.urgentOnBell:	  	true
+! URxvt.clipboard.copycmd:  	xsel -ib
+! URxvt.clipboard.pastecmd: 	xsel -ob
+
+! URxvt.keysym.M-c:   perl:clipboard:copy
+! URxvt.keysym.M-v:   perl:clipboard:paste
+! URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+! URxvt.keysym.Meta-C:   eval:selection_to_clipboard
+! URxvt.keysym.Meta-V:   eval:paste_clipboard
+
+URxvt.keysym.Shift-Control-C:   eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V:   eval:paste_clipboard
+
+! ################
+! # XTerm settings
+! ################
+
+xterm*termName: xterm-256color
+
+! xterm*font: monospace
+! xterm*faceName: monospace:size=10
+! xterm*font: Misc Fixed
+! xterm*faceName: Misc Fixed:size=10
+! xterm*font: 7x13
+! xterm*font: 6x13
+xterm*loginShell: true
+xterm*vt100*geometry: 90x30
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*eightBitInput: false
+xterm*allowBoldFonts: false
+xterm*vt100.renderFont: false
+
+! ################
+! # EMACS settings
+! ################
+
+Emacs.menuBar:		    1
+Emacs.toolBar:		    0
+Emacs.verticalScrollBars:   off
+Emacs.FontBackend:	    xft,x
+Emacs*font:		    7x13
+Emacs.font:		    7x13
+Emacs*boldFont:		    7x13bold
+Emacs.boldFont:		    7x13bold
+
+Emacs*foreground:	    #000000
+Emacs.foreground:	    #000000
+Emacs*background:	    #F5F5F5
+Emacs.background:	    #F5F5F5
+
+!
+! Mwm/Motif
+!
+
+! Mwm**useIconBox:  true
+! Mwm*iconDecoration:  all
