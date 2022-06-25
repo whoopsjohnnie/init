@@ -1,6 +1,12 @@
 # Prototype user .zshrc file
 
 #
+# This is my original tcsh shell config from the Digital UNIX kth.se AFS cell
+#
+# /afs/kth.se/home/e97/e97_jog/.tcshrc, Jan 16 2000, 23:33:08
+#
+
+#
 # Ported from csh/tcsh to bash by john on June 23, 2021
 # Ported to from bash to zsh by john on Feb 20, 2022
 # 
