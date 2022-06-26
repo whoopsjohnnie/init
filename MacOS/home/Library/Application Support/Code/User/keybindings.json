@@ -516,16 +516,29 @@
     //   "command": "",
     //   "when": ""
     // },
+
     // {
     //   "key": "Cmd+g",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
+    {
+      "key": "Cmd+g",
+      // "command": "emacs-mcx.cancel",
+      "command": "",
+      "when": "editorTextFocus"
+    },
     // {
     //   "key": "Cmd+g",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
+    {
+      "key": "Cmd+g",
+      // "command": "emacs-mcx.isearchAbort",
+      "command": "closeFindWidget",
+      "when": "editorFocus && findWidgetVisible && !isComposing"
+    },
     // {
     //   "key":  "enter",
     //   "command": "",
