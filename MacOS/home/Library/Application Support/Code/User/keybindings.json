@@ -654,21 +654,21 @@
     {
       "$special": "rectMarkModeTypes"
     },
-    {
-      "key": "Cmd+'",
-      "command": "editor.action.triggerSuggest",
-      "when": "editorTextFocus"
-    },
+    // {
+    //   "key": "Cmd+'",
+    //   "command": "editor.action.triggerSuggest",
+    //   "when": "editorTextFocus"
+    // },
     {
       "key": "Cmd+'",
       "command": "toggleSuggestionDetails",
       "when": "editorTextFocus && suggestWidgetVisible"
     },
-    {
-      "key": "meta+/",
-      "command": "editor.action.triggerSuggest",
-      "when": "editorTextFocus"
-    },
+    // {
+    //   "key": "meta+/",
+    //   "command": "editor.action.triggerSuggest",
+    //   "when": "editorTextFocus"
+    // },
     {
       "key": "meta+/",
       "command": "toggleSuggestionDetails",
