@@ -58,4 +58,9 @@ fi
 # get any changes that may be made to the system-wide file at 
 # a later date.  Be sure you know what you are doing.
 
-xset -b
+#
+# Gömmer irriterande felmeddelanden i Slackware 15, Adelsö Juli 2022
+# xset:  unable to open display ":0"
+#
+# xset -b
+xset -b &> /dev/null
