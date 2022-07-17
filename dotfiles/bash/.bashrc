@@ -3,7 +3,7 @@
 #
 # This is my original tcsh shell config from the Digital UNIX kth.se AFS cell
 #
-# /afs/kth.se/home/e97/e97_jog/.tcshrc, Jan 16 2000, 23:33:08
+# /afs/kth.se/home/e97/e97_jog/.tcshrc, Jan 17 2000, 08:33:08
 #
 
 #
