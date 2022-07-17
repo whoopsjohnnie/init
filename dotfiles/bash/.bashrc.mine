@@ -2,16 +2,20 @@
 # 
 # Slackware Linux bashrc init konverterad från MacOS.
 # Skriven i vim på buss 312 på Ekerö den 7:e och 8:e Augusti 2021.
+# Fixad och uppstädad på buss 312 på Ekerö den 13:e Augusti 2022.
 # 
 
-# 
 ##
+# Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2014-06-02_at_21:30:07
 # Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2016-01-04_at_00:22:49
 ##
 
-# # MacPorts Installer addition on 2016-01-04_at_00:22:49: adding an appropriate PATH variable for use with MacPorts.
-# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# # Finished adapting your PATH environment variable for use with MacPorts.
+# MacPorts Installer addition on 2014-06-02_at_21:30:07: adding an appropriate PATH variable for use with MacPorts.
+# MacPorts Installer addition on 2016-01-04_at_00:22:49: adding an appropriate PATH variable for use with MacPorts.
+# MacPorts Installer addition on 2017-01-05_at_09:29:52: adding an appropriate PATH variable for use with MacPorts.
+# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
 
 # 
 # prompt
