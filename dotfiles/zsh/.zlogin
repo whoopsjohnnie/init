@@ -34,6 +34,15 @@
 # fi
 
 # 
+# Altered by john on July 16, 2022 to source .environment
+# 
+# Source the ~/.zshenv file if it exists
+if [ -r ~/.zshenv ]
+then
+	source ~/.zshenv
+fi
+
+# 
 # Altered by john on Feb 20, 2022 to bypass /usr/athena/lib/dotfiles
 # 
 # Source the ~/.zsh_login.mine file if it exists
