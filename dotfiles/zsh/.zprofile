@@ -9,6 +9,7 @@
 #
 # Ported from csh/tcsh to bash by john on June 23, 2021
 # Ported to from bash to zsh by john on Feb 20, 2022
+# Renamed to .zprofile by john on July 16, 2022
 # 
 
 # Last modified by patriks/910730
