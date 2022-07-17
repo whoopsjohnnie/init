@@ -27,6 +27,14 @@
 # endif
 
 # 
+# Altered by john on July 16, 2022 to source .environment
+# 
+# Source the ~/.environment file if it exists
+if (-r ~/.environment) then
+	source ~/.environment
+endif
+
+# 
 # Altered by john on Feb 20, 2022 to bypass /usr/athena/lib/dotfiles
 # 
 # Source the ~/.login.mine file if it exists

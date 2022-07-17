@@ -33,6 +33,15 @@
 # fi
 
 # 
+# Altered by john on July 16, 2022 to source .environment
+# 
+# Source the ~/.bashrc.mine file if it exists
+if [ -r ~/.bash_environment ]
+then
+	source ~/.bash_environment
+fi
+
+# 
 # Altered by john on Feb 20, 2022 to bypass /usr/athena/lib/dotfiles
 # 
 # Source the ~/.bashrc.mine file if it exists
@@ -65,5 +74,4 @@ fi
 # xset -b
 xset -b &> /dev/null
 
-source ~/.bash_environment
-
+# source ~/.bash_environment

@@ -35,6 +35,15 @@
 # fi
 
 # 
+# Altered by john on July 16, 2022 to source .environment
+# 
+# Source the ~/.zshenv file if it exists
+if [ -r ~/.zshenv ]
+then
+	source ~/.zshenv
+fi
+
+# 
 # Altered by john on Feb 20, 2022 to bypass /usr/athena/lib/dotfiles
 # 
 # Source the ~/.zshrc.mine file if it exists
@@ -51,7 +60,7 @@ fi
 #                     attach lockers, etc.)
 #      .zshrc.mine - setup cshell environment (set shell variables, aliases,
 #                     unset system defaults, etc.)
-                      
+
 # If you want to CHANGE the zsh initialization sequence, revise this .zshrc
 # file (the one you're reading now).  You may want to copy the contents of
 # the system-wide tcshrc file as a starting point.
@@ -67,5 +76,4 @@ fi
 # xset -b
 xset -b > /dev/null 2>&1
 
-source ~/.zsh_environment
-
+# source ~/.zshenv
