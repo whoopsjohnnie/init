@@ -78,34 +78,95 @@ Menu MwmHelpMenu
 }                         
 
 ! Applications
+! Menu AppMenu
+! {
+! 	"Bildl√§sning (scanner)"	f.exec "/usr/bin/isa_main &"
+! 	"Bookreader"		f.exec "/usr/bin/dxbook &"
+! 	"CDA Viewer"		f.exec "/usr/bin/dxvdoc &"
+! 	"Calculator"		f.exec "/usr/bin/dxcalc &"
+! 	"Calendar"		f.exec "/usr/bin/dxcalendar &"
+! 	"Cardfiler"		f.exec "/usr/bin/dxcardfiler &"
+! 	"Clock"			f.exec "/usr/bin/dxclock &"
+! 	"DECterm"		f.exec "/usr/bin/dxterm -ls &"
+! 	"DECwrite"		f.exec "/usr/bin/decwrite &"
+! 	"Elmer"			f.exec "/usr/local/bin/elmer &"
+! 	"Emacs"			f.exec "/usr/local/bin/emacs &"
+! 	"Emacs version 19"	f.exec "/usr/local/bin/emacs19 &"
+! 	"ghostview"		f.exec "/usr/local/bin/X11/ghostview &"
+! 	"Mail"			f.exec "/usr/local/bin/X11/xmh &"
+! 	"matlab"		f.exec "/usr/bin/dxterm -xrm '*title:Matlab' -xrm '*iconName:Malab' -e matlab -background white"
+! 	"Mosaic"		f.exec "/usr/local/bin/X11/Mosaic &"
+! 	"News"			f.exec "/usr/local/bin/X11/mxrn &"
+! 	"Notepad"		f.exec "/usr/bin/dxnotepad &"
+! 	"Paint"			f.exec "/usr/bin/dxpaint &"
+! 	"Postscript Previewer"	f.exec "/usr/bin/dxpsview &"
+! 	"User Executive"	f.exec "/usr/bin/dxue &"
+! 	"LinkWorks Mgr"		f.exec "/usr/bin/lwkmanager &"
+! 	"xpaint"		f.exec "/usr/local/bin/X11/xpaint &"
+! 	"xman"			f.exec "/usr/local/bin/X11/xman &"
+! 	"xterm"			f.exec "/usr/local/bin/X11/xterm &"
+! 	"xv"			f.exec "/usr/local/bin/X11/xv &"
+! }
+
+! Applications
 Menu AppMenu
 {
-!	"Bildl‰sning (scanner)"	f.exec "/usr/bin/isa_main &"
-!	"Bookreader"		f.exec "/usr/bin/dxbook &"
-!	"CDA Viewer"		f.exec "/usr/bin/dxvdoc &"
+
+
+	"XTerm"			f.exec "xterm -T 'X Terminal' &"
+	"Black XTerm"		f.exec "xterm -fg white -bg black -T 'Black X Terminal' &"
+	"Terminal"		f.exec "urxvt -title Terminal &"
+!	"Terminal ala DEC"	f.exec "urxvt -title Terminal -bg \"#C9AE97\" -bd \"#C9AE97\" -fg black -sr -st --scrollstyle x"
+	"Terminal ala DEC"	f.exec "urxvt -title Terminal -bg \"#696F80\" -bd \"#696F80\" -fg white -sr -st --scrollstyle x"
+	"Top"			f.exec "urxvt -title Top -e top &"
+	"HTop"			f.exec "urxvt -title HTop -e htop &"
+
+	no-label		f.separator
+
+	"Emacs"			f.exec "/usr/local/bin/emacs &"
+!	"Emacs version 19"	f.exec "/usr/local/bin/emacs &"
+	"Emacs terminal"	f.exec "urxvt -title Emacs -e emacs -nw &"
+	"Vim terminal"		f.exec "urxvt -title Vim -e vim &"
+	"Neovim terminal"	f.exec "urxvt -title Neovim -e nvim &"
+
+	no-label		f.separator
+
+	"Filemanager"		f.exec "xfe &"
+	"Filemanager terminal"	f.exec "urxvt -title Filemanager -geometry 144x40 -e mc &"
+
+	no-label		f.separator
+
 	"Calculator"		f.exec "xcalc &"
 	"Calendar"		f.exec "xcalendar &"
-!	"Cardfiler"		f.exec "/usr/bin/dxcardfiler &"
-	"Clock"			f.exec "xclock &"
-	"DECterm"		f.exec "/usr/local/bin/urxvt &"
-	"DECwrite"		f.exec "nedit &"
-!	"Elmer"			f.exec "/usr/local/bin/elmer &"
-	"Emacs"			f.exec "/usr/local/bin/emacs &"
-	"Emacs version 19"	f.exec "/usr/local/bin/emacs &"
-!	"ghostview"		f.exec "/usr/local/bin/X11/ghostview &"
-	"Mail"			f.exec "xmh &"
-	"matlab"		f.exec "xterm -xrm '*title:Matlab' -xrm '*iconName:Malab' -e matlab -background white"
+	"Mail"			f.exec "exmh &"
 	"Mosaic"		f.exec "firefox &"
-!	"News"			f.exec "/usr/local/bin/X11/mxrn &"
-	"Notepad"		f.exec "nedit &"
-!	"Paint"			f.exec "xpaint &"
-!	"Postscript Previewer"	f.exec "/usr/bin/dxpsview &"
-!	"User Executive"	f.exec "/usr/bin/dxue &"
-!	"LinkWorks Mgr"		f.exec "/usr/bin/lwkmanager &"
-	"xpaint"		f.exec "xpaint &"
 	"xman"			f.exec "xman &"
-	"xterm"			f.exec "xterm &"
-	"xv"			f.exec "xv &"
+	"xclipboard"		f.exec "xclipboard &"
+
+	no-label		f.separator
+
+	"matlab"		f.exec "xterm -xrm '*title:Matlab' -xrm '*iconName:Malab' -background white -e octave -i &"
+	"scheme"		f.exec "xterm -xrm '*title:Scheme' -xrm '*iconName:Scheme' -background white -e scheme &"
+
+	no-label		f.separator
+
+	"Clock"			f.exec "xclock -geometry '-10+10' &"
+	"Top"			f.exec "xload -geometry '-10-10' &"
+
+	no-label		f.separator
+
+	"ssh john@nas"		f.exec "urxvt -title 'john@nas' -e ssh john@nas &"
+	"ssh john@twix"		f.exec "urxvt -title 'john@twix' -e ssh john@twix &"
+	"ssh john@mars"		f.exec "urxvt -title 'john@mars' -e ssh john@mars &"
+	"ssh john@pucko"	f.exec "urxvt -title 'john@pucko' -e ssh john@pucko &"
+	"ssh john@oboy"		f.exec "urxvt -title 'john@oboy' -e ssh john@oboy &"
+
+	no-label		f.separator
+
+	"ssh bots@daim"		f.exec "urxvt -title 'bots@daim' -e ssh bots@daim &"
+	"ssh bots@dumle"	f.exec "urxvt -title 'bots@dumle' -e ssh bots@dumle &"
+	"ssh bots@controller"	f.exec "urxvt -title 'bots@controller' -e ssh bots@controller &"
+
 }
 
 ! Default Window Menu
