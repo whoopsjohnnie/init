@@ -1,0 +1,7 @@
+#!/bin/sh 
+ 
+if [ -x /usr/local/vol/frame5/bin/imaker ]; then  
+    xmessage "FrameMaker is not avaliable on this computer. Sorry!"
+else 
+    /usr/local/vol/frame5/bin/imaker $@
+fi 

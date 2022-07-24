@@ -1,0 +1,48 @@
+#!/usr/local/bin/perl
+
+# Trying to get modulepath do "do the right thing". 
+#
+# 1) If FVWM_MODULEDIR is set it uses that variable. It is now set from the
+#    older modules and from fvwm2 itself in newer versions.
+# 2) If not set, the script tries to determine the modulepath according to
+#    the location of the binary.
+# 3) In all other cases it sets a rudimentary path and warns the user.
+
+if (defined $ENV{'FVWM_MODULEDIR'}) {
+    # This variable should either be defined in all our modules or
+    # as it is from fvwm2 version 2.1 and on where it is defined 
+    # internally by fvwm2 itself.
+
+    print "ModulePath /afs/e.kth.se/common/X11/fvwm2.siteconf:" . $ENV{'FVWM_MODULEDIR'} . "\n";
+} else {
+    # If the variable isn't set we try to find out where the modules
+    # are located using the "old" method.
+
+    my $location = `/usr/bin/which fvwm2`;
+    chomp $location;
+    
+    if ($location =~ /^no fvwm2 in /) {
+	# Somehow there were no fvwm2 in the path.
+	
+	print "ModulePath /usr/local/vol/fvwm2/siteconf\n";
+	print STDERR "Du har inte fvwm2 i sökvägen, då kan du inte använda\n";
+	print STDERR "dessa konfigurationsfiler!\n\n";
+    } else {
+	# We found a fvwm2 and try to see if the modules are located 
+	# where we would expect them to be.
+
+	$location =~ s!(/usr/local/vol/fvwm2/)([0-9\.]*)/bin/fvwm2!$1$2/libexec/fvwm/$2!;
+
+	if (-d $location) {
+	    # We found a directory and set the modulepath pointing there.
+
+	    print "ModulePath /usr/local/vol/fvwm2/siteconf:" . $location . "\n";
+	} else {
+	    # There is no directory for modules. 
+
+	    print "ModulePath /usr/local/vol/fvwm2/siteconf\n";
+	    print STDERR "Det är problem att finna modulkatalogen för denna version av fvwm2.\n";
+	    print STDERR "Var god kontakta systemgruppen!\n\n";
+	}
+    }
+}

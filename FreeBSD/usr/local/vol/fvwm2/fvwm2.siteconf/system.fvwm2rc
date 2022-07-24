@@ -1,0 +1,79 @@
+##########################################################################
+#   _____                           ____    ____       _               
+#  |  ___|_   ____      ___ __ ___ |___ \  / ___|  ___| |_ _   _ _ __  
+#  | |_  \ \ / /\ \ /\ / / '_ ` _ \  __) | \___ \ / _ \ __| | | | '_ \ 
+#  |  _|  \ V /  \ V  V /| | | | | |/ __/   ___) |  __/ |_| |_| | |_) |
+#  |_|     \_/    \_/\_/ |_| |_| |_|_____| |____/ \___|\__|\__,_| .__/ 
+#                                                             |_|    
+# FVWM - F? Virtual Window Manager, Version 2.x (fvwm2) Configuration File
+# Created Summer 1998 by
+#	Emil Egerfjord AND
+#	Mikael Hallendal
+# For use at The School Of Electrical Engineering,
+#	the Royal Institute of Technology, Stockholm, Sweden
+#
+# Please, before submitting any questions please read the manuals:
+#                            __                           ____  
+#   _ __ ___   __ _ _ __    / _|_   ____      ___ __ ___ |___ \ 
+#  | '_ ` _ \ / _` | '_ \  | |_\ \ / /\ \ /\ / / '_ ` _ \  __) |
+#  | | | | | | (_| | | | | |  _|\ V /  \ V  V /| | | | | |/ __/ 
+#  |_| |_| |_|\__,_|_| |_| |_|   \_/    \_/\_/ |_| |_| |_|_____|
+# 
+
+# This was the old Modulepath...
+#ModulePath /usr/local/vol/fvwm2/siteconf:/usr/local/vol/fvwm2/2.0.46/modules
+# ...which now is replaced with this that doesn't hardcode versionnumbers.
+PipeRead   /usr/local/vol/fvwm2/siteconf/scripts/modulepath
+
+############################################################################
+# General Features
+Read     .fvwm2.setup/general
+
+############################################################################
+# Look And Feel section
+Read       .fvwm2.setup/lookandfeel
+
+############################################################################
+# START-UP Functions
+Read       .fvwm2.setup/startup
+
+############################################################################
+# BUTTON Setup
+Read       .fvwm2.setup/buttons
+
+############################################################################
+# Forms
+Read       .fvwm2.setup/forms
+
+############################################################################
+# MENU Setup
+PipeRead   /usr/local/vol/fvwm2/siteconf/scripts/dynamic-menu
+Read       .fvwm2.setup/menus
+
+############################################################################
+# COMPLEX FUNCTIONS
+Read       .fvwm2.setup/functions
+
+############################################################################
+# MOUSE Setup
+Read       .fvwm2.setup/mouse
+
+############################################################################
+# KEYBOARD Setup
+Read       .fvwm2.setup/keyboard
+
+############################################################################
+# MODULE setup
+Read       .fvwm2.setup/modules
+
+############################################################################
+# Users own setup
+#
+# If you like to add, replace or modify any settings add them to a 
+# copy of this file in your personal .fvwm2.setup directory.
+#
+Read       .fvwm2.setup/usersetup
+
+
+
+

@@ -1,0 +1,36 @@
+############################################################################
+# FvwmButtons
+#
+# Colors
+*FvwmButtonsFore Black
+*FvwmButtonsBack grey
+
+# Font 
+*FvwmButtonsFont	8x13
+
+# Geometry-- really likes to pick its own size, but giving a position is OK
+*FvwmButtonsGeometry -6-0
+
+# Layout: specify rows or columns, not both
+#*FvwmButtonsColumns 1
+*FvwmButtonsRows 1
+
+*FvwmButtonsFrame 1
+
+# Define the buttons to use.....
+*FvwmButtons XTerm monitor.xpm Exec "XTerm" xterm -T "XTerm" -n "XTerm"
+*FvwmButtons Emacs gnu2.xpm Exec "Emacs" emacs
+*FvwmButtons Mail writeletter.xpm Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient
+*FvwmButtons Knews News.xpm Exec "Knews" knews
+*FvwmButtons WWW WWW.xpm Exec webbrowser
+*FvwmButtons Ordb. text.xpm Exec "Word Processor" /usr/local/vol/fvwm2/siteconf/scripts/wordprocessor
+
+*FvwmButtons(2x1 Container(rows 3, Frame 1))
+*FvwmButtons(1x2 Container(rows 1, Frame 1))
+*FvwmButtons - whatever Swallow "xload" exec xload -bg grey -nolabel
+*FvwmButtons(End)
+*FvwmButtons - whatever Swallow "XClock" exec xclock -bg grey -digital -update 1 -padding 1 -fn "-*-helvetica-medium-r-*-*-10-*-*-*-*-*-*-*"
+*FvwmButtons(End)
+*FvwmButtons(2x1 Container(rows 3, Frame 1))
+*FvwmButtons - whatever Swallow "FvwmPager" Module FvwmPager 0 0
+*FvwmButtons(End)

@@ -1,0 +1,15 @@
+############################################################################
+# FvwmPager
+#
+*FvwmPagerBack grey
+*FvwmPagerFore black
+*FvwmPagerFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+*FvwmPagerHilight tan
+*FvwmPagerGeometry -0-0
+
+# The following "PipeRead" makes sure the pager gets the same name as the
+# Workstation on which it is located
+PipeRead "echo \"*FvwmPagerLabel 0 $HOSTNAME\" | sed 's|\\..*||'"
+
+# Setting the font to 0x0 or nil2 results in no text
+*FvwmPagerSmallFont 5x8

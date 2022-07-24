@@ -1,0 +1,20 @@
+############################################################################
+# FvwmAudio
+#
+#*FvwmAudioPlayCmd /usr/local/bin/AF/aplay -d 0 -t -.05
+#*FvwmAudioDir /usr/local/sound/fvwm
+#*FvwmAudio startup goodmorning.au
+#*FvwmAudio shutdown destruct.au
+#*FvwmAudio unknown cat-1.au
+#*FvwmAudio destroy_window oh_my_god.au
+#*FvwmAudio iconify flush.au
+#*FvwmAudio deiconify eject.au
+
+#*FvwmAudio add_window    ??
+#*FvwmAudio toggle_paging ??
+
+#*FvwmAudioDelay 3
+
+#*FvwmAudio focus_change goodmorning.au
+#*FvwmAudio raise_window goodmorning.au
+#*FvwmAudio lower_window goodmorning.au

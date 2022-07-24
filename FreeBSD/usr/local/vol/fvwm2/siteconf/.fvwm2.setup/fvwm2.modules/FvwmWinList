@@ -1,0 +1,12 @@
+############################################################################
+# FvwmWinList
+#
+*FvwmWinListBack tan
+*FvwmWinListFore black
+*FvwmWinListFont 8x13
+#-adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+*FvwmWinListAction Click1 Iconify -1,Focus
+*FvwmWinListAction Click2 Iconify
+*FvwmWinListAction Click3 Module "FvwmIdent" FvwmIdent
+*FvwmWinListUseSkipList
+*FvwmWinListGeometry -6-83

@@ -1,0 +1,171 @@
+#!/usr/local/bin/perl
+
+
+# This Script is made to bea ble to add programs dynamicly to
+#  the menus in the fvwm2 wm at The School of Electrical Engineering
+#  at The Royal Institute of Technology, Stockholm, Sweden
+
+
+# "menu.conf"-file
+
+# This is the old version of the menu.conf-standard
+# modulename|category|menutext|/path/to/mini-icon|path/to/program and switches
+
+#  This has been added cause we want to be able to specify
+#    the icon for an iconified window.
+#  This is not backward compatible!
+# modulename|category|menutext|/path/to/mini-icon|applicationclass|
+#          path/to/icon-for-iconifiation|path/to/program and switches
+#  /Emil Egerfjord
+
+# Available categories are
+#  Document
+#  Networking
+#  Programming
+#  Graphics
+#  Math
+#  Games
+#  Misc
+#  Help
+
+use strict;
+# use Env; # qw(WMMENUPATH USER HOME);
+use File::Basename;
+
+my ($pn, $path, $suffix);
+my @menupath;
+my ($confpath, @filecontent, $line);
+my ($module, $category, $menutext, $miniiconpath, $class, $iconpath, $program);
+my (%modules, @keys, $key);
+
+# Filehandles
+local *MENUCONF;
+
+# Get the invoking name
+($pn, $path, $suffix) = fileparse ($0, '');
+
+# Start building the dynamic menu
+print STDOUT "AddToMenu Dynamic \"Dynamisk Meny\" Title\n";
+print STDOUT "AddToMenu Dynamic \"Dokumenthantering\" Popup Document\n";
+print STDOUT "AddToMenu Dynamic \"Nätverk\" Popup Networking\n";
+print STDOUT "AddToMenu Dynamic \"Programmering\" Popup Programming\n";
+print STDOUT "AddToMenu Dynamic \"Grafik\" Popup Graphics\n";
+print STDOUT "AddToMenu Dynamic \"Matematik\" Popup Math\n";
+print STDOUT "AddToMenu Dynamic \"Spel\" Popup Games\n";
+print STDOUT "AddToMenu Dynamic \"Diverse\" Popup Misc\n";
+print STDOUT "AddToMenu Dynamic \"Hjälp\" Popup Help\n";
+print STDOUT "AddToMenu Dynamic \"\" Nop\n";
+print STDOUT "AddToMenu Dynamic \"Modulvis\" Popup ByModule\n";
+
+#Start building each Category's menu
+print STDOUT "AddToMenu Document \"Dokumenthantering\" Title\n";
+print STDOUT "AddToMenu Networking \"Nätverk\" Title\n";
+print STDOUT "AddToMenu Programming \"Programmering\" Title\n";
+print STDOUT "AddToMenu Graphics \"Grafik\" Title\n";
+print STDOUT "AddToMenu Math \"Matematik\" Title\n";
+print STDOUT "AddToMenu Games \"Spel\" Title\n";
+print STDOUT "AddToMenu Misc \"Diverse\" Title\n";
+print STDOUT "AddToMenu Help \"Hjälp\" Title\n";
+print STDOUT "AddToMenu ByModule \"Modulvis\" Title\n";
+
+print STDOUT "AddToMenu Help \"Lägg till program\" Exec webbrowser 'http://datorn.e.kth.se/cgi-bin/kb/show?id=114' || netscape 'http://datorn.e.kth.se/cgi-bin/kb/show?id=114'\n";
+print STDOUT "AddToMenu Help \"Manualsidorna\" Exec xman -notopbox -bothshown\n";
+print STDOUT "AddToMenu Help \"Datorsystemet\" Exec webbrowser http://datorn.e.kth.se/ || netscape http://datorn.e.kth.se/\n";
+print STDOUT "AddToMenu Help \"Ordningsregler\" Exec webbrowser http://www.e.kth.se/elhand/infotext/regler/ || netscape http://www.e.kth.se/elhand/infotext/regler/\n";
+print STDOUT "AddToMenu Help \"Netiquette\" Exec webbrowser http://www.e.kth.se/esekt/help/netiquette/ || netscape http://www.e.kth.se/esekt/help/netiquette/\n";
+
+print STDOUT "AddToMenu Misc \"Låsa skärmen\" Exec xnlock\n";
+print STDOUT "AddToMenu Misc \"Utklipp\" Exec xclipboard\n";
+
+my $enable_programming_menu = 0;
+my $enable_math_menu = 0;
+my $enable_games_menu = 0;
+
+if ($ENV{"WMMENUPATH"}) {
+    @menupath = split /\:/, $ENV{"WMMENUPATH"};
+
+    %modules = ();
+    foreach $confpath (@menupath) {
+	if (open (MENUCONF, "$confpath/menu.conf")) {
+	    @filecontent = <MENUCONF>;
+	    close (MENUCONF);
+	    foreach $line (@filecontent) {
+		chomp $line;
+
+		# This is the old version
+#		($module, $category, $menutext, $miniiconpath, $program) =
+		# This is the new version
+		($module, $category, $menutext, $miniiconpath, $class, $iconpath, $program) =
+		    split /\|/, $line,7;
+		$modules{$module} = 1;
+		if ($module ne "" and
+		    $category ne "" and
+		    $menutext ne "" and 
+		    $program ne "" )
+		{
+		    if ($menutext =~ / /) {
+			$menutext = "\"" . $menutext . "\"";
+		    }
+		    
+		    print STDOUT "AddToMenu $module ";
+		    print STDOUT "%$miniiconpath%" if ($miniiconpath ne "");
+		    print STDOUT "$menutext Exec $program\n";
+
+		    print STDOUT "AddToMenu $category ";
+		    print STDOUT "%$miniiconpath%" if ($miniiconpath ne "");
+		    print STDOUT "$menutext Exec $program\n";
+
+		    $enable_programming_menu = 1 if ($category eq "Programming");
+		    $enable_math_menu = 1 if ($category eq "Math");
+		    $enable_games_menu = 1 if ($category eq "Games");
+
+		    if ($iconpath ne "" and
+			$class ne "")
+		    {
+			print STDOUT "Style \"$class\" Icon $iconpath\n";
+		    }
+		}
+		else
+		{
+		    # Klarar fvwm2:s piperead av att det kommer junk på STDERR? Om inte
+                    # så får vi ta bort denna else-sats.
+		    print STDERR "Invalid entry in $confpath/menu.conf. Data missing\n";
+		    print STDERR " --> $. : $line\n";
+		}
+	    }
+	}
+	else {
+	    warn ("$pn : Unable to open $confpath/menu.conf\n");
+	}
+    }
+
+    
+    @keys = keys (%modules);
+    foreach $key (@keys) {
+	print STDOUT "AddToMenu ByModule \"", $key, "\" Popup ", $key, "\n";
+    }
+}
+else {
+    print STDERR "Could not build any Dynamic menus";
+}
+
+# Start building the program menu
+print STDOUT "AddToMenu DynStat \"Program\" Title\n";
+print STDOUT "AddToMenu DynStat \"XTerm\" Exec xterm -T \"XTerm\" -n \"XTerm\"\n";
+print STDOUT "AddToMenu DynStat \"Emacs\" Exec emacs\n";
+print STDOUT "AddToMenu DynStat \"E-post\" Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient\n";
+print STDOUT "AddToMenu DynStat \"Webbläsare\" Exec webbrowser\n";
+print STDOUT "AddToMenu DynStat \"\" Nop\n";
+print STDOUT "AddToMenu DynStat \"Dokumenthantering\" Popup Document\n";
+print STDOUT "AddToMenu DynStat \"Nätverk\" Popup Networking\n";
+print STDOUT "AddToMenu DynStat \"Programmering\" Popup Programming\n" if ($enable_programming_menu);
+print STDOUT "AddToMenu DynStat \"Grafik\" Popup Graphics\n";
+print STDOUT "AddToMenu DynStat \"Matematik\" Popup Math\n" if ($enable_math_menu);
+print STDOUT "AddToMenu DynStat \"Spel\" Popup Games\n" if ($enable_games_menu);
+print STDOUT "AddToMenu DynStat \"Diverse\" Popup Misc\n";
+print STDOUT "AddToMenu DynStat \"Hjälp\" Popup Help\n";
+print STDOUT "AddToMenu DynStat \"\" Nop\n";
+print STDOUT "AddToMenu DynStat \"Fvwm2-kommandon\" Popup FvwmCommands\n";
+print STDOUT "AddToMenu DynStat \"\"              Nop \n";
+print STDOUT "AddToMenu DynStat \"Logga ut...\" Menu Quit-Verify Nop\n";
+

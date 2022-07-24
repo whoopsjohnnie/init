@@ -1,0 +1,182 @@
+##############################################################################
+#		 __  __                      
+#		|  \/  | ___ _ __  _   _ ___ 
+#		| |\/| |/ _ \ '_ \| | | / __|
+#		| |  | |  __/ | | | |_| \__ \
+#		|_|  |_|\___|_| |_|\__,_|___/
+#
+# All static menus are defined in this file.
+#  Syntax: AddToMenu MenuName "Item" What-to-do-when-chosen
+#   "+" - backtracks to the latest occasion of a AddToMenu syntax
+
+# This defines the most common window operations
+AddToMenu Window-Ops
++	"Fönsteroperationer"	Title
++	"Flytta"		Move-or-Raise2
++	"Ändra storlek"		Resize-or-Raise2
++	"Lägg överst"		Raise
++	"Lägg underst"		Lower
++	"(De)Ikonifiera"	Iconify
++	"Fäst av/på"		Stick
++	"(De)Maximera"		Maximize-Func
++	""			Nop
++	"Stäng fönster"		Delete
++	"Döda fönster"		Close
++	""			Nop
++	"Uppdatera skärmen"	Refresh
++	""			Nop
++	"Lista fönster"		WindowList
+
+# A trimmed down version of "Window Ops", good for binding to decorations
+AddToMenu Window-Ops2
++	"Flytta"		Move-or-Raise
++	"Ändra storlek"		Resize-or-Raise
++	"Överst/Underst"	RaiseLower
++	""			Nop
++	"Stäng fönster"		Popup Window-Close-Ops
++	""			Nop
++	"Skapa rullist"		Module FvwmScroll 2 2
+
+# Different ways to close a window
+AddToMenu Window-Close-Ops
++	"Stäng fönster"		Delete
++	"Döda fönster"		Close
++	"Döda program"		Destroy
++	"Stäng inte"		Exec echo -n
+
+AddToMenu FvwmCommands
++	"Fvwm2-kommandon"	Title
++	"Fvwm2 Inställningar"	Popup FvwmSetup
++	"Fvwm2 Moduler"		Popup FvwmModules
++	""			Nop
++	"Starta om Fvwm2"	Restart fvwm2
+
+AddToMenu FvwmSetup
++	"Fvwm2 Inställningar"	Title
++	"Rulla arbetsyta"	Popup FvwmScroll
++	"Lyft aktivt fönster"	Popup FvwmAutoRaise
+
+AddToMenu FvwmScroll
++	"Rulla arbetsyta"		Title
++	"Stäng av rullning"		EdgeScroll 0 0
++	"Tillåt rullning"		EdgeScroll 100 100
++	"Endast horisontell rullning"	EdgeScroll 100 0
++	"Endast vertikal rullning"	EdgeScroll 0 100
++	"Rulla halvskärm"		EdgeScroll 50 50
+
+#
+# Skall testas Funkar inte som önskat. Se funktionen i 
+#
+AddToMenu FvwmAutoRaise
++	"Lyft aktivt fönster"		Title
++	"Omedelbart"			Function AutoRaiseFunction  0
++	"Efter 0,10 sekunder"		Function AutoRaiseFunction  100
++	"Efter 0,25 sekunder"		Function AutoRaiseFunction  250
++	"Efter 0,50 sekunder"		Function AutoRaiseFunction  500
+
+AddToMenu FvwmModules
++	"Fvwm2 Moduler"	Title
++	"Pager"		Module FvwmPager 0 0
++	"Button-Bar"	Module FvwmButtons
++	"WinList"	Module FvwmWinList
++	"Identify"	Module FvwmIdent
++	""		Nop
+#+	"Clean-Up"	Module FvwmClean
++	"SaveDesktop"	Module FvwmSave
++	"Debug"		Module FvwmDebug
+#+	"Background"	Module FvwmBacker
++	"IconBox"	Module FvwmIconBox
++	"Banner"	Module FvwmBanner
++	"Talk"		Module FvwmTalk
+#+	"Prompt"	Module FvwmPrompt "hello" raise
+
+
+# This is the root menu
+AddToMenu StaticMenu
++	"Statisk Meny"  Title
++	"XTerm"		Exec xterm -T "XTerm" -n "XTerm"
++	"Emacs"		Exec emacs
++	"E-post"	Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient
++	"Webbläsare"	Exec webbrowser
++	"" 		Nop
++	"Dokumenthantering"	Popup Document
++	"Nätverk"		Popup Networking
++	"Programmering"		Popup Programming
++	"Grafik"		Popup Graphics
++	"Matematik"		Popup Math
++	"Spel"			Popup Games
++	"Diverse"		Popup Misc
++	"Hjälp"			Popup Help
++	"" 		Nop
++	"Texthantering"	Popup StaticEditors
++	"Nätverk"	Popup StaticNetwork
+#+	"Programmering"	Popup StaticProgramming
++	"Grafik"	Popup StaticGraphics
++	"Matematik"	Popup StaticMath
++	"Diverse"	Popup StaticMisc
++	"Hjälp"		Popup StaticHelp
++	""		Nop
++	"Fvwm2-kommandon"	Popup FvwmCommands
++       ""              Nop 
++	"Logga ut..."	Menu Quit-Verify Nop
+
+# 
+AddToMenu "Quit-Verify" "Logga ut?" Title
++ "&Ja, logga ut.%mini.excl.xpm%"	Quit
++ "&Nej, logga inte ut."		Exec echo -n
+
+# The static editor menu
+AddToMenu StaticEditors
++	"Texthantering"			Title
++	"Emacs"				Exec emacs
++	"TeXmacs"			Exec texmacs
++	"KWord"				Exec kword
++	"OpenOffice"			Exec soffice
++	"AbiWord"			Exec abiword
++	"LyX"				Exec lyx
+#+	"FrameMaker (Svenska)"		Exec /usr/local/vol/fvwm2/siteconf/scripts/imaker-wrapper -l svenska
+#+	"FrameMaker (English)"		Exec /usr/local/vol/fvwm2/siteconf/scripts/imaker-wrapper -l english
+
+# The static networking menu
+AddToMenu StaticNetwork
++	"Nätverk"			Title
++	"E-post"				Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient
++	"Webbläsare"			Exec webbrowser
+
+#AddToMenu StaticProgramming
+#+	"Programmering"			Title
+#+	"Gdb (Gnus debugger)"		Exec xterm -T "Gdb" -n "Gdb" -e gdb
+#+	"DDD (Grafisk debugger)"	Exec ddd
+
+AddToMenu StaticMath
++	"Matematik"	Title
++	"XCalc"		Exec dxcalc || xcalc
+
+AddToMenu StaticGraphics
++	"Grafik" Title
++	"xv"		Function warp-or-run xv "Exec xv -ncols 240"
++	"xpaint"	Exec xpaint
+
+AddToMenu StaticMisc
++	"Diverse"	Title
+#+	"tkModule"	Exec tkModule
++	"Låsa skärmen"	Exec xnlock
++	"Utklipp"	Exec xclipboard
+
+AddToMenu StaticHelp
++	"Hjälp"			Title
++	"Lägg till program"	Exec webbrowser http://datorn.e.kth.se/cgi-bin/kb/show?id=114 || netscape http://datorn.e.kth.se/cgi-bin/kb/show?id=114
++	"Manualsidorna"		Exec xman -notopbox -bothshown
+#+	"Digital BookReader"	Exec dxbook
++	"Datorsystemet"	Exec webbrowser http://datorn.e.kth.se/ || netscape http://datorn.e.kth.se/
++	"Ordningsregler"	Exec webbrowser "http://datorn.e.kth.se/cgi-bin/kb/show?id=147" || netscape "http://datorn.e.kth.se/cgi-bin/kb/show?id=147"
+#+	"Karta över datorsalarna"		Exec webbrowser http://www.e.kth.se/esekt/cyberponq/vaxkab/ || netscape http://www.e.kth.se/esekt/cyberponq/vaxkab/
++	"Netiquette"		Exec webbrowser http://www.e.kth.se/esekt/help/netiquette/ || netscape http://www.e.kth.se/esekt/help/netiquette/
+
+# Not used
+AddToMenu HelpOnWWW
++	"Hjälpsidor på WWW"	Title
++	"Datorsystemet"	Exec webbrowser http://datorn.e.kth.se/ || netscape http://datorn.e.kth.se/
++	"Ordningsregler"	Exec webbrowser http://www.e.kth.se/elhand/infotext/regler/ || netscape http://www.e.kth.se/elhand/infotext/regler/
+#+	"Karta över datorsalarna"		Exec webbrowser http://www.e.kth.se/esekt/cyberponq/vaxkab/ || netscape http://www.e.kth.se/esekt/cyberponq/vaxkab/
++	"Netiquette"		Exec webbrowser http://www.e.kth.se/esekt/help/netiquette/ || netscape http://www.e.kth.se/esekt/help/netiquette/

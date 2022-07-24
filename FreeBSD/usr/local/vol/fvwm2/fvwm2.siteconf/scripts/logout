@@ -1,0 +1,5 @@
+#!/bin/sh
+
+PATH=/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+
+ps auxwww | awk  '$0 ~ /grep/ { next ; } $0 ~ /xlogout/ { print $2 }' | xargs kill
