@@ -1,124 +1,89 @@
+##########################################################################
+#   _____                           ____    ____       _               
+#  |  ___|_   ____      ___ __ ___ |___ \  / ___|  ___| |_ _   _ _ __  
+#  | |_  \ \ / /\ \ /\ / / '_ ` _ \  __) | \___ \ / _ \ __| | | | '_ \ 
+#  |  _|  \ V /  \ V  V /| | | | | |/ __/   ___) |  __/ |_| |_| | |_) |
+#  |_|     \_/    \_/\_/ |_| |_| |_|_____| |____/ \___|\__|\__,_| .__/ 
+#                                                             |_|    
+# FVWM - F? Virtual Window Manager, Version 2.x (fvwm2) Configuration File
+# Created Summer 1998 by
+#	Emil Egerfjord AND
+#	Mikael Hallendal
+# For use at The School Of Electrical Engineering,
+#	the Royal Institute of Technology, Stockholm, Sweden
 #
-#                   Configuration file for fvwm2
-#
-#         Administrated by Marcus Sundberg <e94_msu@e.kth.se>
+# Please, before submitting any questions please read the manuals:
+#                            __                           ____  
+#   _ __ ___   __ _ _ __    / _|_   ____      ___ __ ___ |___ \ 
+#  | '_ ` _ \ / _` | '_ \  | |_\ \ / /\ \ /\ / / '_ ` _ \  __) |
+#  | | | | | | (_| | | | | |  _|\ V /  \ V  V /| | | | | |/ __/ 
+#  |_| |_| |_|\__,_|_| |_| |_|   \_/    \_/\_/ |_| |_| |_|_____|
 # 
-#                    Last changed:  07-May 1998
-#
-# Om du vill ändra på några inställningar i fvwm2 så skall du skapa
-# en katalog '.fvwm2conf' i din hemkatalog.
-# Där skall konfigurationsfilerna ligga.
-# Använd i första hand filen user-conf för dina inställningar.
-# I katalogen /misc/hacks/lib/X11/fvwm2/config ligger
-# standardinställlningarna, titta på dessa för att se vad som kan ändras.
-#
-#========================================================================#
-#
-# Module path and paths to the icons
-# Paths are a colon-separated list, just like regular unix PATH
-#
-# ModulePath /afs/e.kth.se/misc/hacks/lib/X11/fvwm2/modules:/usr/lib/X11/fvwm2
-# PixmapPath /afs/e.kth.se/misc/hacks/icons:/afs/e.kth.se/misc/hacks/icons/mini:/afs/e.kth.se/misc/hacks/icons/NEXT
 
+# This was the old Modulepath...
+#ModulePath /usr/local/vol/fvwm2/siteconf:/usr/local/vol/fvwm2/2.0.46/modules
 ModulePath /usr/local/libexec/fvwm/2.6.9/
-PixmapPath /misc/hacks/icons:/misc/hacks/icons/mini:/misc/hacks/icons/NEXT
+# ...which now is replaced with this that doesn't hardcode versionnumbers.
+# PipeRead   /usr/local/vol/fvwm2/siteconf/scripts/modulepath
 
-IconPath   /usr/include/X11/bitmaps
 
+############################################################################
+# General Features
+Read     .fvwm2.setup/general
 
-Read .fvwm2conf/user-preconf
+############################################################################
+# Look And Feel section
+Read       .fvwm2.setup/lookandfeel 
+Read       .fvwm2.setup/config
 
-# 
-Read .fvwm2conf/config
+############################################################################
+# START-UP Functions
+Read       .fvwm2.setup/startup
 
-#========================================================================#
-#
-# Set up the appearance and operation of fvwm2.
-#
-Read .fvwm2conf/fonts
+############################################################################
+# BUTTON Setup
+# Read       .fvwm2.setup/buttons
 
-Read .fvwm2conf/colors
+############################################################################
+# Forms
+Read       .fvwm2.setup/forms
 
-Read .fvwm2conf/operation
+############################################################################
+# MENU Setup
+PipeRead   /usr/local/vol/fvwm2/siteconf/scripts/dynamic-menu
+Read       .fvwm2.setup/menus
 
-#========================================================================#
-#
-# Set the decoration styles and window options
-#
-Read .fvwm2conf/windowstyles
+############################################################################
+# COMPLEX FUNCTIONS
+Read       .fvwm2.setup/functions
+Read	   .fvwm2.setup/functions2
 
-#========================================================================#
-#
-# Some mini-icons for the title bar
-#
-Read .fvwm2conf/mini-icons
+############################################################################
+# MOUSE Setup
+Read       .fvwm2.setup/mouse
 
-#========================================================================#
-#
-# Stuff to do at start-up
-#
-Read .fvwm2conf/startup
+############################################################################
+# KEYBOARD Setup
+Read       .fvwm2.setup/keyboard
 
-#========================================================================#
-#
-# Now define some handy complex functions
-#
-Read .fvwm2conf/functions
-
-#========================================================================#
-#
-# Configure the menus
-#
-Read .fvwm2conf/start-menu
-
-Read .fvwm2conf/root-menu
-
-Read .fvwm2conf/menus
-
-Read .fvwm2conf/modules-menu
-
-Read .fvwm2conf/hlock-menus
-
-Read .fvwm2conf/window-menu
-
-#========================================================================#
-#
-# Mouse bindings
-#
-Read .fvwm2conf/mouse-bindings
-
-#========================================================================#
-#
-# Key bindings
-#
-Read .fvwm2conf/key-bindings
-
-#========================================================================#
-#
-# Definitions used by the modules
-#
-
-Read .fvwm2conf/misc-modules
-
-Read .fvwm2conf/fvwmpager
-
-Read .fvwm2conf/fvwmbuttons
-
+############################################################################
+# MODULE setup
+Read       .fvwm2.setup/modules
 
 #========================================================================#
 #
 # User specified settings
 #
-Read .fvwm2conf/user-conf
+Read        .fvwm2.setup/user-conf
 
-#========================================================================#
+############################################################################
+# Users own setup
 #
-# Settings made by FvwmConfig
+# If you like to add, replace or modify any settings add them to a 
+# copy of this file in your personal .fvwm2.setup directory.
 #
-Read .fvwm2rc-config
+Read       .fvwm2.setup/usersetup
 
-#========================================================================#
-#
-# TaskBar settings, must be loaded last.
-#
-Read .fvwm2conf/fvwmtaskbar
+
+
+
