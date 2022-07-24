@@ -92,33 +92,87 @@ AddToMenu FvwmModules
 
 
 # This is the root menu
+#AddToMenu StaticMenu
+#+	"Statisk Meny"  Title
+#+	"XTerm"		Exec xterm -T "XTerm" -n "XTerm"
+#+	"Emacs"		Exec emacs
+#+	"E-post"	Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient
+#+	"Webbläsare"	Exec webbrowser
+#+	"" 		Nop
+##+	"Dokumenthantering"	Popup Document
+##+	"Nätverk"		Popup Networking
+##+	"Programmering"		Popup Programming
+##+	"Grafik"		Popup Graphics
+##+	"Matematik"		Popup Math
+##+	"Spel"			Popup Games
+##+	"Diverse"		Popup Misc
+##+	"Hjälp"			Popup Help
+##+	"" 		Nop
+##+	"Texthantering"	Popup StaticEditors
+##+	"Nätverk"	Popup StaticNetwork
+##+	"Programmering"	Popup StaticProgramming
+##+	"Grafik"	Popup StaticGraphics
+##+	"Matematik"	Popup StaticMath
+#+	"Diverse"	Popup StaticMisc
+#+	"Hjälp"		Popup StaticHelp
+#+	""		Nop
+#+	"Fvwm2-kommandon"	Popup FvwmCommands
+#+       ""              Nop 
+#+	"Logga ut..."	Menu Quit-Verify Nop
+
+
+# This is the root menu
 AddToMenu StaticMenu
 +	"Statisk Meny"  Title
-+	"XTerm"		Exec xterm -T "XTerm" -n "XTerm"
-+	"Emacs"		Exec emacs
-+	"E-post"	Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient
-+	"Webbläsare"	Exec webbrowser
++	"XTerm"			Exec xterm -T 'X Terminal'
++	"Black XTerm"		Exec xterm -fg white -bg black -T 'Black X Terminal'
++	"Terminal"		Exec urxvt -title Terminal
+#+	"Terminal ala DEC"	Exec urxvt -title Terminal -bg "#C9AE97" -bd "#C9AE97" -fg black -sr -st --scrollstyle x
++	"Terminal ala DEC"	Exec urxvt -title Terminal -bg "#696F80" -bd "#696F80" -fg white -sr -st --scrollstyle x
++	"Top"			Exec urxvt -title Top -e top
++	"HTop"			Exec urxvt -title HTop -e htop
 +	"" 		Nop
-+	"Dokumenthantering"	Popup Document
-+	"Nätverk"		Popup Networking
-+	"Programmering"		Popup Programming
-+	"Grafik"		Popup Graphics
-+	"Matematik"		Popup Math
-+	"Spel"			Popup Games
-+	"Diverse"		Popup Misc
-+	"Hjälp"			Popup Help
++	"Emacs"			Exec /usr/local/bin/emacs
+#+	"Emacs version 19"	Exec /usr/local/bin/emacs
++	"Emacs terminal"	Exec urxvt -title Emacs -e emacs -nw
++	"Vim terminal"		Exec urxvt -title Vim -e vim
++	"Neovim terminal"	Exec urxvt -title Neovim -e nvim
 +	"" 		Nop
-+	"Texthantering"	Popup StaticEditors
-+	"Nätverk"	Popup StaticNetwork
-#+	"Programmering"	Popup StaticProgramming
-+	"Grafik"	Popup StaticGraphics
-+	"Matematik"	Popup StaticMath
++	"Filemanager"		Exec xfe
++	"Filemanager terminal"	Exec urxvt -title Filemanager -geometry 144x40 -e mc
++	"" 		Nop
++	"Calculator"		Exec xcalc
++	"Calendar"		Exec xcalendar
++	"Mail"			Exec exmh
++	"Mosaic"		Exec firefox
++	"xman"			Exec xman
++	"xclipboard"		Exec xclipboard
++	"" 		Nop
++	"matlab"		Exec xterm -xrm '*title:Matlab' -xrm '*iconName:Malab' -background white -e octave -i
++	"scheme"		Exec xterm -xrm '*title:Scheme' -xrm '*iconName:Scheme' -background white -e scheme
++	"" 		Nop
++	"Clock"			Exec xclock -geometry '-10+10'
++	"Top"			Exec xload -geometry '-10-10'
++	"" 		Nop
++	"ssh john@nas"		Exec urxvt -title 'john@nas' -e ssh john@nas
++	"ssh john@twix"		Exec urxvt -title 'john@twix' -e ssh john@twix
++	"ssh john@mars"		Exec urxvt -title 'john@mars' -e ssh john@mars
++	"ssh john@pucko"	Exec urxvt -title 'john@pucko' -e ssh john@pucko
++	"ssh john@oboy"		Exec urxvt -title 'john@oboy' -e ssh john@oboy
++	"" 		Nop
++	"ssh bots@daim"		Exec urxvt -title 'bots@daim' -e ssh bots@daim
++	"ssh bots@dumle"	Exec urxvt -title 'bots@dumle' -e ssh bots@dumle
++	"ssh bots@controller"	Exec urxvt -title 'bots@controller' -e ssh bots@controller
++	"" 		Nop
 +	"Diverse"	Popup StaticMisc
 +	"Hjälp"		Popup StaticHelp
 +	""		Nop
 +	"Fvwm2-kommandon"	Popup FvwmCommands
 +       ""              Nop 
 +	"Logga ut..."	Menu Quit-Verify Nop
+
+
+
 
 # 
 AddToMenu "Quit-Verify" "Logga ut?" Title
@@ -148,14 +202,14 @@ AddToMenu StaticNetwork
 #+	"Gdb (Gnus debugger)"		Exec xterm -T "Gdb" -n "Gdb" -e gdb
 #+	"DDD (Grafisk debugger)"	Exec ddd
 
-AddToMenu StaticMath
-+	"Matematik"	Title
-+	"XCalc"		Exec dxcalc || xcalc
+#AddToMenu StaticMath
+#+	"Matematik"	Title
+#+	"XCalc"		Exec dxcalc || xcalc
 
-AddToMenu StaticGraphics
-+	"Grafik" Title
-+	"xv"		Function warp-or-run xv "Exec xv -ncols 240"
-+	"xpaint"	Exec xpaint
+#AddToMenu StaticGraphics
+#+	"Grafik" Title
+#+	"xv"		Function warp-or-run xv "Exec xv -ncols 240"
+#+	"xpaint"	Exec xpaint
 
 AddToMenu StaticMisc
 +	"Diverse"	Title

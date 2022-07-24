@@ -4,7 +4,7 @@
 # First, the root window. Button 1 brings up the Main Menu. B2 is the
 # window operations list, and B3 is the winlist module
 #     Button	Context Modifi 	Function
-Mouse 1		R   	A       Menu DynStat Nop
+Mouse 1		R   	A       Menu StaticMenu Nop
 Mouse 2		R    	A       WindowList
 Mouse 3		R    	A      	Menu Window-Ops Nop
 
