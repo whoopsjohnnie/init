@@ -1,0 +1,236 @@
+##############################################################################
+#		 __  __                      
+#		|  \/  | ___ _ __  _   _ ___ 
+#		| |\/| |/ _ \ '_ \| | | / __|
+#		| |  | |  __/ | | | |_| \__ \
+#		|_|  |_|\___|_| |_|\__,_|___/
+#
+# All static menus are defined in this file.
+#  Syntax: AddToMenu MenuName "Item" What-to-do-when-chosen
+#   "+" - backtracks to the latest occasion of a AddToMenu syntax
+
+# This defines the most common window operations
+AddToMenu Window-Ops
++	"Fönsteroperationer"	Title
++	"Flytta"		Move-or-Raise2
++	"Ändra storlek"		Resize-or-Raise2
++	"Lägg överst"		Raise
++	"Lägg underst"		Lower
++	"(De)Ikonifiera"	Iconify
++	"Fäst av/på"		Stick
++	"(De)Maximera"		Maximize-Func
++	""			Nop
++	"Stäng fönster"		Delete
++	"Döda fönster"		Close
++	""			Nop
++	"Uppdatera skärmen"	Refresh
++	""			Nop
++	"Lista fönster"		WindowList
+
+# A trimmed down version of "Window Ops", good for binding to decorations
+AddToMenu Window-Ops2
++	"Flytta"		Move-or-Raise
++	"Ändra storlek"		Resize-or-Raise
++	"Överst/Underst"	RaiseLower
++	""			Nop
++	"Stäng fönster"		Popup Window-Close-Ops
++	""			Nop
++	"Skapa rullist"		Module FvwmScroll 2 2
+
+# Different ways to close a window
+AddToMenu Window-Close-Ops
++	"Stäng fönster"		Delete
++	"Döda fönster"		Close
++	"Döda program"		Destroy
++	"Stäng inte"		Exec echo -n
+
+AddToMenu FvwmCommands
++	"Fvwm2-kommandon"	Title
++	"Fvwm2 Inställningar"	Popup FvwmSetup
++	"Fvwm2 Moduler"		Popup FvwmModules
++	""			Nop
++	"Starta om Fvwm2"	Restart fvwm2
+
+AddToMenu FvwmSetup
++	"Fvwm2 Inställningar"	Title
++	"Rulla arbetsyta"	Popup FvwmScroll
++	"Lyft aktivt fönster"	Popup FvwmAutoRaise
+
+AddToMenu FvwmScroll
++	"Rulla arbetsyta"		Title
++	"Stäng av rullning"		EdgeScroll 0 0
++	"Tillåt rullning"		EdgeScroll 100 100
++	"Endast horisontell rullning"	EdgeScroll 100 0
++	"Endast vertikal rullning"	EdgeScroll 0 100
++	"Rulla halvskärm"		EdgeScroll 50 50
+
+#
+# Skall testas Funkar inte som önskat. Se funktionen i 
+#
+AddToMenu FvwmAutoRaise
++	"Lyft aktivt fönster"		Title
++	"Omedelbart"			Function AutoRaiseFunction  0
++	"Efter 0,10 sekunder"		Function AutoRaiseFunction  100
++	"Efter 0,25 sekunder"		Function AutoRaiseFunction  250
++	"Efter 0,50 sekunder"		Function AutoRaiseFunction  500
+
+AddToMenu FvwmModules
++	"Fvwm2 Moduler"	Title
++	"Pager"		Module FvwmPager 0 0
++	"Button-Bar"	Module FvwmButtons
++	"WinList"	Module FvwmWinList
++	"Identify"	Module FvwmIdent
++	""		Nop
+#+	"Clean-Up"	Module FvwmClean
++	"SaveDesktop"	Module FvwmSave
++	"Debug"		Module FvwmDebug
+#+	"Background"	Module FvwmBacker
++	"IconBox"	Module FvwmIconBox
++	"Banner"	Module FvwmBanner
++	"Talk"		Module FvwmTalk
+#+	"Prompt"	Module FvwmPrompt "hello" raise
+
+
+# This is the root menu
+#AddToMenu StaticMenu
+#+	"Statisk Meny"  Title
+#+	"XTerm"		Exec xterm -T "XTerm" -n "XTerm"
+#+	"Emacs"		Exec emacs
+#+	"E-post"	Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient
+#+	"Webbläsare"	Exec webbrowser
+#+	"" 		Nop
+##+	"Dokumenthantering"	Popup Document
+##+	"Nätverk"		Popup Networking
+##+	"Programmering"		Popup Programming
+##+	"Grafik"		Popup Graphics
+##+	"Matematik"		Popup Math
+##+	"Spel"			Popup Games
+##+	"Diverse"		Popup Misc
+##+	"Hjälp"			Popup Help
+##+	"" 		Nop
+##+	"Texthantering"	Popup StaticEditors
+##+	"Nätverk"	Popup StaticNetwork
+##+	"Programmering"	Popup StaticProgramming
+##+	"Grafik"	Popup StaticGraphics
+##+	"Matematik"	Popup StaticMath
+#+	"Diverse"	Popup StaticMisc
+#+	"Hjälp"		Popup StaticHelp
+#+	""		Nop
+#+	"Fvwm2-kommandon"	Popup FvwmCommands
+#+       ""              Nop 
+#+	"Logga ut..."	Menu Quit-Verify Nop
+
+
+# This is the root menu
+AddToMenu StaticMenu
++	"Statisk Meny"  Title
++	"XTerm"			Exec xterm -T 'X Terminal'
++	"Black XTerm"		Exec xterm -fg white -bg black -T 'Black X Terminal'
++	"Terminal"		Exec urxvt -title Terminal
+#+	"Terminal ala DEC"	Exec urxvt -title Terminal -bg "#C9AE97" -bd "#C9AE97" -fg black -sr -st --scrollstyle x
++	"Terminal ala DEC"	Exec urxvt -title Terminal -bg "#696F80" -bd "#696F80" -fg white -sr -st --scrollstyle x
++	"Top"			Exec urxvt -title Top -e top
++	"HTop"			Exec urxvt -title HTop -e htop
++	"" 		Nop
++	"Emacs"			Exec /usr/local/bin/emacs
+#+	"Emacs version 19"	Exec /usr/local/bin/emacs
++	"Emacs terminal"	Exec urxvt -title Emacs -e emacs -nw
++	"Vim terminal"		Exec urxvt -title Vim -e vim
++	"Neovim terminal"	Exec urxvt -title Neovim -e nvim
++	"" 		Nop
++	"Filemanager"		Exec xfe
++	"Filemanager terminal"	Exec urxvt -title Filemanager -geometry 144x40 -e mc
++	"" 		Nop
++	"Calculator"		Exec xcalc
++	"Calendar"		Exec xcalendar
++	"Mail"			Exec exmh
++	"Mosaic"		Exec firefox
++	"xman"			Exec xman
++	"xclipboard"		Exec xclipboard
++	"" 		Nop
++	"matlab"		Exec xterm -xrm '*title:Matlab' -xrm '*iconName:Malab' -background white -e octave -i
++	"scheme"		Exec xterm -xrm '*title:Scheme' -xrm '*iconName:Scheme' -background white -e scheme
++	"" 		Nop
++	"Clock"			Exec xclock -geometry '-10+10'
++	"Top"			Exec xload -geometry '-10-10'
++	"" 		Nop
++	"ssh john@nas"		Exec urxvt -title 'john@nas' -e ssh john@nas
++	"ssh john@twix"		Exec urxvt -title 'john@twix' -e ssh john@twix
++	"ssh john@mars"		Exec urxvt -title 'john@mars' -e ssh john@mars
++	"ssh john@pucko"	Exec urxvt -title 'john@pucko' -e ssh john@pucko
++	"ssh john@oboy"		Exec urxvt -title 'john@oboy' -e ssh john@oboy
++	"" 		Nop
++	"ssh bots@daim"		Exec urxvt -title 'bots@daim' -e ssh bots@daim
++	"ssh bots@dumle"	Exec urxvt -title 'bots@dumle' -e ssh bots@dumle
++	"ssh bots@controller"	Exec urxvt -title 'bots@controller' -e ssh bots@controller
++	"" 		Nop
++	"Diverse"	Popup StaticMisc
++	"Hjälp"		Popup StaticHelp
++	""		Nop
++	"Fvwm2-kommandon"	Popup FvwmCommands
++       ""              Nop 
++	"Logga ut..."	Menu Quit-Verify Nop
+
+
+
+
+# 
+AddToMenu "Quit-Verify" "Logga ut?" Title
++ "&Ja, logga ut.%mini.excl.xpm%"	Quit
++ "&Nej, logga inte ut."		Exec echo -n
+
+# The static editor menu
+AddToMenu StaticEditors
++	"Texthantering"			Title
++	"Emacs"				Exec emacs
++	"TeXmacs"			Exec texmacs
++	"KWord"				Exec kword
++	"OpenOffice"			Exec soffice
++	"AbiWord"			Exec abiword
++	"LyX"				Exec lyx
+#+	"FrameMaker (Svenska)"		Exec /usr/local/vol/fvwm2/siteconf/scripts/imaker-wrapper -l svenska
+#+	"FrameMaker (English)"		Exec /usr/local/vol/fvwm2/siteconf/scripts/imaker-wrapper -l english
+
+# The static networking menu
+AddToMenu StaticNetwork
++	"Nätverk"			Title
++	"E-post"				Exec /usr/local/vol/fvwm2/siteconf/scripts/mailclient
++	"Webbläsare"			Exec webbrowser
+
+#AddToMenu StaticProgramming
+#+	"Programmering"			Title
+#+	"Gdb (Gnus debugger)"		Exec xterm -T "Gdb" -n "Gdb" -e gdb
+#+	"DDD (Grafisk debugger)"	Exec ddd
+
+#AddToMenu StaticMath
+#+	"Matematik"	Title
+#+	"XCalc"		Exec dxcalc || xcalc
+
+#AddToMenu StaticGraphics
+#+	"Grafik" Title
+#+	"xv"		Function warp-or-run xv "Exec xv -ncols 240"
+#+	"xpaint"	Exec xpaint
+
+AddToMenu StaticMisc
++	"Diverse"	Title
+#+	"tkModule"	Exec tkModule
++	"Låsa skärmen"	Exec xnlock
++	"Utklipp"	Exec xclipboard
+
+AddToMenu StaticHelp
++	"Hjälp"			Title
++	"Lägg till program"	Exec webbrowser http://datorn.e.kth.se/cgi-bin/kb/show?id=114 || netscape http://datorn.e.kth.se/cgi-bin/kb/show?id=114
++	"Manualsidorna"		Exec xman -notopbox -bothshown
+#+	"Digital BookReader"	Exec dxbook
++	"Datorsystemet"	Exec webbrowser http://datorn.e.kth.se/ || netscape http://datorn.e.kth.se/
++	"Ordningsregler"	Exec webbrowser "http://datorn.e.kth.se/cgi-bin/kb/show?id=147" || netscape "http://datorn.e.kth.se/cgi-bin/kb/show?id=147"
+#+	"Karta över datorsalarna"		Exec webbrowser http://www.e.kth.se/esekt/cyberponq/vaxkab/ || netscape http://www.e.kth.se/esekt/cyberponq/vaxkab/
++	"Netiquette"		Exec webbrowser http://www.e.kth.se/esekt/help/netiquette/ || netscape http://www.e.kth.se/esekt/help/netiquette/
+
+# Not used
+AddToMenu HelpOnWWW
++	"Hjälpsidor på WWW"	Title
++	"Datorsystemet"	Exec webbrowser http://datorn.e.kth.se/ || netscape http://datorn.e.kth.se/
++	"Ordningsregler"	Exec webbrowser http://www.e.kth.se/elhand/infotext/regler/ || netscape http://www.e.kth.se/elhand/infotext/regler/
+#+	"Karta över datorsalarna"		Exec webbrowser http://www.e.kth.se/esekt/cyberponq/vaxkab/ || netscape http://www.e.kth.se/esekt/cyberponq/vaxkab/
++	"Netiquette"		Exec webbrowser http://www.e.kth.se/esekt/help/netiquette/ || netscape http://www.e.kth.se/esekt/help/netiquette/

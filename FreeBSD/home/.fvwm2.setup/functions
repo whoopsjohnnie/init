@@ -1,0 +1,48 @@
+############################################################################
+# COMPLEX FUNCTIONS
+#
+AddToFunc warp-or-run		"I" Next [$0 CirculateHit] Iconify -1
++				"I" Next [$0 CirculateHit] Focus
++				"I" None [$0] $1
+
+AddToFunc MailFunction		"I" Next [$0] Iconify -1
++				"I" Next [$0] focus
++				"I" None [$0] Exec $0 $1
+
+AddToFunc Move-or-Raise		"I" Focus
++                               "I" Raise
++				"M" Move
++				"D" Lower
+
+AddToFunc Move-or-Raise2        "M" Raise
++				"M" Move
++				"D" Lower
+
+AddToFunc Maximize-Func         "I" Focus
++                               "C" Maximize     0 100
++                               "D" Maximize     100 100
+
+AddToFunc Sticky-Func		"I" Focus
++				"I" Stick
+
+AddToFunc Move-or-Iconify       "I" Raise
++                               "M" Move
++                               "D" Iconify
+
+AddToFunc Resize-or-Raise	"I" Focus       
++				"I" Raise
++                               "M" Resize
++                               "D" Lower
+
+AddToFunc Resize-or-Raise2      "M" Raise
++                               "M" Resize
++                               "D" Lower
+
+AddToFunc PrintFunction         "I" Raise
++                               "I" Exec xdpr -id $w
+
+AddToFunc Iconify-and-Raise     "I" Iconify
++                               "I" Raise
+
+AddToFunc AutoRaiseFunction	"I" KillModule FvwmAuto
++				"I" Module FvwmAuto $0

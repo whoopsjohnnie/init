@@ -1,0 +1,13 @@
+##########################################################################
+#		 ____       _   _         
+#		|  _ \ __ _| |_| |__  ___ 
+#		| |_) / _` | __| '_ \/ __|
+#		|  __/ (_| | |_| | | \__ \
+#		|_|   \__,_|\__|_| |_|___/
+#
+# Colon seperated unix directory paths for xpm files, and bitmaps
+#
+#  BUT NOT FOR MODULES, THAT IS INCLUDED IN SYSTEM.FVWM2RC !!!!!
+
+PixmapPath /usr/local/vol/fvwm2/icons/reduced/48x48:/usr/local/vol/fvwm2/icons/reduced/14x14:/misc/graphics/icons/reduced/48x48:/misc/graphics/icons/reduced/14x14
+IconPath   /usr/include/X11/bitmaps
