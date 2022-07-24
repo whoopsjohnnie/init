@@ -1,0 +1,43 @@
+#
+# Loads the settings for the different fvwm2 modules.
+#
+
+############################################################################
+# FvwmButtons
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmButtons
+
+############################################################################
+# FvwmIdent
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmIdent
+
+############################################################################
+# FvwmPager
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmPager
+
+############################################################################
+# FvwmWinList
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmWinList
+
+############################################################################
+# FvwmBacker
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmBacker
+
+############################################################################
+# FvwmIconBox
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmIconBox
+
+############################################################################
+# FvwmScroll
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmScroll
+
+############################################################################
+# FvwmAudio
+#
+Read	.fvwm2.setup/fvwm2.modules/FvwmAudio

@@ -1,0 +1,7 @@
+############################################################################
+# FvwmIdent
+#
+# Give us colors and a fonts
+*FvwmIdentBack black
+*FvwmIdentFore tan
+*FvwmIdentFont 8x13

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -d $HOME/.exmh ] && type >/dev/null -t exmh; then
+    exec exmh
+fi
+
+xterm -e pine

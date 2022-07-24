@@ -1,0 +1,166 @@
+###########################################################################
+#  __     ___      _               _       _           _    _              
+#  \ \   / (_)_ __| |_ _   _  __ _| |   __| | ___  ___| | _| |_ ___  _ __  
+#   \ \ / /| | '__| __| | | |/ _` | |  / _` |/ _ \/ __| |/ / __/ _ \| '_ \ 
+#    \ V / | | |  | |_| |_| | (_| | | | (_| |  __/\__ \   <| || (_) | |_) |
+#     \_/  |_|_|   \__|\__,_|\__,_|_|  \__,_|\___||___/_|\_\\__\___/| .__/ 
+#                                                                   |_|    
+#
+# set the desk top size in units of physical screen size (width x height)
+DeskTopSize 2 2
+
+# flip by whole pages on the edge of the screen, but delay for a half second
+EdgeScroll 100 100
+EdgeResistance 500 20
+
+
+############################################################################
+#   ____      _                     _              _   _____           _       
+#  / ___|___ | | ___  _ __ ___     / \   _ __   __| | |  ___|__  _ __ | |_ ___ 
+# | |   / _ \| |/ _ \| '__/ __|   / _ \ | '_ \ / _` | | |_ / _ \| '_ \| __/ __|
+# | |__| (_) | | (_) | |  \__ \  / ___ \| | | | (_| | |  _| (_) | | | | |_\__ \
+#  \____\___/|_|\___/|_|  |___/ /_/   \_\_| |_|\__,_| |_|  \___/|_| |_|\__|___/
+#
+# Set the fore and back border colors for the window that has focus
+HilightColor		grey27 skyblue
+
+# Set fore/back border colors for all other windows 
+Style "*" Color black/tan
+
+# Set colors/font for pop-up menus
+# Syntax: MenuStyle forecolor backcolor shadecolor font style(fvwm/mwm)
+#MenuStyle maroon grey60 grey40 -adobe-times-bold-r-*-*-14-*-*-*-*-*-*-* fvwm
+MenuStyle black grey slategrey 9x15bold mwm
+
+# Set fonts to use on title bar and icon label
+WindowFont              9x15
+IconFont                9x15
+# WindowFont              -adobe-times-bold-r-*-*-18-*-*-*-*-*-*-*
+# IconFont                -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+
+
+############################################################################
+#		 ___                    
+#		|_ _|___ ___  _ __  ___ 
+#		 | |/ __/ _ \| '_ \/ __|
+#		 | | (_| (_) | | | \__ \
+#		|___\___\___/|_| |_|___/
+#
+# Auto Place Icons is a nice feature	Left	Top	Right	Bottom
+#					0/-1280	0/-1024	1280/-0	1024/-0
+Style "*" IconBox 0 -50 500 -0
+
+# If you don't want icons for some or all windows (or all of them!)
+# Style "*" NoIcon
+
+# If you want ALL icons to follow you around the desktop (Sticky)
+Style "*" StickyIcon
+
+# Prefered icons for som specified applications
+Style "emacs"		Icon gnu2.xpm
+Style "Exmh"		Icon writeletter.xpm
+Style "Netscape"	Icon netscape3.xpm
+Style "xv"		Icon PaintBrushSplash.xpm
+Style "*XTerm"		Icon monitor.xpm
+Style "xcalc"		Icon xcalc.xpm
+Style "xman"		Icon man2.xpm
+Style "xneko"		Icon xnekocat.xpm
+Style "*logout"		Icon Stoplight.xpm
+Style "*xconsole"	Icon ArtFolderFull.xpm
+Style "xbun"		Icon vaxkab-epsilon.xbm
+
+
+############################################################################
+#		 _____                    
+#		|  ___|__   ___ _   _ ___ 
+#		| |_ / _ \ / __| | | / __|
+#		|  _| (_) | (__| |_| \__ \
+#		|_|  \___/ \___|\__,_|___/
+#
+# Does the window with focus control the colormap, or the one under the mouse
+ColormapFocus FollowsFocus
+# ColormapFocus FollowsMouse
+
+# This forces you to click in a window to give it focus
+Style "*" ClickToFocus
+
+# This makes focus follows mouse
+#Style "*" MouseFocus
+
+# If you knock your mouse out of the xterm, it keeps focus while in root window.
+# This will take effect if you uncomment this. (Unnecessary with ClickToFocus)
+#Style "*"	SloppyFocus
+
+# With this, zwgc doesn't get focus when it opens a window
+Style "Zwgc" FocusFollowsMouse, Sticky
+
+############################################################################
+#	 ____  _                                     _   
+#	|  _ \| | __ _  ___ ___ _ __ ___   ___ _ __ | |_ 
+#	| |_) | |/ _` |/ __/ _ \ '_ ` _ \ / _ \ '_ \| __|
+#	|  __/| | (_| | (_|  __/ | | | | |  __/ | | | |_ 
+#	|_|   |_|\__,_|\___\___|_| |_| |_|\___|_| |_|\__|
+#			of Windows
+#
+# SmartPlacement makes new windows pop-up in blank regions of screen 
+Style "*" SmartPlacement
+
+# If SmartPlacement fails, this places it randomly instead of making you do it
+Style "*" RandomPlacement
+
+
+############################################################################
+#	 ____                           _   _                 
+#	|  _ \  ___  ___ ___  _ __ __ _| |_(_) _    _ __  ___ 
+#	| | | |/ _ \/ __/ _ \| '__/ _` | __| |/ _ \| '_ \/ __|
+#	| |_| |  __/ (_| (_) | | | (_| | |_| | (_) | | | \__ \
+#	|____/ \___|\___\___/|_|  \__,_|\__|_|\___/|_| |_|___/
+#
+# Note: Order is important!! If compatible styles are set, styles are ORed
+# together. If conflicting styles are set, the last one specified is used.
+
+# MWM Emulation: Don't ignore hints for functions and transient decoration
+Style "*" MWMFunctions
+
+# MWM Emulation (cont):
+# Framemakers dialog boxes amongst others disables all kill/delete-functions 
+# on the windows which mean that if you listen to these hints you cannot 
+# close these windows, ever! Or at least until Framemaker closes.
+# If a program doesn't have it's own method of closing the window it should
+# be listed below. Uncomment at your own risk.
+
+Style "Maker"		     NoFuncHint
+Style "MapleVR*"	     NoFuncHint
+Style "VendorShell"	     NoFuncHint, NoDecorHint
+Style "AcroRead"	     NoFuncHint
+
+# Changes the look of the "rubberband" you see when moving windows (0 - 255)
+XORvalue 100
+
+# change the default width, set a global icon, and give borders printenvto popups
+Style "*"		BorderWidth 6, HandleWidth 6, DecorateTransient
+Style "Fvwm*"		Sticky, WindowListSkip
+Style "FvwmButtons"	NoTitle, ClickToFocus
+Style "FvwmWinList"	NoTitle, ClickToFocus
+Style "FvwmPager"	NoTitle
+Style "*lock"		NoTitle, Sticky, WindowListSkip
+Style "xload"		NoTitle, Sticky, WindowListSkip, ClickToFocus
+Style "*xconsole"	Sticky, WindowListSkip, ClickToFocus, StartIconic
+Style "*logout"		StartIconic, NoIcon
+Style "emacs"		NoPPosition
+
+
+############################################################################
+#		 __  __ _          
+#		|  \/  (_)___  ___ 
+#		| |\/| | / __|/ __|
+#		| |  | | \__ \ (__ 
+#		|_|  |_|_|___/\___|
+#
+# click/release must occur in <n milliseconds to be a "click", in this
+#   case 250 milliseconds.
+ClickTime 250
+
+# if the window occupies less than n% of the screen, draw it opaque
+OpaqueMoveSize 100
+

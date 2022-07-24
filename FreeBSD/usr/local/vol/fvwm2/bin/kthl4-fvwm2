@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export PATH=$PATH:/usr/X11R6/bin
+
+xterm&
+fvwm2 -f /usr/local/vol/fvwm2/siteconf/system.fvwm2rc

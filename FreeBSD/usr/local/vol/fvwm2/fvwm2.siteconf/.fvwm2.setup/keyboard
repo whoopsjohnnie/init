@@ -1,0 +1,28 @@
+############################################################################
+# KEYBOARD Setup
+#
+# press arrow + control anywhere, and scroll by 1 page
+Key Left	A	CS	Scroll -100 +0
+Key Right	A	CS	Scroll +100 +0
+Key Up		A	CS	Scroll +0   -100
+Key Down	A	CS	Scroll +0   +100
+
+# Keyboard accelerators
+#  press shift + control + functionkey
+Key F1		A	SM	Popup "StaticMenu"
+Key F2		A	SM	Popup "Window-Ops"
+Key F3		A	SM	Module FvwmWinList 
+Key F4		A	SM	Iconify
+Key F5		A	SM	Move
+Key F6		A	SM	Resize
+
+# Keyboard accelerators
+# M-Tab/M-S-Tab cycles through ALL windows
+Key Tab         A       M       Next [*] Focus
+Key Tab         A       SM      Prev [*] Focus
+# C-Tab/C-S-Tab cycles through ALL windows on the current screen
+Key Tab         A       C       Next [CurrentScreen *] Focus
+Key Tab         A       SC      Prev [CurrentScreen *] Focus
+# M-C-Tab/M-C-S-Tab cycles through ALL terminals
+Key Tab         A       CM      Next [*xterm] focus
+Key Tab         A       CSM     Prev [*xterm] focus

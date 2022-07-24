@@ -1,0 +1,15 @@
+#############################################################################
+#		 ____  _             _   _   _       
+#		/ ___|| |_ __ _ _ __| |_| | | |_ __  
+#		\___ \| __/ _` | '__| __| | | | '_ \ 
+#		 ___) | || (_| | |  | |_| |_| | |_) |
+#		|____/ \__\__,_|_|   \__|\___/| .__/ 
+#		                              |_|    
+#
+# InitFunction will be 'executed' at startup (login) of fvwm2
+# RestartFunction will be 'executed' at restart of fvwm2
+
+AddToFunc "InitFunction"	"I" Module FvwmButtons
+
+AddToFunc "RestartFunction" "I" Module FvwmButtons
+
