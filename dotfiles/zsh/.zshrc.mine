@@ -63,10 +63,10 @@ export PATH="$HOME/bin/:$PATH"
 # prompt
 # export PS1="\u@\h \w>"
 # export PROMPT="%n@%m %~>"
-# export PROMPT="%n@%M %~>"
+export PROMPT="%n@%M %~>"
 # autoload -U colors && colors
 # export PROMPT='%B%F{10}%n@%M%f:%F{12}%~%f%b>'
-export PS1=$'\033[32;1m%n@%m\033[m:\033[34;1m%~\033[m\>'
+# export PS1=$'\033[32;1m%n@%m\033[m:\033[34;1m%~\033[m\>'
 
 # Env
 export EDITOR="vim"
@@ -138,5 +138,5 @@ check-ssh-agent || {
 # 
 # ssh keys
 # 
-ssh-add ~/.ssh/john_github
+ssh-add ~/.ssh/john_github > /dev/null 2>&1
 
