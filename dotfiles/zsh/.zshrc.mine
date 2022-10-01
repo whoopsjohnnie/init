@@ -140,3 +140,17 @@ check-ssh-agent || {
 # 
 ssh-add ~/.ssh/john_github > /dev/null 2>&1
 
+# 
+# K3s
+# 
+export KUBECONFIG=~/.kube/config.bots-k3s
+# kubectl config set-context bots-k3s
+# kubectl get node -o wide
+
+# 
+# K3s aliases
+# Based on Mastering Kubernetes, 3rd ed
+# 
+alias k='kubectl'
+alias mk='/usr/local/bin/minikube'
+
