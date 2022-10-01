@@ -838,11 +838,5 @@
       "command": "editor.action.clipboardCutAction",
       "when": "editorTextFocus && editorHasSelection && !editorReadonly"
     },
-    {
-      "key": "ctrl+a",
-      "command": "-extension.vim_ctrl+a",
-      "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
-    },
 ]
-
 
