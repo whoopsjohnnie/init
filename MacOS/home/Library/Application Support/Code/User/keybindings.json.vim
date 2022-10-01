@@ -1,7 +1,7 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     // {
-    //   "key": "Cmd+u",
+    //   "key": "Ctrl+u",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
@@ -9,12 +9,12 @@
       "$special": "universalArgumentTypes"
     },
     // {
-    //   "keys": ["right", "Cmd+f"],
+    //   "keys": ["right", "Ctrl+f"],
     //   "command": "",
     //   "whens": ["editorTextFocus", "terminalFocus"]
     // },
     // {
-    //   "keys": ["right", "Cmd+f"],
+    //   "keys": ["right", "Ctrl+f"],
     //   "command": "",
     //   "when": "",
     //   "args": {
@@ -22,12 +22,12 @@
     //   }
     // },
     // {
-    //   "keys": ["left", "Cmd+b"],
+    //   "keys": ["left", "Ctrl+b"],
     //   "command": "",
     //   "whens": ["editorTextFocus", "terminalFocus"]
     // },
     // {
-    //   "keys": ["left", "Cmd+b"],
+    //   "keys": ["left", "Ctrl+b"],
     //   "command": "",
     //   "when": "",
     //   "args": {
@@ -35,22 +35,22 @@
     //   }
     // },
     // {
-    //   "keys": ["up", "Cmd+p"],
+    //   "keys": ["up", "Ctrl+p"],
     //   "command": "",
     //   "whens": ["editorTextFocus && !suggestWidgetVisible", "terminalFocus"]
     // },
     {
-      "keys": ["up", "Cmd+p"],
+      "keys": ["up", "Ctrl+p"],
       "command": "selectPrevSuggestion",
       "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
     {
-      "keys": ["up", "Cmd+p"],
+      "keys": ["up", "Ctrl+p"],
       "command": "showPrevParameterHint",
       "when": "parameterHintsMultipleSignatures && parameterHintsVisible && textInputFocus"
     },
     // {
-    //   "keys": ["up", "Cmd+p"],
+    //   "keys": ["up", "Ctrl+p"],
     //   "command": "",
     //   "when": "",
     //   "args": {
@@ -58,22 +58,22 @@
     //   }
     // },
     // {
-    //   "keys": ["down", "Cmd+n"],
+    //   "keys": ["down", "Ctrl+n"],
     //   "command": "",
     //   "whens": ["editorTextFocus", "terminalFocus"]
     // },
     {
-      "keys": ["down", "Cmd+n"],
+      "keys": ["down", "Ctrl+n"],
       "command": "selectNextSuggestion",
       "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
     {
-      "keys": ["down", "Cmd+n"],
+      "keys": ["down", "Ctrl+n"],
       "command": "showNextParameterHint",
       "when": "parameterHintsMultipleSignatures && parameterHintsVisible && textInputFocus"
     },
     // {
-    //   "keys": ["down", "Cmd+n"],
+    //   "keys": ["down", "Ctrl+n"],
     //   "command": "",
     //   "when": "",
     //   "args": {
@@ -81,12 +81,12 @@
     //   }
     // },
     // {
-    //   "keys": ["home", "Cmd+a"],
+    //   "keys": ["home", "Ctrl+a"],
     //   "command": "",
     //   "whens": ["editorTextFocus", "terminalFocus"]
     // },
     // {
-    //   "keys": ["home", "Cmd+a"],
+    //   "keys": ["home", "Ctrl+a"],
     //   "command": "",
     //   "when": "",
     //   "args": {
@@ -94,12 +94,12 @@
     //   }
     // },
     // {
-    //   "keys": ["end", "Cmd+e"],
+    //   "keys": ["end", "Ctrl+e"],
     //   "command": "",
     //   "whens": ["editorTextFocus", "terminalFocus"]
     // },
     // {
-    //   "keys": ["end", "Cmd+e"],
+    //   "keys": ["end", "Ctrl+e"],
     //   "command": "",
     //   "when": "",
     //   "args": {
@@ -146,12 +146,12 @@
     //   }
     // },
     // {
-    //   "keys": ["pagedown", "Cmd+v"],
+    //   "keys": ["pagedown", "Ctrl+v"],
     //   "command": "",
     //   "when": "editorTextFocus && !suggestWidgetVisible"
     // },
     // {
-    //   "keys": ["pagedown", "Cmd+v"],
+    //   "keys": ["pagedown", "Ctrl+v"],
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing",
     //   "args": {
@@ -229,7 +229,7 @@
       "command": "editor.action.marker.next"
     },
     {
-      "key": "Cmd+x `",
+      "key": "Ctrl+x `",
       "command": "editor.action.marker.next",
       "when": "editorTextFocus"
     },
@@ -238,27 +238,27 @@
       "command": "editor.action.marker.prev"
     },
     // {
-    //   "key": "Cmd+l",
+    //   "key": "Ctrl+l",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
 //    {
-//      "key": "Cmd+s",
+//      "key": "Ctrl+s",
 //      "command": "",
 //      "when": "!findInputFocussed"
 //    },
     {
-      "key": "Cmd+s",
+      "key": "Ctrl+s",
       "command": "editor.action.nextMatchFindAction",
       "when": "findInputFocussed"
     },
     // {
-    //   "key": "Cmd+r",
+    //   "key": "Ctrl+r",
     //   "command": "",
     //   "when": "!findInputFocussed"
     // },
     {
-      "key": "Cmd+r",
+      "key": "Ctrl+r",
       "command": "editor.action.previousMatchFindAction",
       "when": "findInputFocussed"
     },
@@ -269,25 +269,25 @@
     },
     // {
     //   "keys": [
-    //     "Cmd+f",
-    //     "Cmd+b",
-    //     "Cmd+p",
-    //     "Cmd+n",
-    //     "Cmd+a",
-    //     "Cmd+e",
+    //     "Ctrl+f",
+    //     "Ctrl+b",
+    //     "Ctrl+p",
+    //     "Ctrl+n",
+    //     "Ctrl+a",
+    //     "Ctrl+e",
     //     "alt+f",
     //     "alt+b",
     //     "alt+m",
-    //     "Cmd+d",
-    //     "Cmd+h",
+    //     "Ctrl+d",
+    //     "Ctrl+h",
     //     "alt+d",
-    //     "Cmd+k",
-    //     "Cmd+w",
+    //     "Ctrl+k",
+    //     "Ctrl+w",
     //     "alt+w",
-    //     "Cmd+y",
+    //     "Ctrl+y",
     //     "alt+y",
-    //     "Cmd+m",
-    //     "Cmd+j",
+    //     "Ctrl+m",
+    //     "Ctrl+j",
     //     "alt+l",
     //     "alt+u",
     //     "alt+backspace"
@@ -298,22 +298,22 @@
     //   ]
     // },
     // {
-    //   "key": "Cmd+meta+n",
+    //   "key": "Ctrl+meta+n",
     //   "command": "",
     //   "when": "editorFocus"
     // },
     // {
-    //   "key": "Cmd+meta+p",
+    //   "key": "Ctrl+meta+p",
     //   "command": "",
     //   "when": "editorFocus"
     // },
     // {
-    //   "key": "Cmd+d",
+    //   "key": "Ctrl+d",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+h",
+    //   "key": "Ctrl+h",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
@@ -328,22 +328,22 @@
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+k",
+    //   "key": "Ctrl+k",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+shift+backspace",
+    //   "key": "Ctrl+shift+backspace",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
     // {
-    //   "key": "Cmd+w",
+    //   "key": "Ctrl+w",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+w",
+    //   "key": "Ctrl+w",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
@@ -358,12 +358,12 @@
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
     // {
-    //   "key": "Cmd+y",
+    //   "key": "Ctrl+y",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+y",
+    //   "key": "Ctrl+y",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
@@ -378,42 +378,42 @@
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
     {
-      "key": "Cmd+o",
+      "key": "Ctrl+o",
       "command": "lineBreakInsert",
       "when": "editorTextFocus && !editorReadonly"
     },
     // {
-    //   "key": "Cmd+o",
+    //   "key": "Ctrl+o",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
     // {
-    //   "key": "Cmd+m",
+    //   "key": "Ctrl+m",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+m",
+    //   "key": "Ctrl+m",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
     // {
-    //   "key": "Cmd+j",
+    //   "key": "Ctrl+j",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+j",
+    //   "key": "Ctrl+j",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
     // {
-    //   "key": "Cmd+x Cmd+o",
+    //   "key": "Ctrl+x Ctrl+o",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+x Cmd+o",
+    //   "key": "Ctrl+x Ctrl+o",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing",
     //   "args": {
@@ -421,12 +421,12 @@
     //   }
     // },
     {
-      "key": "Cmd+x h",
+      "key": "Ctrl+x h",
       "command": "editor.action.selectAll",
       "when": "editorTextFocus"
     },
     // {
-    //   "key": "Cmd+x h",
+    //   "key": "Ctrl+x h",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing",
     //   "args": {
@@ -434,12 +434,12 @@
     //   }
     // },
     {
-      "keys": ["Cmd+x u", "Cmd+/", "Cmd+shift+-"],
+      "keys": ["Ctrl+x u", "Ctrl+/", "Ctrl+shift+-"],
       "command": "undo",
       "when": "editorTextFocus && !editorReadonly"
     },
     // {
-    //   "keys": ["Cmd+x u", "Cmd+/", "Cmd+shift+-"],
+    //   "keys": ["Ctrl+x u", "Ctrl+/", "Ctrl+shift+-"],
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing",
     //   "args": {
@@ -447,12 +447,12 @@
     //   }
     // },
     {
-      "key": "Cmd+;",
+      "key": "Ctrl+;",
       "command": "editor.action.commentLine",
       "when": "editorTextFocus && !editorReadonly"
     },
     // {
-    //   "key": "Cmd+;",
+    //   "key": "Ctrl+;",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing",
     //   "args": {
@@ -473,7 +473,7 @@
     //   }
     // },
     // {
-    //   "key": "Cmd+x Cmd+l",
+    //   "key": "Ctrl+x Ctrl+l",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
@@ -483,7 +483,7 @@
     //   "when": "editorTextFocus && !editorReadonly"
     // },
     // {
-    //   "key": "Cmd+x Cmd+u",
+    //   "key": "Ctrl+x Ctrl+u",
     //   "command": "",
     //   "when": "editorTextFocus && !editorReadonly"
     // },
@@ -517,23 +517,23 @@
     //   "when": ""
     // },
     // {
-    //   "key": "Cmd+g",
+    //   "key": "Ctrl+g",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       // "command": "emacs-mcx.cancel",
       "command": "",
       "when": "editorTextFocus"
     },
     // {
-    //   "key": "Cmd+g",
+    //   "key": "Ctrl+g",
     //   "command": "",
     //   "when": "editorFocus && findWidgetVisible && !isComposing"
     // },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       // "command": "emacs-mcx.isearchAbort",
       "command": "closeFindWidget",
       "when": "editorFocus && findWidgetVisible && !isComposing"
@@ -545,67 +545,67 @@
     //   "when": "editorFocus && findWidgetVisible && !replaceInputFocussed && !isComposing"
     // },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "closeReferenceSearchEditor",
       "when": "inReferenceSearchEditor && !config.editor.stablePeek"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "closeReferenceSearch",
       "when": "referenceSearchVisible && !config.editor.stablePeek"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "closeBreakpointWidget",
       "when": "breakpointWidgetVisible && editorFocus"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "leaveSnippet",
       "when": "editorTextFocus && inSnippetMode"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "closeMarkersNavigation",
       "when": "editorFocus && markersNavigationVisible"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "closeParameterHints",
       "when": "editorTextFocus && parameterHintsVisible"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "hideSuggestWidget",
       "when": "editorTextFocus && suggestWidgetVisible"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "cancelRenameInput",
       "when": "editorFocus && renameInputVisible"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "closeAccessibilityHelp",
       "when": "accessibilityHelpWidgetVisible && editorFocus"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "closeReplaceInFilesWidget",
       "when": "replaceInputBoxFocus && searchViewletVisible"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "workbench.action.closeMessages",
       "when": "globalMessageVisible"
     },
     {
-      "key": "Cmd+g",
+      "key": "Ctrl+g",
       "command": "workbench.action.closeQuickOpen",
       "when": "inQuickOpen"
     },
     // {
-    //   "keys": ["Cmd+space", "Cmd+shift+2"],
+    //   "keys": ["Ctrl+space", "Ctrl+shift+2"],
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
@@ -615,17 +615,17 @@
     //   "when": ""
     // },
     // {
-    //   "key": "Cmd+x Cmd+x",
+    //   "key": "Ctrl+x Ctrl+x",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
     // {
-    //   "key": "Cmd+x space",
+    //   "key": "Ctrl+x space",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
     // {
-    //   "key": "Cmd+x r",
+    //   "key": "Ctrl+x r",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
@@ -668,12 +668,12 @@
       "$special": "rectMarkModeTypes"
     },
     // {
-    //   "key": "Cmd+'",
+    //   "key": "Ctrl+'",
     //   "command": "editor.action.triggerSuggest",
     //   "when": "editorTextFocus"
     // },
     {
-      "key": "Cmd+'",
+      "key": "Ctrl+'",
       "command": "toggleSuggestionDetails",
       "when": "editorTextFocus && suggestWidgetVisible"
     },
@@ -692,140 +692,140 @@
       "command": "workbench.action.showCommands"
     },
     {
-      "key": "Cmd+meta+space",
+      "key": "Ctrl+meta+space",
       "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-      "key": "Cmd+x Cmd+c",
+      "key": "Ctrl+x Ctrl+c",
       "command": "workbench.action.closeWindow"
     },
     {
-      "key": "Cmd+x z",
+      "key": "Ctrl+x z",
       "command": "workbench.action.toggleZenMode",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x Cmd+f",
+      "key": "Ctrl+x Ctrl+f",
       "command": "workbench.action.quickOpen",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x Cmd+s",
+      "key": "Ctrl+x Ctrl+s",
       "command": "workbench.action.files.save",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x Cmd+w",
+      "key": "Ctrl+x Ctrl+w",
       "command": "workbench.action.files.saveAs",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x s",
+      "key": "Ctrl+x s",
       "command": "workbench.action.files.saveAll",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x Cmd+n",
+      "key": "Ctrl+x Ctrl+n",
       "command": "workbench.action.newWindow",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x b",
+      "key": "Ctrl+x b",
       "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x k",
+      "key": "Ctrl+x k",
       "command": "workbench.action.closeActiveEditor",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x Cmd-k",
+      "key": "Ctrl+x Ctrl-k",
       "command": "workbench.action.closeAllEditors",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x 0",
+      "key": "Ctrl+x 0",
       "command": "workbench.action.closeEditorsInGroup",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x 1",
+      "key": "Ctrl+x 1",
       "command": "workbench.action.closeEditorsInOtherGroups",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x 2",
+      "key": "Ctrl+x 2",
       "command": "workbench.action.splitEditorDown",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x 3",
+      "key": "Ctrl+x 3",
       "command": "workbench.action.splitEditorRight",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x 4",
+      "key": "Ctrl+x 4",
       "command": "workbench.action.toggleEditorGroupLayout",
       "when": "!terminalFocus"
     },
     {
-      "key": "Cmd+x o",
+      "key": "Ctrl+x o",
       "command": "workbench.action.navigateEditorGroups",
       "when": "!terminalFocus"
     },
 //    {
-//      "key": "Cmd+meta+f",
+//      "key": "Ctrl+meta+f",
 //      "command": "",
 //      "when": "editorTextFocus"
 //    },
     // {
-    //   "key": "Cmd+meta+b",
+    //   "key": "Ctrl+meta+b",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
     // {
-    //   "key": "Cmd+meta+k",
+    //   "key": "Ctrl+meta+k",
     //   "command": "",
     //   "when": "editorTextFocus"
     // },
     {
-      "key": "Cmd+p",
+      "key": "Ctrl+p",
       "command": "selectPrevQuickFix",
       "when": "editorFocus && quickFixWidgetVisible"
     },
     {
-      "key": "Cmd+n",
+      "key": "Ctrl+n",
       "command": "selectNextQuickFix",
       "when": "editorFocus && quickFixWidgetVisible"
     },
     {
-      "key": "Cmd+p",
+      "key": "Ctrl+p",
       "command": "workbench.action.quickOpenSelectPrevious",
       "when": "inQuickOpen"
     },
     {
-      "key": "Cmd+n",
+      "key": "Ctrl+n",
       "command": "workbench.action.quickOpenSelectNext",
       "when": "inQuickOpen"
     },
     {
-      "key": "Cmd+m",
+      "key": "Ctrl+m",
       "command": "workbench.action.acceptSelectedQuickOpenItem",
       "when": "inQuickOpen"
     },
     {
-      "key": "Cmd+shift+'",
+      "key": "Ctrl+shift+'",
       "command": "editor.action.triggerParameterHints",
       "when": "editorTextFocus"
     },
     {
-      "key": "Cmd+x j",
+      "key": "Ctrl+x j",
       "command": "workbench.action.togglePanel",
       "when": "!terminalFocus"
     },
     // {
-    //   "key": "Cmd+i",
+    //   "key": "Ctrl+i",
     //   "command": "",
     //   "args": [
     //     "",
@@ -834,7 +834,7 @@
     // }
     // JohnG: Compromise for having Emacs Ctrl-x key chord and Ctrl-x cut
     {
-      "key": "Cmd+x",
+      "key": "Ctrl+x",
       "command": "editor.action.clipboardCutAction",
       "when": "editorTextFocus && editorHasSelection && !editorReadonly"
     },

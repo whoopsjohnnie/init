@@ -35,5 +35,5 @@
       "<C-v>": false,
       "<C-x>": false
     },
-    "workbench.colorTheme": "Norton Commander theme"
+    "workbench.colorTheme": "Default Light+"
 }
