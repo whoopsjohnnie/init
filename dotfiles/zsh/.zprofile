@@ -47,10 +47,10 @@ fi
 # Altered by john on Feb 20, 2022 to bypass /usr/athena/lib/dotfiles
 # 
 # Source the ~/.zshrc.mine file if it exists
-if [ -r ~/.zshrc.mine ]
-then
-	source ~/.zshrc.mine
-fi
+# if [ -r ~/.zshrc.mine ]
+# then
+# 	source ~/.zshrc.mine
+# fi
 
 # If you want to ADJUST the zsh initialization sequence, create any of 
 # the following files (as appropriate) in your home directory, with commands
@@ -74,6 +74,6 @@ fi
 # xset:  unable to open display ":0"
 #
 # xset -b
-xset -b > /dev/null 2>&1
+# xset -b > /dev/null 2>&1
 
 # source ~/.zshenv
