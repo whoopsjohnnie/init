@@ -49,7 +49,11 @@ alias la='ls -aG'
 alias ls='ls -G'
 
 alias emacs='emacs -nw'
-alias vi='vim'
+
+# 2022 called and it said listen to the Primeagen
+# alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 
 # 1999 called and it wants its editor back 
 alias pico='nano'
@@ -69,7 +73,8 @@ export PROMPT="%n@%M %~>"
 # export PS1=$'\033[32;1m%n@%m\033[m:\033[34;1m%~\033[m\>'
 
 # Env
-export EDITOR="vim"
+# export EDITOR="vim"
+export EDITOR="nvim"
 #export PAGER="less"
 
 # JAVA
