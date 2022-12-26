@@ -15,6 +15,8 @@
 ;; /afs/kth.se/home/e97/e97_jog/Public/.emacs, Feb 5 2001, 03:38:57
 ;; /afs/kth.se/home/e97/e97_jog/Public/emacs/FSF-emacs, Feb 5 2001, 03:40:44
 ;;
+;; John Grundback, Los Angeles, January 16 2022
+;;
 
 ;;Goto line
 (global-set-key (quote [f12]) (quote goto-line))
@@ -101,25 +103,21 @@
 ;;
 
 ;; prevent silly initial splash screen
-; (setq inhibit-splash-screen t)
+(setq inhibit-splash-screen t)
 
 (cond ((window-system)
 ;; (cond ((display-graphic-p)
 ;;
 
-;; Zenburn theme
-; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-; (load-theme 'zenburn t)
-; (set-face-background 'fringe "#3f3f3f")
-
 ; (load-theme 'leuven)
 ; (load-theme 'tango)
 
 ;; My theme
-; (set-background-color "white")
-; (set-border-color "white")
-(set-face-background 'fringe "white")
+;; (set-background-color "white")
+;; (set-border-color "white")
+;(set-face-background 'fringe "white")
 (set-face-attribute 'fringe nil :background nil)
+;(set-fringe-mode 0) 
 
 ;; Disable menubar
 ; (menu-bar-mode -1) 
@@ -129,93 +127,6 @@
 
 ;; turn off toolbar
 ; (tool-bar-mode -1)
-
-;; tabs, tabs, tabs
-(global-tab-line-mode t)
-(tab-line-mode 1)
-
-(setq tab-line-new-button-show nil)
-;; (setq tab-line-close-button-show nil)
-
-(set-face-attribute 'tab-line nil ;; background behind tabs
-      :background "white"
-      :foreground "black"
-      :family "Menlo" :height 1.0 :box nil)
-;(set-face-attribute 'tab-line-tab nil ;; active tab in another window
-;      :inherit 'tab-line
-;      :foreground "#88887f" :background "#3f3f3f" :box nil)
-;(set-face-attribute 'tab-line-tab-current nil ;; active tab in current window
-;      :background "#3f3f3f" :foreground "#dcdcca" :box nil)
-;(set-face-attribute 'tab-line-tab-inactive nil ;; inactive tab
-;      :background "#353535" :foreground "#88887f" :box nil)
-;(set-face-attribute 'tab-line-highlight nil ;; mouseover
-;      :background "white" :foreground 'unspecified)
-
-;; Scrollbars on Mac
-; (set-frame-parameter nil 'ns-appearance 'dark)
-; (set-frame-parameter nil 'ns-transparent-titlebar nil)
-
-;; Tabbar
-;(require 'tabbar)
-;(tabbar-mode t)
-;(setq tab-bar-mode t)
-;(setq tab-bar-show nil)
-;(setq global-tab-line-mode t)
-
-;(global-tab-line-mode t)
-;;(tab-line-mode)
-;;(tab-line-mode--turn-on)
-;(tab-line-mode 1)
-
-;; 
-;; Making Emacs tabs work like in Atom
-;; https://andreyorst.gitlab.io/posts/2020-05-07-making-emacs-tabs-work-like-in-atom/
-;; 
-(defun tab-line-close-tab (&optional e)
-  "Close the selected tab.
-If tab is presented in another window, close the tab by using `bury-buffer` function.
-If tab is uniq to all existing windows, kill the buffer with `kill-buffer` function.
-Lastly, if no tabs left in the window, it is deleted with `delete-window` function."
-  (interactive "e")
-  (let* ((posnp (event-start e))
-         (window (posn-window posnp))
-         (buffer (get-pos-property 1 'tab (car (posn-string posnp)))))
-    (with-selected-window window
-      (let ((tab-list (tab-line-tabs-window-buffers))
-            (buffer-list (flatten-list
-                          (seq-reduce (lambda (list window)
-                                        (select-window window t)
-                                        (cons (tab-line-tabs-window-buffers) list))
-                                      (window-list) nil))))
-        (select-window window)
-        (if (> (seq-count (lambda (b) (eq b buffer)) buffer-list) 1)
-            (progn
-              (if (eq buffer (current-buffer))
-                  (bury-buffer)
-                (set-window-prev-buffers window (assq-delete-all buffer (window-prev-buffers)))
-                (set-window-next-buffers window (delq buffer (window-next-buffers))))
-              (unless (cdr tab-list)
-                (ignore-errors (delete-window window))))
-          (and (kill-buffer buffer)
-               (unless (cdr tab-list)
-                 (ignore-errors (delete-window window)))))))
-    (force-mode-line-update)))
-
-;;
-;; Create and open new untitled buffer
-;; https://stackoverflow.com/questions/25791605/emacs-how-do-i-create-a-new-empty-buffer-whenever-creating-a-new-frame
-;;
-(defun create-untitled-buffer ()
-  "Create a new frame with a new empty buffer."
-  (interactive)
-  (let ((buffer (generate-new-buffer "untitled")))
-    (set-buffer-major-mode buffer)
-    ; (display-buffer buffer '(display-buffer-pop-up-frame . nil))))
-    (display-buffer buffer '(display-buffer-same-window . nil))))
-
-;;
-; (global-set-key (kbd "C-c n") #'create-untitled-buffer)
-(global-set-key (kbd "C-n") #'create-untitled-buffer)
 
 ;;
 (setq default-directory "~/")
@@ -253,8 +164,16 @@ Lastly, if no tabs left in the window, it is deleted with `delete-window` functi
 ; (define-key isearch-mode-map "\C-x" 'isearch-yank-pop)
 (define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
+;;
+(global-set-key (kbd "A-x") (kbd "C-x"))
+
 ;; Ctrl-a should mark whole buffer
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
+
+;; Cmd-g should quit
+; (global-set-key (kbd "s-g") 'keyboard-quit)
+; (global-set-key (kbd "s-g") 'keyboard-quit-escape)
+(global-set-key (kbd "s-g") (kbd "C-g"))
 
 ;; Option1
 (setq mac-command-modifier 'control)
