@@ -4,7 +4,7 @@
 
 # To use a windowmanager other than mwm or fvwm2 with the site-
 # specific configuration uncomment the next line.
-export WINDOW_MANAGER="mwm"
+# export WINDOW_MANAGER="mwm"
 # export WINDOW_MANAGER="twm"
 # export WINDOW_MANAGER="fvwm2"
 
@@ -43,4 +43,108 @@ export WINDOW_MANAGER="mwm"
 # KDE
 # KDE is the Slackware default
 # export WINDOW_MANAGER="startplasma-x11"
+
+HOSTNAME=$(hostname)
+
+# if [ -n $HOSTNAME ]
+if [ "$HOSTNAME" = "cola" ]
+then
+
+# export WINDOW_MANAGER="mwm"
+export WINDOW_MANAGER="fvwm2"
+# export WINDOW_MANAGER="/usr/local/dt/bin/Xsession"
+
+elif [ "$HOSTNAME" = "twix" ]
+then
+
+export WINDOW_MANAGER="/usr/local/dt/bin/Xsession"
+
+elif [ "$HOSTNAME" = "mars" ]
+then
+
+export WINDOW_MANAGER="/usr/local/dt/bin/Xsession"
+
+elif [ "$HOSTNAME" = "pepsi" ]
+then
+
+export WINDOW_MANAGER="/usr/local/dt/bin/Xsession"
+
+elif [ "$HOSTNAME" = "raider" ]
+then
+
+export CONFHOST=$(hostname)
+export XDG_CONFIG_HOME=${HOME}/.hostconfig/${CONFHOST}/
+
+# 
+# Linux Mint 20
+#
+# # env -u SESSION_MANAGER
+# unset SESSION_MANAGER
+# # env -u DBUS_SESSION_BUS_ADDRESS
+# unset DBUS_SESSION_BUS_ADDRESS
+# export WINDOW_MANAGER="cinnamon-session"
+
+# 
+# Kubuntu 20.04 
+#
+# export KDE_FULL_SESSION=1
+# export KDE_SESSION_VERSION=5
+# export XDG_SESSION_DESKTOP=KDE
+# export XDG_DATA_DIRS=/usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# export XDG_CONFIG_DIRS=/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
+# export WINDOW_MANAGER="startplasma-x11"
+
+# 
+# Debian 12 Gnome
+#
+# # export GNOME_SHELL_SESSION_MODE=ubuntu
+# # export XDG_CURRENT_DESKTOP=ubuntu:GNOME
+# export XDG_DATA_DIRS=/usr/local/share:/usr/share
+# export XDG_CONFIG_DIRS=/etc/xdg
+# export WINDOW_MANAGER="/usr/bin/gnome-session"
+
+# 
+# Awesome WM
+#
+export WINDOW_MANAGER="awesome"
+
+elif [ "$HOSTNAME" = "snickers" ]
+then
+
+export CONFHOST=$(hostname)
+export XDG_CONFIG_HOME=${HOME}/.hostconfig/${CONFHOST}/
+
+# 
+# Awesome WM
+#
+export WINDOW_MANAGER="awesome"
+
+elif [ "$HOSTNAME" = "piggelin" ]
+then
+
+export CONFHOST=$(hostname)
+export XDG_CONFIG_HOME=${HOME}/.hostconfig/${CONFHOST}/
+
+# 
+# Awesome WM
+#
+export WINDOW_MANAGER="awesome"
+
+else
+
+export CONFHOST=$(hostname)
+export XDG_CONFIG_HOME=${HOME}/.hostconfig/${CONFHOST}/
+
+# Gnome
+# Gnome is the Ubuntu default
+#export WINDOW_MANAGER="gnome-shell"
+
+export GNOME_SHELL_SESSION_MODE=ubuntu
+export XDG_CURRENT_DESKTOP=ubuntu:GNOME
+export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+export WINDOW_MANAGER="/usr/bin/gnome-session --session=ubuntu"
+
+fi
+# fi
 
