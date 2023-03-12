@@ -59,9 +59,14 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # Aliases
 # alias h='history 1'
 alias history='history 1'
-alias ll='ls -lG'
-alias la='ls -aG'
-alias ls='ls -G'
+
+# NetBSD 9.3, -G is not a valid option
+# alias ll='ls -lG'
+# alias la='ls -aG'
+# alias ls='ls -G'
+alias ll='ls -l'
+alias la='ls -a'
+# alias ls='ls'
 
 alias emacs='emacs -nw'
 
@@ -75,6 +80,9 @@ alias pico='nano'
 
 # 1994 called and it wants its os back
 alias cls='clear'
+
+# mc
+# alias mc='mc --nocolor'
 
 # Local bin
 export PATH="$HOME/bin/:$PATH"
