@@ -21,7 +21,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # MacPorts Installer addition on 2021-02-18_at_14:47:21: adding an appropriate DISPLAY variable for use with MacPorts.
-export DISPLAY=:0
+# export DISPLAY=:0
 # Finished adapting your DISPLAY environment variable for use with MacPorts.
 
 # 
@@ -102,6 +102,13 @@ export EDITOR="nvim"
 # Python path, set $PATH before so system python is default to not screw with system and installers
 # export PATH="$PATH:~/Library/Python/2.7/bin/:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/"
 
+# 
+# python virtualenvs in an NFS world
+# 
+# sudo mkdir /virtualenvs
+# sudo chmod a+rwx /virtualenvs
+export WORKON_HOME=/virtualenvs
+
 # GO
 # # export GOPATH=/usr/local/go
 # export PATH="$PATH:/usr/local/go/bin"
@@ -163,8 +170,8 @@ ssh-add ~/.ssh/john_github > /dev/null 2>&1
 # 
 # K3s
 # 
-export KUBECONFIG=~/.kube/config.bots-k3s
-# kubectl config set-context bots-k3s
+export KUBECONFIG=~/.kube/config.nuke-k3s
+# kubectl config set-context nuke-k3s
 # kubectl get node -o wide
 
 # 
