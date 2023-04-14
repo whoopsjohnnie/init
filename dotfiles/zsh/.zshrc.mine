@@ -66,14 +66,15 @@ alias ls='ls -G'
 alias emacs='emacs -nw'
 
 # 2022 called and it said listen to the Primeagen
-# alias vi='vim'
+# 2023 called and said, naaah, lets stick with vim
+alias vi='vim'
 # alias vi='nvim'
 # alias vim='nvim'
-# Cannot install neovim on TrueNAS
-if [ -x "$(command -v nvim)" ]; then
-  alias vi='nvim'
-  alias vim='nvim'
-fi
+# # Cannot install neovim on TrueNAS
+# if [ -x "$(command -v nvim)" ]; then
+#   alias vi='nvim'
+#   alias vim='nvim'
+# fi
 
 # 1999 called and it wants its editor back 
 alias pico='nano'
