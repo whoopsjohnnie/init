@@ -67,8 +67,13 @@ alias emacs='emacs -nw'
 
 # 2022 called and it said listen to the Primeagen
 # alias vi='vim'
-alias vi='nvim'
-alias vim='nvim'
+# alias vi='nvim'
+# alias vim='nvim'
+# Cannot install neovim on TrueNAS
+if [ -x "$(command -v nvim)" ]; then
+  alias vi='nvim'
+  alias vim='nvim'
+fi
 
 # 1999 called and it wants its editor back 
 alias pico='nano'
@@ -89,8 +94,13 @@ export PROMPT="%n@%M %~>"
 
 # Env
 # export EDITOR="vim"
-export EDITOR="nvim"
+# export EDITOR="nvim"
 #export PAGER="less"
+
+# April 6 2023, make sure EDITOR is set to vim and not nvim, I don't have nvim everywhere
+# https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 
 # JAVA
 # export JAVA_HOME=$(/usr/libexec/java_home)
