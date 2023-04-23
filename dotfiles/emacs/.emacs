@@ -183,6 +183,18 @@
 ; (setq mac-command-modifier 'super)
 ; (setq mac-option-modifier 'meta)
 
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
+
+;; Evil CUA
+(define-key evil-insert-state-map (kbd "C-c") 'cua-copy-region)
+(define-key evil-insert-state-map (kbd "C-v") 'cua-paste)
+(define-key evil-insert-state-map (kbd "C-x") 'cua-cut-region)
+(define-key evil-insert-state-map (kbd "C-z") 'undo-tree-undo)
+(define-key evil-insert-state-map (kbd "C-y") 'undo-tree-redo)
+(define-key evil-insert-state-map (kbd "C-a") 'mark-whole-buffer)
+
 ;; Markdown/MD
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
