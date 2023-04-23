@@ -3,6 +3,7 @@
 "" 19 juni 2022 08:38 - Testing editor splits and project drawer stuff
 "" sep. 23 12:59:24 2022 - Disabling visual mode on mouse select for vim
 "" okt.  2 10:22:24 2022 - Enabling relative line numbers
+"" 14 Apr 18:48:57 2023 - Setting splitbelow to have terminals open on bottom
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -19,4 +20,6 @@ set mouse-=a
 
 set number
 set relativenumber
+
+set splitbelow
 
