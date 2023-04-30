@@ -5,13 +5,16 @@
 "" okt.  2 10:22:24 2022 - Enabling relative line numbers
 "" 14 Apr 18:48:57 2023 - Setting splitbelow to have terminals open on bottom
 "" 19 Apr 10:18 2023 - Load defaults.vim and mswin.vim
+"" apr. 30 14:38:21 2023 - TrueNAS does not seem to bundle mswin.vim
 
 "" Sane defaults
 source $VIMRUNTIME/defaults.vim
 
 "" CUA Mode, I cannot live without it
-source $VIMRUNTIME/mswin.vim
-set keymodel-=stopsel
+if filereadable(expand("$VIMRUNTIME/mswin.vim"))
+	source "$VIMRUNTIME/mswin.vim"
+	set keymodel-=stopsel
+endif
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
