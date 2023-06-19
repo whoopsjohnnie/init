@@ -18,6 +18,15 @@
 ;; John Grundback, Los Angeles, January 16 2022
 ;;
 
+;;
+;; 18 Jun 2023, 18:54 - Added by Emacs 26 to get evil working
+;;
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 ;;Goto line
 (global-set-key (quote [f12]) (quote goto-line))
 
@@ -103,7 +112,7 @@
 ;;
 
 ;; prevent silly initial splash screen
-(setq inhibit-splash-screen t)
+; (setq inhibit-splash-screen t)
 
 (cond ((window-system)
 ;; (cond ((display-graphic-p)
