@@ -196,13 +196,26 @@
 (require 'evil)
 (evil-mode 1)
 
+;; 
+;; 22 Jun 2023, 22:27 - Emacs Ansi Terminal does not like my old bindings
+;;
+
 ;; Evil CUA
-(define-key evil-insert-state-map (kbd "C-c") 'cua-copy-region)
-(define-key evil-insert-state-map (kbd "C-v") 'cua-paste)
-(define-key evil-insert-state-map (kbd "C-x") 'cua-cut-region)
-(define-key evil-insert-state-map (kbd "C-z") 'undo-tree-undo)
-(define-key evil-insert-state-map (kbd "C-y") 'undo-tree-redo)
-(define-key evil-insert-state-map (kbd "C-a") 'mark-whole-buffer)
+;(define-key evil-insert-state-map (kbd "C-c") 'cua-copy-region)
+;(define-key evil-insert-state-map (kbd "C-v") 'cua-paste)
+;(define-key evil-insert-state-map (kbd "C-x") 'cua-cut-region)
+;(define-key evil-insert-state-map (kbd "C-z") 'undo-tree-undo)
+;(define-key evil-insert-state-map (kbd "C-y") 'undo-tree-redo)
+;(define-key evil-insert-state-map (kbd "C-a") 'mark-whole-buffer)
+
+;; Evil CUA take two, this works with the ansi term/shell too
+(evil-define-key 'insert 'local (kbd "C-c") 'cua-copy-region)
+(evil-define-key 'insert 'local (kbd "C-v") 'cua-paste)
+;(evil-define-key 'insert 'local (kbd "C-x") 'cua-cut-region)
+(evil-define-key 'insert 'local (kbd "C-x") 'cua-cut-region)
+(evil-define-key 'insert 'local (kbd "C-z") 'undo-tree-undo)
+(evil-define-key 'insert 'local (kbd "C-y") 'undo-tree-redo)
+(evil-define-key 'insert 'local (kbd "C-a") 'mark-whole-buffer)
 
 ;; Markdown/MD
 (add-to-list 'load-path "~/.emacs.d/lisp/")
