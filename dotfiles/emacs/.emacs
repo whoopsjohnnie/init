@@ -240,6 +240,26 @@
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
+;; Multi term
+(add-to-list 'load-path "~/.emacs.d/multi-term/")
+(require 'multi-term)
+(setq multi-term-program "/bin/zsh")
+(setq multi-term-dedicated-select-after-open-p t)
+(setq multi-term-dedicated-close-back-to-open-buffer-p t)
+(global-set-key (kbd "C-j") 'multi-term-dedicated-toggle)
+(add-to-list 'term-unbind-key-list "C-j")
+
+;; Term toggle
+;(add-to-list 'load-path "~/.emacs.d/term-toggle/")
+;(autoload 'term-toggle "term-toggle"
+;	  "Toggles between the *terminal* buffer and whatever buffer you are editing." t)
+;(autoload 'term-toggle-cd "term-toggle"
+;	  "Pops up a shell-buffer and insert a \"cd <file-dir>\" command." t)
+;;(global-set-key [M-f1] 'term-toggle)
+;;(global-set-key [C-f1] 'term-toggle-cd)
+;(global-set-key (kbd "C-x j") 'term-toggle)
+;(global-set-key (kbd "C-j") 'term-toggle)
+
 ;;
 ;; This is how .emacs would load ~/emacs/FSF-emacs at the end of the GNU Emacs config section.
 ;;
