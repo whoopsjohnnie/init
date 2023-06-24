@@ -198,6 +198,7 @@
 
 ;; 
 ;; 22 Jun 2023, 22:27 - Emacs Ansi Terminal does not like my old bindings
+;; 24 Jun 2023, 12:44 - Emacs Ansi Terminal does not get ctrl-k kill buffer
 ;;
 
 ;; Evil CUA
@@ -209,13 +210,20 @@
 ;(define-key evil-insert-state-map (kbd "C-a") 'mark-whole-buffer)
 
 ;; Evil CUA take two, this works with the ansi term/shell too
-(evil-define-key 'insert 'local (kbd "C-c") 'cua-copy-region)
-(evil-define-key 'insert 'local (kbd "C-v") 'cua-paste)
+(evil-define-key 'insert 'global (kbd "C-c") 'cua-copy-region)
+(evil-define-key 'insert 'global (kbd "C-v") 'cua-paste)
 ;(evil-define-key 'insert 'local (kbd "C-x") 'cua-cut-region)
-(evil-define-key 'insert 'local (kbd "C-x") 'cua-cut-region)
-(evil-define-key 'insert 'local (kbd "C-z") 'undo-tree-undo)
-(evil-define-key 'insert 'local (kbd "C-y") 'undo-tree-redo)
-(evil-define-key 'insert 'local (kbd "C-a") 'mark-whole-buffer)
+(evil-define-key 'insert 'global (kbd "C-x") 'cua-cut-region)
+(evil-define-key 'insert 'global (kbd "C-z") 'undo-tree-undo)
+(evil-define-key 'insert 'global (kbd "C-y") 'undo-tree-redo)
+(evil-define-key 'insert 'global (kbd "C-a") 'mark-whole-buffer)
+
+;; Ctrl-D does not kill the ansi term
+(define-key evil-insert-state-map (kbd "C-d") 'self-insert-command)
+
+;; Ctrl-C k does not work in the ansi term
+(delete 'term-mode evil-insert-state-modes)
+(add-to-list 'evil-emacs-state-modes 'term-mode)
 
 ;; Markdown/MD
 (add-to-list 'load-path "~/.emacs.d/lisp/")
