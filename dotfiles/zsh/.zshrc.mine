@@ -110,7 +110,9 @@ export PROMPT="%n@%M %~>"
 
 # April 6 2023, make sure EDITOR is set to vim and not nvim, I don't have nvim everywhere
 # https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
-export VISUAL="vim"
+# export VISUAL="vim"
+# 4:e Juli 20:37 2023 - På buss 311 till Adelsö, prövar git commit via Emacs
+export VISUAL="emacs"
 export EDITOR="$VISUAL"
 
 # JAVA
