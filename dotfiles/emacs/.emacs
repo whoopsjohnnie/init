@@ -249,6 +249,16 @@
 (global-set-key (kbd "C-j") 'multi-term-dedicated-toggle)
 (add-to-list 'term-unbind-key-list "C-j")
 
+;
+; I am used to :term in vim,
+; so overrinding the emacs default (defun term (...) ... to be a passthrough to
+; the multi-term terminal toggle
+;
+(defun term ()
+  "Start a terminal-emulator in a new buffer."
+  (interactive)
+  (multi-term-dedicated-toggle))
+
 ;; Term toggle
 ;(add-to-list 'load-path "~/.emacs.d/term-toggle/")
 ;(autoload 'term-toggle "term-toggle"
