@@ -18,6 +18,10 @@
 ;; John Grundback, Los Angeles, January 16 2022
 ;;
 
+;; 12 July 2023, 21:13 - Emacs 28.2 on mac fails with an svg not found error
+(if (boundp 'image-types)
+    (setq image-types (cons 'svg image-types)))
+
 ;;
 ;; 18 Jun 2023, 18:54 - Added by Emacs 26 to get evil working
 ;;
