@@ -37,6 +37,21 @@ zstyle ':completion:*' insert-tab false
 # zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+# 
+# Charset och locale
+# 
+# EN/US Amerikanska
+# export CHARSET="UTF-8"
+# export LANG="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"
+# export LC_CTYPE="en_US.UTF-8"
+
+# SV/SE Svenska
+export CHARSET="UTF-8"
+export LANG="sv_SE.UTF-8"
+export LC_ALL="sv_SE.UTF-8"
+export LC_CTYPE="sv_SE.UTF-8"
+
 # LSCOLORS
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -73,14 +88,20 @@ export PROMPT="%n@%M %~>"
 # export PS1=$'\033[32;1m%n@%m\033[m:\033[34;1m%~\033[m\>'
 
 # Env
-export EDITOR="vim"
+# export EDITOR="vim"
+# export EDITOR="nvim"
 #export PAGER="less"
+
+# April 6 2023, make sure EDITOR is set to vim and not nvim, I don't have nvim everywhere
+# https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 
 # JAVA
 # export JAVA_HOME=$(/usr/libexec/java_home)
 # export PATH=${JAVA_HOME}/bin:$PATH
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
 # jenv global 1.8.0.92
 
 # Python path, set $PATH before so system python is default to not screw with system and installers
@@ -92,8 +113,8 @@ eval "$(jenv init -)"
 # export GOPATH=$HOME/go
 
 # NPM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Yarn
@@ -147,8 +168,8 @@ ssh-add ~/.ssh/john_github > /dev/null 2>&1
 # 
 # K3s
 # 
-export KUBECONFIG=~/.kube/config.bots-k3s
-# kubectl config set-context bots-k3s
+export KUBECONFIG=~/.kube/config.nuke-k3s
+# kubectl config set-context nuke-k3s
 # kubectl get node -o wide
 
 # 
