@@ -9,7 +9,6 @@
 ##
 # Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2014-06-02_at_21:30:07
 # Your previous /Users/john/.bash_profile file was backed up as /Users/john/.bash_profile.macports-saved_2016-01-04_at_00:22:49
-# Your previous /Users/john/.zprofile file was backed up as /Users/john/.zprofile.macports-saved_2023-06-17_at_11:01:25
 ##
 
 # Path
@@ -17,14 +16,12 @@
 # MacPorts Installer addition on 2016-01-04_at_00:22:49: adding an appropriate PATH variable for use with MacPorts.
 # MacPorts Installer addition on 2017-01-05_at_09:29:52: adding an appropriate PATH variable for use with MacPorts.
 # MacPorts Installer addition on 2021-02-18_at_14:47:21: adding an appropriate PATH variable for use with MacPorts.
-# MacPorts Installer addition on 2023-06-17_at_11:01:25: adding an appropriate PATH variable for use with MacPorts.
 # export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # MacPorts Installer addition on 2021-02-18_at_14:47:21: adding an appropriate DISPLAY variable for use with MacPorts.
-# export DISPLAY=:0
+export DISPLAY=:0
 # Finished adapting your DISPLAY environment variable for use with MacPorts.
 
 # 
@@ -40,60 +37,29 @@ zstyle ':completion:*' insert-tab false
 # zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# 
-# Charset och locale
-# 
-# EN/US Amerikanska
-# export CHARSET="UTF-8"
-# export LANG="en_US.UTF-8"
-# export LC_ALL="en_US.UTF-8"
-# export LC_CTYPE="en_US.UTF-8"
-
-# SV/SE Svenska
-export CHARSET="UTF-8"
-export LANG="sv_SE.UTF-8"
-export LC_ALL="sv_SE.UTF-8"
-export LC_CTYPE="sv_SE.UTF-8"
-
 # LSCOLORS
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
 
 # Aliases
 # alias h='history 1'
 alias history='history 1'
-
-# NetBSD 9.3, -G is not a valid option
-# alias ll='ls -lG'
-# alias la='ls -aG'
-# alias ls='ls -G'
-alias ll='ls -l'
-alias la='ls -a'
-# alias ls='ls'
-alias ls='ls --color=auto'
+alias ll='ls -lG'
+alias la='ls -aG'
+alias ls='ls -G'
 
 alias emacs='emacs -nw'
 
 # 2022 called and it said listen to the Primeagen
-# 2023 called and said, naaah, lets stick with vim
-alias vi='vim'
-# alias vi='nvim'
-# alias vim='nvim'
-# # Cannot install neovim on TrueNAS
-# if [ -x "$(command -v nvim)" ]; then
-#   alias vi='nvim'
-#   alias vim='nvim'
-# fi
+# alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 
 # 1999 called and it wants its editor back 
 alias pico='nano'
 
 # 1994 called and it wants its os back
 alias cls='clear'
-
-# mc
-# alias mc='mc --nocolor'
 
 # Local bin
 export PATH="$HOME/bin/:$PATH"
@@ -107,33 +73,18 @@ export PROMPT="%n@%M %~>"
 # export PS1=$'\033[32;1m%n@%m\033[m:\033[34;1m%~\033[m\>'
 
 # Env
-# export EDITOR="vim"
-# export EDITOR="nvim"
+export EDITOR="vim"
 #export PAGER="less"
-
-# April 6 2023, make sure EDITOR is set to vim and not nvim, I don't have nvim everywhere
-# https://unix.stackexchange.com/questions/4859/visual-vs-editor-what-s-the-difference
-# export VISUAL="vim"
-# 4:e Juli 20:37 2023 - På buss 311 till Adelsö, prövar git commit via Emacs
-export VISUAL="emacs"
-export EDITOR="$VISUAL"
 
 # JAVA
 # export JAVA_HOME=$(/usr/libexec/java_home)
 # export PATH=${JAVA_HOME}/bin:$PATH
-# export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 # jenv global 1.8.0.92
 
 # Python path, set $PATH before so system python is default to not screw with system and installers
 # export PATH="$PATH:~/Library/Python/2.7/bin/:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/"
-
-# 
-# python virtualenvs in an NFS world
-# 
-# sudo mkdir /virtualenvs
-# sudo chmod a+rwx /virtualenvs
-export WORKON_HOME=/virtualenvs
 
 # GO
 # # export GOPATH=/usr/local/go
@@ -141,8 +92,8 @@ export WORKON_HOME=/virtualenvs
 # export GOPATH=$HOME/go
 
 # NPM
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Yarn
@@ -196,8 +147,8 @@ ssh-add ~/.ssh/john_github > /dev/null 2>&1
 # 
 # K3s
 # 
-export KUBECONFIG=~/.kube/config.nuke-k3s
-# kubectl config set-context nuke-k3s
+export KUBECONFIG=~/.kube/config.bots-k3s
+# kubectl config set-context bots-k3s
 # kubectl get node -o wide
 
 # 
