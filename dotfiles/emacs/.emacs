@@ -279,6 +279,13 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
+;; 24 June 2023, 23:29:36 - Adding Projectile as a project manager
+(projectile-mode +1)
+;;(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+;;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
+(setq projectile-keymap-prefix (kbd "C-x p"))
+
 ;;
 ;; This is how .emacs would load ~/emacs/FSF-emacs at the end of the GNU Emacs config section.
 ;;
