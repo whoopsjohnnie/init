@@ -274,6 +274,11 @@
 ;(global-set-key (kbd "C-x j") 'term-toggle)
 ;(global-set-key (kbd "C-j") 'term-toggle)
 
+;; 24 June 2023, 23:29:36 - Adding NeoTree as a project explorer
+(add-to-list 'load-path "~/.emacs.d/neotree/")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 ;;
 ;; This is how .emacs would load ~/emacs/FSF-emacs at the end of the GNU Emacs config section.
 ;;
