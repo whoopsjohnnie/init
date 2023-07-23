@@ -115,6 +115,13 @@ export PROMPT="%n@%M %~>"
 export VISUAL="emacs"
 export EDITOR="$VISUAL"
 
+# 
+# 23:e Juli 2023, 11:09:04 - Prövar bash C-x C-e för att editera kommandorad.
+#
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
 # JAVA
 # export JAVA_HOME=$(/usr/libexec/java_home)
 # export PATH=${JAVA_HOME}/bin:$PATH
