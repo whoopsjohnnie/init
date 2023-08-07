@@ -203,7 +203,8 @@
 ;; 
 ;; 22 Jun 2023, 22:27 - Emacs Ansi Terminal does not like my old bindings
 ;; 24 Jun 2023, 12:44 - Emacs Ansi Terminal does not get ctrl-k kill buffer
-;;
+;; 04 Jul 2023, 14:45:43 - FreeBSD 12.4, I have to rely on the $SHELL env var.
+;; 
 
 ;; Evil CUA
 ;(define-key evil-insert-state-map (kbd "C-c") 'cua-copy-region)
@@ -247,7 +248,12 @@
 ;; Multi term
 (add-to-list 'load-path "~/.emacs.d/multi-term/")
 (require 'multi-term)
-(setq multi-term-program "/bin/zsh")
+;
+; 2023-07-04 14:45:43 - FreeBSD 12.4
+; zsh is not /bin/zsh but /usr/local/bin/zsh, I have to rely on the $SHELL env var.
+;
+;(setq multi-term-program "/bin/zsh");
+;((setq multi-term-program (getenv "SHELL"))
 (setq multi-term-dedicated-select-after-open-p t)
 (setq multi-term-dedicated-close-back-to-open-buffer-p t)
 (global-set-key (kbd "C-j") 'multi-term-dedicated-toggle)
