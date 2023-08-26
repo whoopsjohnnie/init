@@ -196,6 +196,17 @@
 (require 'evil)
 (evil-mode 1)
 
+;; 26th Aug 2023, 01:27 - Emacs undo in evil mode treats entire edit session
+;; as one unto which drives me crazy. Imagine writing a git commit message in
+;; one edit session without leaving insert, then making a mistake and having
+;; to undo, when pressing u for undo the entire git commit message disappears!
+;(setq evil-want-fine-undo t)
+;(setq evil-want-fine-undo 'fine)
+
+(setq evil-want-fine-undo t)
+(advice-add 'undo-auto--last-boundary-amalgamating-number
+            :override #'ignore)
+
 ;; 
 ;; 22 Jun 2023, 22:27 - Emacs Ansi Terminal does not like my old bindings
 ;; 24 Jun 2023, 12:44 - Emacs Ansi Terminal does not get ctrl-k kill buffer
