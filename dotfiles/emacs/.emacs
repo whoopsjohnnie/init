@@ -192,9 +192,31 @@
 ; (setq mac-command-modifier 'super)
 ; (setq mac-option-modifier 'meta)
 
+;;
+;; 30th Sep 2023, 10:52 - Evil undo is not working well without
+;; loading undo-tree. This requres queue and undo-tree.
+;;
+
+;; Queue
+(add-to-list 'load-path "~/.emacs.d/queue/")
+(require 'queue)
+
+;; Undo tree
+(add-to-list 'load-path "~/.emacs.d/undo-tree/")
+(require 'undo-tree)
+
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+
+;;
+;; 30th Sep 2023, 10:52 - Evil undo is not working well without
+;; loading undo-tree. Configure evil to use undo-tree by default.
+;;
+
+;; Evil undo
+(evil-set-undo-system 'undo-tree)
+(global-undo-tree-mode 1)
 
 ;; 26th Aug 2023, 01:27 - Emacs undo in evil mode treats entire edit session
 ;; as one unto which drives me crazy. Imagine writing a git commit message in
