@@ -230,6 +230,15 @@
 (delete 'term-mode evil-insert-state-modes)
 (add-to-list 'evil-emacs-state-modes 'term-mode)
 
+;; Oct 1 2023, 12:21 - I am quite used to emacs evil Ctrl-w switch window
+;; at this point. I would love for it to also work in the terminal just
+;; like in vim.
+(add-hook 'term-mode-hook (lambda ()
+			     (define-key term-raw-map (kbd "C-w") nil) 
+			     (define-key term-raw-map (kbd "C-w w") 'evil-window-next)
+			     (define-key term-raw-map (kbd "C-w C-w") 'evil-window-next)
+                             ))
+
 ;; Markdown/MD
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
